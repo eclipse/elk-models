@@ -1,8 +1,10 @@
+###############################################################################
 # Copyright (c) 2017 Kiel University and others.
 # All rights reserved. This program and the accompanying materials
 # are made available under the terms of the Eclipse Public License v1.0
 # which accompanies this distribution, and is available at
 # http://www.eclipse.org/legal/epl-v10.html
+###############################################################################
 
 """A program to create and update license headers for different kinds of file types."""
 
@@ -27,19 +29,61 @@ import tempfile
  #     # #    # #   ## #    #   #   #    # #   ##   #   #    #
   #####   ####  #    #  ####    #   #    # #    #   #    ####
 
-SUPPORTED_FILE_TYPES = [".elkg", ".elkt", ".java", ".xtend"]
 
-LICENCE_HEADER = ["Copyright (c) {0} Kiel University and others.",
+LICENCE_HEADER = ["Copyright (c) {0} {1} and others.",
                   "All rights reserved. This program and the accompanying materials",
                   "are made available under the terms of the Eclipse Public License v1.0",
                   "which accompanies this distribution, and is available at",
                   "http://www.eclipse.org/legal/epl-v10.html"]
-LICENCE_UPDATE = "Copyright (c) {0}, {1} Kiel University and others."
+LICENCE_UPDATE = "Copyright (c) {0}, {1} {2} and others."
 LICENCE_RE = re.compile(r"Copyright \(c\) ((?P<year_one>\d{4})"
-                        r"(?P<year_two_full>, (?P<year_two>\d{4}))?) Kiel University and others\.")
+                        r"(?P<year_two_full>, (?P<year_two>\d{4}))?) (?P<company>.+) and others\.")
 
-# The number of lines we scan for the licence header until we determine that there is none
+# The number of lines we scan for the license header until we determine that there is none
 LINES_TO_SCAN = 5
+
+
+
+
+ #######                    #######
+ #       # #      ######       #    #   # #####  ######  ####
+ #       # #      #            #     # #  #    # #      #
+ #####   # #      #####        #      #   #    # #####   ####
+ #       # #      #            #      #   #####  #           #
+ #       # #      #            #      #   #      #      #    #
+ #       # ###### ######       #      #   #      ######  ####
+
+def license_text_java():
+    """Create license text for Java-like comments."""
+    return "/*******************************************************************************\n * " + \
+           "\n * ".join(LICENCE_HEADER) + \
+           "\n *******************************************************************************/\n"
+
+
+def license_text_python():
+    """Create license text for Python-like comments."""
+    return "###############################################################################\n# " + \
+           "\n# ".join(LICENCE_HEADER) + \
+           "\n###############################################################################\n"
+
+
+def license_text_xml():
+    """Create license text for XML-like comments."""
+    return "<!--\n  " + "\n  ".join(LICENCE_HEADER) + "\n-->\n"
+
+
+# A dictionary that maps supported file types to functions that generate new license headers
+# for those kinds of files
+FILE_TYPES = {
+    ".elkg": license_text_xml,
+    ".elkt": license_text_java,
+    ".java": license_text_java,
+    ".ini": license_text_python,
+    ".properties": license_text_python,
+    ".py": license_text_python,
+    ".xml": license_text_xml,
+    ".xtend": license_text_java,
+}
 
 
 
@@ -63,16 +107,14 @@ def parse_command_line():
 
     # Mode of operation
     parser.add_argument(
-        "-u",
-        "--update",
+        "-u", "--update",
         help="also update existing license headers to include the current year",
         action="store_true")
 
     # File selection
     group = parser.add_mutually_exclusive_group()
     group.add_argument(
-        "-a",
-        "--all",
+        "-a", "--all",
         help="select all files in the directory tree (Default)",
         action="store_true")
     group.add_argument(
@@ -89,15 +131,18 @@ def parse_command_line():
 
     # Miscellaneous things
     parser.add_argument(
-        "-n",
-        "--dry-run",
+        "-n", "--dry-run",
         help="don't actually change anything, just show what would be done",
         action="store_true")
     parser.add_argument(
-        "-v",
-        "--verbose",
+        "-v", "--verbose",
         help="generate more output",
         action="store_true")
+    parser.add_argument(
+        "-c", "--company",
+        help="the company to be mentioned in new license headers "
+             "(only used for new license headers; existing ones keep their company name)",
+        default="Kiel University")
 
     return parser.parse_args()
 
@@ -119,6 +164,13 @@ def current_year_as_string():
  #       # #      #         #     # #      #      #      #    #   #   # #    # #   ##
  #       # ###### ######     #####  ###### ###### ######  ####    #   #  ####  #    #
 
+def include_directory(dir_name):
+    """Checks for a given directory name if we want to add its content to our list of files."""
+
+    # Only exclude hidden directories for the time being
+    return not dir_name.startswith(".")
+
+
 def select_all_files(root_dir):
     """Selects all files in the directory tree rooted in the given directory.
        Returns a list of Path objects."""
@@ -132,10 +184,10 @@ def select_all_files(root_dir):
         folder = folder_queue.popleft()
 
         for item in folder.iterdir():
-            if item.is_dir() and not item.name.startswith("."):
+            if item.is_dir() and include_directory(item.name):
                 folder_queue.append(item)
             elif item.is_file():
-                if item.suffix in SUPPORTED_FILE_TYPES:
+                if item.suffix in FILE_TYPES:
                     files.append(item)
 
     return files
@@ -157,9 +209,9 @@ def select_specific_files(file_paths, include_folders, error_on_invalid, verbose
 
         # If the file is a file, great. If it's a folder, call select_all_files.
         # If it's nothing, terminate with an error
-        if file.is_file() and file.suffix in SUPPORTED_FILE_TYPES:
+        if file.is_file() and file.suffix in FILE_TYPES:
             files.append(file)
-        elif file.is_dir() and include_folders:
+        elif file.is_dir() and include_folders and include_directory(file.name):
             files.extend(select_all_files(file))
         else:
             if error_on_invalid:
@@ -184,11 +236,8 @@ def select_commit(commit_id, verbose):
         command_line.extend(["diff-tree", "--no-commit-id", "--name-only", "-r", commit_id])
 
     try:
-        git = subprocess.run(command_line,
-                             encoding="utf8",
-                             check=True,
+        git = subprocess.run(command_line, encoding="utf8", check=True,
                              stdin=PIPE, stdout=PIPE, stderr=PIPE)
-
         file_list = []
         for output_line in git.stdout.split("\n"):
             if output_line:
@@ -224,8 +273,8 @@ def select_files(args):
  #       # #   ## #    #    #       # #    # #      #   ## #    # #
  #       # #    # #####     ####### #  ####  ###### #    #  ####  ######
 
-def has_licence_header(file):
-    """Check if the given file already has a licence header."""
+def has_license_header(file):
+    """Check if the given file already has a license header."""
 
     try:
         with file.open("r", encoding="utf8") as in_file:
@@ -244,9 +293,9 @@ def has_licence_header(file):
     return False
 
 
-def needs_licence_header_update(file):
-    """Check if the given file's licence header needs an update regarding the year.
-       This function assumes that has_licence_header(file) would return True."""
+def needs_license_header_update(file):
+    """Check if the given file's license header needs an update regarding the year.
+       This function assumes that has_license_header(file) would return True."""
 
     current_year = current_year_as_string()
 
@@ -283,23 +332,8 @@ def needs_licence_header_update(file):
  #     # #   #  #      #    #   #   #         #       # #    # #      #   ## #    # #
   #####  #    # ###### #    #   #   ######    ####### #  ####  ###### #    #  ####  ######
 
-def licence_text_for_extension(extension):
-    """Creates a string with the licence text suitable for files with the given extension."""
-
-    licence = ""
-
-    if extension == ".elkg":
-        # XML Syntax
-        licence = "<!-- " + "\n     ".join(LICENCE_HEADER) + "\n-->\n"
-    else:
-        # Java Syntax
-        licence = "/* " + "\n * ".join(LICENCE_HEADER) + "\n */\n\n"
-
-    return licence.format(current_year_as_string())
-
-
-def create_licence_header(file):
-    """Creates a licence header for the given file."""
+def create_license_header(file, company):
+    """Creates a license header for the given file using the given company name."""
 
     try:
         # Generate a temporary file
@@ -310,8 +344,9 @@ def create_licence_header(file):
                                                 delete=False)
 
         with  temp_file, file.open("r") as old_file:
-            # Write the licence header
-            temp_file.write(licence_text_for_extension(file.suffix))
+            # Write the license header by calling the appropriate function
+            temp_file.write(FILE_TYPES[file.suffix]().format(
+                current_year_as_string(), company))
 
             # Write the original file's content
             for line in old_file:
@@ -334,8 +369,8 @@ def create_licence_header(file):
  #     # #      #    # #    #   #   #         #       # #    # #      #   ## #    # #
   #####  #      #####  #    #   #   ######    ####### #  ####  ###### #    #  ####  ######
 
-def update_licence_header(file):
-    """Updates the licence header of the given file. If the file has only one year,
+def update_license_header(file):
+    """Updates the license header of the given file. If the file has only one year,
        a second is added. If it has two years, the second is updated."""
 
     try:
@@ -348,7 +383,7 @@ def update_licence_header(file):
 
         with  temp_file, file.open("r") as old_file:
             # Iterate over the original file's lines and simply copy everything over,
-            # except for the first licence header line we encounter
+            # except for the first license header line we encounter
             found_line_to_update = False
 
             for line in old_file:
@@ -359,7 +394,8 @@ def update_licence_header(file):
                         new_line = LICENCE_RE.sub(
                             LICENCE_UPDATE.format(
                                 match.group("year_one"),
-                                current_year_as_string()),
+                                current_year_as_string(),
+                                match.group("company")),
                             line)
                         temp_file.write(new_line)
                         found_line_to_update = True
@@ -386,32 +422,34 @@ def update_licence_header(file):
  #     # #    # # #    #     #####   ####  #####  ######
 
 def traverse_files(files, also_update, dry_run, verbose):
-    """Traverses the given files and creates a licence header if not already present.
-       If also_update is true, an existing licence header is updated to include the current year.
+    """Traverses the given files and creates a license header if not already present.
+       If also_update is true, an existing license header is updated to include the current year.
        If dry_run is true, only information about what we would do is printed."""
 
     for file in files:
-        if not has_licence_header(file):
+        if not has_license_header(file):
             if dry_run:
-                print("Would create licence header for", file)
+                print("Would create license header for", file)
             else:
                 if verbose:
-                    print("Creating licence header for", file)
-                create_licence_header(file)
-        elif also_update and needs_licence_header_update(file):
+                    print("Creating license header for", file)
+                create_license_header(file, ARGS.company)
+        elif also_update and needs_license_header_update(file):
             if dry_run:
-                print("Would update licence header for", file)
+                print("Would update license header for", file)
             else:
                 if verbose:
-                    print("Updating licence header for", file)
-                update_licence_header(file)
+                    print("Updating license header for", file)
+                update_license_header(file)
+        elif ARGS.verbose:
+            print("No need to touch", file)
 
 
 ARGS = parse_command_line()
 FILES = select_files(ARGS)
 
 if FILES is None or not FILES:
-    if args.verbose:
+    if ARGS.verbose:
         print("No files found.")
 else:
     traverse_files(FILES, ARGS.update, ARGS.dry_run, ARGS.verbose)

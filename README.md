@@ -37,13 +37,13 @@ Common use cases:
 
 ```bash
 # Ensure all files have licence headers
-python3.6 license.py --verbose
+python3.6 license.py --verbose --company "Your company's name"
 
 # Add licence headers to files staged for commit
-python3.6 license.py --verbose --staged
+python3.6 license.py --verbose --staged --company "Your company's name"
 
 # Also update existing licence headers to include the current year
-python3.6 license.py --verbose --staged --update
+python3.6 license.py --verbose --staged --update --company "Your company's name"
 ```
 
 To see what the script would do, add the `--dry-run` option (or `-n` for short).
