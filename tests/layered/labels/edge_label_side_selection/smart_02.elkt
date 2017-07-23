@@ -1,0 +1,39 @@
+/*******************************************************************************
+ * Copyright (c) 2017 Kiel University and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *******************************************************************************/
+
+// Demonstrates a typical case where strict DOWN or UP label side selection can be ambiguous
+algorithm: layered
+elk.direction: DOWN
+
+// Select different strategies to check what's right or wrong about them
+edgeLabels.sideSelection: SMART_UP
+
+// Fix port order to force N2 to be left of the long label
+node N1 {
+	portConstraints: FIXED_ORDER
+	
+	port P1_1 {
+		^port.side: SOUTH
+		^port.index: 3
+	}
+	port P1_2 {
+		^port.side: SOUTH
+		^port.index: 2
+	}
+	port P1_3 {
+		^port.side: SOUTH
+		^port.index: 1
+	}
+}
+node N2
+node N3
+
+edge N1.P1_1 -> N2 { label "Short" }
+edge N1.P1_2 -> N3 { label "A rather longer label than would seem necessary" }
+edge N2 -> N3 { label "Possibly ambiguous label" }
+edge N3 -> N1.P1_3 { label "Another rather long label that further complicates things" }
