@@ -5,21 +5,14 @@
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
  *******************************************************************************/
-// Reproduces a case where an unfortunate label side selection strategy will
-// mess up the layout and impede readability.
+
+// The label should be under the edge. There was a bug in the initial implementation
+// of smart label side selection that caused it not to be.
 algorithm: layered
-elk.direction: DOWN
+elk.direction: RIGHT
 edgeLabels.sideSelection: SMART_DOWN
 
-node stop
-node rev
-node fwd
+node N0
+node N1
 
-edge stop -> rev { label "2: _trackSpeed < 0" }
-edge rev -> stop { label "1: _trackSpeed == 0" }
-
-edge rev -> fwd { label "2: _trackSpeed > 0" }
-edge fwd -> rev { label "2: _trackSpeed < 0" }
-
-edge stop -> fwd { label "1: _trackSpeed > 0" }
-edge fwd -> stop { label "1: _trackSpeed == 0" }
+edge N0 -> N1 { label "An excellent edge label" }
