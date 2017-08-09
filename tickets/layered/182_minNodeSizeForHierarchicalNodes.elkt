@@ -1,0 +1,36 @@
+/*******************************************************************************
+ * Copyright (c) 2017 Kiel University and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *******************************************************************************/
+spacing.portPort: 5
+
+node P1 {
+	org.eclipse.elk.nodeSize.constraints: "PORTS PORT_LABELS"
+	portConstraints: FIXED_SIDE
+	
+	node N1 {
+		layout [ size: 20, 20 ]
+	}
+	
+	port P1 {
+		^port.side: NORTH
+	}
+	port P2 {
+		^port.side: NORTH
+	}
+	port P3 {
+		^port.side: NORTH
+	}
+	port P4 {
+		^port.side: NORTH
+	}
+	port P5 {
+		^port.side: NORTH
+	}
+	port P6 {
+		^port.side: NORTH
+	}
+}
