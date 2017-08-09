@@ -1,0 +1,44 @@
+/*******************************************************************************
+ * Copyright (c) 2017 Kiel University and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *******************************************************************************/
+node N1 {
+	org.eclipse.elk.insideSelfLoops.activate: true
+	org.eclipse.elk.portConstraints: FIXED_SIDE
+	org.eclipse.elk.portLabels.placement: INSIDE
+	org.eclipse.elk.nodeLabels.placement: "[H_CENTER V_BOTTOM INSIDE]"
+		
+	port P1 {
+		org.eclipse.elk.^port.side: WEST
+	}
+	
+	port P2 {
+		org.eclipse.elk.^port.side: EAST
+	}
+}
+
+edge N1.P1 -> N1.P2 {
+	org.eclipse.elk.insideSelfLoops.yo: true
+}
+
+node N2 {
+	org.eclipse.elk.portConstraints: FIXED_SIDE
+	org.eclipse.elk.portLabels.placement: INSIDE
+	org.eclipse.elk.nodeLabels.placement: "[H_CENTER V_BOTTOM INSIDE]"
+		
+	port P1 {
+		org.eclipse.elk.^port.side: WEST
+	}
+	
+	port P2 {
+		org.eclipse.elk.^port.side: EAST
+	}
+	
+	node N3
+	
+	edge N2.P1 -> N3
+	edge N3 -> N2.P2
+}
