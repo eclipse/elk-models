@@ -1,0 +1,49 @@
+/*******************************************************************************
+ * Copyright (c) 2017 Kiel University and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *******************************************************************************/
+node r {
+//	layout [ size: 300, 300 ]
+	org.eclipse.elk.portConstraints: FIXED_POS
+	
+	node n1
+	node n2
+	node n3
+	node n4
+	node n5
+	node n6
+	node n7
+	node n8
+	node n9
+	
+	port p1 {
+		layout [ position: 100, 0 ]
+		^port.side: NORTH
+		^port.index: 1
+	}
+	port p2 {
+		layout [ position: 150, 0 ]
+		^port.side: NORTH
+		^port.index: 2
+	}
+	port p3 {
+		layout [ position: 200, 0 ]
+		^port.side: NORTH
+		^port.index: 3
+	}
+	port p4 {
+		layout [ position: 0, 200 ]
+		^port.side: WEST
+	}
+	
+	edge n1 -> n2
+	edge n2 -> n3
+	edge n4 -> n5
+	edge n2 -> p1
+	edge n8 -> p2
+	edge n5 -> p3
+	edge n3 -> p4
+}

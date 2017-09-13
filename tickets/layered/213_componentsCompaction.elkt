@@ -1,0 +1,156 @@
+/*******************************************************************************
+ * Copyright (c) 2017 Kiel University and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *******************************************************************************/
+algorithm: layered
+
+node Compound {
+    portConstraints: FIXED_SIDE
+    compaction.connectedComponents: true
+    
+    port CW1 {
+        ^port.side: WEST
+    }
+    port CW2 {
+		^port.side: WEST
+    }
+    port CW3 {
+		^port.side: WEST
+    }
+    port CW4 {
+		^port.side: WEST
+    }
+    port CN1 {
+		^port.side: NORTH
+    }
+    
+    ///////////////////////////////////////////////////////////////////////
+    // COMPONENT 1
+    
+    node N1_1 {
+        label "N1_1"
+    }
+    
+    node N1_2 {
+        label "N1_2"
+    }
+    
+    ///////////////////////////////////////////////////////////////////////
+    // COMPONENT 2
+    
+    node N2_1 {
+        label "N2_1"
+    }
+    
+    node N2_2 {
+        label "N2_2"
+    }
+    
+    node N2_3 {
+        label "N2_3"
+    }
+    
+    node N2_4 {
+        label "N2_4"
+    }
+    
+    node N2_5 {
+        label "N2_5"
+    }
+    
+    ///////////////////////////////////////////////////////////////////////
+    // COMPONENT 3
+    
+    node N3_1 {
+        label "N3_1"
+    }
+    
+    ///////////////////////////////////////////////////////////////////////
+    // COMPONENT 4
+    
+    node N4_1 {
+        label "N4_1"
+    }
+    
+    ///////////////////////////////////////////////////////////////////////
+    // COMPONENT 5
+    
+    node N5_1 {
+        label "N5_1"
+    }
+    
+    ///////////////////////////////////////////////////////////////////////
+    // COMPONENT 6
+    
+    node N6_1 {
+        label "N6_1"
+    }
+    
+    ///////////////////////////////////////////////////////////////////////
+    // COMPONENT 7
+    
+    node N7_1 {
+        label "N7_1"
+    }
+    
+    ///////////////////////////////////////////////////////////////////////
+    // COMPONENT 8
+    
+    node N8_1 {
+        label "N8_1"
+    }
+    
+    node N8_2 {
+        label "N8_2"
+    }
+    
+    node N8_3 {
+        label "N8_3"
+    }
+    
+    ///////////////////////////////////////////////////////////////////////
+    // COMPONENT 9
+    
+    node N9_1 {
+        label "N9_1"
+    }
+        
+    node N9_2 {
+        label "N9_2"
+    }
+    
+    node N9_3 {
+        label "N9_3"
+    }
+    
+    node N9_4 {
+        label "N9_4"
+    }
+    
+    node N9_5 {
+        label "N9_5"
+    }
+    
+    edge N1_1 -> N1_2
+    edge N2_1 -> N2_2
+    edge N2_1 -> N2_3
+    edge N2_2 -> N2_4
+    edge N2_3 -> N2_4
+    edge N2_4 -> N2_5
+    edge N8_1 -> N8_2
+    edge N8_2 -> N8_3
+    edge N9_1 -> N9_2
+    edge N9_1 -> N9_3
+    edge N9_1 -> N9_4
+    edge N9_1 -> N9_5
+    
+    edge ^CW1 -> N1_1
+    edge ^CW2 -> N3_1
+    edge ^CW3 -> N4_1
+    edge N5_1 -> ^CW4
+
+    edge ^CN1 -> N1_2
+}
