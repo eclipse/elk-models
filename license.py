@@ -30,6 +30,7 @@ import tempfile
   #####   ####  #    #  ####    #   #    # #    #   #    ####
 
 
+# The licence heaader is overwritten if a licence header file is specified
 LICENCE_HEADER = ["Copyright (c) {0} {1} and others.",
                   "All rights reserved. This program and the accompanying materials",
                   "are made available under the terms of the Eclipse Public License v1.0",
@@ -128,6 +129,11 @@ def parse_command_line():
     group.add_argument(
         "--commit",
         help="selects the files changed in the commit with the given hash")
+
+    # Licence text specification
+    parser.add_argument(
+        "-l", "--licence-file",
+        help="Name of the file that contains the licence text to be used.")
 
     # Miscellaneous things
     parser.add_argument(
@@ -452,4 +458,9 @@ if FILES is None or not FILES:
     if ARGS.verbose:
         print("No files found.")
 else:
+    # We may need to load the actual licence header to be created
+    if not ARGS.dry_run and ARGS.licence_file:
+        with open(ARGS.licence_file) as lf:
+            LICENCE_HEADER = lf.read().splitlines()
+
     traverse_files(FILES, ARGS.update, ARGS.dry_run, ARGS.verbose)
