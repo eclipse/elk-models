@@ -1,0 +1,24 @@
+/*******************************************************************************
+ * Copyright (c) 2017 Kiel University and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *******************************************************************************/
+node Node {
+	portConstraints: FIXED_SIDE
+	portAlignment.basic: JUSTIFIED
+	
+	port N1 { ^port.side: NORTH }
+	port N2 { ^port.side: NORTH }
+	port N3 { ^port.side: NORTH }
+	port E1 { ^port.side: EAST }
+	port E2 { ^port.side: EAST }
+	port E3 { ^port.side: EAST }
+	port S1 { ^port.side: SOUTH }
+	port S2 { ^port.side: SOUTH }
+	port S3 { ^port.side: SOUTH }
+	port W1 { ^port.side: WEST }
+	port W2 { ^port.side: WEST }
+	port W3 { ^port.side: WEST }
+}
