@@ -1,0 +1,79 @@
+/*******************************************************************************
+ * Copyright (c) 2017 Kiel University and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *******************************************************************************/
+
+// Demonstrates how center labels placed at end layers are aligned in their layer.
+// We're using interactive cycle breaking because the second graph must have the
+// labeled edges reversed.
+algorithm: layered
+elk.direction: RIGHT
+cycleBreaking.strategy: INTERACTIVE
+
+// First graph
+node N1_1 {
+	layout [ position: 0, 0]
+}
+node N1_2 {
+	layout [ size: 100, 40 position: 100, 0 ]
+}
+node N1_3 {
+	layout [ size: 100, 40 position: 200, 0 ]
+}
+node N1_4 {
+	layout [ position: 300, 0]
+}
+
+edge N1_1 -> N1_2
+edge N1_2 -> N1_3
+edge N1_3 -> N1_4
+
+edge N1_1 -> N1_4 {
+	label "Tail layer" {
+		edgeLabels.placement: CENTER
+		centerLabelPlacementStrategy: TAIL_LAYER
+	}
+}
+
+edge N1_1 -> N1_4 {
+	label "Head layer" {
+		edgeLabels.placement: CENTER
+		centerLabelPlacementStrategy: HEAD_LAYER
+	}
+}
+
+
+// Second graph
+node N2_1 {
+	layout [ position: 0, 0]
+}
+node N2_2 {
+	layout [ size: 100, 40 position: 100, 0 ]
+}
+node N2_3 {
+	layout [ size: 100, 40 position: 200, 0 ]
+}
+node N2_4 {
+	layout [ position: 300, 0]
+}
+
+edge N2_1 -> N2_2
+edge N2_2 -> N2_3
+edge N2_3 -> N2_4
+
+edge N2_4 -> N2_1 {
+	label "Tail layer" {
+		edgeLabels.placement: CENTER
+		centerLabelPlacementStrategy: TAIL_LAYER
+	}
+}
+
+edge N2_4 -> N2_1 {
+	label "Head layer" {
+		edgeLabels.placement: CENTER
+		centerLabelPlacementStrategy: HEAD_LAYER
+	}
+}
