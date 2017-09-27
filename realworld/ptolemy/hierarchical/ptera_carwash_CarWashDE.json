@@ -1,0 +1,566 @@
+{
+  "id": "G1",
+  "children": [
+    {
+      "id": "N1",
+      "labels": [
+        {
+          "text": "SingleEvent",
+          "id": "L1",
+          "width": 68.0,
+          "height": 15.0
+        }
+      ],
+      "ports": [
+        {
+          "id": "P1",
+          "properties": {
+            "port.side": "EAST",
+            "port.index": "0"
+          },
+          "width": 8.0,
+          "height": 8.0
+        }
+      ],
+      "properties": {
+        "portConstraints": "FIXED_ORDER",
+        "nodeLabels.placement": "[H_LEFT, V_TOP, OUTSIDE]"
+      },
+      "width": 66.0,
+      "height": 46.0
+    },
+    {
+      "id": "N2",
+      "labels": [
+        {
+          "text": "InitQueue",
+          "id": "L2",
+          "width": 56.0,
+          "height": 15.0
+        }
+      ],
+      "ports": [
+        {
+          "id": "P2",
+          "properties": {
+            "port.side": "EAST",
+            "port.index": "0"
+          },
+          "width": 8.0,
+          "height": 8.0
+        },
+        {
+          "id": "P3",
+          "properties": {
+            "port.side": "WEST",
+            "port.index": "-1"
+          },
+          "width": 8.0,
+          "height": 8.0
+        }
+      ],
+      "properties": {
+        "portConstraints": "FIXED_ORDER",
+        "nodeLabels.placement": "[H_LEFT, V_TOP, OUTSIDE]"
+      },
+      "width": 18.0,
+      "height": 25.0
+    },
+    {
+      "id": "N3",
+      "labels": [
+        {
+          "text": "InitServers",
+          "id": "L3",
+          "width": 60.0,
+          "height": 15.0
+        }
+      ],
+      "ports": [
+        {
+          "id": "P4",
+          "properties": {
+            "port.side": "EAST",
+            "port.index": "0"
+          },
+          "width": 8.0,
+          "height": 8.0
+        },
+        {
+          "id": "P5",
+          "properties": {
+            "port.side": "WEST",
+            "port.index": "-1"
+          },
+          "width": 8.0,
+          "height": 8.0
+        }
+      ],
+      "properties": {
+        "portConstraints": "FIXED_ORDER",
+        "nodeLabels.placement": "[H_LEFT, V_TOP, OUTSIDE]"
+      },
+      "width": 18.0,
+      "height": 25.0
+    },
+    {
+      "id": "N4",
+      "labels": [
+        {
+          "text": "PteraModalModel",
+          "id": "L4",
+          "width": 101.0,
+          "height": 15.0
+        }
+      ],
+      "ports": [
+        {
+          "id": "P6",
+          "properties": {
+            "port.side": "WEST",
+            "port.index": "0"
+          },
+          "width": 8.0,
+          "height": 8.0
+        },
+        {
+          "id": "P7",
+          "properties": {
+            "port.side": "WEST",
+            "port.index": "-1"
+          },
+          "width": 8.0,
+          "height": 8.0
+        },
+        {
+          "id": "P8",
+          "properties": {
+            "port.side": "EAST",
+            "port.index": "2"
+          },
+          "width": 8.0,
+          "height": 8.0
+        },
+        {
+          "id": "P9",
+          "properties": {
+            "port.side": "EAST",
+            "port.index": "3"
+          },
+          "width": 8.0,
+          "height": 8.0
+        }
+      ],
+      "children": [
+        {
+          "id": "N5",
+          "labels": [
+            {
+              "text": "queueOutput",
+              "id": "L5",
+              "width": 74.0,
+              "height": 15.0
+            }
+          ],
+          "ports": [
+            {
+              "id": "P10",
+              "properties": {
+                "port.side": "WEST",
+                "port.index": "0"
+              }
+            },
+            {
+              "id": "P11",
+              "properties": {
+                "port.side": "WEST",
+                "port.index": "-1"
+              }
+            },
+            {
+              "id": "P12",
+              "properties": {
+                "port.side": "SOUTH",
+                "port.index": "-2"
+              }
+            },
+            {
+              "id": "P13",
+              "properties": {
+                "port.side": "SOUTH",
+                "port.index": "-3"
+              }
+            }
+          ],
+          "children": [
+            {
+              "id": "N6",
+              "labels": [
+                {
+                  "text": "Run",
+                  "id": "L6",
+                  "width": 24.0,
+                  "height": 15.0
+                }
+              ],
+              "ports": [
+                {
+                  "id": "P14",
+                  "properties": {
+                    "port.side": "EAST",
+                    "port.index": "0"
+                  },
+                  "width": 8.0,
+                  "height": 8.0
+                }
+              ],
+              "properties": {
+                "portConstraints": "FIXED_ORDER",
+                "nodeLabels.placement": "[H_LEFT, V_TOP, OUTSIDE]"
+              },
+              "width": 60.0,
+              "height": 40.0
+            },
+            {
+              "id": "N7",
+              "labels": [
+                {
+                  "text": "Enter",
+                  "id": "L7",
+                  "width": 32.0,
+                  "height": 15.0
+                }
+              ],
+              "ports": [
+                {
+                  "id": "P15",
+                  "properties": {
+                    "port.side": "WEST",
+                    "port.index": "0"
+                  },
+                  "width": 8.0,
+                  "height": 8.0
+                },
+                {
+                  "id": "P16",
+                  "properties": {
+                    "port.side": "EAST",
+                    "port.index": "1"
+                  },
+                  "width": 8.0,
+                  "height": 8.0
+                }
+              ],
+              "properties": {
+                "portConstraints": "FIXED_ORDER",
+                "nodeLabels.placement": "[H_LEFT, V_TOP, OUTSIDE]"
+              },
+              "width": 60.0,
+              "height": 40.0
+            },
+            {
+              "id": "N8",
+              "labels": [
+                {
+                  "text": "Start",
+                  "id": "L8",
+                  "width": 28.0,
+                  "height": 15.0
+                }
+              ],
+              "ports": [
+                {
+                  "id": "P17",
+                  "properties": {
+                    "port.side": "WEST",
+                    "port.index": "0"
+                  },
+                  "width": 8.0,
+                  "height": 8.0
+                },
+                {
+                  "id": "P18",
+                  "properties": {
+                    "port.side": "EAST",
+                    "port.index": "1"
+                  },
+                  "width": 8.0,
+                  "height": 8.0
+                }
+              ],
+              "properties": {
+                "portConstraints": "FIXED_ORDER",
+                "nodeLabels.placement": "[H_LEFT, V_TOP, OUTSIDE]"
+              },
+              "width": 60.0,
+              "height": 40.0
+            },
+            {
+              "id": "N9",
+              "labels": [
+                {
+                  "text": "Leave",
+                  "id": "L9",
+                  "width": 34.0,
+                  "height": 15.0
+                }
+              ],
+              "ports": [
+                {
+                  "id": "P19",
+                  "properties": {
+                    "port.side": "WEST",
+                    "port.index": "0"
+                  },
+                  "width": 8.0,
+                  "height": 8.0
+                },
+                {
+                  "id": "P20",
+                  "properties": {
+                    "port.side": "EAST",
+                    "port.index": "1"
+                  },
+                  "width": 8.0,
+                  "height": 8.0
+                }
+              ],
+              "properties": {
+                "portConstraints": "FIXED_ORDER",
+                "nodeLabels.placement": "[H_LEFT, V_TOP, OUTSIDE]"
+              },
+              "width": 60.0,
+              "height": 40.0
+            },
+            {
+              "id": "N10",
+              "labels": [
+                {
+                  "text": "ReadInput",
+                  "id": "L10",
+                  "width": 58.0,
+                  "height": 15.0
+                }
+              ],
+              "ports": [
+                {
+                  "id": "P21",
+                  "properties": {
+                    "port.side": "WEST",
+                    "port.index": "0"
+                  },
+                  "width": 8.0,
+                  "height": 8.0
+                },
+                {
+                  "id": "P22",
+                  "properties": {
+                    "port.side": "EAST",
+                    "port.index": "1"
+                  },
+                  "width": 8.0,
+                  "height": 8.0
+                }
+              ],
+              "properties": {
+                "portConstraints": "FIXED_ORDER",
+                "nodeLabels.placement": "[H_LEFT, V_TOP, OUTSIDE]"
+              },
+              "width": 60.0,
+              "height": 40.0
+            }
+          ],
+          "properties": {
+            "portConstraints": "FREE",
+            "nodeLabels.placement": "[H_LEFT, V_TOP, OUTSIDE]"
+          },
+          "edges": [
+            {
+              "id": "E11",
+              "sources": [
+                "P14"
+              ],
+              "targets": [
+                "P21"
+              ]
+            },
+            {
+              "id": "E12",
+              "sources": [
+                "P16"
+              ],
+              "targets": [
+                "P17"
+              ]
+            },
+            {
+              "id": "E13",
+              "sources": [
+                "P16"
+              ],
+              "targets": [
+                "P15"
+              ]
+            },
+            {
+              "id": "E14",
+              "sources": [
+                "P18"
+              ],
+              "targets": [
+                "P19"
+              ]
+            },
+            {
+              "id": "E15",
+              "sources": [
+                "P20"
+              ],
+              "targets": [
+                "P17"
+              ]
+            },
+            {
+              "id": "E16",
+              "sources": [
+                "P22"
+              ],
+              "targets": [
+                "P15"
+              ]
+            }
+          ]
+        }
+      ],
+      "properties": {
+        "portConstraints": "FREE",
+        "nodeLabels.placement": "[H_LEFT, V_TOP, OUTSIDE]"
+      },
+      "edges": [
+        {
+          "id": "E7",
+          "sources": [
+            "P6"
+          ],
+          "targets": [
+            "P10"
+          ]
+        },
+        {
+          "id": "E8",
+          "sources": [
+            "P7"
+          ],
+          "targets": [
+            "P11"
+          ]
+        },
+        {
+          "id": "E9",
+          "sources": [
+            "P12"
+          ],
+          "targets": [
+            "P8"
+          ]
+        },
+        {
+          "id": "E10",
+          "sources": [
+            "P13"
+          ],
+          "targets": [
+            "P9"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "N11",
+      "labels": [
+        {
+          "text": "TimedPlotter",
+          "id": "L11",
+          "width": 74.0,
+          "height": 15.0
+        }
+      ],
+      "ports": [
+        {
+          "id": "P23",
+          "properties": {
+            "port.side": "WEST",
+            "port.index": "0"
+          },
+          "width": 8.0,
+          "height": 8.0
+        }
+      ],
+      "properties": {
+        "portConstraints": "FIXED_ORDER",
+        "nodeLabels.placement": "[H_LEFT, V_TOP, OUTSIDE]"
+      },
+      "width": 41.0,
+      "height": 41.0
+    }
+  ],
+  "properties": {
+    "portConstraints": "FREE"
+  },
+  "edges": [
+    {
+      "id": "E1",
+      "sources": [
+        "P1"
+      ],
+      "targets": [
+        "P3"
+      ]
+    },
+    {
+      "id": "E2",
+      "sources": [
+        "P1"
+      ],
+      "targets": [
+        "P5"
+      ]
+    },
+    {
+      "id": "E3",
+      "sources": [
+        "P2"
+      ],
+      "targets": [
+        "P7"
+      ]
+    },
+    {
+      "id": "E4",
+      "sources": [
+        "P4"
+      ],
+      "targets": [
+        "P6"
+      ]
+    },
+    {
+      "id": "E5",
+      "sources": [
+        "P8"
+      ],
+      "targets": [
+        "P23"
+      ]
+    },
+    {
+      "id": "E6",
+      "sources": [
+        "P9"
+      ],
+      "targets": [
+        "P23"
+      ]
+    }
+  ]
+}

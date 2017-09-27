@@ -1,0 +1,8111 @@
+/*******************************************************************************
+ * Copyright (c) 1997-2013 The Regents of the University of California.
+ * All rights reserved.
+ * Permission is hereby granted, without written agreement and without
+ * license or royalty fees, to use, copy, modify, and distribute this
+ * software and its documentation for any purpose, provided that the above
+ * copyright notice and the following two paragraphs appear in all copies
+ * of this software.
+ * 
+ * IN NO EVENT SHALL THE UNIVERSITY OF CALIFORNIA BE LIABLE TO ANY PARTY
+ * FOR DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES
+ * ARISING OUT OF THE USE OF THIS SOFTWARE AND ITS DOCUMENTATION, EVEN IF
+ * THE UNIVERSITY OF CALIFORNIA HAS BEEN ADVISED OF THE POSSIBILITY OF
+ * SUCH DAMAGE.
+ * 
+ * THE UNIVERSITY OF CALIFORNIA SPECIFICALLY DISCLAIMS ANY WARRANTIES,
+ * INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+ * MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE SOFTWARE
+ * PROVIDED HEREUNDER IS ON AN "AS IS" BASIS, AND THE UNIVERSITY OF
+ * CALIFORNIA HAS NO OBLIGATION TO PROVIDE MAINTENANCE, SUPPORT, UPDATES,
+ * ENHANCEMENTS, OR MODIFICATIONS.
+ *******************************************************************************/
+graph G1
+portConstraints: FREE
+node N1 {
+	nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+	portConstraints: FREE
+	label L1: "Graphics Animation" {
+		layout [ size: 114, 15 ]
+	}
+	port P1 {
+		layout [ size: 8, 8 ]
+		index: 0
+		side: WEST
+	}
+	port P2 {
+		layout [ size: 8, 8 ]
+		index: -1
+		side: WEST
+	}
+	node N2 {
+		layout [ size: 60, 40 ]
+		nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+		portConstraints: FIXED_ORDER
+		label L2: "Translate3D" {
+			layout [ size: 70, 15 ]
+		}
+		port P3 {
+			layout [
+				position: -8, 1.600000023841858
+				size: 8, 8
+			]
+			index: 0
+			side: WEST
+		}
+		port P4 {
+			layout [
+				position: 60, 16
+				size: 8, 8
+			]
+			index: 1
+			side: EAST
+		}
+		port P5 {
+			layout [
+				position: -8, 11.199999809265137
+				size: 8, 8
+			]
+			index: -2
+			side: WEST
+		}
+		port P6 {
+			layout [
+				position: -8, 20.799999237060547
+				size: 8, 8
+			]
+			index: -3
+			side: WEST
+		}
+		port P7 {
+			layout [
+				position: -8, 30.399999618530273
+				size: 8, 8
+			]
+			index: -4
+			side: WEST
+		}
+	}
+	node N3 {
+		layout [ size: 10, 41 ]
+		nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+		portConstraints: FIXED_ORDER
+		label L3: "VectorDisassembler" {
+			layout [ size: 117, 15 ]
+		}
+		port P8 {
+			layout [
+				position: -8, 16.5
+				size: 8, 8
+			]
+			index: 0
+			side: WEST
+		}
+		port P9 {
+			layout [
+				position: 10, 16.5
+				size: 8, 8
+			]
+			index: 1
+			side: EAST
+		}
+	}
+	node N4 {
+		layout [ size: 60, 40 ]
+		nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+		portConstraints: FIXED_ORDER
+		label L4: "ViewScreen3D" {
+			layout [ size: 86, 15 ]
+		}
+		port P10 {
+			layout [
+				position: -8, 16
+				size: 8, 8
+			]
+			index: 0
+			side: WEST
+		}
+	}
+	node N5 {
+		layout [ size: 10, 41 ]
+		nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+		portConstraints: FIXED_ORDER
+		label L5: "VectorDisassembler2" {
+			layout [ size: 124, 15 ]
+		}
+		port P11 {
+			layout [
+				position: -8, 16.5
+				size: 8, 8
+			]
+			index: 0
+			side: WEST
+		}
+		port P12 {
+			layout [
+				position: 10, 16.5
+				size: 8, 8
+			]
+			index: 1
+			side: EAST
+		}
+	}
+	node N6 {
+		layout [ size: 60, 40 ]
+		nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+		portConstraints: FIXED_ORDER
+		label L6: "Rotate3" {
+			layout [ size: 46, 15 ]
+		}
+		port P13 {
+			layout [
+				position: -8, 8
+				size: 8, 8
+			]
+			index: 0
+			side: WEST
+		}
+		port P14 {
+			layout [
+				position: 60, 16
+				size: 8, 8
+			]
+			index: 1
+			side: EAST
+		}
+		port P15 {
+			layout [
+				position: -8, 24
+				size: 8, 8
+			]
+			index: -2
+			side: WEST
+		}
+	}
+	node N7 {
+		layout [ size: 60, 40 ]
+		nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+		portConstraints: FIXED_ORDER
+		label L7: "Rotate2" {
+			layout [ size: 46, 15 ]
+		}
+		port P16 {
+			layout [
+				position: -8, 8
+				size: 8, 8
+			]
+			index: 0
+			side: WEST
+		}
+		port P17 {
+			layout [
+				position: 60, 16
+				size: 8, 8
+			]
+			index: 1
+			side: EAST
+		}
+		port P18 {
+			layout [
+				position: -8, 24
+				size: 8, 8
+			]
+			index: -2
+			side: WEST
+		}
+	}
+	node N8 {
+		layout [ size: 60, 40 ]
+		nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+		portConstraints: FIXED_ORDER
+		label L8: "Rotate4" {
+			layout [ size: 46, 15 ]
+		}
+		port P19 {
+			layout [
+				position: -8, 8
+				size: 8, 8
+			]
+			index: 0
+			side: WEST
+		}
+		port P20 {
+			layout [
+				position: 60, 16
+				size: 8, 8
+			]
+			index: 1
+			side: EAST
+		}
+		port P21 {
+			layout [
+				position: -8, 24
+				size: 8, 8
+			]
+			index: -2
+			side: WEST
+		}
+	}
+	node N9 {
+		nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+		portConstraints: FREE
+		label L9: "Starmac" {
+			layout [ size: 49, 15 ]
+		}
+		port P22 {
+			layout [ size: 8, 8 ]
+			index: 0
+			side: EAST
+		}
+		node N10 {
+			layout [ size: 60, 40 ]
+			nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+			portConstraints: FIXED_ORDER
+			label L10: "Box3D" {
+				layout [ size: 40, 15 ]
+			}
+			port P23 {
+				layout [
+					position: 60, 16
+					size: 8, 8
+				]
+				index: 0
+				side: EAST
+			}
+		}
+		node N11 {
+			layout [ size: 60, 40 ]
+			nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+			portConstraints: FIXED_ORDER
+			label L11: "Cylinder3D" {
+				layout [ size: 64, 15 ]
+			}
+			port P24 {
+				layout [
+					position: 60, 16
+					size: 8, 8
+				]
+				index: 0
+				side: EAST
+			}
+		}
+		node N12 {
+			layout [ size: 60, 40 ]
+			nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+			portConstraints: FIXED_ORDER
+			label L12: "Scale3D" {
+				layout [ size: 50, 15 ]
+			}
+			port P25 {
+				layout [
+					position: -8, 16
+					size: 8, 8
+				]
+				index: 0
+				side: WEST
+			}
+			port P26 {
+				layout [
+					position: 60, 16
+					size: 8, 8
+				]
+				index: 1
+				side: EAST
+			}
+		}
+		node N13 {
+			layout [ size: 60, 40 ]
+			nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+			portConstraints: FIXED_ORDER
+			label L13: "Translate3D" {
+				layout [ size: 70, 15 ]
+			}
+			port P27 {
+				layout [
+					position: -8, 16
+					size: 8, 8
+				]
+				index: 0
+				side: WEST
+			}
+			port P28 {
+				layout [
+					position: 60, 16
+					size: 8, 8
+				]
+				index: 1
+				side: EAST
+			}
+		}
+		node N14 {
+			layout [ size: 60, 40 ]
+			nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+			portConstraints: FIXED_ORDER
+			label L14: "Box3D2" {
+				layout [ size: 47, 15 ]
+			}
+			port P29 {
+				layout [
+					position: 60, 16
+					size: 8, 8
+				]
+				index: 0
+				side: EAST
+			}
+		}
+		node N15 {
+			layout [ size: 60, 40 ]
+			nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+			portConstraints: FIXED_ORDER
+			label L15: "Box3D3" {
+				layout [ size: 47, 15 ]
+			}
+			port P30 {
+				layout [
+					position: 60, 16
+					size: 8, 8
+				]
+				index: 0
+				side: EAST
+			}
+		}
+		node N16 {
+			layout [ size: 60, 40 ]
+			nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+			portConstraints: FIXED_ORDER
+			label L16: "Cylinder3D2" {
+				layout [ size: 71, 15 ]
+			}
+			port P31 {
+				layout [
+					position: 60, 16
+					size: 8, 8
+				]
+				index: 0
+				side: EAST
+			}
+		}
+		node N17 {
+			layout [ size: 60, 40 ]
+			nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+			portConstraints: FIXED_ORDER
+			label L17: "Translate3D2" {
+				layout [ size: 77, 15 ]
+			}
+			port P32 {
+				layout [
+					position: -8, 16
+					size: 8, 8
+				]
+				index: 0
+				side: WEST
+			}
+			port P33 {
+				layout [
+					position: 60, 16
+					size: 8, 8
+				]
+				index: 1
+				side: EAST
+			}
+		}
+		node N18 {
+			layout [ size: 60, 40 ]
+			nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+			portConstraints: FIXED_ORDER
+			label L18: "Cylinder3D3" {
+				layout [ size: 71, 15 ]
+			}
+			port P34 {
+				layout [
+					position: 60, 16
+					size: 8, 8
+				]
+				index: 0
+				side: EAST
+			}
+		}
+		node N19 {
+			layout [ size: 60, 40 ]
+			nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+			portConstraints: FIXED_ORDER
+			label L19: "Translate3D3" {
+				layout [ size: 77, 15 ]
+			}
+			port P35 {
+				layout [
+					position: -8, 16
+					size: 8, 8
+				]
+				index: 0
+				side: WEST
+			}
+			port P36 {
+				layout [
+					position: 60, 16
+					size: 8, 8
+				]
+				index: 1
+				side: EAST
+			}
+		}
+		node N20 {
+			layout [ size: 60, 40 ]
+			nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+			portConstraints: FIXED_ORDER
+			label L20: "Cylinder3D4" {
+				layout [ size: 71, 15 ]
+			}
+			port P37 {
+				layout [
+					position: 60, 16
+					size: 8, 8
+				]
+				index: 0
+				side: EAST
+			}
+		}
+		node N21 {
+			layout [ size: 60, 40 ]
+			nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+			portConstraints: FIXED_ORDER
+			label L21: "Translate3D4" {
+				layout [ size: 77, 15 ]
+			}
+			port P38 {
+				layout [
+					position: -8, 16
+					size: 8, 8
+				]
+				index: 0
+				side: WEST
+			}
+			port P39 {
+				layout [
+					position: 60, 16
+					size: 8, 8
+				]
+				index: 1
+				side: EAST
+			}
+		}
+		edge E29: N10.P23 -> N12.P25
+		edge E30: N11.P24 -> N13.P27
+		edge E31: N12.P26 -> P22
+		edge E32: N13.P28 -> N12.P25
+		edge E33: N14.P29 -> N12.P25
+		edge E34: N15.P30 -> N12.P25
+		edge E35: N16.P31 -> N17.P32
+		edge E36: N17.P33 -> N12.P25
+		edge E37: N18.P34 -> N19.P35
+		edge E38: N19.P36 -> N12.P25
+		edge E39: N20.P37 -> N21.P38
+		edge E40: N21.P39 -> N12.P25
+	}
+	node N22 {
+		layout [ size: 66, 46 ]
+		nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+		portConstraints: FIXED_ORDER
+		label L22: "Scale" {
+			layout [ size: 34, 15 ]
+		}
+		port P40 {
+			layout [
+				position: -8, 19
+				size: 8, 8
+			]
+			index: 0
+			side: WEST
+		}
+		port P41 {
+			layout [
+				position: 66, 19
+				size: 8, 8
+			]
+			index: 1
+			side: EAST
+		}
+	}
+	node N23 {
+		layout [ size: 66, 46 ]
+		nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+		portConstraints: FIXED_ORDER
+		label L23: "Scale2" {
+			layout [ size: 41, 15 ]
+		}
+		port P42 {
+			layout [
+				position: -8, 19
+				size: 8, 8
+			]
+			index: 0
+			side: WEST
+		}
+		port P43 {
+			layout [
+				position: 66, 19
+				size: 8, 8
+			]
+			index: 1
+			side: EAST
+		}
+	}
+	edge E14: P2 -> N5.P11
+	edge E15: P1 -> N3.P8
+	edge E16: N2.P4 -> N4.P10
+	edge E17: N3.P9 -> N2.P5
+	edge E18: N3.P9 -> N2.P7
+	edge E19: N3.P9 -> N22.P40
+	edge E20: N5.P12 -> N7.P18
+	edge E21: N5.P12 -> N6.P15
+	edge E22: N5.P12 -> N23.P42
+	edge E23: N6.P14 -> N7.P16
+	edge E24: N7.P17 -> N2.P3
+	edge E25: N8.P20 -> N6.P13
+	edge E26: N9.P22 -> N8.P19
+	edge E27: N22.P41 -> N2.P6
+	edge E28: N23.P43 -> N8.P21
+}
+node N24 {
+	layout [ size: 88, 25 ]
+	nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+	portConstraints: FIXED_ORDER
+	label L24: "Wind Velocity" {
+		layout [ size: 80, 15 ]
+	}
+	port P44 {
+		layout [
+			position: 88, 8.5
+			size: 8, 8
+		]
+		index: 0
+		side: EAST
+	}
+	port P45 {
+		layout [
+			position: -8, 8.5
+			size: 8, 8
+		]
+		index: -1
+		side: WEST
+	}
+}
+node N25 {
+	layout [ size: 66, 46 ]
+	nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+	portConstraints: FIXED_ORDER
+	label L25: "Scale" {
+		layout [ size: 34, 15 ]
+	}
+	port P46 {
+		layout [
+			position: -8, 19
+			size: 8, 8
+		]
+		index: 0
+		side: WEST
+	}
+	port P47 {
+		layout [
+			position: 66, 19
+			size: 8, 8
+		]
+		index: 1
+		side: EAST
+	}
+}
+node N26 {
+	layout [ size: 41, 31 ]
+	nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+	portConstraints: FIXED_ORDER
+	label L26: "Angle" {
+		layout [ size: 34, 15 ]
+	}
+	port P48 {
+		layout [
+			position: -8, 11.5
+			size: 8, 8
+		]
+		index: 0
+		side: WEST
+	}
+}
+node N27 {
+	layout [ size: 61, 41 ]
+	nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+	portConstraints: FIXED_ORDER
+	label L27: "PeriodicSampler" {
+		layout [ size: 96, 15 ]
+	}
+	port P49 {
+		layout [
+			position: -8, 16.5
+			size: 8, 8
+		]
+		index: 0
+		side: WEST
+	}
+	port P50 {
+		layout [
+			position: 61, 16.5
+			size: 8, 8
+		]
+		index: 1
+		side: EAST
+	}
+}
+node N28 {
+	layout [ size: 61, 41 ]
+	nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+	portConstraints: FIXED_ORDER
+	label L28: "PeriodicSampler2" {
+		layout [ size: 103, 15 ]
+	}
+	port P51 {
+		layout [
+			position: -8, 16.5
+			size: 8, 8
+		]
+		index: 0
+		side: WEST
+	}
+	port P52 {
+		layout [
+			position: 61, 16.5
+			size: 8, 8
+		]
+		index: 1
+		side: EAST
+	}
+}
+node N29 {
+	nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+	portConstraints: FREE
+	label L29: "Vehicle Control" {
+		layout [ size: 87, 15 ]
+	}
+	port P53 {
+		layout [ size: 8, 8 ]
+		index: 0
+		side: EAST
+	}
+	port P54 {
+		layout [ size: 8, 8 ]
+		index: -1
+		side: WEST
+	}
+	node N30 {
+		nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+		portConstraints: FREE
+		label L30: "Position Control" {
+			layout [ size: 92, 15 ]
+		}
+		port P55 {
+			layout [ size: 8, 8 ]
+			index: 0
+			side: WEST
+		}
+		port P56 {
+			layout [ size: 8, 8 ]
+			index: 1
+			side: EAST
+		}
+		node N31 {
+			layout [ size: 102, 25 ]
+			nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+			portConstraints: FIXED_ORDER
+			label L31: "Const" {
+				layout [ size: 34, 15 ]
+			}
+			port P57 {
+				layout [
+					position: 102, 8.5
+					size: 8, 8
+				]
+				index: 0
+				side: EAST
+			}
+			port P58 {
+				layout [
+					position: -8, 8.5
+					size: 8, 8
+				]
+				index: -1
+				side: WEST
+			}
+		}
+		edge E48: N31.P57 -> P56
+	}
+	node N32 {
+		nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+		portConstraints: FREE
+		label L32: "Altitude Control" {
+			layout [ size: 89, 15 ]
+		}
+		port P59 {
+			layout [ size: 8, 8 ]
+			index: 0
+			side: EAST
+		}
+		port P60 {
+			layout [ size: 8, 8 ]
+			index: -1
+			side: WEST
+		}
+		node N33 {
+			layout [ size: 39, 25 ]
+			nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+			portConstraints: FIXED_ORDER
+			label L33: "Const" {
+				layout [ size: 34, 15 ]
+			}
+			port P61 {
+				layout [
+					position: 39, 8.5
+					size: 8, 8
+				]
+				index: 0
+				side: EAST
+			}
+			port P62 {
+				layout [
+					position: -8, 8.5
+					size: 8, 8
+				]
+				index: -1
+				side: WEST
+			}
+		}
+		node N34 {
+			layout [ size: 41, 41 ]
+			nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+			portConstraints: FIXED_ORDER
+			label L34: "AddSubtract" {
+				layout [ size: 72, 15 ]
+			}
+			port P63 {
+				layout [
+					position: -8, 8.333333015441895
+					size: 8, 8
+				]
+				index: 0
+				side: WEST
+			}
+			port P64 {
+				layout [
+					position: -8, 24.66666603088379
+					size: 8, 8
+				]
+				index: -1
+				side: WEST
+			}
+			port P65 {
+				layout [
+					position: 41, 16.5
+					size: 8, 8
+				]
+				index: 2
+				side: EAST
+			}
+		}
+		node N35 {
+			layout [ size: 66, 46 ]
+			nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+			portConstraints: FIXED_ORDER
+			label L35: "Scale" {
+				layout [ size: 34, 15 ]
+			}
+			port P66 {
+				layout [
+					position: -8, 19
+					size: 8, 8
+				]
+				index: 0
+				side: WEST
+			}
+			port P67 {
+				layout [
+					position: 66, 19
+					size: 8, 8
+				]
+				index: 1
+				side: EAST
+			}
+		}
+		node N36 {
+			layout [ size: 41, 41 ]
+			nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+			portConstraints: FIXED_ORDER
+			label L36: "AddSubtract2" {
+				layout [ size: 80, 15 ]
+			}
+			port P68 {
+				layout [
+					position: -8, 8.333333015441895
+					size: 8, 8
+				]
+				index: 0
+				side: WEST
+			}
+			port P69 {
+				layout [
+					position: -8, 24.66666603088379
+					size: 8, 8
+				]
+				index: -1
+				side: WEST
+			}
+			port P70 {
+				layout [
+					position: 41, 16.5
+					size: 8, 8
+				]
+				index: 2
+				side: EAST
+			}
+		}
+		node N37 {
+			layout [ size: 41, 41 ]
+			nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+			portConstraints: FIXED_ORDER
+			label L37: "AddSubtract3" {
+				layout [ size: 80, 15 ]
+			}
+			port P71 {
+				layout [
+					position: -8, 8.333333015441895
+					size: 8, 8
+				]
+				index: 0
+				side: WEST
+			}
+			port P72 {
+				layout [
+					position: -8, 24.66666603088379
+					size: 8, 8
+				]
+				index: -1
+				side: WEST
+			}
+			port P73 {
+				layout [
+					position: 41, 16.5
+					size: 8, 8
+				]
+				index: 2
+				side: EAST
+			}
+		}
+		node N38 {
+			layout [ size: 46, 25 ]
+			nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+			portConstraints: FIXED_ORDER
+			label L38: "Const2" {
+				layout [ size: 42, 15 ]
+			}
+			port P74 {
+				layout [
+					position: 46, 8.5
+					size: 8, 8
+				]
+				index: 0
+				side: EAST
+			}
+			port P75 {
+				layout [
+					position: -8, 8.5
+					size: 8, 8
+				]
+				index: -1
+				side: WEST
+			}
+		}
+		node N39 {
+			layout [ size: 41, 41 ]
+			nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+			portConstraints: FIXED_ORDER
+			label L39: "AddSubtract4" {
+				layout [ size: 80, 15 ]
+			}
+			port P76 {
+				layout [
+					position: -8, 8.333333015441895
+					size: 8, 8
+				]
+				index: 0
+				side: WEST
+			}
+			port P77 {
+				layout [
+					position: -8, 24.66666603088379
+					size: 8, 8
+				]
+				index: -1
+				side: WEST
+			}
+			port P78 {
+				layout [
+					position: 41, 16.5
+					size: 8, 8
+				]
+				index: 2
+				side: EAST
+			}
+		}
+		node N40 {
+			layout [ size: 66, 46 ]
+			nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+			portConstraints: FIXED_ORDER
+			label L40: "Scale2" {
+				layout [ size: 41, 15 ]
+			}
+			port P79 {
+				layout [
+					position: -8, 19
+					size: 8, 8
+				]
+				index: 0
+				side: WEST
+			}
+			port P80 {
+				layout [
+					position: 66, 19
+					size: 8, 8
+				]
+				index: 1
+				side: EAST
+			}
+		}
+		node N41 {
+			layout [ size: 46, 42 ]
+			nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+			portConstraints: FIXED_ORDER
+			label L41: "Discard" {
+				layout [ size: 45, 15 ]
+			}
+			port P81 {
+				layout [
+					position: -8, 17
+					size: 8, 8
+				]
+				index: 0
+				side: WEST
+			}
+		}
+		node N42 {
+			layout [ size: 31, 25 ]
+			nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+			portConstraints: FIXED_ORDER
+			label L42: "TrigFunction" {
+				layout [ size: 72, 15 ]
+			}
+			port P82 {
+				layout [
+					position: -8, 8.5
+					size: 8, 8
+				]
+				index: 0
+				side: WEST
+			}
+			port P83 {
+				layout [
+					position: 31, 8.5
+					size: 8, 8
+				]
+				index: 1
+				side: EAST
+			}
+		}
+		node N43 {
+			layout [ size: 31, 25 ]
+			nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+			portConstraints: FIXED_ORDER
+			label L43: "TrigFunction2" {
+				layout [ size: 79, 15 ]
+			}
+			port P84 {
+				layout [
+					position: -8, 8.5
+					size: 8, 8
+				]
+				index: 0
+				side: WEST
+			}
+			port P85 {
+				layout [
+					position: 31, 8.5
+					size: 8, 8
+				]
+				index: 1
+				side: EAST
+			}
+		}
+		node N44 {
+			layout [ size: 41, 41 ]
+			nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+			portConstraints: FIXED_ORDER
+			label L44: "MultiplyDivide" {
+				layout [ size: 80, 15 ]
+			}
+			port P86 {
+				layout [
+					position: -8, 8.333333015441895
+					size: 8, 8
+				]
+				index: 0
+				side: WEST
+			}
+			port P87 {
+				layout [
+					position: -8, 24.66666603088379
+					size: 8, 8
+				]
+				index: -1
+				side: WEST
+			}
+			port P88 {
+				layout [
+					position: 41, 16.5
+					size: 8, 8
+				]
+				index: 2
+				side: EAST
+			}
+		}
+		node N45 {
+			layout [ size: 41, 41 ]
+			nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+			portConstraints: FIXED_ORDER
+			label L45: "MultiplyDivide2" {
+				layout [ size: 87, 15 ]
+			}
+			port P89 {
+				layout [
+					position: -8, 8.333333015441895
+					size: 8, 8
+				]
+				index: 0
+				side: WEST
+			}
+			port P90 {
+				layout [
+					position: -8, 24.66666603088379
+					size: 8, 8
+				]
+				index: -1
+				side: WEST
+			}
+			port P91 {
+				layout [
+					position: 41, 16.5
+					size: 8, 8
+				]
+				index: 2
+				side: EAST
+			}
+		}
+		node N46 {
+			layout [ size: 49, 25 ]
+			nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+			portConstraints: FIXED_ORDER
+			label L46: "Const3" {
+				layout [ size: 42, 15 ]
+			}
+			port P92 {
+				layout [
+					position: 49, 8.5
+					size: 8, 8
+				]
+				index: 0
+				side: EAST
+			}
+			port P93 {
+				layout [
+					position: -8, 8.5
+					size: 8, 8
+				]
+				index: -1
+				side: WEST
+			}
+		}
+		node N47 {
+			layout [ size: 10, 41 ]
+			nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+			portConstraints: FIXED_ORDER
+			label L47: "VectorAssembler" {
+				layout [ size: 100, 15 ]
+			}
+			port P94 {
+				layout [
+					position: -8, 16.5
+					size: 8, 8
+				]
+				index: 0
+				side: WEST
+			}
+			port P95 {
+				layout [
+					position: 10, 16.5
+					size: 8, 8
+				]
+				index: 1
+				side: EAST
+			}
+		}
+		node N48 {
+			layout [ size: 10, 41 ]
+			nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+			portConstraints: FIXED_ORDER
+			label L48: "VectorDisassembler2" {
+				layout [ size: 124, 15 ]
+			}
+			port P96 {
+				layout [
+					position: -8, 16.5
+					size: 8, 8
+				]
+				index: 0
+				side: WEST
+			}
+			port P97 {
+				layout [
+					position: 10, 16.5
+					size: 8, 8
+				]
+				index: 1
+				side: EAST
+			}
+		}
+		edge E49: P60 -> N48.P96
+		edge E50: N33.P61 -> N34.P63
+		edge E51: N34.P65 -> N35.P66
+		edge E52: N35.P67 -> N36.P68
+		edge E53: N36.P70 -> N37.P71
+		edge E54: N37.P73 -> N47.P94
+		edge E55: N38.P74 -> N39.P76
+		edge E56: N39.P78 -> N40.P79
+		edge E57: N40.P80 -> N36.P68
+		edge E58: N42.P83 -> N44.P86
+		edge E59: N43.P85 -> N44.P86
+		edge E60: N44.P88 -> N45.P90
+		edge E61: N45.P91 -> N37.P71
+		edge E62: N46.P92 -> N45.P89
+		edge E63: N47.P95 -> P59
+		edge E64: N48.P97 -> N34.P64
+		edge E65: N48.P97 -> N41.P81
+		edge E66: N48.P97 -> N41.P81
+		edge E67: N48.P97 -> N41.P81
+		edge E68: N48.P97 -> N41.P81
+		edge E69: N48.P97 -> N39.P77
+		edge E70: N48.P97 -> N42.P82
+		edge E71: N48.P97 -> N43.P84
+	}
+	node N49 {
+		nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+		portConstraints: FREE
+		label L49: "Attitude Control" {
+			layout [ size: 90, 15 ]
+		}
+		port P98 {
+			layout [ size: 8, 8 ]
+			index: 0
+			side: WEST
+		}
+		port P99 {
+			layout [ size: 8, 8 ]
+			index: -1
+			side: WEST
+		}
+		port P100 {
+			layout [ size: 8, 8 ]
+			index: 2
+			side: EAST
+		}
+		node N50 {
+			layout [ size: 41, 41 ]
+			nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+			portConstraints: FIXED_ORDER
+			label L50: "AddSubtract" {
+				layout [ size: 72, 15 ]
+			}
+			port P101 {
+				layout [
+					position: -8, 8.333333015441895
+					size: 8, 8
+				]
+				index: 0
+				side: WEST
+			}
+			port P102 {
+				layout [
+					position: -8, 24.66666603088379
+					size: 8, 8
+				]
+				index: -1
+				side: WEST
+			}
+			port P103 {
+				layout [
+					position: 41, 16.5
+					size: 8, 8
+				]
+				index: 2
+				side: EAST
+			}
+		}
+		node N51 {
+			nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+			portConstraints: FREE
+			label L51: "VectorAssembler" {
+				layout [ size: 100, 15 ]
+			}
+			port P104 {
+				layout [ size: 8, 8 ]
+				index: 0
+				side: WEST
+			}
+			port P105 {
+				layout [ size: 8, 8 ]
+				index: 1
+				side: EAST
+			}
+			node N52 {
+				layout [ size: 10, 41 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L52: "VectorAssembler" {
+					layout [ size: 100, 15 ]
+				}
+				port P106 {
+					layout [
+						position: -8, 16.5
+						size: 8, 8
+					]
+					index: 0
+					side: WEST
+				}
+				port P107 {
+					layout [
+						position: 10, 16.5
+						size: 8, 8
+					]
+					index: 1
+					side: EAST
+				}
+			}
+			node N53 {
+				layout [ size: 10, 41 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L53: "VectorDisassembler" {
+					layout [ size: 117, 15 ]
+				}
+				port P108 {
+					layout [
+						position: -8, 16.5
+						size: 8, 8
+					]
+					index: 0
+					side: WEST
+				}
+				port P109 {
+					layout [
+						position: 10, 16.5
+						size: 8, 8
+					]
+					index: 1
+					side: EAST
+				}
+			}
+			node N54 {
+				layout [ size: 10, 41 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L54: "VectorDisassembler2" {
+					layout [ size: 124, 15 ]
+				}
+				port P110 {
+					layout [
+						position: -8, 16.5
+						size: 8, 8
+					]
+					index: 0
+					side: WEST
+				}
+				port P111 {
+					layout [
+						position: 10, 16.5
+						size: 8, 8
+					]
+					index: 1
+					side: EAST
+				}
+			}
+			edge E79: P104 -> N53.P108
+			edge E80: P104 -> N54.P110
+			edge E81: N52.P107 -> P105
+			edge E82: N53.P109 -> N52.P106
+			edge E83: N53.P109 -> N52.P106
+			edge E84: N53.P109 -> N52.P106
+			edge E85: N54.P111 -> N52.P106
+			edge E86: N54.P111 -> N52.P106
+			edge E87: N54.P111 -> N52.P106
+		}
+		node N55 {
+			layout [ size: 66, 46 ]
+			nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+			portConstraints: FIXED_ORDER
+			label L55: "Scale" {
+				layout [ size: 34, 15 ]
+			}
+			port P112 {
+				layout [
+					position: -8, 19
+					size: 8, 8
+				]
+				index: 0
+				side: WEST
+			}
+			port P113 {
+				layout [
+					position: 66, 19
+					size: 8, 8
+				]
+				index: 1
+				side: EAST
+			}
+		}
+		node N56 {
+			nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+			portConstraints: FREE
+			label L56: "VectorDisassembler" {
+				layout [ size: 117, 15 ]
+			}
+			port P114 {
+				layout [ size: 8, 8 ]
+				index: 0
+				side: WEST
+			}
+			port P115 {
+				layout [ size: 8, 8 ]
+				index: 1
+				side: EAST
+			}
+			port P116 {
+				layout [ size: 8, 8 ]
+				index: 2
+				side: EAST
+			}
+			port P117 {
+				layout [ size: 8, 8 ]
+				index: 3
+				side: EAST
+			}
+			port P118 {
+				layout [ size: 8, 8 ]
+				index: 4
+				side: EAST
+			}
+			port P119 {
+				layout [ size: 8, 8 ]
+				index: 5
+				side: EAST
+			}
+			node N57 {
+				layout [ size: 10, 41 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L57: "VectorDisassembler" {
+					layout [ size: 117, 15 ]
+				}
+				port P120 {
+					layout [
+						position: -8, 16.5
+						size: 8, 8
+					]
+					index: 0
+					side: WEST
+				}
+				port P121 {
+					layout [
+						position: 10, 16.5
+						size: 8, 8
+					]
+					index: 1
+					side: EAST
+				}
+			}
+			node N58 {
+				layout [ size: 10, 41 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L58: "VectorAssembler" {
+					layout [ size: 100, 15 ]
+				}
+				port P122 {
+					layout [
+						position: -8, 16.5
+						size: 8, 8
+					]
+					index: 0
+					side: WEST
+				}
+				port P123 {
+					layout [
+						position: 10, 16.5
+						size: 8, 8
+					]
+					index: 1
+					side: EAST
+				}
+			}
+			node N59 {
+				layout [ size: 10, 41 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L59: "VectorAssembler2" {
+					layout [ size: 107, 15 ]
+				}
+				port P124 {
+					layout [
+						position: -8, 16.5
+						size: 8, 8
+					]
+					index: 0
+					side: WEST
+				}
+				port P125 {
+					layout [
+						position: 10, 16.5
+						size: 8, 8
+					]
+					index: 1
+					side: EAST
+				}
+			}
+			node N60 {
+				layout [ size: 10, 41 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L60: "VectorAssembler3" {
+					layout [ size: 107, 15 ]
+				}
+				port P126 {
+					layout [
+						position: -8, 16.5
+						size: 8, 8
+					]
+					index: 0
+					side: WEST
+				}
+				port P127 {
+					layout [
+						position: 10, 16.5
+						size: 8, 8
+					]
+					index: 1
+					side: EAST
+				}
+			}
+			node N61 {
+				layout [ size: 10, 41 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L61: "VectorAssembler4" {
+					layout [ size: 107, 15 ]
+				}
+				port P128 {
+					layout [
+						position: -8, 16.5
+						size: 8, 8
+					]
+					index: 0
+					side: WEST
+				}
+				port P129 {
+					layout [
+						position: 10, 16.5
+						size: 8, 8
+					]
+					index: 1
+					side: EAST
+				}
+			}
+			node N62 {
+				layout [ size: 10, 41 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L62: "VectorAssembler5" {
+					layout [ size: 107, 15 ]
+				}
+				port P130 {
+					layout [
+						position: -8, 16.5
+						size: 8, 8
+					]
+					index: 0
+					side: WEST
+				}
+				port P131 {
+					layout [
+						position: 10, 16.5
+						size: 8, 8
+					]
+					index: 1
+					side: EAST
+				}
+			}
+			edge E88: P114 -> N57.P120
+			edge E89: N57.P121 -> N58.P122
+			edge E90: N57.P121 -> N58.P122
+			edge E91: N57.P121 -> N58.P122
+			edge E92: N57.P121 -> N62.P130
+			edge E93: N57.P121 -> N62.P130
+			edge E94: N57.P121 -> N62.P130
+			edge E95: N57.P121 -> N61.P128
+			edge E96: N57.P121 -> N61.P128
+			edge E97: N57.P121 -> N61.P128
+			edge E98: N57.P121 -> N60.P126
+			edge E99: N57.P121 -> N60.P126
+			edge E100: N57.P121 -> N60.P126
+			edge E101: N57.P121 -> N59.P124
+			edge E102: N57.P121 -> N59.P124
+			edge E103: N57.P121 -> N59.P124
+			edge E104: N58.P123 -> P115
+			edge E105: N59.P125 -> P119
+			edge E106: N60.P127 -> P118
+			edge E107: N61.P129 -> P117
+			edge E108: N62.P131 -> P116
+		}
+		edge E72: P98 -> N50.P101
+		edge E73: P99 -> N56.P114
+		edge E74: N50.P103 -> N55.P112
+		edge E75: N51.P105 -> N50.P102
+		edge E76: N55.P113 -> P100
+		edge E77: N56.P117 -> N51.P104
+		edge E78: N56.P119 -> N51.P104
+	}
+	node N63 {
+		layout [ size: 41, 41 ]
+		nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+		portConstraints: FIXED_ORDER
+		label L63: "AddSubtract" {
+			layout [ size: 72, 15 ]
+		}
+		port P132 {
+			layout [
+				position: -8, 8.333333015441895
+				size: 8, 8
+			]
+			index: 0
+			side: WEST
+		}
+		port P133 {
+			layout [
+				position: -8, 24.66666603088379
+				size: 8, 8
+			]
+			index: -1
+			side: WEST
+		}
+		port P134 {
+			layout [
+				position: 41, 16.5
+				size: 8, 8
+			]
+			index: 2
+			side: EAST
+		}
+	}
+	edge E41: P54 -> N30.P55
+	edge E42: P54 -> N32.P60
+	edge E43: P54 -> N49.P99
+	edge E44: N30.P56 -> N49.P98
+	edge E45: N32.P59 -> N63.P132
+	edge E46: N49.P100 -> N63.P132
+	edge E47: N63.P134 -> P53
+}
+node N64 {
+	layout [ size: 41, 31 ]
+	nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+	portConstraints: FIXED_ORDER
+	label L64: "Control" {
+		layout [ size: 41, 15 ]
+	}
+	port P135 {
+		layout [
+			position: -8, 11.5
+			size: 8, 8
+		]
+		index: 0
+		side: WEST
+	}
+}
+node N65 {
+	layout [ size: 41, 31 ]
+	nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+	portConstraints: FIXED_ORDER
+	label L65: "Position" {
+		layout [ size: 48, 15 ]
+	}
+	port P136 {
+		layout [
+			position: -8, 11.5
+			size: 8, 8
+		]
+		index: 0
+		side: WEST
+	}
+}
+node N66 {
+	layout [ size: 61, 41 ]
+	nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+	portConstraints: FIXED_ORDER
+	label L66: "ZeroOrderHold" {
+		layout [ size: 84, 15 ]
+	}
+	port P137 {
+		layout [
+			position: -8, 16.5
+			size: 8, 8
+		]
+		index: 0
+		side: WEST
+	}
+	port P138 {
+		layout [
+			position: 61, 16.5
+			size: 8, 8
+		]
+		index: 1
+		side: EAST
+	}
+}
+node N67 {
+	layout [ size: 61, 41 ]
+	nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+	portConstraints: FIXED_ORDER
+	label L67: "PeriodicSampler3" {
+		layout [ size: 103, 15 ]
+	}
+	port P139 {
+		layout [
+			position: -8, 16.5
+			size: 8, 8
+		]
+		index: 0
+		side: WEST
+	}
+	port P140 {
+		layout [
+			position: 61, 16.5
+			size: 8, 8
+		]
+		index: 1
+		side: EAST
+	}
+}
+node N68 {
+	nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+	portConstraints: FREE
+	label L68: "Vehicle Dynamics" {
+		layout [ size: 104, 15 ]
+	}
+	port P141 {
+		layout [ size: 8, 8 ]
+		index: 0
+		side: WEST
+	}
+	port P142 {
+		layout [ size: 8, 8 ]
+		index: -1
+		side: WEST
+	}
+	port P143 {
+		layout [ size: 8, 8 ]
+		index: 2
+		side: EAST
+	}
+	port P144 {
+		layout [ size: 8, 8 ]
+		index: 3
+		side: EAST
+	}
+	port P145 {
+		layout [ size: 8, 8 ]
+		index: 4
+		side: EAST
+	}
+	node N69 {
+		nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+		portConstraints: FREE
+		label L69: "Motor Dynamics" {
+			layout [ size: 95, 15 ]
+		}
+		port P146 {
+			layout [ size: 8, 8 ]
+			index: 0
+			side: WEST
+		}
+		port P147 {
+			layout [ size: 8, 8 ]
+			index: 1
+			side: EAST
+		}
+		node N70 {
+			nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+			portConstraints: FREE
+			label L70: "ContinuousTransferFunction" {
+				layout [ size: 162, 15 ]
+			}
+			port P148 {
+				layout [ size: 8, 8 ]
+				index: 0
+				side: WEST
+			}
+			port P149 {
+				layout [ size: 8, 8 ]
+				index: 1
+				side: EAST
+			}
+			node N71 {
+				layout [ size: 41, 41 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L71: "InputAdder" {
+					layout [ size: 63, 15 ]
+				}
+				port P150 {
+					layout [
+						position: -8, 8.333333015441895
+						size: 8, 8
+					]
+					index: 0
+					side: WEST
+				}
+				port P151 {
+					layout [
+						position: -8, 24.66666603088379
+						size: 8, 8
+					]
+					index: -1
+					side: WEST
+				}
+				port P152 {
+					layout [
+						position: 41, 16.5
+						size: 8, 8
+					]
+					index: 2
+					side: EAST
+				}
+			}
+			node N72 {
+				layout [ size: 41, 41 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L72: "OutputAdder" {
+					layout [ size: 74, 15 ]
+				}
+				port P153 {
+					layout [
+						position: -8, 8.333333015441895
+						size: 8, 8
+					]
+					index: 0
+					side: WEST
+				}
+				port P154 {
+					layout [
+						position: -8, 24.66666603088379
+						size: 8, 8
+					]
+					index: -1
+					side: WEST
+				}
+				port P155 {
+					layout [
+						position: 41, 16.5
+						size: 8, 8
+					]
+					index: 2
+					side: EAST
+				}
+			}
+			node N73 {
+				layout [ size: 44, 46 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L73: "Integrator0" {
+					layout [ size: 62, 15 ]
+				}
+				port P156 {
+					layout [
+						position: 9.333333015441895, 46
+						size: 8, 8
+					]
+					index: 0
+					side: SOUTH
+				}
+				port P157 {
+					layout [
+						position: -8, 19
+						size: 8, 8
+					]
+					index: -1
+					side: WEST
+				}
+				port P158 {
+					layout [
+						position: 44, 19
+						size: 8, 8
+					]
+					index: 2
+					side: EAST
+				}
+				port P159 {
+					layout [
+						position: 26.66666603088379, 46
+						size: 8, 8
+					]
+					index: -3
+					side: SOUTH
+				}
+			}
+			node N74 {
+				layout [ size: 66, 46 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L74: "Feedback0" {
+					layout [ size: 65, 15 ]
+				}
+				port P160 {
+					layout [
+						position: -8, 19
+						size: 8, 8
+					]
+					index: 0
+					side: WEST
+				}
+				port P161 {
+					layout [
+						position: 66, 19
+						size: 8, 8
+					]
+					index: 1
+					side: EAST
+				}
+			}
+			node N75 {
+				layout [ size: 66, 46 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L75: "Feedforward0" {
+					layout [ size: 78, 15 ]
+				}
+				port P162 {
+					layout [
+						position: -8, 19
+						size: 8, 8
+					]
+					index: 0
+					side: WEST
+				}
+				port P163 {
+					layout [
+						position: 66, 19
+						size: 8, 8
+					]
+					index: 1
+					side: EAST
+				}
+			}
+			edge E155: P148 -> N71.P150
+			edge E156: N71.P152 -> N73.P157
+			edge E157: N72.P155 -> P149
+			edge E158: N73.P158 -> N74.P160
+			edge E159: N73.P158 -> N75.P162
+			edge E160: N74.P161 -> N71.P150
+			edge E161: N75.P163 -> N72.P153
+		}
+		node N76 {
+			layout [ size: 61, 41 ]
+			nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+			portConstraints: FIXED_ORDER
+			label L76: "Limiter" {
+				layout [ size: 40, 15 ]
+			}
+			port P164 {
+				layout [
+					position: -8, 16.5
+					size: 8, 8
+				]
+				index: 0
+				side: WEST
+			}
+			port P165 {
+				layout [
+					position: 61, 16.5
+					size: 8, 8
+				]
+				index: 1
+				side: EAST
+			}
+		}
+		node N77 {
+			layout [ size: 61, 41 ]
+			nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+			portConstraints: FIXED_ORDER
+			label L77: "Limiter2" {
+				layout [ size: 47, 15 ]
+			}
+			port P166 {
+				layout [
+					position: -8, 16.5
+					size: 8, 8
+				]
+				index: 0
+				side: WEST
+			}
+			port P167 {
+				layout [
+					position: 61, 16.5
+					size: 8, 8
+				]
+				index: 1
+				side: EAST
+			}
+		}
+		node N78 {
+			layout [ size: 61, 41 ]
+			nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+			portConstraints: FIXED_ORDER
+			label L78: "Limiter3" {
+				layout [ size: 47, 15 ]
+			}
+			port P168 {
+				layout [
+					position: -8, 16.5
+					size: 8, 8
+				]
+				index: 0
+				side: WEST
+			}
+			port P169 {
+				layout [
+					position: 61, 16.5
+					size: 8, 8
+				]
+				index: 1
+				side: EAST
+			}
+		}
+		node N79 {
+			layout [ size: 61, 41 ]
+			nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+			portConstraints: FIXED_ORDER
+			label L79: "Limiter4" {
+				layout [ size: 47, 15 ]
+			}
+			port P170 {
+				layout [
+					position: -8, 16.5
+					size: 8, 8
+				]
+				index: 0
+				side: WEST
+			}
+			port P171 {
+				layout [
+					position: 61, 16.5
+					size: 8, 8
+				]
+				index: 1
+				side: EAST
+			}
+		}
+		node N80 {
+			layout [ size: 41, 41 ]
+			nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+			portConstraints: FIXED_ORDER
+			label L80: "AddSubtract" {
+				layout [ size: 72, 15 ]
+			}
+			port P172 {
+				layout [
+					position: -8, 8.333333015441895
+					size: 8, 8
+				]
+				index: 0
+				side: WEST
+			}
+			port P173 {
+				layout [
+					position: -8, 24.66666603088379
+					size: 8, 8
+				]
+				index: -1
+				side: WEST
+			}
+			port P174 {
+				layout [
+					position: 41, 16.5
+					size: 8, 8
+				]
+				index: 2
+				side: EAST
+			}
+		}
+		node N81 {
+			layout [ size: 41, 41 ]
+			nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+			portConstraints: FIXED_ORDER
+			label L81: "AddSubtract2" {
+				layout [ size: 80, 15 ]
+			}
+			port P175 {
+				layout [
+					position: -8, 8.333333015441895
+					size: 8, 8
+				]
+				index: 0
+				side: WEST
+			}
+			port P176 {
+				layout [
+					position: -8, 24.66666603088379
+					size: 8, 8
+				]
+				index: -1
+				side: WEST
+			}
+			port P177 {
+				layout [
+					position: 41, 16.5
+					size: 8, 8
+				]
+				index: 2
+				side: EAST
+			}
+		}
+		node N82 {
+			layout [ size: 41, 41 ]
+			nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+			portConstraints: FIXED_ORDER
+			label L82: "AddSubtract3" {
+				layout [ size: 80, 15 ]
+			}
+			port P178 {
+				layout [
+					position: -8, 8.333333015441895
+					size: 8, 8
+				]
+				index: 0
+				side: WEST
+			}
+			port P179 {
+				layout [
+					position: -8, 24.66666603088379
+					size: 8, 8
+				]
+				index: -1
+				side: WEST
+			}
+			port P180 {
+				layout [
+					position: 41, 16.5
+					size: 8, 8
+				]
+				index: 2
+				side: EAST
+			}
+		}
+		node N83 {
+			layout [ size: 41, 41 ]
+			nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+			portConstraints: FIXED_ORDER
+			label L83: "AddSubtract4" {
+				layout [ size: 80, 15 ]
+			}
+			port P181 {
+				layout [
+					position: -8, 8.333333015441895
+					size: 8, 8
+				]
+				index: 0
+				side: WEST
+			}
+			port P182 {
+				layout [
+					position: -8, 24.66666603088379
+					size: 8, 8
+				]
+				index: -1
+				side: WEST
+			}
+			port P183 {
+				layout [
+					position: 41, 16.5
+					size: 8, 8
+				]
+				index: 2
+				side: EAST
+			}
+		}
+		node N84 {
+			nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+			portConstraints: FREE
+			label L84: "Motor Noise Source" {
+				layout [ size: 116, 15 ]
+			}
+			port P184 {
+				layout [ size: 8, 8 ]
+				index: 0
+				side: EAST
+			}
+			port P185 {
+				layout [ size: 8, 8 ]
+				index: 1
+				side: EAST
+			}
+			port P186 {
+				layout [ size: 8, 8 ]
+				index: 2
+				side: EAST
+			}
+			port P187 {
+				layout [ size: 8, 8 ]
+				index: 3
+				side: EAST
+			}
+			node N85 {
+				layout [ size: 66, 46 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L85: "Gaussian" {
+					layout [ size: 56, 15 ]
+				}
+				port P188 {
+					layout [
+						position: 66, 19
+						size: 8, 8
+					]
+					index: 0
+					side: EAST
+				}
+				port P189 {
+					layout [
+						position: -8, 5.5
+						size: 8, 8
+					]
+					index: -1
+					side: WEST
+				}
+				port P190 {
+					layout [
+						position: -8, 19
+						size: 8, 8
+					]
+					index: -2
+					side: WEST
+				}
+				port P191 {
+					layout [
+						position: -8, 32.5
+						size: 8, 8
+					]
+					index: -3
+					side: WEST
+				}
+			}
+			node N86 {
+				layout [ size: 66, 46 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L86: "Gaussian2" {
+					layout [ size: 63, 15 ]
+				}
+				port P192 {
+					layout [
+						position: 66, 19
+						size: 8, 8
+					]
+					index: 0
+					side: EAST
+				}
+				port P193 {
+					layout [
+						position: -8, 5.5
+						size: 8, 8
+					]
+					index: -1
+					side: WEST
+				}
+				port P194 {
+					layout [
+						position: -8, 19
+						size: 8, 8
+					]
+					index: -2
+					side: WEST
+				}
+				port P195 {
+					layout [
+						position: -8, 32.5
+						size: 8, 8
+					]
+					index: -3
+					side: WEST
+				}
+			}
+			node N87 {
+				layout [ size: 66, 46 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L87: "Gaussian3" {
+					layout [ size: 63, 15 ]
+				}
+				port P196 {
+					layout [
+						position: 66, 19
+						size: 8, 8
+					]
+					index: 0
+					side: EAST
+				}
+				port P197 {
+					layout [
+						position: -8, 5.5
+						size: 8, 8
+					]
+					index: -1
+					side: WEST
+				}
+				port P198 {
+					layout [
+						position: -8, 19
+						size: 8, 8
+					]
+					index: -2
+					side: WEST
+				}
+				port P199 {
+					layout [
+						position: -8, 32.5
+						size: 8, 8
+					]
+					index: -3
+					side: WEST
+				}
+			}
+			node N88 {
+				layout [ size: 66, 46 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L88: "Gaussian4" {
+					layout [ size: 63, 15 ]
+				}
+				port P200 {
+					layout [
+						position: 66, 19
+						size: 8, 8
+					]
+					index: 0
+					side: EAST
+				}
+				port P201 {
+					layout [
+						position: -8, 5.5
+						size: 8, 8
+					]
+					index: -1
+					side: WEST
+				}
+				port P202 {
+					layout [
+						position: -8, 19
+						size: 8, 8
+					]
+					index: -2
+					side: WEST
+				}
+				port P203 {
+					layout [
+						position: -8, 32.5
+						size: 8, 8
+					]
+					index: -3
+					side: WEST
+				}
+			}
+			edge E162: N85.P188 -> P184
+			edge E163: N86.P192 -> P185
+			edge E164: N87.P196 -> P186
+			edge E165: N88.P200 -> P187
+		}
+		node N89 {
+			nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+			portConstraints: FREE
+			label L89: "ContinuousTransferFunction5" {
+				layout [ size: 169, 15 ]
+			}
+			port P204 {
+				layout [ size: 8, 8 ]
+				index: 0
+				side: WEST
+			}
+			port P205 {
+				layout [ size: 8, 8 ]
+				index: 1
+				side: EAST
+			}
+			node N90 {
+				layout [ size: 41, 41 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L90: "InputAdder" {
+					layout [ size: 63, 15 ]
+				}
+				port P206 {
+					layout [
+						position: -8, 8.333333015441895
+						size: 8, 8
+					]
+					index: 0
+					side: WEST
+				}
+				port P207 {
+					layout [
+						position: -8, 24.66666603088379
+						size: 8, 8
+					]
+					index: -1
+					side: WEST
+				}
+				port P208 {
+					layout [
+						position: 41, 16.5
+						size: 8, 8
+					]
+					index: 2
+					side: EAST
+				}
+			}
+			node N91 {
+				layout [ size: 41, 41 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L91: "OutputAdder" {
+					layout [ size: 74, 15 ]
+				}
+				port P209 {
+					layout [
+						position: -8, 8.333333015441895
+						size: 8, 8
+					]
+					index: 0
+					side: WEST
+				}
+				port P210 {
+					layout [
+						position: -8, 24.66666603088379
+						size: 8, 8
+					]
+					index: -1
+					side: WEST
+				}
+				port P211 {
+					layout [
+						position: 41, 16.5
+						size: 8, 8
+					]
+					index: 2
+					side: EAST
+				}
+			}
+			node N92 {
+				layout [ size: 44, 46 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L92: "Integrator0" {
+					layout [ size: 62, 15 ]
+				}
+				port P212 {
+					layout [
+						position: 9.333333015441895, 46
+						size: 8, 8
+					]
+					index: 0
+					side: SOUTH
+				}
+				port P213 {
+					layout [
+						position: -8, 19
+						size: 8, 8
+					]
+					index: -1
+					side: WEST
+				}
+				port P214 {
+					layout [
+						position: 44, 19
+						size: 8, 8
+					]
+					index: 2
+					side: EAST
+				}
+				port P215 {
+					layout [
+						position: 26.66666603088379, 46
+						size: 8, 8
+					]
+					index: -3
+					side: SOUTH
+				}
+			}
+			node N93 {
+				layout [ size: 66, 46 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L93: "Feedback0" {
+					layout [ size: 65, 15 ]
+				}
+				port P216 {
+					layout [
+						position: -8, 19
+						size: 8, 8
+					]
+					index: 0
+					side: WEST
+				}
+				port P217 {
+					layout [
+						position: 66, 19
+						size: 8, 8
+					]
+					index: 1
+					side: EAST
+				}
+			}
+			node N94 {
+				layout [ size: 66, 46 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L94: "Feedforward0" {
+					layout [ size: 78, 15 ]
+				}
+				port P218 {
+					layout [
+						position: -8, 19
+						size: 8, 8
+					]
+					index: 0
+					side: WEST
+				}
+				port P219 {
+					layout [
+						position: 66, 19
+						size: 8, 8
+					]
+					index: 1
+					side: EAST
+				}
+			}
+			edge E166: P204 -> N90.P206
+			edge E167: N90.P208 -> N92.P213
+			edge E168: N91.P211 -> P205
+			edge E169: N92.P214 -> N93.P216
+			edge E170: N92.P214 -> N94.P218
+			edge E171: N93.P217 -> N90.P206
+			edge E172: N94.P219 -> N91.P209
+		}
+		node N95 {
+			nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+			portConstraints: FREE
+			label L95: "ContinuousTransferFunction6" {
+				layout [ size: 169, 15 ]
+			}
+			port P220 {
+				layout [ size: 8, 8 ]
+				index: 0
+				side: WEST
+			}
+			port P221 {
+				layout [ size: 8, 8 ]
+				index: 1
+				side: EAST
+			}
+			node N96 {
+				layout [ size: 41, 41 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L96: "InputAdder" {
+					layout [ size: 63, 15 ]
+				}
+				port P222 {
+					layout [
+						position: -8, 8.333333015441895
+						size: 8, 8
+					]
+					index: 0
+					side: WEST
+				}
+				port P223 {
+					layout [
+						position: -8, 24.66666603088379
+						size: 8, 8
+					]
+					index: -1
+					side: WEST
+				}
+				port P224 {
+					layout [
+						position: 41, 16.5
+						size: 8, 8
+					]
+					index: 2
+					side: EAST
+				}
+			}
+			node N97 {
+				layout [ size: 41, 41 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L97: "OutputAdder" {
+					layout [ size: 74, 15 ]
+				}
+				port P225 {
+					layout [
+						position: -8, 8.333333015441895
+						size: 8, 8
+					]
+					index: 0
+					side: WEST
+				}
+				port P226 {
+					layout [
+						position: -8, 24.66666603088379
+						size: 8, 8
+					]
+					index: -1
+					side: WEST
+				}
+				port P227 {
+					layout [
+						position: 41, 16.5
+						size: 8, 8
+					]
+					index: 2
+					side: EAST
+				}
+			}
+			node N98 {
+				layout [ size: 44, 46 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L98: "Integrator0" {
+					layout [ size: 62, 15 ]
+				}
+				port P228 {
+					layout [
+						position: 9.333333015441895, 46
+						size: 8, 8
+					]
+					index: 0
+					side: SOUTH
+				}
+				port P229 {
+					layout [
+						position: -8, 19
+						size: 8, 8
+					]
+					index: -1
+					side: WEST
+				}
+				port P230 {
+					layout [
+						position: 44, 19
+						size: 8, 8
+					]
+					index: 2
+					side: EAST
+				}
+				port P231 {
+					layout [
+						position: 26.66666603088379, 46
+						size: 8, 8
+					]
+					index: -3
+					side: SOUTH
+				}
+			}
+			node N99 {
+				layout [ size: 66, 46 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L99: "Feedback0" {
+					layout [ size: 65, 15 ]
+				}
+				port P232 {
+					layout [
+						position: -8, 19
+						size: 8, 8
+					]
+					index: 0
+					side: WEST
+				}
+				port P233 {
+					layout [
+						position: 66, 19
+						size: 8, 8
+					]
+					index: 1
+					side: EAST
+				}
+			}
+			node N100 {
+				layout [ size: 66, 46 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L100: "Feedforward0" {
+					layout [ size: 78, 15 ]
+				}
+				port P234 {
+					layout [
+						position: -8, 19
+						size: 8, 8
+					]
+					index: 0
+					side: WEST
+				}
+				port P235 {
+					layout [
+						position: 66, 19
+						size: 8, 8
+					]
+					index: 1
+					side: EAST
+				}
+			}
+			edge E173: P220 -> N96.P222
+			edge E174: N96.P224 -> N98.P229
+			edge E175: N97.P227 -> P221
+			edge E176: N98.P230 -> N99.P232
+			edge E177: N98.P230 -> N100.P234
+			edge E178: N99.P233 -> N96.P222
+			edge E179: N100.P235 -> N97.P225
+		}
+		node N101 {
+			nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+			portConstraints: FREE
+			label L101: "ContinuousTransferFunction7" {
+				layout [ size: 169, 15 ]
+			}
+			port P236 {
+				layout [ size: 8, 8 ]
+				index: 0
+				side: WEST
+			}
+			port P237 {
+				layout [ size: 8, 8 ]
+				index: 1
+				side: EAST
+			}
+			node N102 {
+				layout [ size: 41, 41 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L102: "InputAdder" {
+					layout [ size: 63, 15 ]
+				}
+				port P238 {
+					layout [
+						position: -8, 8.333333015441895
+						size: 8, 8
+					]
+					index: 0
+					side: WEST
+				}
+				port P239 {
+					layout [
+						position: -8, 24.66666603088379
+						size: 8, 8
+					]
+					index: -1
+					side: WEST
+				}
+				port P240 {
+					layout [
+						position: 41, 16.5
+						size: 8, 8
+					]
+					index: 2
+					side: EAST
+				}
+			}
+			node N103 {
+				layout [ size: 41, 41 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L103: "OutputAdder" {
+					layout [ size: 74, 15 ]
+				}
+				port P241 {
+					layout [
+						position: -8, 8.333333015441895
+						size: 8, 8
+					]
+					index: 0
+					side: WEST
+				}
+				port P242 {
+					layout [
+						position: -8, 24.66666603088379
+						size: 8, 8
+					]
+					index: -1
+					side: WEST
+				}
+				port P243 {
+					layout [
+						position: 41, 16.5
+						size: 8, 8
+					]
+					index: 2
+					side: EAST
+				}
+			}
+			node N104 {
+				layout [ size: 44, 46 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L104: "Integrator0" {
+					layout [ size: 62, 15 ]
+				}
+				port P244 {
+					layout [
+						position: 9.333333015441895, 46
+						size: 8, 8
+					]
+					index: 0
+					side: SOUTH
+				}
+				port P245 {
+					layout [
+						position: -8, 19
+						size: 8, 8
+					]
+					index: -1
+					side: WEST
+				}
+				port P246 {
+					layout [
+						position: 44, 19
+						size: 8, 8
+					]
+					index: 2
+					side: EAST
+				}
+				port P247 {
+					layout [
+						position: 26.66666603088379, 46
+						size: 8, 8
+					]
+					index: -3
+					side: SOUTH
+				}
+			}
+			node N105 {
+				layout [ size: 66, 46 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L105: "Feedback0" {
+					layout [ size: 65, 15 ]
+				}
+				port P248 {
+					layout [
+						position: -8, 19
+						size: 8, 8
+					]
+					index: 0
+					side: WEST
+				}
+				port P249 {
+					layout [
+						position: 66, 19
+						size: 8, 8
+					]
+					index: 1
+					side: EAST
+				}
+			}
+			node N106 {
+				layout [ size: 66, 46 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L106: "Feedforward0" {
+					layout [ size: 78, 15 ]
+				}
+				port P250 {
+					layout [
+						position: -8, 19
+						size: 8, 8
+					]
+					index: 0
+					side: WEST
+				}
+				port P251 {
+					layout [
+						position: 66, 19
+						size: 8, 8
+					]
+					index: 1
+					side: EAST
+				}
+			}
+			edge E180: P236 -> N102.P238
+			edge E181: N102.P240 -> N104.P245
+			edge E182: N103.P243 -> P237
+			edge E183: N104.P246 -> N105.P248
+			edge E184: N104.P246 -> N106.P250
+			edge E185: N105.P249 -> N102.P238
+			edge E186: N106.P251 -> N103.P241
+		}
+		node N107 {
+			layout [ size: 10, 41 ]
+			nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+			portConstraints: FIXED_ORDER
+			label L107: "VectorDisassembler" {
+				layout [ size: 117, 15 ]
+			}
+			port P252 {
+				layout [
+					position: -8, 16.5
+					size: 8, 8
+				]
+				index: 0
+				side: WEST
+			}
+			port P253 {
+				layout [
+					position: 10, 16.5
+					size: 8, 8
+				]
+				index: 1
+				side: EAST
+			}
+		}
+		node N108 {
+			layout [ size: 10, 41 ]
+			nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+			portConstraints: FIXED_ORDER
+			label L108: "VectorAssembler" {
+				layout [ size: 100, 15 ]
+			}
+			port P254 {
+				layout [
+					position: -8, 16.5
+					size: 8, 8
+				]
+				index: 0
+				side: WEST
+			}
+			port P255 {
+				layout [
+					position: 10, 16.5
+					size: 8, 8
+				]
+				index: 1
+				side: EAST
+			}
+		}
+		edge E133: P146 -> N107.P252
+		edge E134: N70.P149 -> N76.P164
+		edge E135: N76.P165 -> N80.P172
+		edge E136: N77.P167 -> N81.P175
+		edge E137: N78.P169 -> N82.P178
+		edge E138: N79.P171 -> N83.P181
+		edge E139: N80.P174 -> N108.P254
+		edge E140: N81.P177 -> N108.P254
+		edge E141: N82.P180 -> N108.P254
+		edge E142: N83.P183 -> N108.P254
+		edge E143: N84.P184 -> N80.P172
+		edge E144: N84.P185 -> N81.P175
+		edge E145: N84.P186 -> N82.P178
+		edge E146: N84.P187 -> N83.P181
+		edge E147: N89.P205 -> N77.P166
+		edge E148: N95.P221 -> N78.P168
+		edge E149: N101.P237 -> N79.P170
+		edge E150: N107.P253 -> N70.P148
+		edge E151: N107.P253 -> N89.P204
+		edge E152: N107.P253 -> N95.P220
+		edge E153: N107.P253 -> N101.P236
+		edge E154: N108.P255 -> P147
+	}
+	node N109 {
+		nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+		portConstraints: FREE
+		label L109: "Aerodynamic Effects" {
+			layout [ size: 120, 15 ]
+		}
+		port P256 {
+			layout [ size: 8, 8 ]
+			index: 0
+			side: WEST
+		}
+		port P257 {
+			layout [ size: 8, 8 ]
+			index: -1
+			side: WEST
+		}
+		port P258 {
+			layout [ size: 8, 8 ]
+			index: 2
+			side: EAST
+		}
+		port P259 {
+			layout [ size: 8, 8 ]
+			index: 3
+			side: EAST
+		}
+		node N110 {
+			layout [ size: 41, 41 ]
+			nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+			portConstraints: FIXED_ORDER
+			label L110: "MultiplyDivide" {
+				layout [ size: 80, 15 ]
+			}
+			port P260 {
+				layout [
+					position: -8, 8.333333015441895
+					size: 8, 8
+				]
+				index: 0
+				side: WEST
+			}
+			port P261 {
+				layout [
+					position: -8, 24.66666603088379
+					size: 8, 8
+				]
+				index: -1
+				side: WEST
+			}
+			port P262 {
+				layout [
+					position: 41, 16.5
+					size: 8, 8
+				]
+				index: 2
+				side: EAST
+			}
+		}
+		node N111 {
+			nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+			portConstraints: FREE
+			label L111: "Moments" {
+				layout [ size: 54, 15 ]
+			}
+			port P263 {
+				layout [ size: 8, 8 ]
+				index: 0
+				side: WEST
+			}
+			port P264 {
+				layout [ size: 8, 8 ]
+				index: -1
+				side: WEST
+			}
+			port P265 {
+				layout [ size: 8, 8 ]
+				index: 2
+				side: EAST
+			}
+			node N112 {
+				layout [ size: 41, 41 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L112: "MultiplyDivide" {
+					layout [ size: 80, 15 ]
+				}
+				port P266 {
+					layout [
+						position: -8, 8.333333015441895
+						size: 8, 8
+					]
+					index: 0
+					side: WEST
+				}
+				port P267 {
+					layout [
+						position: -8, 24.66666603088379
+						size: 8, 8
+					]
+					index: -1
+					side: WEST
+				}
+				port P268 {
+					layout [
+						position: 41, 16.5
+						size: 8, 8
+					]
+					index: 2
+					side: EAST
+				}
+			}
+			node N113 {
+				layout [ size: 41, 41 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L113: "MultiplyDivide2" {
+					layout [ size: 87, 15 ]
+				}
+				port P269 {
+					layout [
+						position: -8, 8.333333015441895
+						size: 8, 8
+					]
+					index: 0
+					side: WEST
+				}
+				port P270 {
+					layout [
+						position: -8, 24.66666603088379
+						size: 8, 8
+					]
+					index: -1
+					side: WEST
+				}
+				port P271 {
+					layout [
+						position: 41, 16.5
+						size: 8, 8
+					]
+					index: 2
+					side: EAST
+				}
+			}
+			node N114 {
+				layout [ size: 41, 41 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L114: "MultiplyDivide3" {
+					layout [ size: 87, 15 ]
+				}
+				port P272 {
+					layout [
+						position: -8, 8.333333015441895
+						size: 8, 8
+					]
+					index: 0
+					side: WEST
+				}
+				port P273 {
+					layout [
+						position: -8, 24.66666603088379
+						size: 8, 8
+					]
+					index: -1
+					side: WEST
+				}
+				port P274 {
+					layout [
+						position: 41, 16.5
+						size: 8, 8
+					]
+					index: 2
+					side: EAST
+				}
+			}
+			node N115 {
+				layout [ size: 41, 41 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L115: "MultiplyDivide4" {
+					layout [ size: 87, 15 ]
+				}
+				port P275 {
+					layout [
+						position: -8, 8.333333015441895
+						size: 8, 8
+					]
+					index: 0
+					side: WEST
+				}
+				port P276 {
+					layout [
+						position: -8, 24.66666603088379
+						size: 8, 8
+					]
+					index: -1
+					side: WEST
+				}
+				port P277 {
+					layout [
+						position: 41, 16.5
+						size: 8, 8
+					]
+					index: 2
+					side: EAST
+				}
+			}
+			node N116 {
+				layout [ size: 41, 41 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L116: "MultiplyDivide5" {
+					layout [ size: 87, 15 ]
+				}
+				port P278 {
+					layout [
+						position: -8, 8.333333015441895
+						size: 8, 8
+					]
+					index: 0
+					side: WEST
+				}
+				port P279 {
+					layout [
+						position: -8, 24.66666603088379
+						size: 8, 8
+					]
+					index: -1
+					side: WEST
+				}
+				port P280 {
+					layout [
+						position: 41, 16.5
+						size: 8, 8
+					]
+					index: 2
+					side: EAST
+				}
+			}
+			node N117 {
+				layout [ size: 41, 41 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L117: "MultiplyDivide6" {
+					layout [ size: 87, 15 ]
+				}
+				port P281 {
+					layout [
+						position: -8, 8.333333015441895
+						size: 8, 8
+					]
+					index: 0
+					side: WEST
+				}
+				port P282 {
+					layout [
+						position: -8, 24.66666603088379
+						size: 8, 8
+					]
+					index: -1
+					side: WEST
+				}
+				port P283 {
+					layout [
+						position: 41, 16.5
+						size: 8, 8
+					]
+					index: 2
+					side: EAST
+				}
+			}
+			node N118 {
+				layout [ size: 41, 41 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L118: "MultiplyDivide7" {
+					layout [ size: 87, 15 ]
+				}
+				port P284 {
+					layout [
+						position: -8, 8.333333015441895
+						size: 8, 8
+					]
+					index: 0
+					side: WEST
+				}
+				port P285 {
+					layout [
+						position: -8, 24.66666603088379
+						size: 8, 8
+					]
+					index: -1
+					side: WEST
+				}
+				port P286 {
+					layout [
+						position: 41, 16.5
+						size: 8, 8
+					]
+					index: 2
+					side: EAST
+				}
+			}
+			node N119 {
+				layout [ size: 41, 41 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L119: "MultiplyDivide8" {
+					layout [ size: 87, 15 ]
+				}
+				port P287 {
+					layout [
+						position: -8, 8.333333015441895
+						size: 8, 8
+					]
+					index: 0
+					side: WEST
+				}
+				port P288 {
+					layout [
+						position: -8, 24.66666603088379
+						size: 8, 8
+					]
+					index: -1
+					side: WEST
+				}
+				port P289 {
+					layout [
+						position: 41, 16.5
+						size: 8, 8
+					]
+					index: 2
+					side: EAST
+				}
+			}
+			node N120 {
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FREE
+				label L120: "Motor Thrust to Torque" {
+					layout [ size: 131, 15 ]
+				}
+				port P290 {
+					layout [ size: 8, 8 ]
+					index: 0
+					side: EAST
+				}
+				port P291 {
+					layout [ size: 8, 8 ]
+					index: 1
+					side: EAST
+				}
+				port P292 {
+					layout [ size: 8, 8 ]
+					index: 2
+					side: EAST
+				}
+				port P293 {
+					layout [ size: 8, 8 ]
+					index: 3
+					side: EAST
+				}
+				port P294 {
+					layout [ size: 8, 8 ]
+					index: -4
+					side: WEST
+				}
+				node N121 {
+					layout [ size: 66, 46 ]
+					nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+					portConstraints: FIXED_ORDER
+					label L121: "Scale" {
+						layout [ size: 34, 15 ]
+					}
+					port P295 {
+						layout [
+							position: -8, 19
+							size: 8, 8
+						]
+						index: 0
+						side: WEST
+					}
+					port P296 {
+						layout [
+							position: 66, 19
+							size: 8, 8
+						]
+						index: 1
+						side: EAST
+					}
+				}
+				node N122 {
+					layout [ size: 10, 41 ]
+					nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+					portConstraints: FIXED_ORDER
+					label L122: "VectorDisassembler" {
+						layout [ size: 117, 15 ]
+					}
+					port P297 {
+						layout [
+							position: -8, 16.5
+							size: 8, 8
+						]
+						index: 0
+						side: WEST
+					}
+					port P298 {
+						layout [
+							position: 10, 16.5
+							size: 8, 8
+						]
+						index: 1
+						side: EAST
+					}
+				}
+				edge E248: P294 -> N121.P295
+				edge E249: N121.P296 -> N122.P297
+				edge E250: N122.P298 -> P290
+				edge E251: N122.P298 -> P291
+				edge E252: N122.P298 -> P292
+				edge E253: N122.P298 -> P293
+			}
+			node N123 {
+				layout [ size: 66, 46 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L123: "Motor1" {
+					layout [ size: 41, 15 ]
+				}
+				port P299 {
+					layout [
+						position: -8, 19
+						size: 8, 8
+					]
+					index: 0
+					side: WEST
+				}
+				port P300 {
+					layout [
+						position: 66, 19
+						size: 8, 8
+					]
+					index: 1
+					side: EAST
+				}
+			}
+			node N124 {
+				layout [ size: 66, 46 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L124: "Motor4" {
+					layout [ size: 41, 15 ]
+				}
+				port P301 {
+					layout [
+						position: -8, 19
+						size: 8, 8
+					]
+					index: 0
+					side: WEST
+				}
+				port P302 {
+					layout [
+						position: 66, 19
+						size: 8, 8
+					]
+					index: 1
+					side: EAST
+				}
+			}
+			node N125 {
+				layout [ size: 66, 46 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L125: "Motor2" {
+					layout [ size: 41, 15 ]
+				}
+				port P303 {
+					layout [
+						position: -8, 19
+						size: 8, 8
+					]
+					index: 0
+					side: WEST
+				}
+				port P304 {
+					layout [
+						position: 66, 19
+						size: 8, 8
+					]
+					index: 1
+					side: EAST
+				}
+			}
+			node N126 {
+				layout [ size: 66, 46 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L126: "Motor3" {
+					layout [ size: 41, 15 ]
+				}
+				port P305 {
+					layout [
+						position: -8, 19
+						size: 8, 8
+					]
+					index: 0
+					side: WEST
+				}
+				port P306 {
+					layout [
+						position: 66, 19
+						size: 8, 8
+					]
+					index: 1
+					side: EAST
+				}
+			}
+			node N127 {
+				layout [ size: 41, 41 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L127: "AddSubtract" {
+					layout [ size: 72, 15 ]
+				}
+				port P307 {
+					layout [
+						position: -8, 8.333333015441895
+						size: 8, 8
+					]
+					index: 0
+					side: WEST
+				}
+				port P308 {
+					layout [
+						position: -8, 24.66666603088379
+						size: 8, 8
+					]
+					index: -1
+					side: WEST
+				}
+				port P309 {
+					layout [
+						position: 41, 16.5
+						size: 8, 8
+					]
+					index: 2
+					side: EAST
+				}
+			}
+			node N128 {
+				layout [ size: 41, 41 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L128: "AddSubtract2" {
+					layout [ size: 80, 15 ]
+				}
+				port P310 {
+					layout [
+						position: -8, 8.333333015441895
+						size: 8, 8
+					]
+					index: 0
+					side: WEST
+				}
+				port P311 {
+					layout [
+						position: -8, 24.66666603088379
+						size: 8, 8
+					]
+					index: -1
+					side: WEST
+				}
+				port P312 {
+					layout [
+						position: 41, 16.5
+						size: 8, 8
+					]
+					index: 2
+					side: EAST
+				}
+			}
+			node N129 {
+				layout [ size: 41, 41 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L129: "AddSubtract3" {
+					layout [ size: 80, 15 ]
+				}
+				port P313 {
+					layout [
+						position: -8, 8.333333015441895
+						size: 8, 8
+					]
+					index: 0
+					side: WEST
+				}
+				port P314 {
+					layout [
+						position: -8, 24.66666603088379
+						size: 8, 8
+					]
+					index: -1
+					side: WEST
+				}
+				port P315 {
+					layout [
+						position: 41, 16.5
+						size: 8, 8
+					]
+					index: 2
+					side: EAST
+				}
+			}
+			node N130 {
+				layout [ size: 22, 25 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L130: "Moment Arm" {
+					layout [ size: 74, 15 ]
+				}
+				port P316 {
+					layout [
+						position: 22, 8.5
+						size: 8, 8
+					]
+					index: 0
+					side: EAST
+				}
+				port P317 {
+					layout [
+						position: -8, 8.5
+						size: 8, 8
+					]
+					index: -1
+					side: WEST
+				}
+			}
+			node N131 {
+				layout [ size: 22, 25 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L131: "Moment Arm2" {
+					layout [ size: 82, 15 ]
+				}
+				port P318 {
+					layout [
+						position: 22, 8.5
+						size: 8, 8
+					]
+					index: 0
+					side: EAST
+				}
+				port P319 {
+					layout [
+						position: -8, 8.5
+						size: 8, 8
+					]
+					index: -1
+					side: WEST
+				}
+			}
+			node N132 {
+				layout [ size: 22, 25 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L132: "Moment Arm3" {
+					layout [ size: 82, 15 ]
+				}
+				port P320 {
+					layout [
+						position: 22, 8.5
+						size: 8, 8
+					]
+					index: 0
+					side: EAST
+				}
+				port P321 {
+					layout [
+						position: -8, 8.5
+						size: 8, 8
+					]
+					index: -1
+					side: WEST
+				}
+			}
+			node N133 {
+				layout [ size: 22, 25 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L133: "Moment Arm4" {
+					layout [ size: 82, 15 ]
+				}
+				port P322 {
+					layout [
+						position: 22, 8.5
+						size: 8, 8
+					]
+					index: 0
+					side: EAST
+				}
+				port P323 {
+					layout [
+						position: -8, 8.5
+						size: 8, 8
+					]
+					index: -1
+					side: WEST
+				}
+			}
+			node N134 {
+				layout [ size: 10, 41 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L134: "VectorDisassembler" {
+					layout [ size: 117, 15 ]
+				}
+				port P324 {
+					layout [
+						position: -8, 16.5
+						size: 8, 8
+					]
+					index: 0
+					side: WEST
+				}
+				port P325 {
+					layout [
+						position: 10, 16.5
+						size: 8, 8
+					]
+					index: 1
+					side: EAST
+				}
+			}
+			node N135 {
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FREE
+				label L135: "CrossProduct(AXB)3" {
+					layout [ size: 120, 15 ]
+				}
+				port P326 {
+					layout [ size: 8, 8 ]
+					index: 0
+					side: WEST
+				}
+				port P327 {
+					layout [ size: 8, 8 ]
+					index: -1
+					side: WEST
+				}
+				port P328 {
+					layout [ size: 8, 8 ]
+					index: 2
+					side: EAST
+				}
+				node N136 {
+					layout [ size: 313, 25 ]
+					nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+					portConstraints: FIXED_ORDER
+					label L136: "Expression" {
+						layout [ size: 66, 15 ]
+					}
+					port P329 {
+						layout [
+							position: 313, 8.5
+							size: 8, 8
+						]
+						index: 0
+						side: EAST
+					}
+					port P330 {
+						layout [
+							position: -8, -3.2857143878936768
+							size: 8, 8
+						]
+						index: -1
+						side: WEST
+					}
+					port P331 {
+						layout [
+							position: -8, 1.4285714626312256
+							size: 8, 8
+						]
+						index: -2
+						side: WEST
+					}
+					port P332 {
+						layout [
+							position: -8, 6.142857074737549
+							size: 8, 8
+						]
+						index: -3
+						side: WEST
+					}
+					port P333 {
+						layout [
+							position: -8, 10.857142448425293
+							size: 8, 8
+						]
+						index: -4
+						side: WEST
+					}
+					port P334 {
+						layout [
+							position: -8, 15.571428298950195
+							size: 8, 8
+						]
+						index: -5
+						side: WEST
+					}
+					port P335 {
+						layout [
+							position: -8, 20.285715103149414
+							size: 8, 8
+						]
+						index: -6
+						side: WEST
+					}
+				}
+				node N137 {
+					layout [ size: 10, 41 ]
+					nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+					portConstraints: FIXED_ORDER
+					label L137: "VectorDisassembler" {
+						layout [ size: 117, 15 ]
+					}
+					port P336 {
+						layout [
+							position: -8, 16.5
+							size: 8, 8
+						]
+						index: 0
+						side: WEST
+					}
+					port P337 {
+						layout [
+							position: 10, 16.5
+							size: 8, 8
+						]
+						index: 1
+						side: EAST
+					}
+				}
+				node N138 {
+					layout [ size: 10, 41 ]
+					nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+					portConstraints: FIXED_ORDER
+					label L138: "VectorDisassembler2" {
+						layout [ size: 124, 15 ]
+					}
+					port P338 {
+						layout [
+							position: -8, 16.5
+							size: 8, 8
+						]
+						index: 0
+						side: WEST
+					}
+					port P339 {
+						layout [
+							position: 10, 16.5
+							size: 8, 8
+						]
+						index: 1
+						side: EAST
+					}
+				}
+				edge E254: P326 -> N137.P336
+				edge E255: P327 -> N138.P338
+				edge E256: N136.P329 -> P328
+				edge E257: N137.P337 -> N136.P330
+				edge E258: N137.P337 -> N136.P331
+				edge E259: N137.P337 -> N136.P332
+				edge E260: N138.P339 -> N136.P333
+				edge E261: N138.P339 -> N136.P334
+				edge E262: N138.P339 -> N136.P335
+			}
+			node N139 {
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FREE
+				label L139: "CrossProduct(AXB)4" {
+					layout [ size: 120, 15 ]
+				}
+				port P340 {
+					layout [ size: 8, 8 ]
+					index: 0
+					side: WEST
+				}
+				port P341 {
+					layout [ size: 8, 8 ]
+					index: -1
+					side: WEST
+				}
+				port P342 {
+					layout [ size: 8, 8 ]
+					index: 2
+					side: EAST
+				}
+				node N140 {
+					layout [ size: 313, 25 ]
+					nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+					portConstraints: FIXED_ORDER
+					label L140: "Expression" {
+						layout [ size: 66, 15 ]
+					}
+					port P343 {
+						layout [
+							position: 313, 8.5
+							size: 8, 8
+						]
+						index: 0
+						side: EAST
+					}
+					port P344 {
+						layout [
+							position: -8, -3.2857143878936768
+							size: 8, 8
+						]
+						index: -1
+						side: WEST
+					}
+					port P345 {
+						layout [
+							position: -8, 1.4285714626312256
+							size: 8, 8
+						]
+						index: -2
+						side: WEST
+					}
+					port P346 {
+						layout [
+							position: -8, 6.142857074737549
+							size: 8, 8
+						]
+						index: -3
+						side: WEST
+					}
+					port P347 {
+						layout [
+							position: -8, 10.857142448425293
+							size: 8, 8
+						]
+						index: -4
+						side: WEST
+					}
+					port P348 {
+						layout [
+							position: -8, 15.571428298950195
+							size: 8, 8
+						]
+						index: -5
+						side: WEST
+					}
+					port P349 {
+						layout [
+							position: -8, 20.285715103149414
+							size: 8, 8
+						]
+						index: -6
+						side: WEST
+					}
+				}
+				node N141 {
+					layout [ size: 10, 41 ]
+					nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+					portConstraints: FIXED_ORDER
+					label L141: "VectorDisassembler" {
+						layout [ size: 117, 15 ]
+					}
+					port P350 {
+						layout [
+							position: -8, 16.5
+							size: 8, 8
+						]
+						index: 0
+						side: WEST
+					}
+					port P351 {
+						layout [
+							position: 10, 16.5
+							size: 8, 8
+						]
+						index: 1
+						side: EAST
+					}
+				}
+				node N142 {
+					layout [ size: 10, 41 ]
+					nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+					portConstraints: FIXED_ORDER
+					label L142: "VectorDisassembler2" {
+						layout [ size: 124, 15 ]
+					}
+					port P352 {
+						layout [
+							position: -8, 16.5
+							size: 8, 8
+						]
+						index: 0
+						side: WEST
+					}
+					port P353 {
+						layout [
+							position: 10, 16.5
+							size: 8, 8
+						]
+						index: 1
+						side: EAST
+					}
+				}
+				edge E263: P340 -> N141.P350
+				edge E264: P341 -> N142.P352
+				edge E265: N140.P343 -> P342
+				edge E266: N141.P351 -> N140.P344
+				edge E267: N141.P351 -> N140.P345
+				edge E268: N141.P351 -> N140.P346
+				edge E269: N142.P353 -> N140.P347
+				edge E270: N142.P353 -> N140.P348
+				edge E271: N142.P353 -> N140.P349
+			}
+			node N143 {
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FREE
+				label L143: "CrossProduct(AXB)" {
+					layout [ size: 113, 15 ]
+				}
+				port P354 {
+					layout [ size: 8, 8 ]
+					index: 0
+					side: WEST
+				}
+				port P355 {
+					layout [ size: 8, 8 ]
+					index: -1
+					side: WEST
+				}
+				port P356 {
+					layout [ size: 8, 8 ]
+					index: 2
+					side: EAST
+				}
+				node N144 {
+					layout [ size: 313, 25 ]
+					nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+					portConstraints: FIXED_ORDER
+					label L144: "Expression" {
+						layout [ size: 66, 15 ]
+					}
+					port P357 {
+						layout [
+							position: 313, 8.5
+							size: 8, 8
+						]
+						index: 0
+						side: EAST
+					}
+					port P358 {
+						layout [
+							position: -8, -3.2857143878936768
+							size: 8, 8
+						]
+						index: -1
+						side: WEST
+					}
+					port P359 {
+						layout [
+							position: -8, 1.4285714626312256
+							size: 8, 8
+						]
+						index: -2
+						side: WEST
+					}
+					port P360 {
+						layout [
+							position: -8, 6.142857074737549
+							size: 8, 8
+						]
+						index: -3
+						side: WEST
+					}
+					port P361 {
+						layout [
+							position: -8, 10.857142448425293
+							size: 8, 8
+						]
+						index: -4
+						side: WEST
+					}
+					port P362 {
+						layout [
+							position: -8, 15.571428298950195
+							size: 8, 8
+						]
+						index: -5
+						side: WEST
+					}
+					port P363 {
+						layout [
+							position: -8, 20.285715103149414
+							size: 8, 8
+						]
+						index: -6
+						side: WEST
+					}
+				}
+				node N145 {
+					layout [ size: 10, 41 ]
+					nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+					portConstraints: FIXED_ORDER
+					label L145: "VectorDisassembler" {
+						layout [ size: 117, 15 ]
+					}
+					port P364 {
+						layout [
+							position: -8, 16.5
+							size: 8, 8
+						]
+						index: 0
+						side: WEST
+					}
+					port P365 {
+						layout [
+							position: 10, 16.5
+							size: 8, 8
+						]
+						index: 1
+						side: EAST
+					}
+				}
+				node N146 {
+					layout [ size: 10, 41 ]
+					nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+					portConstraints: FIXED_ORDER
+					label L146: "VectorDisassembler2" {
+						layout [ size: 124, 15 ]
+					}
+					port P366 {
+						layout [
+							position: -8, 16.5
+							size: 8, 8
+						]
+						index: 0
+						side: WEST
+					}
+					port P367 {
+						layout [
+							position: 10, 16.5
+							size: 8, 8
+						]
+						index: 1
+						side: EAST
+					}
+				}
+				edge E272: P354 -> N145.P364
+				edge E273: P355 -> N146.P366
+				edge E274: N144.P357 -> P356
+				edge E275: N145.P365 -> N144.P358
+				edge E276: N145.P365 -> N144.P359
+				edge E277: N145.P365 -> N144.P360
+				edge E278: N146.P367 -> N144.P361
+				edge E279: N146.P367 -> N144.P362
+				edge E280: N146.P367 -> N144.P363
+			}
+			node N147 {
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FREE
+				label L147: "CrossProduct(AXB)2" {
+					layout [ size: 120, 15 ]
+				}
+				port P368 {
+					layout [ size: 8, 8 ]
+					index: 0
+					side: WEST
+				}
+				port P369 {
+					layout [ size: 8, 8 ]
+					index: -1
+					side: WEST
+				}
+				port P370 {
+					layout [ size: 8, 8 ]
+					index: 2
+					side: EAST
+				}
+				node N148 {
+					layout [ size: 313, 25 ]
+					nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+					portConstraints: FIXED_ORDER
+					label L148: "Expression" {
+						layout [ size: 66, 15 ]
+					}
+					port P371 {
+						layout [
+							position: 313, 8.5
+							size: 8, 8
+						]
+						index: 0
+						side: EAST
+					}
+					port P372 {
+						layout [
+							position: -8, -3.2857143878936768
+							size: 8, 8
+						]
+						index: -1
+						side: WEST
+					}
+					port P373 {
+						layout [
+							position: -8, 1.4285714626312256
+							size: 8, 8
+						]
+						index: -2
+						side: WEST
+					}
+					port P374 {
+						layout [
+							position: -8, 6.142857074737549
+							size: 8, 8
+						]
+						index: -3
+						side: WEST
+					}
+					port P375 {
+						layout [
+							position: -8, 10.857142448425293
+							size: 8, 8
+						]
+						index: -4
+						side: WEST
+					}
+					port P376 {
+						layout [
+							position: -8, 15.571428298950195
+							size: 8, 8
+						]
+						index: -5
+						side: WEST
+					}
+					port P377 {
+						layout [
+							position: -8, 20.285715103149414
+							size: 8, 8
+						]
+						index: -6
+						side: WEST
+					}
+				}
+				node N149 {
+					layout [ size: 10, 41 ]
+					nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+					portConstraints: FIXED_ORDER
+					label L149: "VectorDisassembler" {
+						layout [ size: 117, 15 ]
+					}
+					port P378 {
+						layout [
+							position: -8, 16.5
+							size: 8, 8
+						]
+						index: 0
+						side: WEST
+					}
+					port P379 {
+						layout [
+							position: 10, 16.5
+							size: 8, 8
+						]
+						index: 1
+						side: EAST
+					}
+				}
+				node N150 {
+					layout [ size: 10, 41 ]
+					nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+					portConstraints: FIXED_ORDER
+					label L150: "VectorDisassembler2" {
+						layout [ size: 124, 15 ]
+					}
+					port P380 {
+						layout [
+							position: -8, 16.5
+							size: 8, 8
+						]
+						index: 0
+						side: WEST
+					}
+					port P381 {
+						layout [
+							position: 10, 16.5
+							size: 8, 8
+						]
+						index: 1
+						side: EAST
+					}
+				}
+				edge E281: P368 -> N149.P378
+				edge E282: P369 -> N150.P380
+				edge E283: N148.P371 -> P370
+				edge E284: N149.P379 -> N148.P372
+				edge E285: N149.P379 -> N148.P373
+				edge E286: N149.P379 -> N148.P374
+				edge E287: N150.P381 -> N148.P375
+				edge E288: N150.P381 -> N148.P376
+				edge E289: N150.P381 -> N148.P377
+			}
+			edge E207: P264 -> N112.P266
+			edge E208: P264 -> N113.P269
+			edge E209: P264 -> N114.P272
+			edge E210: P264 -> N115.P275
+			edge E211: P264 -> N116.P278
+			edge E212: P264 -> N117.P281
+			edge E213: P264 -> N118.P284
+			edge E214: P264 -> N119.P287
+			edge E215: P263 -> N120.P294
+			edge E216: P263 -> N134.P324
+			edge E217: N112.P268 -> N135.P327
+			edge E218: N113.P271 -> N139.P341
+			edge E219: N114.P274 -> N143.P355
+			edge E220: N115.P277 -> N147.P369
+			edge E221: N116.P280 -> N123.P299
+			edge E222: N117.P283 -> N125.P303
+			edge E223: N118.P286 -> N126.P305
+			edge E224: N119.P289 -> N124.P301
+			edge E225: N120.P290 -> N116.P278
+			edge E226: N120.P291 -> N117.P281
+			edge E227: N120.P292 -> N118.P284
+			edge E228: N120.P293 -> N119.P287
+			edge E229: N123.P300 -> N127.P307
+			edge E230: N124.P302 -> N127.P307
+			edge E231: N125.P304 -> N127.P307
+			edge E232: N126.P306 -> N127.P307
+			edge E233: N127.P309 -> N128.P310
+			edge E234: N128.P312 -> P265
+			edge E235: N129.P315 -> N128.P310
+			edge E236: N130.P316 -> N135.P326
+			edge E237: N131.P318 -> N139.P340
+			edge E238: N132.P320 -> N143.P354
+			edge E239: N133.P322 -> N147.P368
+			edge E240: N134.P325 -> N112.P266
+			edge E241: N134.P325 -> N113.P269
+			edge E242: N134.P325 -> N114.P272
+			edge E243: N134.P325 -> N115.P275
+			edge E244: N135.P328 -> N129.P313
+			edge E245: N139.P342 -> N129.P313
+			edge E246: N143.P356 -> N129.P313
+			edge E247: N147.P370 -> N129.P313
+		}
+		node N151 {
+			layout [ size: 41, 41 ]
+			nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+			portConstraints: FIXED_ORDER
+			label L151: "MultiplyDivide2" {
+				layout [ size: 87, 15 ]
+			}
+			port P382 {
+				layout [
+					position: -8, 8.333333015441895
+					size: 8, 8
+				]
+				index: 0
+				side: WEST
+			}
+			port P383 {
+				layout [
+					position: -8, 24.66666603088379
+					size: 8, 8
+				]
+				index: -1
+				side: WEST
+			}
+			port P384 {
+				layout [
+					position: 41, 16.5
+					size: 8, 8
+				]
+				index: 2
+				side: EAST
+			}
+		}
+		node N152 {
+			layout [ size: 41, 41 ]
+			nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+			portConstraints: FIXED_ORDER
+			label L152: "AddSubtract" {
+				layout [ size: 72, 15 ]
+			}
+			port P385 {
+				layout [
+					position: -8, 8.333333015441895
+					size: 8, 8
+				]
+				index: 0
+				side: WEST
+			}
+			port P386 {
+				layout [
+					position: -8, 24.66666603088379
+					size: 8, 8
+				]
+				index: -1
+				side: WEST
+			}
+			port P387 {
+				layout [
+					position: 41, 16.5
+					size: 8, 8
+				]
+				index: 2
+				side: EAST
+			}
+		}
+		node N153 {
+			nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+			portConstraints: FREE
+			label L153: "Flapping Dynamics" {
+				layout [ size: 111, 15 ]
+			}
+			port P388 {
+				layout [ size: 8, 8 ]
+				index: 0
+				side: WEST
+			}
+			port P389 {
+				layout [ size: 8, 8 ]
+				index: 1
+				side: EAST
+			}
+			port P390 {
+				layout [ size: 8, 8 ]
+				index: 2
+				side: EAST
+			}
+			node N154 {
+				layout [ size: 66, 46 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L154: "DotProduct" {
+					layout [ size: 65, 15 ]
+				}
+				port P391 {
+					layout [
+						position: -8, 10
+						size: 8, 8
+					]
+					index: 0
+					side: WEST
+				}
+				port P392 {
+					layout [
+						position: -8, 28
+						size: 8, 8
+					]
+					index: -1
+					side: WEST
+				}
+				port P393 {
+					layout [
+						position: 66, 19
+						size: 8, 8
+					]
+					index: 2
+					side: EAST
+				}
+			}
+			node N155 {
+				layout [ size: 32, 25 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L155: "UnaryMathFunction" {
+					layout [ size: 114, 15 ]
+				}
+				port P394 {
+					layout [
+						position: -8, 8.5
+						size: 8, 8
+					]
+					index: 0
+					side: WEST
+				}
+				port P395 {
+					layout [
+						position: 32, 8.5
+						size: 8, 8
+					]
+					index: 1
+					side: EAST
+				}
+			}
+			node N156 {
+				layout [ size: 66, 46 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L156: "Flap Angle Gain" {
+					layout [ size: 93, 15 ]
+				}
+				port P396 {
+					layout [
+						position: -8, 19
+						size: 8, 8
+					]
+					index: 0
+					side: WEST
+				}
+				port P397 {
+					layout [
+						position: 66, 19
+						size: 8, 8
+					]
+					index: 1
+					side: EAST
+				}
+			}
+			node N157 {
+				layout [ size: 31, 25 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L157: "TrigFunction" {
+					layout [ size: 72, 15 ]
+				}
+				port P398 {
+					layout [
+						position: -8, 8.5
+						size: 8, 8
+					]
+					index: 0
+					side: WEST
+				}
+				port P399 {
+					layout [
+						position: 31, 8.5
+						size: 8, 8
+					]
+					index: 1
+					side: EAST
+				}
+			}
+			node N158 {
+				layout [ size: 14, 25 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L158: "TrigFunction2" {
+					layout [ size: 79, 15 ]
+				}
+				port P400 {
+					layout [
+						position: -8, 8.5
+						size: 8, 8
+					]
+					index: 0
+					side: WEST
+				}
+				port P401 {
+					layout [
+						position: 14, 8.5
+						size: 8, 8
+					]
+					index: 1
+					side: EAST
+				}
+			}
+			node N159 {
+				layout [ size: 41, 41 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L159: "MultiplyDivide" {
+					layout [ size: 80, 15 ]
+				}
+				port P402 {
+					layout [
+						position: -8, 8.333333015441895
+						size: 8, 8
+					]
+					index: 0
+					side: WEST
+				}
+				port P403 {
+					layout [
+						position: -8, 24.66666603088379
+						size: 8, 8
+					]
+					index: -1
+					side: WEST
+				}
+				port P404 {
+					layout [
+						position: 41, 16.5
+						size: 8, 8
+					]
+					index: 2
+					side: EAST
+				}
+			}
+			node N160 {
+				layout [ size: 66, 46 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L160: "rotate 90 degrees2" {
+					layout [ size: 109, 15 ]
+				}
+				port P405 {
+					layout [
+						position: -8, 19
+						size: 8, 8
+					]
+					index: 0
+					side: WEST
+				}
+				port P406 {
+					layout [
+						position: 66, 19
+						size: 8, 8
+					]
+					index: 1
+					side: EAST
+				}
+			}
+			node N161 {
+				layout [ size: 66, 46 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L161: "Gain" {
+					layout [ size: 28, 15 ]
+				}
+				port P407 {
+					layout [
+						position: -8, 19
+						size: 8, 8
+					]
+					index: 0
+					side: WEST
+				}
+				port P408 {
+					layout [
+						position: 66, 19
+						size: 8, 8
+					]
+					index: 1
+					side: EAST
+				}
+			}
+			node N162 {
+				layout [ size: 41, 41 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L162: "MultiplyDivide2" {
+					layout [ size: 87, 15 ]
+				}
+				port P409 {
+					layout [
+						position: -8, 8.333333015441895
+						size: 8, 8
+					]
+					index: 0
+					side: WEST
+				}
+				port P410 {
+					layout [
+						position: -8, 24.66666603088379
+						size: 8, 8
+					]
+					index: -1
+					side: WEST
+				}
+				port P411 {
+					layout [
+						position: 41, 16.5
+						size: 8, 8
+					]
+					index: 2
+					side: EAST
+				}
+			}
+			node N163 {
+				layout [ size: 41, 41 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L163: "AddSubtract" {
+					layout [ size: 72, 15 ]
+				}
+				port P412 {
+					layout [
+						position: -8, 8.333333015441895
+						size: 8, 8
+					]
+					index: 0
+					side: WEST
+				}
+				port P413 {
+					layout [
+						position: -8, 24.66666603088379
+						size: 8, 8
+					]
+					index: -1
+					side: WEST
+				}
+				port P414 {
+					layout [
+						position: 41, 16.5
+						size: 8, 8
+					]
+					index: 2
+					side: EAST
+				}
+			}
+			node N164 {
+				layout [ size: 41, 41 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L164: "MultiplyDivide3" {
+					layout [ size: 87, 15 ]
+				}
+				port P415 {
+					layout [
+						position: -8, 8.333333015441895
+						size: 8, 8
+					]
+					index: 0
+					side: WEST
+				}
+				port P416 {
+					layout [
+						position: -8, 24.66666603088379
+						size: 8, 8
+					]
+					index: -1
+					side: WEST
+				}
+				port P417 {
+					layout [
+						position: 41, 16.5
+						size: 8, 8
+					]
+					index: 2
+					side: EAST
+				}
+			}
+			node N165 {
+				layout [ size: 66, 46 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L165: "rotate 90 degrees3" {
+					layout [ size: 109, 15 ]
+				}
+				port P418 {
+					layout [
+						position: -8, 19
+						size: 8, 8
+					]
+					index: 0
+					side: WEST
+				}
+				port P419 {
+					layout [
+						position: 66, 19
+						size: 8, 8
+					]
+					index: 1
+					side: EAST
+				}
+			}
+			node N166 {
+				layout [ size: 41, 47 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L166: "Select" {
+					layout [ size: 37, 15 ]
+				}
+				port P420 {
+					layout [
+						position: -8, 19.5
+						size: 8, 8
+					]
+					index: 0
+					side: WEST
+				}
+				port P421 {
+					layout [
+						position: 41, 19.5
+						size: 8, 8
+					]
+					index: 1
+					side: EAST
+				}
+				port P422 {
+					layout [
+						position: 16.5, 47
+						size: 8, 8
+					]
+					index: -2
+					side: SOUTH
+				}
+			}
+			node N167 {
+				layout [ size: 55, 25 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L167: "Const" {
+					layout [ size: 34, 15 ]
+				}
+				port P423 {
+					layout [
+						position: 55, 8.5
+						size: 8, 8
+					]
+					index: 0
+					side: EAST
+				}
+				port P424 {
+					layout [
+						position: -8, 8.5
+						size: 8, 8
+					]
+					index: -1
+					side: WEST
+				}
+			}
+			node N168 {
+				layout [ size: 41, 41 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L168: "MultiplyDivide4" {
+					layout [ size: 87, 15 ]
+				}
+				port P425 {
+					layout [
+						position: -8, 8.333333015441895
+						size: 8, 8
+					]
+					index: 0
+					side: WEST
+				}
+				port P426 {
+					layout [
+						position: -8, 24.66666603088379
+						size: 8, 8
+					]
+					index: -1
+					side: WEST
+				}
+				port P427 {
+					layout [
+						position: 41, 16.5
+						size: 8, 8
+					]
+					index: 2
+					side: EAST
+				}
+			}
+			node N169 {
+				layout [ size: 41, 47 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L169: "Select2" {
+					layout [ size: 45, 15 ]
+				}
+				port P428 {
+					layout [
+						position: -8, 19.5
+						size: 8, 8
+					]
+					index: 0
+					side: WEST
+				}
+				port P429 {
+					layout [
+						position: 41, 19.5
+						size: 8, 8
+					]
+					index: 1
+					side: EAST
+				}
+				port P430 {
+					layout [
+						position: 16.5, 47
+						size: 8, 8
+					]
+					index: -2
+					side: SOUTH
+				}
+			}
+			node N170 {
+				layout [ size: 88, 25 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L170: "Const2" {
+					layout [ size: 42, 15 ]
+				}
+				port P431 {
+					layout [
+						position: 88, 8.5
+						size: 8, 8
+					]
+					index: 0
+					side: EAST
+				}
+				port P432 {
+					layout [
+						position: -8, 8.5
+						size: 8, 8
+					]
+					index: -1
+					side: WEST
+				}
+			}
+			node N171 {
+				layout [ size: 59, 25 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L171: "Body Z" {
+					layout [ size: 42, 15 ]
+				}
+				port P433 {
+					layout [
+						position: 59, 8.5
+						size: 8, 8
+					]
+					index: 0
+					side: EAST
+				}
+				port P434 {
+					layout [
+						position: -8, 8.5
+						size: 8, 8
+					]
+					index: -1
+					side: WEST
+				}
+			}
+			node N172 {
+				layout [ size: 137, 25 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L172: "Expression" {
+					layout [ size: 66, 15 ]
+				}
+				port P435 {
+					layout [
+						position: 137, 8.5
+						size: 8, 8
+					]
+					index: 0
+					side: EAST
+				}
+				port P436 {
+					layout [
+						position: -8, 8.5
+						size: 8, 8
+					]
+					index: -1
+					side: WEST
+				}
+			}
+			node N173 {
+				layout [ size: 41, 41 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L173: "MultiplyDivide5" {
+					layout [ size: 87, 15 ]
+				}
+				port P437 {
+					layout [
+						position: -8, 8.333333015441895
+						size: 8, 8
+					]
+					index: 0
+					side: WEST
+				}
+				port P438 {
+					layout [
+						position: -8, 24.66666603088379
+						size: 8, 8
+					]
+					index: -1
+					side: WEST
+				}
+				port P439 {
+					layout [
+						position: 41, 16.5
+						size: 8, 8
+					]
+					index: 2
+					side: EAST
+				}
+			}
+			node N174 {
+				layout [ size: 41, 25 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L174: "Const3" {
+					layout [ size: 42, 15 ]
+				}
+				port P440 {
+					layout [
+						position: 41, 8.5
+						size: 8, 8
+					]
+					index: 0
+					side: EAST
+				}
+				port P441 {
+					layout [
+						position: -8, 8.5
+						size: 8, 8
+					]
+					index: -1
+					side: WEST
+				}
+			}
+			edge E290: P388 -> N168.P425
+			edge E291: P388 -> N154.P391
+			edge E292: P388 -> N154.P392
+			edge E293: N154.P393 -> N155.P394
+			edge E294: N155.P395 -> N156.P396
+			edge E295: N155.P395 -> N166.P420
+			edge E296: N155.P395 -> N172.P436
+			edge E297: N156.P397 -> N157.P398
+			edge E298: N156.P397 -> N158.P400
+			edge E299: N156.P397 -> N159.P402
+			edge E300: N157.P399 -> N162.P409
+			edge E301: N158.P401 -> N164.P415
+			edge E302: N159.P404 -> N160.P405
+			edge E303: N160.P406 -> N161.P407
+			edge E304: N161.P408 -> P390
+			edge E305: N162.P411 -> N163.P412
+			edge E306: N163.P414 -> P389
+			edge E307: N164.P417 -> N163.P412
+			edge E308: N165.P419 -> N164.P415
+			edge E309: N166.P421 -> N168.P426
+			edge E310: N167.P423 -> N166.P420
+			edge E311: N168.P427 -> N169.P428
+			edge E312: N169.P429 -> N165.P418
+			edge E313: N169.P429 -> N173.P437
+			edge E314: N170.P431 -> N169.P428
+			edge E315: N171.P433 -> N162.P409
+			edge E316: N172.P435 -> N166.P422
+			edge E317: N172.P435 -> N169.P430
+			edge E318: N173.P439 -> N159.P402
+			edge E319: N174.P440 -> N173.P437
+		}
+		node N175 {
+			nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+			portConstraints: FREE
+			label L175: "Vertical Effect Dynamics" {
+				layout [ size: 142, 15 ]
+			}
+			port P442 {
+				layout [ size: 8, 8 ]
+				index: 0
+				side: WEST
+			}
+			port P443 {
+				layout [ size: 8, 8 ]
+				index: -1
+				side: WEST
+			}
+			port P444 {
+				layout [ size: 8, 8 ]
+				index: 2
+				side: EAST
+			}
+			node N176 {
+				layout [ size: 14, 25 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L176: "Const" {
+					layout [ size: 34, 15 ]
+				}
+				port P445 {
+					layout [
+						position: 14, 8.5
+						size: 8, 8
+					]
+					index: 0
+					side: EAST
+				}
+				port P446 {
+					layout [
+						position: -8, 8.5
+						size: 8, 8
+					]
+					index: -1
+					side: WEST
+				}
+			}
+			edge E320: N176.P445 -> P444
+		}
+		node N177 {
+			layout [ size: 41, 41 ]
+			nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+			portConstraints: FIXED_ORDER
+			label L177: "MultiplyDivide3" {
+				layout [ size: 87, 15 ]
+			}
+			port P447 {
+				layout [
+					position: -8, 8.333333015441895
+					size: 8, 8
+				]
+				index: 0
+				side: WEST
+			}
+			port P448 {
+				layout [
+					position: -8, 24.66666603088379
+					size: 8, 8
+				]
+				index: -1
+				side: WEST
+			}
+			port P449 {
+				layout [
+					position: 41, 16.5
+					size: 8, 8
+				]
+				index: 2
+				side: EAST
+			}
+		}
+		node N178 {
+			layout [ size: 145, 25 ]
+			nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+			portConstraints: FIXED_ORDER
+			label L178: "Pick First 2 Elements" {
+				layout [ size: 126, 15 ]
+			}
+			port P450 {
+				layout [
+					position: 145, 8.5
+					size: 8, 8
+				]
+				index: 0
+				side: EAST
+			}
+			port P451 {
+				layout [
+					position: -8, 8.5
+					size: 8, 8
+				]
+				index: -1
+				side: WEST
+			}
+		}
+		node N179 {
+			layout [ size: 10, 41 ]
+			nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+			portConstraints: FIXED_ORDER
+			label L179: "VectorDisassembler" {
+				layout [ size: 117, 15 ]
+			}
+			port P452 {
+				layout [
+					position: -8, 16.5
+					size: 8, 8
+				]
+				index: 0
+				side: WEST
+			}
+			port P453 {
+				layout [
+					position: 10, 16.5
+					size: 8, 8
+				]
+				index: 1
+				side: EAST
+			}
+		}
+		node N180 {
+			layout [ size: 41, 41 ]
+			nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+			portConstraints: FIXED_ORDER
+			label L180: "AddSubtract2" {
+				layout [ size: 80, 15 ]
+			}
+			port P454 {
+				layout [
+					position: -8, 8.333333015441895
+					size: 8, 8
+				]
+				index: 0
+				side: WEST
+			}
+			port P455 {
+				layout [
+					position: -8, 24.66666603088379
+					size: 8, 8
+				]
+				index: -1
+				side: WEST
+			}
+			port P456 {
+				layout [
+					position: 41, 16.5
+					size: 8, 8
+				]
+				index: 2
+				side: EAST
+			}
+		}
+		node N181 {
+			layout [ size: 41, 31 ]
+			nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+			portConstraints: FIXED_ORDER
+			label L181: "flap" {
+				layout [ size: 21, 15 ]
+			}
+			port P457 {
+				layout [
+					position: -8, 11.5
+					size: 8, 8
+				]
+				index: 0
+				side: WEST
+			}
+		}
+		edge E187: P256 -> N110.P260
+		edge E188: P257 -> N177.P447
+		edge E189: P257 -> N175.P442
+		edge E190: N110.P262 -> N111.P263
+		edge E191: N110.P262 -> N179.P452
+		edge E192: N111.P265 -> N152.P385
+		edge E193: N151.P384 -> P258
+		edge E194: N152.P387 -> P259
+		edge E195: N152.P387 -> N181.P457
+		edge E196: N153.P389 -> N111.P264
+		edge E197: N153.P389 -> N151.P382
+		edge E198: N153.P390 -> N152.P386
+		edge E199: N175.P444 -> N110.P260
+		edge E200: N177.P449 -> N153.P388
+		edge E201: N177.P449 -> N175.P443
+		edge E202: N178.P450 -> N177.P447
+		edge E203: N179.P453 -> N180.P454
+		edge E204: N179.P453 -> N180.P454
+		edge E205: N179.P453 -> N180.P454
+		edge E206: N180.P456 -> N151.P382
+	}
+	node N182 {
+		nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+		portConstraints: FREE
+		label L182: "6DOF (Eurler Angles)_CMU" {
+			layout [ size: 160, 15 ]
+		}
+		port P458 {
+			layout [ size: 8, 8 ]
+			index: 0
+			side: WEST
+		}
+		port P459 {
+			layout [ size: 8, 8 ]
+			index: -1
+			side: WEST
+		}
+		port P460 {
+			layout [ size: 8, 8 ]
+			index: 2
+			side: EAST
+		}
+		port P461 {
+			layout [ size: 8, 8 ]
+			index: 3
+			side: EAST
+		}
+		port P462 {
+			layout [ size: 8, 8 ]
+			index: 4
+			side: EAST
+		}
+		port P463 {
+			layout [ size: 8, 8 ]
+			index: 5
+			side: EAST
+		}
+		port P464 {
+			layout [ size: 8, 8 ]
+			index: 6
+			side: EAST
+		}
+		port P465 {
+			layout [ size: 8, 8 ]
+			index: 7
+			side: EAST
+		}
+		port P466 {
+			layout [ size: 8, 8 ]
+			index: 8
+			side: EAST
+		}
+		port P467 {
+			layout [ size: 8, 8 ]
+			index: 9
+			side: EAST
+		}
+		node N183 {
+			layout [ size: 66, 46 ]
+			nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+			portConstraints: FIXED_ORDER
+			label L183: "Gain" {
+				layout [ size: 28, 15 ]
+			}
+			port P468 {
+				layout [
+					position: -8, 19
+					size: 8, 8
+				]
+				index: 0
+				side: WEST
+			}
+			port P469 {
+				layout [
+					position: 66, 19
+					size: 8, 8
+				]
+				index: 1
+				side: EAST
+			}
+		}
+		node N184 {
+			layout [ size: 41, 41 ]
+			nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+			portConstraints: FIXED_ORDER
+			label L184: "AddSubtract" {
+				layout [ size: 72, 15 ]
+			}
+			port P470 {
+				layout [
+					position: -8, 8.333333015441895
+					size: 8, 8
+				]
+				index: 0
+				side: WEST
+			}
+			port P471 {
+				layout [
+					position: -8, 24.66666603088379
+					size: 8, 8
+				]
+				index: -1
+				side: WEST
+			}
+			port P472 {
+				layout [
+					position: 41, 16.5
+					size: 8, 8
+				]
+				index: 2
+				side: EAST
+			}
+		}
+		node N185 {
+			nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+			portConstraints: FREE
+			label L185: "CrossProduct(AXB)1" {
+				layout [ size: 120, 15 ]
+			}
+			port P473 {
+				layout [ size: 8, 8 ]
+				index: 0
+				side: WEST
+			}
+			port P474 {
+				layout [ size: 8, 8 ]
+				index: -1
+				side: WEST
+			}
+			port P475 {
+				layout [ size: 8, 8 ]
+				index: 2
+				side: EAST
+			}
+			node N186 {
+				layout [ size: 313, 25 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L186: "Expression" {
+					layout [ size: 66, 15 ]
+				}
+				port P476 {
+					layout [
+						position: 313, 8.5
+						size: 8, 8
+					]
+					index: 0
+					side: EAST
+				}
+				port P477 {
+					layout [
+						position: -8, -3.2857143878936768
+						size: 8, 8
+					]
+					index: -1
+					side: WEST
+				}
+				port P478 {
+					layout [
+						position: -8, 1.4285714626312256
+						size: 8, 8
+					]
+					index: -2
+					side: WEST
+				}
+				port P479 {
+					layout [
+						position: -8, 6.142857074737549
+						size: 8, 8
+					]
+					index: -3
+					side: WEST
+				}
+				port P480 {
+					layout [
+						position: -8, 10.857142448425293
+						size: 8, 8
+					]
+					index: -4
+					side: WEST
+				}
+				port P481 {
+					layout [
+						position: -8, 15.571428298950195
+						size: 8, 8
+					]
+					index: -5
+					side: WEST
+				}
+				port P482 {
+					layout [
+						position: -8, 20.285715103149414
+						size: 8, 8
+					]
+					index: -6
+					side: WEST
+				}
+			}
+			node N187 {
+				layout [ size: 10, 41 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L187: "VectorDisassembler" {
+					layout [ size: 117, 15 ]
+				}
+				port P483 {
+					layout [
+						position: -8, 16.5
+						size: 8, 8
+					]
+					index: 0
+					side: WEST
+				}
+				port P484 {
+					layout [
+						position: 10, 16.5
+						size: 8, 8
+					]
+					index: 1
+					side: EAST
+				}
+			}
+			node N188 {
+				layout [ size: 10, 41 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L188: "VectorDisassembler2" {
+					layout [ size: 124, 15 ]
+				}
+				port P485 {
+					layout [
+						position: -8, 16.5
+						size: 8, 8
+					]
+					index: 0
+					side: WEST
+				}
+				port P486 {
+					layout [
+						position: 10, 16.5
+						size: 8, 8
+					]
+					index: 1
+					side: EAST
+				}
+			}
+			edge E350: P473 -> N187.P483
+			edge E351: P474 -> N188.P485
+			edge E352: N186.P476 -> P475
+			edge E353: N187.P484 -> N186.P477
+			edge E354: N187.P484 -> N186.P478
+			edge E355: N187.P484 -> N186.P479
+			edge E356: N188.P486 -> N186.P480
+			edge E357: N188.P486 -> N186.P481
+			edge E358: N188.P486 -> N186.P482
+		}
+		node N189 {
+			nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+			portConstraints: FREE
+			label L189: "Create_DCM" {
+				layout [ size: 74, 15 ]
+			}
+			port P487 {
+				layout [ size: 8, 8 ]
+				index: 0
+				side: WEST
+			}
+			port P488 {
+				layout [ size: 8, 8 ]
+				index: 1
+				side: EAST
+			}
+			node N190 {
+				layout [ size: 14, 25 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L190: "TrigFunction2" {
+					layout [ size: 79, 15 ]
+				}
+				port P489 {
+					layout [
+						position: -8, 8.5
+						size: 8, 8
+					]
+					index: 0
+					side: WEST
+				}
+				port P490 {
+					layout [
+						position: 14, 8.5
+						size: 8, 8
+					]
+					index: 1
+					side: EAST
+				}
+			}
+			node N191 {
+				layout [ size: 41, 41 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L191: "AddSubtract" {
+					layout [ size: 72, 15 ]
+				}
+				port P491 {
+					layout [
+						position: -8, 8.333333015441895
+						size: 8, 8
+					]
+					index: 0
+					side: WEST
+				}
+				port P492 {
+					layout [
+						position: -8, 24.66666603088379
+						size: 8, 8
+					]
+					index: -1
+					side: WEST
+				}
+				port P493 {
+					layout [
+						position: 41, 16.5
+						size: 8, 8
+					]
+					index: 2
+					side: EAST
+				}
+			}
+			node N192 {
+				layout [ size: 52, 25 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L192: "Expression" {
+					layout [ size: 66, 15 ]
+				}
+				port P494 {
+					layout [
+						position: 52, 8.5
+						size: 8, 8
+					]
+					index: 0
+					side: EAST
+				}
+				port P495 {
+					layout [
+						position: -8, 3
+						size: 8, 8
+					]
+					index: -1
+					side: WEST
+				}
+				port P496 {
+					layout [
+						position: -8, 14
+						size: 8, 8
+					]
+					index: -2
+					side: WEST
+				}
+			}
+			node N193 {
+				layout [ size: 44, 25 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L193: "Expression2" {
+					layout [ size: 73, 15 ]
+				}
+				port P497 {
+					layout [
+						position: 44, 8.5
+						size: 8, 8
+					]
+					index: 0
+					side: EAST
+				}
+				port P498 {
+					layout [
+						position: -8, 3
+						size: 8, 8
+					]
+					index: -1
+					side: WEST
+				}
+				port P499 {
+					layout [
+						position: -8, 14
+						size: 8, 8
+					]
+					index: -2
+					side: WEST
+				}
+			}
+			node N194 {
+				layout [ size: 29, 25 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L194: "Expression3" {
+					layout [ size: 73, 15 ]
+				}
+				port P500 {
+					layout [
+						position: 29, 8.5
+						size: 8, 8
+					]
+					index: 0
+					side: EAST
+				}
+				port P501 {
+					layout [
+						position: -8, 8.5
+						size: 8, 8
+					]
+					index: -1
+					side: WEST
+				}
+			}
+			node N195 {
+				layout [ size: 108, 25 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L195: "Expression4" {
+					layout [ size: 73, 15 ]
+				}
+				port P502 {
+					layout [
+						position: 108, 8.5
+						size: 8, 8
+					]
+					index: 0
+					side: EAST
+				}
+				port P503 {
+					layout [
+						position: -8, -1.399999976158142
+						size: 8, 8
+					]
+					index: -1
+					side: WEST
+				}
+				port P504 {
+					layout [
+						position: -8, 5.199999809265137
+						size: 8, 8
+					]
+					index: -2
+					side: WEST
+				}
+				port P505 {
+					layout [
+						position: -8, 11.800000190734863
+						size: 8, 8
+					]
+					index: -3
+					side: WEST
+				}
+				port P506 {
+					layout [
+						position: -8, 18.399999618530273
+						size: 8, 8
+					]
+					index: -4
+					side: WEST
+				}
+			}
+			node N196 {
+				layout [ size: 104, 25 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L196: "Expression5" {
+					layout [ size: 73, 15 ]
+				}
+				port P507 {
+					layout [
+						position: 104, 8.5
+						size: 8, 8
+					]
+					index: 0
+					side: EAST
+				}
+				port P508 {
+					layout [
+						position: -8, -2.5
+						size: 8, 8
+					]
+					index: -1
+					side: WEST
+				}
+				port P509 {
+					layout [
+						position: -8, 3
+						size: 8, 8
+					]
+					index: -2
+					side: WEST
+				}
+				port P510 {
+					layout [
+						position: -8, 8.5
+						size: 8, 8
+					]
+					index: -3
+					side: WEST
+				}
+				port P511 {
+					layout [
+						position: -8, 14
+						size: 8, 8
+					]
+					index: -4
+					side: WEST
+				}
+				port P512 {
+					layout [
+						position: -8, 19.5
+						size: 8, 8
+					]
+					index: -5
+					side: WEST
+				}
+			}
+			node N197 {
+				layout [ size: 44, 25 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L197: "Expression6" {
+					layout [ size: 73, 15 ]
+				}
+				port P513 {
+					layout [
+						position: 44, 8.5
+						size: 8, 8
+					]
+					index: 0
+					side: EAST
+				}
+				port P514 {
+					layout [
+						position: -8, 3
+						size: 8, 8
+					]
+					index: -1
+					side: WEST
+				}
+				port P515 {
+					layout [
+						position: -8, 14
+						size: 8, 8
+					]
+					index: -2
+					side: WEST
+				}
+			}
+			node N198 {
+				layout [ size: 104, 25 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L198: "Expression7" {
+					layout [ size: 73, 15 ]
+				}
+				port P516 {
+					layout [
+						position: 104, 8.5
+						size: 8, 8
+					]
+					index: 0
+					side: EAST
+				}
+				port P517 {
+					layout [
+						position: -8, -2.5
+						size: 8, 8
+					]
+					index: -1
+					side: WEST
+				}
+				port P518 {
+					layout [
+						position: -8, 3
+						size: 8, 8
+					]
+					index: -2
+					side: WEST
+				}
+				port P519 {
+					layout [
+						position: -8, 8.5
+						size: 8, 8
+					]
+					index: -3
+					side: WEST
+				}
+				port P520 {
+					layout [
+						position: -8, 14
+						size: 8, 8
+					]
+					index: -4
+					side: WEST
+				}
+				port P521 {
+					layout [
+						position: -8, 19.5
+						size: 8, 8
+					]
+					index: -5
+					side: WEST
+				}
+			}
+			node N199 {
+				layout [ size: 108, 25 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L199: "Expression8" {
+					layout [ size: 73, 15 ]
+				}
+				port P522 {
+					layout [
+						position: 108, 8.5
+						size: 8, 8
+					]
+					index: 0
+					side: EAST
+				}
+				port P523 {
+					layout [
+						position: -8, -2.5
+						size: 8, 8
+					]
+					index: -1
+					side: WEST
+				}
+				port P524 {
+					layout [
+						position: -8, 3
+						size: 8, 8
+					]
+					index: -2
+					side: WEST
+				}
+				port P525 {
+					layout [
+						position: -8, 8.5
+						size: 8, 8
+					]
+					index: -3
+					side: WEST
+				}
+				port P526 {
+					layout [
+						position: -8, 14
+						size: 8, 8
+					]
+					index: -4
+					side: WEST
+				}
+				port P527 {
+					layout [
+						position: -8, 19.5
+						size: 8, 8
+					]
+					index: -5
+					side: WEST
+				}
+			}
+			node N200 {
+				layout [ size: 44, 25 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L200: "Expression9" {
+					layout [ size: 73, 15 ]
+				}
+				port P528 {
+					layout [
+						position: 44, 8.5
+						size: 8, 8
+					]
+					index: 0
+					side: EAST
+				}
+				port P529 {
+					layout [
+						position: -8, 3
+						size: 8, 8
+					]
+					index: -1
+					side: WEST
+				}
+				port P530 {
+					layout [
+						position: -8, 14
+						size: 8, 8
+					]
+					index: -2
+					side: WEST
+				}
+			}
+			node N201 {
+				layout [ size: 66, 46 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L201: "Scale" {
+					layout [ size: 34, 15 ]
+				}
+				port P531 {
+					layout [
+						position: -8, 19
+						size: 8, 8
+					]
+					index: 0
+					side: WEST
+				}
+				port P532 {
+					layout [
+						position: 66, 19
+						size: 8, 8
+					]
+					index: 1
+					side: EAST
+				}
+			}
+			node N202 {
+				layout [ size: 66, 46 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L202: "Scale2" {
+					layout [ size: 41, 15 ]
+				}
+				port P533 {
+					layout [
+						position: -8, 19
+						size: 8, 8
+					]
+					index: 0
+					side: WEST
+				}
+				port P534 {
+					layout [
+						position: 66, 19
+						size: 8, 8
+					]
+					index: 1
+					side: EAST
+				}
+			}
+			node N203 {
+				layout [ size: 66, 46 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L203: "Scale3" {
+					layout [ size: 41, 15 ]
+				}
+				port P535 {
+					layout [
+						position: -8, 19
+						size: 8, 8
+					]
+					index: 0
+					side: WEST
+				}
+				port P536 {
+					layout [
+						position: 66, 19
+						size: 8, 8
+					]
+					index: 1
+					side: EAST
+				}
+			}
+			node N204 {
+				layout [ size: 66, 46 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L204: "Scale4" {
+					layout [ size: 41, 15 ]
+				}
+				port P537 {
+					layout [
+						position: -8, 19
+						size: 8, 8
+					]
+					index: 0
+					side: WEST
+				}
+				port P538 {
+					layout [
+						position: 66, 19
+						size: 8, 8
+					]
+					index: 1
+					side: EAST
+				}
+			}
+			node N205 {
+				layout [ size: 66, 46 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L205: "Scale5" {
+					layout [ size: 41, 15 ]
+				}
+				port P539 {
+					layout [
+						position: -8, 19
+						size: 8, 8
+					]
+					index: 0
+					side: WEST
+				}
+				port P540 {
+					layout [
+						position: 66, 19
+						size: 8, 8
+					]
+					index: 1
+					side: EAST
+				}
+			}
+			node N206 {
+				layout [ size: 66, 46 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L206: "Scale6" {
+					layout [ size: 41, 15 ]
+				}
+				port P541 {
+					layout [
+						position: -8, 19
+						size: 8, 8
+					]
+					index: 0
+					side: WEST
+				}
+				port P542 {
+					layout [
+						position: 66, 19
+						size: 8, 8
+					]
+					index: 1
+					side: EAST
+				}
+			}
+			node N207 {
+				layout [ size: 66, 46 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L207: "Scale7" {
+					layout [ size: 41, 15 ]
+				}
+				port P543 {
+					layout [
+						position: -8, 19
+						size: 8, 8
+					]
+					index: 0
+					side: WEST
+				}
+				port P544 {
+					layout [
+						position: 66, 19
+						size: 8, 8
+					]
+					index: 1
+					side: EAST
+				}
+			}
+			node N208 {
+				layout [ size: 66, 46 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L208: "Scale8" {
+					layout [ size: 41, 15 ]
+				}
+				port P545 {
+					layout [
+						position: -8, 19
+						size: 8, 8
+					]
+					index: 0
+					side: WEST
+				}
+				port P546 {
+					layout [
+						position: 66, 19
+						size: 8, 8
+					]
+					index: 1
+					side: EAST
+				}
+			}
+			node N209 {
+				layout [ size: 66, 46 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L209: "Scale9" {
+					layout [ size: 41, 15 ]
+				}
+				port P547 {
+					layout [
+						position: -8, 19
+						size: 8, 8
+					]
+					index: 0
+					side: WEST
+				}
+				port P548 {
+					layout [
+						position: 66, 19
+						size: 8, 8
+					]
+					index: 1
+					side: EAST
+				}
+			}
+			node N210 {
+				layout [ size: 14, 25 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L210: "TrigFunction" {
+					layout [ size: 72, 15 ]
+				}
+				port P549 {
+					layout [
+						position: -8, 8.5
+						size: 8, 8
+					]
+					index: 0
+					side: WEST
+				}
+				port P550 {
+					layout [
+						position: 14, 8.5
+						size: 8, 8
+					]
+					index: 1
+					side: EAST
+				}
+			}
+			node N211 {
+				layout [ size: 14, 25 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L211: "TrigFunction3" {
+					layout [ size: 79, 15 ]
+				}
+				port P551 {
+					layout [
+						position: -8, 8.5
+						size: 8, 8
+					]
+					index: 0
+					side: WEST
+				}
+				port P552 {
+					layout [
+						position: 14, 8.5
+						size: 8, 8
+					]
+					index: 1
+					side: EAST
+				}
+			}
+			node N212 {
+				layout [ size: 31, 25 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L212: "TrigFunction4" {
+					layout [ size: 79, 15 ]
+				}
+				port P553 {
+					layout [
+						position: -8, 8.5
+						size: 8, 8
+					]
+					index: 0
+					side: WEST
+				}
+				port P554 {
+					layout [
+						position: 31, 8.5
+						size: 8, 8
+					]
+					index: 1
+					side: EAST
+				}
+			}
+			node N213 {
+				layout [ size: 31, 25 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L213: "TrigFunction5" {
+					layout [ size: 79, 15 ]
+				}
+				port P555 {
+					layout [
+						position: -8, 8.5
+						size: 8, 8
+					]
+					index: 0
+					side: WEST
+				}
+				port P556 {
+					layout [
+						position: 31, 8.5
+						size: 8, 8
+					]
+					index: 1
+					side: EAST
+				}
+			}
+			node N214 {
+				layout [ size: 31, 25 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L214: "TrigFunction6" {
+					layout [ size: 79, 15 ]
+				}
+				port P557 {
+					layout [
+						position: -8, 8.5
+						size: 8, 8
+					]
+					index: 0
+					side: WEST
+				}
+				port P558 {
+					layout [
+						position: 31, 8.5
+						size: 8, 8
+					]
+					index: 1
+					side: EAST
+				}
+			}
+			node N215 {
+				layout [ size: 10, 41 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L215: "VectorDisassembler" {
+					layout [ size: 117, 15 ]
+				}
+				port P559 {
+					layout [
+						position: -8, 16.5
+						size: 8, 8
+					]
+					index: 0
+					side: WEST
+				}
+				port P560 {
+					layout [
+						position: 10, 16.5
+						size: 8, 8
+					]
+					index: 1
+					side: EAST
+				}
+			}
+			edge E359: P487 -> N215.P559
+			edge E360: N190.P490 -> N193.P499
+			edge E361: N190.P490 -> N195.P505
+			edge E362: N190.P490 -> N196.P510
+			edge E363: N190.P490 -> N198.P520
+			edge E364: N190.P490 -> N199.P525
+			edge E365: N191.P493 -> P488
+			edge E366: N192.P494 -> N201.P531
+			edge E367: N193.P497 -> N202.P533
+			edge E368: N194.P500 -> N203.P535
+			edge E369: N195.P502 -> N204.P537
+			edge E370: N196.P507 -> N205.P539
+			edge E371: N197.P513 -> N206.P541
+			edge E372: N198.P516 -> N207.P543
+			edge E373: N199.P522 -> N208.P545
+			edge E374: N200.P528 -> N209.P547
+			edge E375: N201.P532 -> N191.P491
+			edge E376: N202.P534 -> N191.P491
+			edge E377: N203.P536 -> N191.P491
+			edge E378: N204.P538 -> N191.P491
+			edge E379: N205.P540 -> N191.P491
+			edge E380: N206.P542 -> N191.P491
+			edge E381: N207.P544 -> N191.P491
+			edge E382: N208.P546 -> N191.P491
+			edge E383: N209.P548 -> N191.P491
+			edge E384: N210.P550 -> N196.P512
+			edge E385: N210.P550 -> N197.P514
+			edge E386: N210.P550 -> N198.P517
+			edge E387: N210.P550 -> N199.P527
+			edge E388: N211.P552 -> N194.P501
+			edge E389: N211.P552 -> N195.P504
+			edge E390: N211.P552 -> N196.P508
+			edge E391: N211.P552 -> N198.P519
+			edge E392: N211.P552 -> N199.P524
+			edge E393: N212.P554 -> N195.P503
+			edge E394: N212.P554 -> N198.P518
+			edge E395: N212.P554 -> N199.P523
+			edge E396: N212.P554 -> N200.P529
+			edge E397: N213.P556 -> N192.P495
+			edge E398: N213.P556 -> N193.P498
+			edge E399: N213.P556 -> N196.P509
+			edge E400: N213.P556 -> N197.P515
+			edge E401: N213.P556 -> N200.P530
+			edge E402: N214.P558 -> N192.P496
+			edge E403: N214.P558 -> N195.P506
+			edge E404: N214.P558 -> N196.P511
+			edge E405: N214.P558 -> N198.P521
+			edge E406: N214.P558 -> N199.P526
+			edge E407: N215.P560 -> N210.P549
+			edge E408: N215.P560 -> N212.P553
+			edge E409: N215.P560 -> N211.P551
+			edge E410: N215.P560 -> N213.P555
+			edge E411: N215.P560 -> N190.P489
+			edge E412: N215.P560 -> N214.P557
+		}
+		node N216 {
+			nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+			portConstraints: FREE
+			label L216: "Body-based-to-ref-fram-based" {
+				layout [ size: 171, 15 ]
+			}
+			port P561 {
+				layout [ size: 8, 8 ]
+				index: 0
+				side: WEST
+			}
+			port P562 {
+				layout [ size: 8, 8 ]
+				index: -1
+				side: WEST
+			}
+			port P563 {
+				layout [ size: 8, 8 ]
+				index: 2
+				side: EAST
+			}
+			node N217 {
+				layout [ size: 251, 25 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L217: "Expression" {
+					layout [ size: 66, 15 ]
+				}
+				port P564 {
+					layout [
+						position: 251, 8.5
+						size: 8, 8
+					]
+					index: 0
+					side: EAST
+				}
+				port P565 {
+					layout [
+						position: -8, -2.5
+						size: 8, 8
+					]
+					index: -2
+					side: WEST
+				}
+				port P566 {
+					layout [
+						position: -8, 3
+						size: 8, 8
+					]
+					index: -3
+					side: WEST
+				}
+				port P567 {
+					layout [
+						position: -8, 8.5
+						size: 8, 8
+					]
+					index: -4
+					side: WEST
+				}
+				port P568 {
+					layout [
+						position: -8, 14
+						size: 8, 8
+					]
+					index: -5
+					side: WEST
+				}
+				port P569 {
+					layout [
+						position: -8, 19.5
+						size: 8, 8
+					]
+					index: -6
+					side: WEST
+				}
+			}
+			node N218 {
+				layout [ size: 135, 25 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L218: "Expression2" {
+					layout [ size: 73, 15 ]
+				}
+				port P570 {
+					layout [
+						position: 135, 8.5
+						size: 8, 8
+					]
+					index: 0
+					side: EAST
+				}
+				port P571 {
+					layout [
+						position: -8, 0.25
+						size: 8, 8
+					]
+					index: -2
+					side: WEST
+				}
+				port P572 {
+					layout [
+						position: -8, 8.5
+						size: 8, 8
+					]
+					index: -3
+					side: WEST
+				}
+				port P573 {
+					layout [
+						position: -8, 16.75
+						size: 8, 8
+					]
+					index: -4
+					side: WEST
+				}
+			}
+			node N219 {
+				layout [ size: 273, 25 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L219: "Expression3" {
+					layout [ size: 73, 15 ]
+				}
+				port P574 {
+					layout [
+						position: 273, 8.5
+						size: 8, 8
+					]
+					index: 0
+					side: EAST
+				}
+				port P575 {
+					layout [
+						position: -8, -2.5
+						size: 8, 8
+					]
+					index: -2
+					side: WEST
+				}
+				port P576 {
+					layout [
+						position: -8, 3
+						size: 8, 8
+					]
+					index: -3
+					side: WEST
+				}
+				port P577 {
+					layout [
+						position: -8, 8.5
+						size: 8, 8
+					]
+					index: -4
+					side: WEST
+				}
+				port P578 {
+					layout [
+						position: -8, 14
+						size: 8, 8
+					]
+					index: -5
+					side: WEST
+				}
+				port P579 {
+					layout [
+						position: -8, 19.5
+						size: 8, 8
+					]
+					index: -6
+					side: WEST
+				}
+			}
+			node N220 {
+				layout [ size: 10, 41 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L220: "VectorDisassembler" {
+					layout [ size: 117, 15 ]
+				}
+				port P580 {
+					layout [
+						position: -8, 16.5
+						size: 8, 8
+					]
+					index: 0
+					side: WEST
+				}
+				port P581 {
+					layout [
+						position: 10, 16.5
+						size: 8, 8
+					]
+					index: 1
+					side: EAST
+				}
+			}
+			node N221 {
+				layout [ size: 10, 41 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L221: "VectorDisassembler2" {
+					layout [ size: 124, 15 ]
+				}
+				port P582 {
+					layout [
+						position: -8, 16.5
+						size: 8, 8
+					]
+					index: 0
+					side: WEST
+				}
+				port P583 {
+					layout [
+						position: 10, 16.5
+						size: 8, 8
+					]
+					index: 1
+					side: EAST
+				}
+			}
+			node N222 {
+				layout [ size: 10, 41 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L222: "VectorAssembler" {
+					layout [ size: 100, 15 ]
+				}
+				port P584 {
+					layout [
+						position: -8, 16.5
+						size: 8, 8
+					]
+					index: 0
+					side: WEST
+				}
+				port P585 {
+					layout [
+						position: 10, 16.5
+						size: 8, 8
+					]
+					index: 1
+					side: EAST
+				}
+			}
+			edge E413: P561 -> N220.P580
+			edge E414: P562 -> N221.P582
+			edge E415: N217.P564 -> N222.P584
+			edge E416: N218.P570 -> N222.P584
+			edge E417: N219.P574 -> N222.P584
+			edge E418: N220.P581 -> N217.P565
+			edge E419: N220.P581 -> N219.P575
+			edge E420: N220.P581 -> N217.P566
+			edge E421: N220.P581 -> N218.P571
+			edge E422: N220.P581 -> N219.P576
+			edge E423: N220.P581 -> N217.P567
+			edge E424: N220.P581 -> N218.P572
+			edge E425: N220.P581 -> N219.P577
+			edge E426: N221.P583 -> N217.P568
+			edge E427: N221.P583 -> N218.P573
+			edge E428: N221.P583 -> N219.P578
+			edge E429: N221.P583 -> N217.P569
+			edge E430: N221.P583 -> N219.P579
+			edge E431: N222.P585 -> P563
+		}
+		node N223 {
+			layout [ size: 41, 41 ]
+			nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+			portConstraints: FIXED_ORDER
+			label L223: "AddSubtract2" {
+				layout [ size: 80, 15 ]
+			}
+			port P586 {
+				layout [
+					position: -8, 8.333333015441895
+					size: 8, 8
+				]
+				index: 0
+				side: WEST
+			}
+			port P587 {
+				layout [
+					position: -8, 24.66666603088379
+					size: 8, 8
+				]
+				index: -1
+				side: WEST
+			}
+			port P588 {
+				layout [
+					position: 41, 16.5
+					size: 8, 8
+				]
+				index: 2
+				side: EAST
+			}
+		}
+		node N224 {
+			layout [ size: 41, 41 ]
+			nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+			portConstraints: FIXED_ORDER
+			label L224: "Product" {
+				layout [ size: 45, 15 ]
+			}
+			port P589 {
+				layout [
+					position: -8, 8.333333015441895
+					size: 8, 8
+				]
+				index: 0
+				side: WEST
+			}
+			port P590 {
+				layout [
+					position: -8, 24.66666603088379
+					size: 8, 8
+				]
+				index: -1
+				side: WEST
+			}
+			port P591 {
+				layout [
+					position: 41, 16.5
+					size: 8, 8
+				]
+				index: 2
+				side: EAST
+			}
+		}
+		node N225 {
+			layout [ size: 41, 41 ]
+			nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+			portConstraints: FIXED_ORDER
+			label L225: "MultiplyDivide2" {
+				layout [ size: 87, 15 ]
+			}
+			port P592 {
+				layout [
+					position: -8, 8.333333015441895
+					size: 8, 8
+				]
+				index: 0
+				side: WEST
+			}
+			port P593 {
+				layout [
+					position: -8, 24.66666603088379
+					size: 8, 8
+				]
+				index: -1
+				side: WEST
+			}
+			port P594 {
+				layout [
+					position: 41, 16.5
+					size: 8, 8
+				]
+				index: 2
+				side: EAST
+			}
+		}
+		node N226 {
+			layout [ size: 41, 41 ]
+			nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+			portConstraints: FIXED_ORDER
+			label L226: "MultiplyDivide3" {
+				layout [ size: 87, 15 ]
+			}
+			port P595 {
+				layout [
+					position: -8, 8.333333015441895
+					size: 8, 8
+				]
+				index: 0
+				side: WEST
+			}
+			port P596 {
+				layout [
+					position: -8, 24.66666603088379
+					size: 8, 8
+				]
+				index: -1
+				side: WEST
+			}
+			port P597 {
+				layout [
+					position: 41, 16.5
+					size: 8, 8
+				]
+				index: 2
+				side: EAST
+			}
+		}
+		node N227 {
+			layout [ size: 17, 25 ]
+			nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+			portConstraints: FIXED_ORDER
+			label L227: "J" {
+				layout [ size: 7, 15 ]
+			}
+			port P598 {
+				layout [
+					position: 17, 8.5
+					size: 8, 8
+				]
+				index: 0
+				side: EAST
+			}
+			port P599 {
+				layout [
+					position: -8, 8.5
+					size: 8, 8
+				]
+				index: -1
+				side: WEST
+			}
+		}
+		node N228 {
+			layout [ size: 65, 25 ]
+			nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+			portConstraints: FIXED_ORDER
+			label L228: "Inv(J)" {
+				layout [ size: 30, 15 ]
+			}
+			port P600 {
+				layout [
+					position: 65, 8.5
+					size: 8, 8
+				]
+				index: 0
+				side: EAST
+			}
+			port P601 {
+				layout [
+					position: -8, 8.5
+					size: 8, 8
+				]
+				index: -1
+				side: WEST
+			}
+		}
+		node N229 {
+			layout [ size: 104, 25 ]
+			nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+			portConstraints: FIXED_ORDER
+			label L229: "uT" {
+				layout [ size: 15, 15 ]
+			}
+			port P602 {
+				layout [
+					position: 104, 8.5
+					size: 8, 8
+				]
+				index: 0
+				side: EAST
+			}
+			port P603 {
+				layout [
+					position: -8, 8.5
+					size: 8, 8
+				]
+				index: -1
+				side: WEST
+			}
+		}
+		node N230 {
+			nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+			portConstraints: FREE
+			label L230: "VectorIntegrator" {
+				layout [ size: 92, 15 ]
+			}
+			port P604 {
+				layout [ size: 8, 8 ]
+				index: 0
+				side: WEST
+			}
+			port P605 {
+				layout [ size: 8, 8 ]
+				index: 1
+				side: EAST
+			}
+			node N231 {
+				layout [ size: 44, 46 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L231: "Integrator" {
+					layout [ size: 55, 15 ]
+				}
+				port P606 {
+					layout [
+						position: 9.333333015441895, 46
+						size: 8, 8
+					]
+					index: 0
+					side: SOUTH
+				}
+				port P607 {
+					layout [
+						position: -8, 19
+						size: 8, 8
+					]
+					index: -1
+					side: WEST
+				}
+				port P608 {
+					layout [
+						position: 44, 19
+						size: 8, 8
+					]
+					index: 2
+					side: EAST
+				}
+				port P609 {
+					layout [
+						position: 26.66666603088379, 46
+						size: 8, 8
+					]
+					index: -3
+					side: SOUTH
+				}
+			}
+			node N232 {
+				layout [ size: 44, 46 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L232: "Integrator2" {
+					layout [ size: 62, 15 ]
+				}
+				port P610 {
+					layout [
+						position: 9.333333015441895, 46
+						size: 8, 8
+					]
+					index: 0
+					side: SOUTH
+				}
+				port P611 {
+					layout [
+						position: -8, 19
+						size: 8, 8
+					]
+					index: -1
+					side: WEST
+				}
+				port P612 {
+					layout [
+						position: 44, 19
+						size: 8, 8
+					]
+					index: 2
+					side: EAST
+				}
+				port P613 {
+					layout [
+						position: 26.66666603088379, 46
+						size: 8, 8
+					]
+					index: -3
+					side: SOUTH
+				}
+			}
+			node N233 {
+				layout [ size: 44, 46 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L233: "Integrator3" {
+					layout [ size: 62, 15 ]
+				}
+				port P614 {
+					layout [
+						position: 9.333333015441895, 46
+						size: 8, 8
+					]
+					index: 0
+					side: SOUTH
+				}
+				port P615 {
+					layout [
+						position: -8, 19
+						size: 8, 8
+					]
+					index: -1
+					side: WEST
+				}
+				port P616 {
+					layout [
+						position: 44, 19
+						size: 8, 8
+					]
+					index: 2
+					side: EAST
+				}
+				port P617 {
+					layout [
+						position: 26.66666603088379, 46
+						size: 8, 8
+					]
+					index: -3
+					side: SOUTH
+				}
+			}
+			node N234 {
+				layout [ size: 10, 41 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L234: "VectorDisassembler" {
+					layout [ size: 117, 15 ]
+				}
+				port P618 {
+					layout [
+						position: -8, 16.5
+						size: 8, 8
+					]
+					index: 0
+					side: WEST
+				}
+				port P619 {
+					layout [
+						position: 10, 16.5
+						size: 8, 8
+					]
+					index: 1
+					side: EAST
+				}
+			}
+			node N235 {
+				layout [ size: 10, 41 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L235: "VectorAssembler" {
+					layout [ size: 100, 15 ]
+				}
+				port P620 {
+					layout [
+						position: -8, 16.5
+						size: 8, 8
+					]
+					index: 0
+					side: WEST
+				}
+				port P621 {
+					layout [
+						position: 10, 16.5
+						size: 8, 8
+					]
+					index: 1
+					side: EAST
+				}
+			}
+			edge E432: P604 -> N234.P618
+			edge E433: N231.P608 -> N235.P620
+			edge E434: N232.P612 -> N235.P620
+			edge E435: N233.P616 -> N235.P620
+			edge E436: N234.P619 -> N231.P607
+			edge E437: N234.P619 -> N232.P611
+			edge E438: N234.P619 -> N233.P615
+			edge E439: N235.P621 -> P605
+		}
+		node N236 {
+			nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+			portConstraints: FREE
+			label L236: "CrossProduct(AXB)" {
+				layout [ size: 113, 15 ]
+			}
+			port P622 {
+				layout [ size: 8, 8 ]
+				index: 0
+				side: WEST
+			}
+			port P623 {
+				layout [ size: 8, 8 ]
+				index: -1
+				side: WEST
+			}
+			port P624 {
+				layout [ size: 8, 8 ]
+				index: 2
+				side: EAST
+			}
+			node N237 {
+				layout [ size: 313, 25 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L237: "Expression" {
+					layout [ size: 66, 15 ]
+				}
+				port P625 {
+					layout [
+						position: 313, 8.5
+						size: 8, 8
+					]
+					index: 0
+					side: EAST
+				}
+				port P626 {
+					layout [
+						position: -8, -3.2857143878936768
+						size: 8, 8
+					]
+					index: -1
+					side: WEST
+				}
+				port P627 {
+					layout [
+						position: -8, 1.4285714626312256
+						size: 8, 8
+					]
+					index: -2
+					side: WEST
+				}
+				port P628 {
+					layout [
+						position: -8, 6.142857074737549
+						size: 8, 8
+					]
+					index: -3
+					side: WEST
+				}
+				port P629 {
+					layout [
+						position: -8, 10.857142448425293
+						size: 8, 8
+					]
+					index: -4
+					side: WEST
+				}
+				port P630 {
+					layout [
+						position: -8, 15.571428298950195
+						size: 8, 8
+					]
+					index: -5
+					side: WEST
+				}
+				port P631 {
+					layout [
+						position: -8, 20.285715103149414
+						size: 8, 8
+					]
+					index: -6
+					side: WEST
+				}
+			}
+			node N238 {
+				layout [ size: 10, 41 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L238: "VectorDisassembler" {
+					layout [ size: 117, 15 ]
+				}
+				port P632 {
+					layout [
+						position: -8, 16.5
+						size: 8, 8
+					]
+					index: 0
+					side: WEST
+				}
+				port P633 {
+					layout [
+						position: 10, 16.5
+						size: 8, 8
+					]
+					index: 1
+					side: EAST
+				}
+			}
+			node N239 {
+				layout [ size: 10, 41 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L239: "VectorDisassembler2" {
+					layout [ size: 124, 15 ]
+				}
+				port P634 {
+					layout [
+						position: -8, 16.5
+						size: 8, 8
+					]
+					index: 0
+					side: WEST
+				}
+				port P635 {
+					layout [
+						position: 10, 16.5
+						size: 8, 8
+					]
+					index: 1
+					side: EAST
+				}
+			}
+			edge E440: P622 -> N238.P632
+			edge E441: P623 -> N239.P634
+			edge E442: N237.P625 -> P624
+			edge E443: N238.P633 -> N237.P626
+			edge E444: N238.P633 -> N237.P627
+			edge E445: N238.P633 -> N237.P628
+			edge E446: N239.P635 -> N237.P629
+			edge E447: N239.P635 -> N237.P630
+			edge E448: N239.P635 -> N237.P631
+		}
+		node N240 {
+			nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+			portConstraints: FREE
+			label L240: "VectorIntegrator2" {
+				layout [ size: 99, 15 ]
+			}
+			port P636 {
+				layout [ size: 8, 8 ]
+				index: 0
+				side: WEST
+			}
+			port P637 {
+				layout [ size: 8, 8 ]
+				index: 1
+				side: EAST
+			}
+			node N241 {
+				layout [ size: 44, 46 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L241: "Integrator" {
+					layout [ size: 55, 15 ]
+				}
+				port P638 {
+					layout [
+						position: 9.333333015441895, 46
+						size: 8, 8
+					]
+					index: 0
+					side: SOUTH
+				}
+				port P639 {
+					layout [
+						position: -8, 19
+						size: 8, 8
+					]
+					index: -1
+					side: WEST
+				}
+				port P640 {
+					layout [
+						position: 44, 19
+						size: 8, 8
+					]
+					index: 2
+					side: EAST
+				}
+				port P641 {
+					layout [
+						position: 26.66666603088379, 46
+						size: 8, 8
+					]
+					index: -3
+					side: SOUTH
+				}
+			}
+			node N242 {
+				layout [ size: 44, 46 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L242: "Integrator2" {
+					layout [ size: 62, 15 ]
+				}
+				port P642 {
+					layout [
+						position: 9.333333015441895, 46
+						size: 8, 8
+					]
+					index: 0
+					side: SOUTH
+				}
+				port P643 {
+					layout [
+						position: -8, 19
+						size: 8, 8
+					]
+					index: -1
+					side: WEST
+				}
+				port P644 {
+					layout [
+						position: 44, 19
+						size: 8, 8
+					]
+					index: 2
+					side: EAST
+				}
+				port P645 {
+					layout [
+						position: 26.66666603088379, 46
+						size: 8, 8
+					]
+					index: -3
+					side: SOUTH
+				}
+			}
+			node N243 {
+				layout [ size: 44, 46 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L243: "Integrator3" {
+					layout [ size: 62, 15 ]
+				}
+				port P646 {
+					layout [
+						position: 9.333333015441895, 46
+						size: 8, 8
+					]
+					index: 0
+					side: SOUTH
+				}
+				port P647 {
+					layout [
+						position: -8, 19
+						size: 8, 8
+					]
+					index: -1
+					side: WEST
+				}
+				port P648 {
+					layout [
+						position: 44, 19
+						size: 8, 8
+					]
+					index: 2
+					side: EAST
+				}
+				port P649 {
+					layout [
+						position: 26.66666603088379, 46
+						size: 8, 8
+					]
+					index: -3
+					side: SOUTH
+				}
+			}
+			node N244 {
+				layout [ size: 10, 41 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L244: "VectorDisassembler" {
+					layout [ size: 117, 15 ]
+				}
+				port P650 {
+					layout [
+						position: -8, 16.5
+						size: 8, 8
+					]
+					index: 0
+					side: WEST
+				}
+				port P651 {
+					layout [
+						position: 10, 16.5
+						size: 8, 8
+					]
+					index: 1
+					side: EAST
+				}
+			}
+			node N245 {
+				layout [ size: 10, 41 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L245: "VectorAssembler" {
+					layout [ size: 100, 15 ]
+				}
+				port P652 {
+					layout [
+						position: -8, 16.5
+						size: 8, 8
+					]
+					index: 0
+					side: WEST
+				}
+				port P653 {
+					layout [
+						position: 10, 16.5
+						size: 8, 8
+					]
+					index: 1
+					side: EAST
+				}
+			}
+			edge E449: P636 -> N244.P650
+			edge E450: N241.P640 -> N245.P652
+			edge E451: N242.P644 -> N245.P652
+			edge E452: N243.P648 -> N245.P652
+			edge E453: N244.P651 -> N241.P639
+			edge E454: N244.P651 -> N242.P643
+			edge E455: N244.P651 -> N243.P647
+			edge E456: N245.P653 -> P637
+		}
+		node N246 {
+			nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+			portConstraints: FREE
+			label L246: "VectorIntegrator3" {
+				layout [ size: 99, 15 ]
+			}
+			port P654 {
+				layout [ size: 8, 8 ]
+				index: 0
+				side: WEST
+			}
+			port P655 {
+				layout [ size: 8, 8 ]
+				index: 1
+				side: EAST
+			}
+			node N247 {
+				layout [ size: 44, 46 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L247: "Integrator" {
+					layout [ size: 55, 15 ]
+				}
+				port P656 {
+					layout [
+						position: 9.333333015441895, 46
+						size: 8, 8
+					]
+					index: 0
+					side: SOUTH
+				}
+				port P657 {
+					layout [
+						position: -8, 19
+						size: 8, 8
+					]
+					index: -1
+					side: WEST
+				}
+				port P658 {
+					layout [
+						position: 44, 19
+						size: 8, 8
+					]
+					index: 2
+					side: EAST
+				}
+				port P659 {
+					layout [
+						position: 26.66666603088379, 46
+						size: 8, 8
+					]
+					index: -3
+					side: SOUTH
+				}
+			}
+			node N248 {
+				layout [ size: 44, 46 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L248: "Integrator2" {
+					layout [ size: 62, 15 ]
+				}
+				port P660 {
+					layout [
+						position: 9.333333015441895, 46
+						size: 8, 8
+					]
+					index: 0
+					side: SOUTH
+				}
+				port P661 {
+					layout [
+						position: -8, 19
+						size: 8, 8
+					]
+					index: -1
+					side: WEST
+				}
+				port P662 {
+					layout [
+						position: 44, 19
+						size: 8, 8
+					]
+					index: 2
+					side: EAST
+				}
+				port P663 {
+					layout [
+						position: 26.66666603088379, 46
+						size: 8, 8
+					]
+					index: -3
+					side: SOUTH
+				}
+			}
+			node N249 {
+				layout [ size: 44, 46 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L249: "Integrator3" {
+					layout [ size: 62, 15 ]
+				}
+				port P664 {
+					layout [
+						position: 9.333333015441895, 46
+						size: 8, 8
+					]
+					index: 0
+					side: SOUTH
+				}
+				port P665 {
+					layout [
+						position: -8, 19
+						size: 8, 8
+					]
+					index: -1
+					side: WEST
+				}
+				port P666 {
+					layout [
+						position: 44, 19
+						size: 8, 8
+					]
+					index: 2
+					side: EAST
+				}
+				port P667 {
+					layout [
+						position: 26.66666603088379, 46
+						size: 8, 8
+					]
+					index: -3
+					side: SOUTH
+				}
+			}
+			node N250 {
+				layout [ size: 10, 41 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L250: "VectorDisassembler" {
+					layout [ size: 117, 15 ]
+				}
+				port P668 {
+					layout [
+						position: -8, 16.5
+						size: 8, 8
+					]
+					index: 0
+					side: WEST
+				}
+				port P669 {
+					layout [
+						position: 10, 16.5
+						size: 8, 8
+					]
+					index: 1
+					side: EAST
+				}
+			}
+			node N251 {
+				layout [ size: 10, 41 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L251: "VectorAssembler" {
+					layout [ size: 100, 15 ]
+				}
+				port P670 {
+					layout [
+						position: -8, 16.5
+						size: 8, 8
+					]
+					index: 0
+					side: WEST
+				}
+				port P671 {
+					layout [
+						position: 10, 16.5
+						size: 8, 8
+					]
+					index: 1
+					side: EAST
+				}
+			}
+			edge E457: P654 -> N250.P668
+			edge E458: N247.P658 -> N251.P670
+			edge E459: N248.P662 -> N251.P670
+			edge E460: N249.P666 -> N251.P670
+			edge E461: N250.P669 -> N247.P657
+			edge E462: N250.P669 -> N248.P661
+			edge E463: N250.P669 -> N249.P665
+			edge E464: N251.P671 -> P655
+		}
+		node N252 {
+			nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+			portConstraints: FREE
+			label L252: "VectorIntegrator4" {
+				layout [ size: 99, 15 ]
+			}
+			port P672 {
+				layout [ size: 8, 8 ]
+				index: 0
+				side: WEST
+			}
+			port P673 {
+				layout [ size: 8, 8 ]
+				index: 1
+				side: EAST
+			}
+			node N253 {
+				layout [ size: 44, 46 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L253: "Integrator" {
+					layout [ size: 55, 15 ]
+				}
+				port P674 {
+					layout [
+						position: 9.333333015441895, 46
+						size: 8, 8
+					]
+					index: 0
+					side: SOUTH
+				}
+				port P675 {
+					layout [
+						position: -8, 19
+						size: 8, 8
+					]
+					index: -1
+					side: WEST
+				}
+				port P676 {
+					layout [
+						position: 44, 19
+						size: 8, 8
+					]
+					index: 2
+					side: EAST
+				}
+				port P677 {
+					layout [
+						position: 26.66666603088379, 46
+						size: 8, 8
+					]
+					index: -3
+					side: SOUTH
+				}
+			}
+			node N254 {
+				layout [ size: 44, 46 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L254: "Integrator2" {
+					layout [ size: 62, 15 ]
+				}
+				port P678 {
+					layout [
+						position: 9.333333015441895, 46
+						size: 8, 8
+					]
+					index: 0
+					side: SOUTH
+				}
+				port P679 {
+					layout [
+						position: -8, 19
+						size: 8, 8
+					]
+					index: -1
+					side: WEST
+				}
+				port P680 {
+					layout [
+						position: 44, 19
+						size: 8, 8
+					]
+					index: 2
+					side: EAST
+				}
+				port P681 {
+					layout [
+						position: 26.66666603088379, 46
+						size: 8, 8
+					]
+					index: -3
+					side: SOUTH
+				}
+			}
+			node N255 {
+				layout [ size: 44, 46 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L255: "Integrator3" {
+					layout [ size: 62, 15 ]
+				}
+				port P682 {
+					layout [
+						position: 9.333333015441895, 46
+						size: 8, 8
+					]
+					index: 0
+					side: SOUTH
+				}
+				port P683 {
+					layout [
+						position: -8, 19
+						size: 8, 8
+					]
+					index: -1
+					side: WEST
+				}
+				port P684 {
+					layout [
+						position: 44, 19
+						size: 8, 8
+					]
+					index: 2
+					side: EAST
+				}
+				port P685 {
+					layout [
+						position: 26.66666603088379, 46
+						size: 8, 8
+					]
+					index: -3
+					side: SOUTH
+				}
+			}
+			node N256 {
+				layout [ size: 10, 41 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L256: "VectorDisassembler" {
+					layout [ size: 117, 15 ]
+				}
+				port P686 {
+					layout [
+						position: -8, 16.5
+						size: 8, 8
+					]
+					index: 0
+					side: WEST
+				}
+				port P687 {
+					layout [
+						position: 10, 16.5
+						size: 8, 8
+					]
+					index: 1
+					side: EAST
+				}
+			}
+			node N257 {
+				layout [ size: 10, 41 ]
+				nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+				portConstraints: FIXED_ORDER
+				label L257: "VectorAssembler" {
+					layout [ size: 100, 15 ]
+				}
+				port P688 {
+					layout [
+						position: -8, 16.5
+						size: 8, 8
+					]
+					index: 0
+					side: WEST
+				}
+				port P689 {
+					layout [
+						position: 10, 16.5
+						size: 8, 8
+					]
+					index: 1
+					side: EAST
+				}
+			}
+			edge E465: P672 -> N256.P686
+			edge E466: N253.P676 -> N257.P688
+			edge E467: N254.P680 -> N257.P688
+			edge E468: N255.P684 -> N257.P688
+			edge E469: N256.P687 -> N253.P675
+			edge E470: N256.P687 -> N254.P679
+			edge E471: N256.P687 -> N255.P683
+			edge E472: N257.P689 -> P673
+		}
+		edge E321: P458 -> N183.P468
+		edge E322: P459 -> N223.P586
+		edge E323: N183.P469 -> P467
+		edge E324: N183.P469 -> N184.P470
+		edge E325: N184.P472 -> N230.P604
+		edge E326: N185.P475 -> N223.P587
+		edge E327: N189.P488 -> P463
+		edge E328: N189.P488 -> N229.P603
+		edge E329: N216.P563 -> N246.P654
+		edge E330: N223.P588 -> N224.P589
+		edge E331: N224.P591 -> P466
+		edge E332: N224.P591 -> N240.P636
+		edge E333: N225.P594 -> N185.P474
+		edge E334: N226.P597 -> P460
+		edge E335: N226.P597 -> N252.P672
+		edge E336: N227.P598 -> N225.P592
+		edge E337: N228.P600 -> N224.P589
+		edge E338: N229.P602 -> N226.P595
+		edge E339: N230.P605 -> P464
+		edge E340: N230.P605 -> N226.P595
+		edge E341: N230.P605 -> N236.P623
+		edge E342: N236.P624 -> N184.P471
+		edge E343: N240.P637 -> N225.P592
+		edge E344: N240.P637 -> N216.P561
+		edge E345: N240.P637 -> N185.P473
+		edge E346: N246.P655 -> N216.P562
+		edge E347: N246.P655 -> P462
+		edge E348: N246.P655 -> N189.P487
+		edge E349: N252.P673 -> P461
+	}
+	node N258 {
+		layout [ size: 41, 41 ]
+		nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+		portConstraints: FIXED_ORDER
+		label L258: "AddSubtract" {
+			layout [ size: 72, 15 ]
+		}
+		port P690 {
+			layout [
+				position: -8, 8.333333015441895
+				size: 8, 8
+			]
+			index: 0
+			side: WEST
+		}
+		port P691 {
+			layout [
+				position: -8, 24.66666603088379
+				size: 8, 8
+			]
+			index: -1
+			side: WEST
+		}
+		port P692 {
+			layout [
+				position: 41, 16.5
+				size: 8, 8
+			]
+			index: 2
+			side: EAST
+		}
+	}
+	node N259 {
+		layout [ size: 41, 41 ]
+		nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+		portConstraints: FIXED_ORDER
+		label L259: "AddSubtract2" {
+			layout [ size: 80, 15 ]
+		}
+		port P693 {
+			layout [
+				position: -8, 8.333333015441895
+				size: 8, 8
+			]
+			index: 0
+			side: WEST
+		}
+		port P694 {
+			layout [
+				position: -8, 24.66666603088379
+				size: 8, 8
+			]
+			index: -1
+			side: WEST
+		}
+		port P695 {
+			layout [
+				position: 41, 16.5
+				size: 8, 8
+			]
+			index: 2
+			side: EAST
+		}
+	}
+	node N260 {
+		layout [ size: 41, 41 ]
+		nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+		portConstraints: FIXED_ORDER
+		label L260: "MultiplyDivide" {
+			layout [ size: 80, 15 ]
+		}
+		port P696 {
+			layout [
+				position: -8, 8.333333015441895
+				size: 8, 8
+			]
+			index: 0
+			side: WEST
+		}
+		port P697 {
+			layout [
+				position: -8, 24.66666603088379
+				size: 8, 8
+			]
+			index: -1
+			side: WEST
+		}
+		port P698 {
+			layout [
+				position: 41, 16.5
+				size: 8, 8
+			]
+			index: 2
+			side: EAST
+		}
+	}
+	node N261 {
+		layout [ size: 41, 41 ]
+		nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+		portConstraints: FIXED_ORDER
+		label L261: "MultiplyDivide2" {
+			layout [ size: 87, 15 ]
+		}
+		port P699 {
+			layout [
+				position: -8, 8.333333015441895
+				size: 8, 8
+			]
+			index: 0
+			side: WEST
+		}
+		port P700 {
+			layout [
+				position: -8, 24.66666603088379
+				size: 8, 8
+			]
+			index: -1
+			side: WEST
+		}
+		port P701 {
+			layout [
+				position: 41, 16.5
+				size: 8, 8
+			]
+			index: 2
+			side: EAST
+		}
+	}
+	node N262 {
+		layout [ size: 66, 46 ]
+		nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+		portConstraints: FIXED_ORDER
+		label L262: "Viscous Drag" {
+			layout [ size: 79, 15 ]
+		}
+		port P702 {
+			layout [
+				position: -8, 19
+				size: 8, 8
+			]
+			index: 0
+			side: WEST
+		}
+		port P703 {
+			layout [
+				position: 66, 19
+				size: 8, 8
+			]
+			index: 1
+			side: EAST
+		}
+	}
+	node N263 {
+		layout [ size: 41, 25 ]
+		nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+		portConstraints: FIXED_ORDER
+		label L263: "Gravity" {
+			layout [ size: 40, 15 ]
+		}
+		port P704 {
+			layout [
+				position: 41, 8.5
+				size: 8, 8
+			]
+			index: 0
+			side: EAST
+		}
+		port P705 {
+			layout [
+				position: -8, 8.5
+				size: 8, 8
+			]
+			index: -1
+			side: WEST
+		}
+	}
+	node N264 {
+		nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+		portConstraints: FREE
+		label L264: "VectorAssembler" {
+			layout [ size: 100, 15 ]
+		}
+		port P706 {
+			layout [ size: 8, 8 ]
+			index: 0
+			side: WEST
+		}
+		port P707 {
+			layout [ size: 8, 8 ]
+			index: 1
+			side: EAST
+		}
+		node N265 {
+			layout [ size: 10, 41 ]
+			nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+			portConstraints: FIXED_ORDER
+			label L265: "VectorDisassembler" {
+				layout [ size: 117, 15 ]
+			}
+			port P708 {
+				layout [
+					position: -8, 16.5
+					size: 8, 8
+				]
+				index: 0
+				side: WEST
+			}
+			port P709 {
+				layout [
+					position: 10, 16.5
+					size: 8, 8
+				]
+				index: 1
+				side: EAST
+			}
+		}
+		node N266 {
+			layout [ size: 10, 41 ]
+			nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+			portConstraints: FIXED_ORDER
+			label L266: "VectorDisassembler2" {
+				layout [ size: 124, 15 ]
+			}
+			port P710 {
+				layout [
+					position: -8, 16.5
+					size: 8, 8
+				]
+				index: 0
+				side: WEST
+			}
+			port P711 {
+				layout [
+					position: 10, 16.5
+					size: 8, 8
+				]
+				index: 1
+				side: EAST
+			}
+		}
+		node N267 {
+			layout [ size: 10, 41 ]
+			nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+			portConstraints: FIXED_ORDER
+			label L267: "VectorDisassembler3" {
+				layout [ size: 124, 15 ]
+			}
+			port P712 {
+				layout [
+					position: -8, 16.5
+					size: 8, 8
+				]
+				index: 0
+				side: WEST
+			}
+			port P713 {
+				layout [
+					position: 10, 16.5
+					size: 8, 8
+				]
+				index: 1
+				side: EAST
+			}
+		}
+		node N268 {
+			layout [ size: 10, 41 ]
+			nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+			portConstraints: FIXED_ORDER
+			label L268: "VectorDisassembler4" {
+				layout [ size: 124, 15 ]
+			}
+			port P714 {
+				layout [
+					position: -8, 16.5
+					size: 8, 8
+				]
+				index: 0
+				side: WEST
+			}
+			port P715 {
+				layout [
+					position: 10, 16.5
+					size: 8, 8
+				]
+				index: 1
+				side: EAST
+			}
+		}
+		node N269 {
+			layout [ size: 10, 41 ]
+			nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+			portConstraints: FIXED_ORDER
+			label L269: "VectorDisassembler5" {
+				layout [ size: 124, 15 ]
+			}
+			port P716 {
+				layout [
+					position: -8, 16.5
+					size: 8, 8
+				]
+				index: 0
+				side: WEST
+			}
+			port P717 {
+				layout [
+					position: 10, 16.5
+					size: 8, 8
+				]
+				index: 1
+				side: EAST
+			}
+		}
+		node N270 {
+			layout [ size: 10, 41 ]
+			nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+			portConstraints: FIXED_ORDER
+			label L270: "VectorAssembler" {
+				layout [ size: 100, 15 ]
+			}
+			port P718 {
+				layout [
+					position: -8, 16.5
+					size: 8, 8
+				]
+				index: 0
+				side: WEST
+			}
+			port P719 {
+				layout [
+					position: 10, 16.5
+					size: 8, 8
+				]
+				index: 1
+				side: EAST
+			}
+		}
+		edge E473: P706 -> N265.P708
+		edge E474: P706 -> N266.P710
+		edge E475: P706 -> N267.P712
+		edge E476: P706 -> N268.P714
+		edge E477: P706 -> N269.P716
+		edge E478: N265.P709 -> N270.P718
+		edge E479: N265.P709 -> N270.P718
+		edge E480: N265.P709 -> N270.P718
+		edge E481: N266.P711 -> N270.P718
+		edge E482: N266.P711 -> N270.P718
+		edge E483: N266.P711 -> N270.P718
+		edge E484: N267.P713 -> N270.P718
+		edge E485: N267.P713 -> N270.P718
+		edge E486: N267.P713 -> N270.P718
+		edge E487: N268.P715 -> N270.P718
+		edge E488: N268.P715 -> N270.P718
+		edge E489: N268.P715 -> N270.P718
+		edge E490: N269.P717 -> N270.P718
+		edge E491: N269.P717 -> N270.P718
+		edge E492: N269.P717 -> N270.P718
+		edge E493: N270.P719 -> P707
+	}
+	node N271 {
+		layout [ size: 41, 31 ]
+		nodeLabels.placement: "[H_LEFT, V_TOP, OUTSIDE]"
+		portConstraints: FIXED_ORDER
+		label L271: "Forces" {
+			layout [ size: 40, 15 ]
+		}
+		port P720 {
+			layout [
+				position: -8, 11.5
+				size: 8, 8
+			]
+			index: 0
+			side: WEST
+		}
+	}
+	edge E109: P141 -> N69.P146
+	edge E110: P142 -> N260.P696
+	edge E111: N69.P147 -> N109.P256
+	edge E112: N109.P259 -> N182.P459
+	edge E113: N109.P258 -> N258.P690
+	edge E114: N109.P258 -> N271.P720
+	edge E115: N182.P463 -> N260.P696
+	edge E116: N182.P463 -> N261.P699
+	edge E117: N182.P464 -> N259.P693
+	edge E118: N182.P465 -> N264.P706
+	edge E119: N182.P461 -> P143
+	edge E120: N182.P461 -> N264.P706
+	edge E121: N182.P462 -> P144
+	edge E122: N182.P462 -> N264.P706
+	edge E123: N182.P460 -> N264.P706
+	edge E124: N182.P467 -> N264.P706
+	edge E125: N258.P692 -> N182.P458
+	edge E126: N259.P695 -> N109.P257
+	edge E127: N259.P695 -> N262.P702
+	edge E128: N260.P698 -> N259.P694
+	edge E129: N261.P701 -> N258.P690
+	edge E130: N262.P703 -> N258.P690
+	edge E131: N263.P704 -> N261.P699
+	edge E132: N264.P707 -> P145
+}
+edge E1: N24.P44 -> N68.P142
+edge E2: N25.P47 -> N1.P1
+edge E3: N25.P47 -> N65.P136
+edge E4: N27.P50 -> N25.P46
+edge E5: N28.P52 -> N1.P2
+edge E6: N28.P52 -> N26.P48
+edge E7: N29.P53 -> N66.P137
+edge E8: N66.P138 -> N64.P135
+edge E9: N66.P138 -> N68.P141
+edge E10: N67.P140 -> N29.P54
+edge E11: N68.P143 -> N27.P49
+edge E12: N68.P144 -> N28.P51
+edge E13: N68.P145 -> N67.P139
