@@ -32,7 +32,7 @@ Type      | Description
 ## License Headers
 
 All files except for the JSON files must contain a proper licence at the file header.
-The `license.py` script in the repository's root folder can help.
+The `license.py` script in the repository's root folder can help (requires Python >= 3.5).
 Common use cases:
 
 ```bash

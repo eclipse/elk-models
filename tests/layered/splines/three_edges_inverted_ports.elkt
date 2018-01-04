@@ -1,0 +1,34 @@
+/*******************************************************************************
+ * Copyright (c) 2018 Kiel University and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *******************************************************************************/
+ 
+elk.direction: RIGHT
+elk.edgeRouting: SPLINES
+
+//elk.layered.edgeRouting.sloppySplineRouting: false
+
+node N1 {
+	elk.portConstraints: FIXED_SIDE
+	elk.layered.layering.layerConstraint: FIRST
+	port P1 { side: WEST }
+	port P2 { side: EAST }
+	port P3 { side: WEST }
+	port P4 { side: WEST }
+}
+
+node N2 {  
+	elk.portConstraints: FIXED_SIDE
+	port P1 { side: WEST }
+	port P2 { side: EAST }
+	port P3 { side: EAST }
+	port P4 { side: EAST }
+}
+
+edge N1.P2->N2.P1
+edge N2.P2->N1.P1
+edge N2.P3->N1.P3
+edge N2.P4->N1.P4
