@@ -7,27 +7,17 @@
  *******************************************************************************/
 
 edgeRouting: SPLINES
-mode: SLOPPY
-    
+mode: CONSERVATIVE 
+fixedAlignment: LEFTDOWN
 
-node n1 {
-//	alignment:CENTER	
-}
-node n2 {
-	layout [ size: 400, 500]
-}
+node n1
+node n2
 node n3
 node n4 {
-	layout [ size: 300, 600 ]
+	port in
 }
 
-node n0
-edge e1: n0 -> n4
-edge e2: n0 -> n1
-edge e3: n4 -> n2
 
-edge e4: n1->n2
-edge e5: n2->n3
-edge e6: n1->n3
-
-edge n0 -> n3
+edge n1 -> n4.in
+edge n2 -> n4.in
+edge n3 -> n4.in

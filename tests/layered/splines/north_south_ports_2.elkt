@@ -1,0 +1,51 @@
+/*******************************************************************************
+ * Copyright (c) 2018 Kiel University and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *******************************************************************************/
+
+
+edgeRouting: SPLINES
+mode: CONSERVATIVE
+spacing.edgeNode: 40
+
+node N1 {
+	layout [ size: 100, 75 ]
+	portConstraints: FIXED_POS
+	port a {
+		layout [
+			position: 100, 20
+			size: 10, 10
+		]
+	}
+}
+node N2 {
+	layout [ size: 100, 75 ]
+	portConstraints: FIXED_POS
+	port b {
+		layout [
+			position: 100, 20
+			size: 10, 10
+		]
+	}
+}
+node N3 {
+	layout [ size: 100, 75 ]
+	portConstraints: FIXED_POS
+	port c {
+		layout [
+			position: 50, -10
+			size: 10, 10
+		]
+	}
+	port d {
+		layout [
+			position: 50, 75
+			size: 10, 10
+		]
+	}
+}
+edge E1: N1.a -> N3.c
+edge E2: N2.b -> N3.d

@@ -5,10 +5,11 @@
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
  *******************************************************************************/
-edgeRouting: SPLINES
-//edgeRouting.sloppySplineRouting: false
 
-postCompaction.strategy: LEFT
+edgeRouting: SPLINES
+mode: SLOPPY
+
+spacing.edgeNodeBetweenLayers: 30
 
 node n0 { layout [ size: 20, 20 ] }
 node n1 { layout [ size: 20, 20 ] }

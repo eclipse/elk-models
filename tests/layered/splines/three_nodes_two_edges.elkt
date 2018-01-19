@@ -8,7 +8,9 @@
 
 elk.edgeRouting: SPLINES
 
-//edgeRouting.sloppySplineRouting: false
+mode: CONSERVATIVE
+spacing.nodeNodeBetweenLayers: 70
+spacing.edgeNodeBetweenLayers: 10
 
 node n1
 node n2
@@ -16,4 +18,4 @@ node n3
 
 edge n1->n2
 edge n2->n3
-edge n1->n3
+edge n1->n3 

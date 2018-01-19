@@ -5,12 +5,12 @@
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
  *******************************************************************************/
+
 edgeRouting: SPLINES
-crossingMinimization.strategy: INTERACTIVE 
 
 node n1
 node n2
-
+ 
 edge n1->n2
 edge n1->n2
 edge n1->n2

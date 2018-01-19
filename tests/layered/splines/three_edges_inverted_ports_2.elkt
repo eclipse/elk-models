@@ -7,31 +7,44 @@
  *******************************************************************************/
  
 node outer {
-
 	elk.direction: RIGHT
 	elk.edgeRouting: SPLINES
+	cycleBreaking.strategy: INTERACTIVE
+	layering.strategy: INTERACTIVE
+	
 	elk.padding: "[top=0.0,left=0.0,bottom=0.0,right=0.0]"
 	 
-	spacing.nodeNodeBetweenLayers: 40
-	spacing.edgeEdgeBetweenLayers: 5
+	spacing.nodeNodeBetweenLayers: 10
+	spacing.edgeEdgeBetweenLayers: 2
 	spacing.edgeNodeBetweenLayers: 10
 	
 	node N1 {
 		elk.portConstraints: FIXED_SIDE
-		elk.layered.layering.layerConstraint: FIRST
 		port P1 { side: WEST }
 		port P2 { side: EAST }
 		port P3 { side: WEST }
 		port P4 { side: WEST }
 	}
 	
-	node N2 {
+	node N2 {  
 		elk.portConstraints: FIXED_SIDE
 		port P1 { side: WEST }
 		port P2 { side: EAST }
 		port P3 { side: EAST }
 		port P4 { side: EAST }
+		port P5 { side: EAST }
 	}
+	
+	node N0 {
+		portConstraints: FIXED_SIDE
+		elk.layered.layering.layerConstraint: FIRST_SEPARATE
+		port P1 { side: EAST }
+	}
+	node N3 {
+		layering.layerConstraint: LAST_SEPARATE
+	}
+	edge N0.P1 -> N1
+	edge N2.P5 -> N3
 	
 	edge N1.P2->N2.P1
 	edge N2.P2->N1.P1
