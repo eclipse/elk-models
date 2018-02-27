@@ -9,7 +9,7 @@
 /* Reproduces #245: Surrounding port space failed to be applied to the ports of this node */
 node N1 {
 	portConstraints: FIXED_SIDE
-	portAlignment.basic: JUSTIFIED
+	portAlignment: JUSTIFIED
 
 	port W1 { ^port.side: WEST }
 	port W2 { ^port.side: WEST }
