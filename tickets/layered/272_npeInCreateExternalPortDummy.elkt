@@ -1,0 +1,41 @@
+/*******************************************************************************
+ * Copyright (c) 2018 Kiel University and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *******************************************************************************/
+graph G1
+hierarchyHandling: INCLUDE_CHILDREN
+algorithm: org.eclipse.elk.layered
+node N1 {
+	node N2 {
+		layout [
+			size: 300,300
+		]
+	}
+	
+	node N4 {
+		layout [
+			size: 300, 300
+		]
+		portConstraints: FIXED_POS
+		node N5 {
+			layout [
+				size: 200, 200
+			]
+			
+		}
+		
+		port P1 {
+			layout [
+				position: 0, 50
+				size: 20, 20
+			]	
+		} 
+		
+		edge E2: N4 -> N4.N5
+	}
+	
+	edge E1: N2 -> N4
+}

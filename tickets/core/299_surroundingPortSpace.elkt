@@ -1,0 +1,46 @@
+/*******************************************************************************
+ * Copyright (c) 2018 Kiel University and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *******************************************************************************/
+
+/* Reproduces #299: Unequal surrounding port space.
+ * 
+ * With P1's second label active, the surrounding port space above the ports
+ * is larger than the space below the ports.
+ */
+
+node N1 {
+	nodeSize.constraints: "PORTS PORT_LABELS MINIMUM_SIZE NODE_LABELS"
+	portConstraints: FIXED_ORDER
+	
+	port P1 {
+		^port.side: EAST
+		^port.index: 1
+		
+		label "Port 1"
+		label "[-]"  // Comment this out to get equal port space
+	}
+	port P2 {
+		^port.side: EAST
+		^port.index: 2
+		
+		label "Port 2"
+	}
+	port P3 {
+		^port.side: EAST
+		^port.index: 3
+		
+		label "Port 3"
+	}
+}
+
+node T1
+node T2
+node T3
+
+edge N1.P1->T1
+edge N1.P2->T2
+edge N1.P3->T3

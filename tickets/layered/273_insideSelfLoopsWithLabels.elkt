@@ -1,0 +1,49 @@
+/*******************************************************************************
+ * Copyright (c) 2018 Kiel University and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *******************************************************************************/
+graph G1
+elk.direction: RIGHT
+hierarchyHandling: SEPARATE_CHILDREN
+algorithm: org.eclipse.elk.layered
+nodeLabels.placement: "[]"
+minimum: "(100.0,100.0)"
+node N1 {
+	node N2 {
+		layout [
+			position: 12, 12
+			size: 152, 100
+		]
+		nodeSize.constraints: "[MINIMUM_SIZE]"
+		insideSelfLoops.activate: true
+		portConstraints: FIXED_SIDE
+		minimum: "(255.0,100.0)"
+
+		port P2 {
+			layout [
+				size: 20, 16
+				position: 0, 55
+			]
+			side: WEST
+			borderOffset: -20.0
+		}
+
+		port P5 {
+			layout [
+				size: 20, 16
+				position: 0, 55
+			]
+			side: EAST
+			borderOffset: -20.0
+		}
+	}
+	edge E1: N2.P2 -> N2.P5 {
+		yo: true
+		label L1: "test_label" {
+			layout [ size: 47, 21 ]
+		}
+	}
+}
