@@ -1,0 +1,24 @@
+/*******************************************************************************
+ * Copyright (c) 2018 Kiel University and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *******************************************************************************/
+ 
+hierarchyHandling: INCLUDE_CHILDREN
+
+node N7 {
+	edgeRouting: SPLINES 
+
+	node N8
+	node N2 {
+		node N1
+	}
+	node N4
+	
+	edge N8 -> N2.N1
+	edge N2 -> N2
+	edge N2 -> N4
+	edge N2.N1 -> N4
+}
