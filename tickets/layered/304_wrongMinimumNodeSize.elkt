@@ -1,0 +1,67 @@
+/*******************************************************************************
+ * Copyright (c) 2018 Kiel University and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *******************************************************************************/
+/* Reproduces #304: Minimum size calculated for hierarchical nodes is wrong. */
+
+node A1 { layout [ size: 30, 15 ] }
+node A2 { layout [ size: 30, 15 ] }
+node A3 { layout [ size: 30, 15 ] }
+node A4 { layout [ size: 30, 15 ] }
+node A5 { layout [ size: 30, 15 ] }
+
+node B {
+	org.eclipse.elk.nodeSize.constraints: "PORT_LABELS PORTS NODE_LABELS MINIMUM_SIZE"
+	de.cau.cs.kieler.klighd.minimalNodeSize: "(60.0,60.0)"
+	
+	node D1
+	
+	port P1 {
+		label "P1 - 1"
+		label "P1 - 2"
+	}
+	port P2 {
+		label "P2 - 1"
+		label "P2 - 2"
+	}
+	port P3 {
+		label "P3 - 1"
+		label "P3 - 2"
+	}
+	port P4 {
+		label "P4 - 1"
+		label "P4 - 2"
+	}
+	port P5 {
+		label "P5 - 1"
+		label "P5 - 2"
+	}
+	port P6 {
+		label "P6 - 1"
+		label "P6 - 2"
+	}
+	port P7 {
+		label "P7 - 1"
+		label "P7 - 2"
+	}
+	port P8 {
+		label "P8 - 1"
+		label "P8 - 2"
+	}
+}
+
+node C1 { layout [ size: 30, 15 ] }
+node C2 { layout [ size: 30, 15 ] }
+node C3 { layout [ size: 30, 15 ] }
+
+edge A1 -> B.P1
+edge A2 -> B.P2
+edge A3 -> B.P3
+edge A4 -> B.P4
+edge A5 -> B.P5
+edge B.P6 -> C1
+edge B.P7 -> C2
+edge B.P8 -> C3
