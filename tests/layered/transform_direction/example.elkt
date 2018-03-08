@@ -1,0 +1,116 @@
+/*******************************************************************************
+ * Copyright (c) 2018 Kiel University and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *******************************************************************************/
+ 
+aspectRatio: 1.5
+
+node LTR {
+	directionCongruency: ROTATION
+	edgeRouting: SPLINES
+	randomSeed: 11
+	nodeLabels.placement: "INSIDE V_TOP H_CENTER"
+	label "left-to-right"
+		
+	node n1 { nodeLabels.placement: "INSIDE V_CENTER H_CENTER" label "1" } 
+	node n2 { nodeLabels.placement: "INSIDE V_CENTER H_CENTER" label "2" } 
+	node n3 { nodeLabels.placement: "INSIDE V_CENTER H_CENTER" label "3" } 
+	node n4 { nodeLabels.placement: "INSIDE V_CENTER H_CENTER" label "4" } 
+	
+	edge n1 -> n3 {
+		label "One"
+	}
+	edge n1 -> n4 {
+		label "Two"
+	}
+	edge n2 -> n4 {
+		label "Three" 
+	}
+	edge n4 -> n2 {
+		label "Four"
+	}
+}
+
+node TTB {
+	directionCongruency: ROTATION
+	elk.direction: DOWN
+	edgeRouting: SPLINES
+	randomSeed: 11
+	nodeLabels.placement: "INSIDE V_TOP H_CENTER"
+	label "top-to-bottom"
+		
+	node n1 { nodeLabels.placement: "INSIDE V_CENTER H_CENTER" label "1" } 
+	node n2 { nodeLabels.placement: "INSIDE V_CENTER H_CENTER" label "2" } 
+	node n3 { nodeLabels.placement: "INSIDE V_CENTER H_CENTER" label "3" } 
+	node n4 { nodeLabels.placement: "INSIDE V_CENTER H_CENTER" label "4" } 
+	
+	edge n1 -> n3 {
+		label "One"
+	}
+	edge n1 -> n4 {
+		label "Two"
+	}
+	edge n2 -> n4 {
+		label "Three" 
+	}
+	edge n4 -> n2 {
+		label "Four"
+	}
+}
+
+node RTL {
+	directionCongruency: ROTATION
+	elk.direction: LEFT
+	edgeRouting: SPLINES
+	randomSeed: 11
+	nodeLabels.placement: "INSIDE V_TOP H_CENTER"
+	label "right-to-left"
+		
+	node n1 { nodeLabels.placement: "INSIDE V_CENTER H_CENTER" label "1" } 
+	node n2 { nodeLabels.placement: "INSIDE V_CENTER H_CENTER" label "2" } 
+	node n3 { nodeLabels.placement: "INSIDE V_CENTER H_CENTER" label "3" } 
+	node n4 { nodeLabels.placement: "INSIDE V_CENTER H_CENTER" label "4" } 
+	
+	edge n1 -> n3 {
+		label "One"
+	}
+	edge n1 -> n4 {
+		label "Two"
+	}
+	edge n2 -> n4 {
+		label "Three" 
+	}
+	edge n4 -> n2 {
+		label "Four"
+	}
+}
+
+node BTT {
+	directionCongruency: ROTATION
+	elk.direction: UP
+	edgeRouting: SPLINES
+	randomSeed: 11
+	nodeLabels.placement: "INSIDE V_TOP H_CENTER"
+	label "bottom-to-top"
+		
+	node n1 { nodeLabels.placement: "INSIDE V_CENTER H_CENTER" label "1" } 
+	node n2 { nodeLabels.placement: "INSIDE V_CENTER H_CENTER" label "2" } 
+	node n3 { nodeLabels.placement: "INSIDE V_CENTER H_CENTER" label "3" } 
+	node n4 { nodeLabels.placement: "INSIDE V_CENTER H_CENTER" label "4" } 
+	
+	edge n1 -> n3 {
+		label "One"
+	}
+	edge n1 -> n4 {
+		label "Two"
+	}
+	edge n2 -> n4 {
+		label "Three" 
+	}
+	edge n4 -> n2 {
+		label "Four"
+	}
+}
