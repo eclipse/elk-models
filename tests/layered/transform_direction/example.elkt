@@ -10,6 +10,7 @@ aspectRatio: 1.5
 
 node LTR {
 	directionCongruency: ROTATION
+	portSortingStrategy: PORT_DEGREE
 	edgeRouting: SPLINES
 	randomSeed: 11
 	nodeLabels.placement: "INSIDE V_TOP H_CENTER"
@@ -36,6 +37,7 @@ node LTR {
 
 node TTB {
 	directionCongruency: ROTATION
+	portSortingStrategy: PORT_DEGREE
 	elk.direction: DOWN
 	edgeRouting: SPLINES
 	randomSeed: 11
@@ -63,6 +65,7 @@ node TTB {
 
 node RTL {
 	directionCongruency: ROTATION
+	portSortingStrategy: PORT_DEGREE
 	elk.direction: LEFT
 	edgeRouting: SPLINES
 	randomSeed: 11
@@ -90,6 +93,7 @@ node RTL {
 
 node BTT {
 	directionCongruency: ROTATION
+	portSortingStrategy: PORT_DEGREE
 	elk.direction: UP
 	edgeRouting: SPLINES
 	randomSeed: 11

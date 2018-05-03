@@ -1,0 +1,296 @@
+/*******************************************************************************
+ * Copyright (c) 2018 Kiel University and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *******************************************************************************/
+
+//randomSeed: 9
+//thoroughness: 100
+
+node N1 {
+	layout [ size: 220, 100 ]
+	portConstraints: FIXED_SIDE
+	label L1: "N1"
+	port P1N1 {
+		layout [ size: 5, 5 ]
+		side: NORTH
+		label L2: "N1"
+	}
+	port P1N2 {
+		layout [ size: 5, 5 ]
+		side: NORTH
+		label L3: "N2"
+	}
+	port P1N3 {
+		layout [ size: 5, 5 ]
+		side: NORTH
+		label L4: "N3"
+	}
+	port P1N4 {
+		layout [ size: 5, 5 ]
+		side: NORTH
+		label L5: "N4"
+	}
+	port P1N5 {
+		layout [ size: 5, 5 ]
+		side: NORTH
+		label L6: "N5"
+	}
+	port P1N6 {
+		layout [ size: 5, 5 ]
+		side: NORTH
+		label L7: "N6"
+	}
+	port P1N7 {
+		layout [ size: 5, 5 ]
+		side: NORTH
+		label L8: "N7"
+	}
+	port P1N8 {
+		layout [ size: 5, 5 ]
+		side: NORTH
+		label L9: "N8"
+	}
+	port P1S1 {
+		layout [ size: 5, 5 ]
+		side: SOUTH
+		label L10: "S1"
+	}
+	port P1S2 {
+		layout [ size: 5, 5 ]
+		side: SOUTH
+		label L11: "S2"
+	}
+	port P1S3 {
+		layout [ size: 5, 5 ]
+		side: SOUTH
+		label L12: "S3"
+	}
+	port P1S4 {
+		layout [ size: 5, 5 ]
+		side: SOUTH
+		label L13: "S4"
+	}
+	port P1S5 {
+		layout [ size: 5, 5 ]
+		side: SOUTH
+		label L14: "S5"
+	}
+	port P1S6 {
+		layout [ size: 5, 5 ]
+		side: SOUTH
+		label L15: "S6"
+	}
+	port P1S7 {
+		layout [ size: 5, 5 ]
+		side: SOUTH
+		label L16: "S7"
+	}
+	port P1S8 {
+		layout [ size: 5, 5 ]
+		side: SOUTH
+		label L17: "S8"
+	}
+}
+node N20 {
+	layout [ size: 50, 50 ]
+	portConstraints: FIXED_SIDE
+	label L18: "N20"
+	port P20 {
+		layout [ size: 5, 5 ]
+		side: EAST
+	}
+}
+node N21 {
+	layout [ size: 50, 50 ]
+	portConstraints: FIXED_SIDE
+	label L19: "N21"
+	port P21 {
+		layout [ size: 5, 5 ]
+		side: EAST
+	}
+}
+node N22 {
+	layout [ size: 50, 50 ]
+	portConstraints: FIXED_SIDE
+	label L20: "N22"
+	port P22 {
+		layout [ size: 5, 5 ]
+		side: EAST
+	}
+}
+node N23 {
+	layout [ size: 50, 50 ]
+	portConstraints: FIXED_SIDE
+	label L21: "N23"
+	port P23 {
+		layout [ size: 5, 5 ]
+		side: EAST
+	}
+}
+node N24 {
+	layout [ size: 50, 50 ]
+	portConstraints: FIXED_SIDE
+	label L22: "N24"
+	port P24 {
+		layout [ size: 5, 5 ]
+		side: EAST
+	}
+}
+node N25 {
+	layout [ size: 50, 50 ]
+	portConstraints: FIXED_SIDE
+	label L23: "N25"
+	port P25 {
+		layout [ size: 5, 5 ]
+		side: EAST
+	}
+}
+node N26 {
+	layout [ size: 50, 50 ]
+	portConstraints: FIXED_SIDE
+	label L24: "N26"
+	port P26 {
+		layout [ size: 5, 5 ]
+		side: EAST
+	}
+}
+node N27 {
+	layout [ size: 50, 50 ]
+	portConstraints: FIXED_SIDE
+	label L25: "N27"
+	port P27 {
+		layout [ size: 5, 5 ]
+		side: EAST
+	}
+}
+node N28 {
+	layout [ size: 50, 50 ]
+	portConstraints: FIXED_SIDE
+	label L26: "N28"
+	port P28 {
+		layout [ size: 5, 5 ]
+		side: EAST
+	}
+}
+node N29 {
+	layout [ size: 50, 50 ]
+	portConstraints: FIXED_SIDE
+	label L27: "N29"
+	port P29 {
+		layout [ size: 5, 5 ]
+		side: EAST
+	}
+}
+node N30 {
+	layout [ size: 50, 50 ]
+	portConstraints: FIXED_SIDE
+	label L28: "N30"
+	port P30 {
+		layout [ size: 5, 5 ]
+		side: WEST
+	}
+}
+node N31 {
+	layout [ size: 50, 50 ]
+	portConstraints: FIXED_SIDE
+	label L29: "N31"
+	port P31 {
+		layout [ size: 5, 5 ]
+		side: WEST
+	}
+}
+node N32 {
+	layout [ size: 50, 50 ]
+	portConstraints: FIXED_SIDE
+	label L30: "N32"
+	port P32 {
+		layout [ size: 5, 5 ]
+		side: WEST
+	}
+}
+node N33 {
+	layout [ size: 50, 50 ]
+	portConstraints: FIXED_SIDE
+	label L31: "N33"
+	port P33 {
+		layout [ size: 5, 5 ]
+		side: WEST
+	}
+}
+node N34 {
+	layout [ size: 50, 50 ]
+	portConstraints: FIXED_SIDE
+	label L32: "N34"
+	port P34 {
+		layout [ size: 5, 5 ]
+		side: WEST
+	}
+}
+node N35 {
+	layout [ size: 50, 50 ]
+	portConstraints: FIXED_SIDE
+	label L33: "N35"
+	port P35 {
+		layout [ size: 5, 5 ]
+		side: WEST
+	}
+}
+node N36 {
+	layout [ size: 50, 50 ]
+	portConstraints: FIXED_SIDE
+	label L34: "N36"
+	port P36 {
+		layout [ size: 5, 5 ]
+		side: WEST
+	}
+}
+node N37 {
+	layout [ size: 50, 50 ]
+	portConstraints: FIXED_SIDE
+	label L35: "N37"
+	port P37 {
+		layout [ size: 5, 5 ]
+		side: WEST
+	}
+}
+node N38 {
+	layout [ size: 50, 50 ]
+	portConstraints: FIXED_SIDE
+	label L36: "N38"
+	port P38 {
+		layout [ size: 5, 5 ]
+		side: WEST
+	}
+}
+node N39 {
+	layout [ size: 50, 50 ]
+	portConstraints: FIXED_SIDE
+	label L37: "N39"
+	port P39 {
+		layout [ size: 5, 5 ]
+		side: WEST
+	}
+}
+edge E1: N1.P1N1 -> N31.P31
+edge E2: N1.P1N3 -> N30.P30
+edge E3: N1.P1N5 -> N34.P34
+edge E4: N1.P1N6 -> N33.P33
+edge E5: N1.P1N7 -> N32.P32
+edge E6: N1.P1S1 -> N35.P35
+edge E7: N1.P1S2 -> N36.P36
+edge E8: N1.P1S4 -> N37.P37
+edge E9: N1.P1S6 -> N38.P38
+edge E10: N1.P1S8 -> N39.P39
+edge E11: N20.P20 -> N1.P1N8
+edge E12: N21.P21 -> N1.P1N5
+edge E13: N22.P22 -> N1.P1N4
+edge E14: N23.P23 -> N1.P1N2
+edge E15: N24.P24 -> N1.P1N6
+edge E16: N25.P25 -> N1.P1S7
+edge E17: N26.P26 -> N1.P1S3
+edge E18: N27.P27 -> N1.P1S5
+edge E19: N28.P28 -> N1.P1S8
+edge E20: N29.P29 -> N1.P1S1

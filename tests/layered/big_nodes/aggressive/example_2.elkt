@@ -1,0 +1,150 @@
+/*******************************************************************************
+ * Copyright (c) 2018 Kiel University and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *******************************************************************************/
+
+algorithm: layered
+layering.wideNodesOnMultipleLayers: AGGRESSIVE
+
+node n1 {
+	layout [ size: 100, 100 ]
+	portConstraints: FIXED_SIDE
+	label L1: "n1"
+	port in1 {
+		layout [ size: 10, 10 ]
+		side: WEST
+	}
+	port out1 {
+		layout [ size: 10, 10 ]
+		side: EAST
+	}
+}
+node n2 {
+	layout [ size: 100, 100 ]
+	portConstraints: FIXED_SIDE
+	label L2: "n2"
+	port in2 {
+		layout [ size: 10, 10 ]
+		side: WEST
+	}
+	port out2 {
+		layout [ size: 10, 10 ]
+		side: EAST
+	}
+}
+node n3 {
+	layout [ size: 100, 100 ]
+	portConstraints: FIXED_SIDE
+	label L3: "n3"
+	port in3 {
+		layout [ size: 10, 10 ]
+		side: WEST
+	}
+	port out3 {
+		layout [ size: 10, 10 ]
+		side: EAST
+	}
+}
+node n4 {
+	layout [ size: 100, 100 ]
+	portConstraints: FIXED_SIDE
+	label L4: "n4"
+	port in4 {
+		layout [ size: 10, 10 ]
+		side: WEST
+	}
+	port out4 {
+		layout [ size: 10, 10 ]
+		side: EAST
+	}
+}
+node n5 {
+	layout [ size: 100, 100 ]
+	portConstraints: FIXED_SIDE
+	label L5: "n5"
+	port in5 {
+		layout [ size: 10, 10 ]
+		side: WEST
+	}
+	port out5 {
+		layout [ size: 10, 10 ]
+		side: EAST
+	}
+}
+node n6 {
+	layout [ size: 100, 100 ]
+	portConstraints: FIXED_SIDE
+	label L6: "n6"
+	port in6 {
+		layout [ size: 10, 10 ]
+		side: WEST
+	}
+	port out6 {
+		layout [ size: 10, 10 ]
+		side: EAST
+	}
+}
+node n7 {
+	layout [ size: 100, 100 ]
+	portConstraints: FIXED_SIDE
+	label L7: "n7"
+	port in7 {
+		layout [ size: 10, 10 ]
+		side: WEST
+	}
+	port out7 {
+		layout [ size: 10, 10 ]
+		side: EAST
+	}
+}
+node n8 {
+	layout [ size: 100, 100 ]
+	portConstraints: FIXED_SIDE
+	label L8: "n8"
+	port in8 {
+		layout [ size: 10, 10 ]
+		side: WEST
+	}
+	port out8 {
+		layout [ size: 10, 10 ]
+		side: EAST
+	}
+}
+node n9 {
+	layout [ size: 100, 100 ]
+	portConstraints: FIXED_SIDE
+	label L9: "n9"
+	port in9 {
+		layout [ size: 10, 10 ]
+		side: WEST
+	}
+	port out9 {
+		layout [ size: 10, 10 ]
+		side: EAST
+	}
+}
+node n10 {
+	layout [ size: 300, 100 ]
+	portConstraints: FIXED_SIDE
+	label L10: "n10"
+	port in10 {
+		layout [ size: 10, 10 ]
+		side: WEST
+	}
+	port out10 {
+		layout [ size: 10, 10 ]
+		side: EAST
+	}
+}
+edge E1: n1.out1 -> n2.in2
+edge E2: n1.out1 -> n8.in8 
+edge E3: n2.out2 -> n3.in3
+edge E4: n3.out3 -> n4.in4
+edge E5: n4.out4 -> n5.in5
+edge E6: n5.out5 -> n6.in6
+edge E7: n6.out6 -> n7.in7
+edge E8: n8.out8 -> n9.in9
+edge E9: n9.out9 -> n10.in10
