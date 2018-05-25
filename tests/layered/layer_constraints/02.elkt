@@ -1,0 +1,42 @@
+/*******************************************************************************
+ * Copyright (c) 2018 Kiel University and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *******************************************************************************/
+graph G1
+edgeRouting: ORTHOGONAL
+node _1 {
+	layout [ size: 50, 50 ]
+	layerConstraint: FIRST_SEPARATE
+	label L1: "first_sep"
+}
+node _2 {
+	layout [ size: 50, 50 ]
+	layerConstraint: FIRST
+	label L2: "first"
+}
+node _3 {
+	layout [ size: 50, 50 ]
+}
+node _4 {
+	layout [ size: 50, 50 ]
+	layerConstraint: LAST
+	label L3: "last4"
+}
+node _5 {
+	layout [ size: 50, 50 ]
+	layerConstraint: LAST
+	label L4: "last"
+}
+node _6 {
+	layout [ size: 50, 50 ]
+	layerConstraint: LAST_SEPARATE
+	label L5: "last_sep"
+}
+edge E1: _1 -> _3
+edge E2: _2 -> _3
+edge E3: _3 -> _6
+edge E4: _3 -> _5
+edge E5: _3 -> _4

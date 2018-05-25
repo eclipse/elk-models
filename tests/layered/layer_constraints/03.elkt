@@ -1,0 +1,55 @@
+/*******************************************************************************
+ * Copyright (c) 2018 Kiel University and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *******************************************************************************/
+/* Tests FIRST and LAST layer constraints. With layer constraints set, FIRST
+ * should be in the same layer as N1, and LAST should be in the same layer as
+ * N5.
+ */
+
+node FIRST {
+	layout [ size: 50, 50 ]
+	nodeLabels.placement: "[H_CENTER, V_CENTER, INSIDE]"
+	layerConstraint: FIRST
+	label L1: "FIRST"
+}
+node LAST {
+	layout [ size: 50, 50 ]
+	nodeLabels.placement: "[H_CENTER, V_CENTER, INSIDE]"
+	layerConstraint: LAST
+	label L2: "LAST"
+}
+node N1 {
+	layout [ size: 50, 50 ]
+	nodeLabels.placement: "[H_CENTER, V_CENTER, INSIDE]"
+	label L3: "N1"
+}
+node N2 {
+	layout [ size: 50, 50 ]
+	nodeLabels.placement: "[H_CENTER, V_CENTER, INSIDE]"
+	label L4: "N2"
+}
+node N3 {
+	layout [ size: 50, 50 ]
+	nodeLabels.placement: "[H_CENTER, V_CENTER, INSIDE]"
+	label L5: "N3"
+}
+node N4 {
+	layout [ size: 50, 50 ]
+	nodeLabels.placement: "[H_CENTER, V_CENTER, INSIDE]"
+	label L6: "N4"
+}
+node N5 {
+	layout [ size: 50, 50 ]
+	nodeLabels.placement: "[H_CENTER, V_CENTER, INSIDE]"
+	label L7: "N5"
+}
+edge E1: FIRST -> N3
+edge E2: N1 -> N2
+edge E3: N2 -> N3
+edge E4: N3 -> LAST
+edge E5: N3 -> N4
+edge E6: N4 -> N5

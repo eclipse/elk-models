@@ -1,0 +1,101 @@
+/*******************************************************************************
+ * Copyright (c) 2018 Kiel University and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *******************************************************************************/
+/* Several nodes connected in a way that we have a bunch of hyperedges that can
+ * be merged.
+ */
+cycleBreaking.strategy: INTERACTIVE
+edgeRouting: ORTHOGONAL
+node N1 {
+	layout [ size: 50, 50 ]
+	portConstraints: FIXED_POS
+	label L1: "N1"
+	port P1_E {
+		layout [
+			position: -5, 22
+			size: 5, 5
+		]
+	}
+}
+node N2 {
+	layout [
+		position: 100, 0
+		size: 50, 50
+	]
+	portConstraints: FIXED_POS
+	label L2: "N2"
+	port P2_W1 {
+		layout [
+			position: -5, 10
+			size: 5, 5
+		]
+	}
+	port P2_W2 {
+		layout [
+			position: -5, 35
+			size: 5, 5
+		]
+	}
+	port P2_E {
+		layout [
+			position: 50, 22
+			size: 5, 5
+		]
+	}
+}
+node N3 {
+	layout [
+		position: 200, 0
+		size: 50, 50
+	]
+	portConstraints: FIXED_POS
+	label L3: "N3"
+	port P3_W1 {
+		layout [
+			position: -5, 10
+			size: 5, 5
+		]
+	}
+	port P3_W2 {
+		layout [
+			position: -5, 35
+			size: 5, 5
+		]
+	}
+	port P3_E {
+		layout [
+			position: 50, 22
+			size: 5, 5
+		]
+	}
+}
+node N4 {
+	layout [
+		position: 300, 0
+		size: 50, 50
+	]
+	portConstraints: FIXED_POS
+	label L4: "N4"
+	port P4_W1 {
+		layout [
+			position: -5, 10
+			size: 5, 5
+		]
+	}
+	port P4_W2 {
+		layout [
+			position: -5, 35
+			size: 5, 5
+		]
+	}
+}
+edge E1: N1.P1_E -> N2.P2_W1
+edge E2: N1.P1_E -> N2.P2_W2
+edge E3: N1.P1_E -> N3.P3_W2
+edge E4: N1.P1_E -> N4.P4_W2
+edge E5: N2.P2_E -> N3.P3_W1
+edge E6: N3.P3_E -> N4.P4_W1

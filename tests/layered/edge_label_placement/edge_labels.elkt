@@ -1,0 +1,44 @@
+/*******************************************************************************
+ * Copyright (c) 2018 Kiel University and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *******************************************************************************/
+/* Demos all different kinds of edge labels.
+ */
+
+edgeRouting: ORTHOGONAL
+node N1 {
+	port P1
+}
+node N2 {
+	port P2
+}
+node N3 {
+	port P3_1
+	port P3_2
+}
+node N4 {
+	port P4
+}
+edge E1: N1.P1 -> N2.P2 {
+	label L1: "Le center label" {
+		edgeLabels.placement: CENTER
+	}
+}
+edge E2: N1.P1 -> N3.P3_1 {
+	label L2: "Das Tail Label" {
+		edgeLabels.placement: TAIL
+	}
+}
+edge E3: N3.P3_2 -> N2.P2 {
+	label L3: "El Labilos Heados" {
+		edgeLabels.placement: HEAD
+	}
+}
+edge E4: N3.P3_2 -> N4.P4 {
+	label L4: "Allus Labellus Undefindus" {
+		edgeLabels.placement: UNDEFINED
+	}
+}

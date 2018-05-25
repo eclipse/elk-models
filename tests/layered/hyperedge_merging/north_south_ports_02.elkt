@@ -1,0 +1,52 @@
+/*******************************************************************************
+ * Copyright (c) 2018 Kiel University and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *******************************************************************************/
+/* This diagram shows long edges involving north/south ports.
+ */
+
+node N1 {
+	layout [ size: 50, 50 ]
+	portConstraints: FIXED_SIDE
+	label L1: "N1"
+	port P1 {
+		layout [ size: 5, 5 ]
+		side: EAST
+	}
+}
+node N2 {
+	layout [ size: 50, 50 ]
+	portConstraints: FIXED_SIDE
+	label L2: "N2"
+	port P2_1 {
+		layout [ size: 5, 5 ]
+		side: NORTH
+	}
+	port P2_2 {
+		layout [ size: 5, 5 ]
+		side: EAST
+	}
+}
+node N3 {
+	layout [ size: 50, 50 ]
+	portConstraints: FIXED_POS
+	label L3: "N3"
+	port P3_1 {
+		layout [
+			position: -5, 10
+			size: 5, 5
+		]
+	}
+	port P3_2 {
+		layout [
+			position: -5, 35
+			size: 5, 5
+		]
+	}
+}
+edge E1: N1.P1 -> N2.P2_1
+edge E2: N1.P1 -> N3.P3_1
+edge E3: N2.P2_2 -> N3.P3_2

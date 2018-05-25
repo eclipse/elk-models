@@ -1,0 +1,76 @@
+/*******************************************************************************
+ * Copyright (c) 2018 Kiel University and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *******************************************************************************/
+/* Can be used to test the label side selection mechanisms. */
+
+sideSelection: DIRECTION_UP
+edgeRouting: ORTHOGONAL
+
+node N1
+node N2
+node N3 {
+	portConstraints: FIXED_SIDE
+	port P3Out {
+		side: EAST
+	}
+	port P3In {
+		side: WEST
+	}
+}
+node N4 {
+	portConstraints: FIXED_SIDE
+	port P4Out {
+		side: EAST
+	}
+	port P4In {
+		side: WEST
+	}
+}
+edge E1: N1 -> N2 {
+	label L1: "Head" {
+		edgeLabels.placement: HEAD
+	}
+	label L2: "Center" {
+		edgeLabels.placement: CENTER
+	}
+	label L3: "Tail" {
+		edgeLabels.placement: TAIL
+	}
+}
+edge E2: N2 -> N1 {
+	label L4: "Head" {
+		edgeLabels.placement: HEAD
+	}
+	label L5: "Center" {
+		edgeLabels.placement: CENTER
+	}
+	label L6: "Tail" {
+		edgeLabels.placement: TAIL
+	}
+}
+edge E3: N3.P3Out -> N4.P4In {
+	label L7: "Head" {
+		edgeLabels.placement: HEAD
+	}
+	label L8: "Center" {
+		edgeLabels.placement: CENTER
+	}
+	label L9: "Tail" {
+		edgeLabels.placement: TAIL
+	}
+}
+edge E4: N4.P4Out -> N3.P3In {
+	label L10: "Head" {
+		edgeLabels.placement: HEAD
+	}
+	label L11: "Center" {
+		edgeLabels.placement: CENTER
+	}
+	label L12: "Tail" {
+		edgeLabels.placement: TAIL
+	}
+}

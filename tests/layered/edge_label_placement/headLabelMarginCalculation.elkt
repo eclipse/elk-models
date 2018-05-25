@@ -1,0 +1,18 @@
+/*******************************************************************************
+ * Copyright (c) 2018 Kiel University and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *******************************************************************************/
+/* Tests head label placement. Due to KIPRA-1752, subsequent layout runs would cause this
+ * diagram to become wider and wider.
+ */
+
+node N1
+node N2
+edge E1: N1 -> N2 {
+	label L1: "Head Label" {
+		edgeLabels.placement: HEAD
+	}
+}

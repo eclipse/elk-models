@@ -1,0 +1,69 @@
+/*******************************************************************************
+ * Copyright (c) 2018 Kiel University and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *******************************************************************************/
+/* Tests multiple south ports. Nodes N1 to N3 should be ordered in a way
+ * that the final drawing has no crossings.
+ */
+node N1 {
+	layout [ size: 100, 75 ]
+	portConstraints: FIXED_POS
+	label L1: "N1"
+	port a {
+		layout [
+			position: 100, 20
+			size: 10, 10
+		]
+	}
+}
+node N2 {
+	layout [ size: 100, 75 ]
+	portConstraints: FIXED_POS
+	label L2: "N2"
+	port b {
+		layout [
+			position: 100, 20
+			size: 10, 10
+		]
+	}
+}
+node N3 {
+	layout [ size: 100, 75 ]
+	portConstraints: FIXED_POS
+	label L3: "N3"
+	port c {
+		layout [
+			position: 100, 20
+			size: 10, 10
+		]
+	}
+}
+node N4 {
+	layout [ size: 100, 75 ]
+	portConstraints: FIXED_POS
+	label L4: "N4"
+	port d {
+		layout [
+			position: 20, 75
+			size: 10, 10
+		]
+	}
+	port e {
+		layout [
+			position: 45, 75
+			size: 10, 10
+		]
+	}
+	port f {
+		layout [
+			position: 70, 75
+			size: 10, 10
+		]
+	}
+}
+edge E1: N1.a -> N4.d
+edge E2: N2.b -> N4.e
+edge E3: N3.c -> N4.f

@@ -1,0 +1,54 @@
+/*******************************************************************************
+ * Copyright (c) 2018 Kiel University and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *******************************************************************************/
+// End edge labels with northern and southern ports.
+algorithm: layered
+elk.direction: RIGHT
+edgeLabels.sideSelection: ALWAYS_DOWN
+
+node N1 {
+	portConstraints: FIXED_SIDE
+	
+	port P1_1 {
+		^port.side: NORTH
+		label "A northern port"
+	}
+	port P1_2 {
+		^port.side: SOUTH
+		label "A southern port"
+	}
+}
+node N2 {
+	port P2_1 { label "A port" }
+}
+node N3 {
+	port P3_1 { label "A port" }
+}
+
+edge N1.P1_1 -> N2.P2_1 {
+	label "A first center label"
+	label "A second center label"
+	label "A third center label"
+	label "A first tail label" { edgeLabels.placement: TAIL }
+	label "A second tail label" { edgeLabels.placement: TAIL }
+	label "A third tail label" { edgeLabels.placement: TAIL }
+	label "A first head label" { edgeLabels.placement: HEAD }
+	label "A second head label" { edgeLabels.placement: HEAD }
+	label "A third head label" { edgeLabels.placement: HEAD }
+}
+
+edge N1.P1_2 -> N3.P3_1 {
+	label "A first center label"
+	label "A second center label"
+	label "A third center label"
+	label "A first tail label" { edgeLabels.placement: TAIL }
+	label "A second tail label" { edgeLabels.placement: TAIL }
+	label "A third tail label" { edgeLabels.placement: TAIL }
+	label "A first head label" { edgeLabels.placement: HEAD }
+	label "A second head label" { edgeLabels.placement: HEAD }
+	label "A third head label" { edgeLabels.placement: HEAD }
+}

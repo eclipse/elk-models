@@ -1,0 +1,54 @@
+/*******************************************************************************
+ * Copyright (c) 2018 Kiel University and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *******************************************************************************/
+// Different scenarios for smart label side selection only involving eastern and western ports.
+algorithm: layered
+edgeLabels.sideSelection: SMART_UP
+elk.direction: RIGHT
+
+node N1 {
+	port Out1_1
+}
+node N2 {
+	port Out2_1
+	port Out2_2
+}
+node N3 {
+	port In3_1
+	port In3_2
+	port In3_3
+	port Out3_1
+	port Out3_2
+}
+node N4 {
+	port In4_1
+	port In4_2
+}
+
+edge N1.Out1_1 -> N3.In3_1 {
+	label "Center label" { edgeLabels.placement: CENTER }
+	label "Head label" { edgeLabels.placement: HEAD }
+}
+edge N2.Out2_1 -> N3.In3_2 {
+	label "Tail label" { edgeLabels.placement: TAIL }
+	label "Center label" { edgeLabels.placement: CENTER }
+	label "Head label" { edgeLabels.placement: HEAD }
+}
+edge N2.Out2_2 -> N3.In3_3 {
+	label "Center label" { edgeLabels.placement: CENTER }
+	label "Head label" { edgeLabels.placement: HEAD }
+}
+edge N3.Out3_1 -> N4.In4_1 {
+	label "Tail label" { edgeLabels.placement: TAIL }
+	label "Center label" { edgeLabels.placement: CENTER }
+	label "Head label 1" { edgeLabels.placement: HEAD }
+}
+edge N3.Out3_2 -> N4.In4_2 {
+	label "Tail label" { edgeLabels.placement: TAIL }
+	label "Center label" { edgeLabels.placement: CENTER }
+	label "Head label 2" { edgeLabels.placement: HEAD }
+}

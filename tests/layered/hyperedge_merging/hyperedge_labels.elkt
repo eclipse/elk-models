@@ -1,0 +1,30 @@
+/*******************************************************************************
+ * Copyright (c) 2018 Kiel University and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *******************************************************************************/
+/* This model tests a condition where different edges comprising a hyperedge have different labels. It
+ * would be wrong to merge the edges such that it's not clear anymore which label belongs to which edge.
+ */
+node N1 {
+	port P1_main
+	port P1_aux
+}
+node N2
+node N3
+node Dummy1
+node Dummy2
+node Dummy3
+edge E1: N1.P1_main -> N2 {
+	label L1: "First edge label"
+}
+edge E2: N1.P1_main -> N3 {
+	label L2: "Second edge label"
+}
+edge E3: N1.P1_main -> N3
+edge E4: N1.P1_aux -> Dummy1
+edge E5: Dummy1 -> Dummy2
+edge E6: Dummy2 -> Dummy3
+edge E7: Dummy3 -> N3

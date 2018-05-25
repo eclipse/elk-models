@@ -1,0 +1,38 @@
+/*******************************************************************************
+ * Copyright (c) 2018 Kiel University and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *******************************************************************************/
+// A test graph for placing label dummies into the center layer.
+// This is a good case for the center layer strategy since the
+// center layer indeed ends up very near to the edge's physical
+// center.
+algorithm: layered
+edgeLabels.centerLabelPlacementStrategy: CENTER_LAYER
+
+// Nodes with increasing width
+node source
+node n1
+node n2
+node n3
+node n4
+node n5
+node n6
+node n7 { layout [ size: 300, 40 ] }
+node target
+
+// Edges to force the nodes into a sequence
+edge source -> n1
+edge n1 -> n2
+edge n2 -> n3
+edge n3 -> n4
+edge n4 -> n5
+edge n5 -> n6
+edge n6 -> n7
+edge n7 -> target
+
+// Edges that have labels
+edge source -> target { label "A label" }
+

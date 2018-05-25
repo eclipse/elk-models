@@ -1,0 +1,47 @@
+/*******************************************************************************
+ * Copyright (c) 2018 Kiel University and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *******************************************************************************/
+/* Demos the interplay of edge and port labels. The edge labels should not
+ * overlap the port labels, but be offset accordingly.
+ */
+edgeRouting: ORTHOGONAL
+node N1 {
+	portLabels.placement: OUTSIDE
+	port P1 {
+		label L3: "Fett das Portlabel"
+	}
+}
+node N2 {
+	port P2
+}
+node N3 {
+	port P3
+}
+node N4 {
+	port P4
+}
+node N5 {
+	port P5
+}
+node N6 {
+	portLabels.placement: OUTSIDE
+	port P6 {
+		label L4: "Schon wieder ein Portlabel!!!!111einself"
+	}
+}
+edge E1: N1.P1 -> N2.P2 {
+	label L1: "Tail label" {
+		edgeLabels.placement: TAIL
+	}
+}
+edge E2: N1.P1 -> N3.P3
+edge E3: N4.P4 -> N6.P6
+edge E4: N5.P5 -> N6.P6 {
+	label L2: "Head label" {
+		edgeLabels.placement: HEAD
+	}
+}

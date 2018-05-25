@@ -1,0 +1,68 @@
+/*******************************************************************************
+ * Copyright (c) 2018 Kiel University and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *******************************************************************************/
+// End edge labels with northern and southern ports.
+// End edge labels with multiple north / south ports.
+algorithm: layered
+elk.direction: DOWN
+edgeLabels.sideSelection: ALWAYS_DOWN
+spacing.labelLabel: 2
+spacing.edgeLabel: 4
+
+node N1 {
+	portConstraints: FIXED_SIDE
+	
+	port North1 {
+		^port.side: NORTH
+		label "North port 1"
+	}
+	port North2 {
+		^port.side: NORTH
+		label "North port 1"
+	}
+	port South1 {
+		^port.side: SOUTH
+		label "South port 1"
+	}
+	port South2 {
+		^port.side: SOUTH
+		label "South port 2"
+	}
+}
+node N2 {
+	port P2_1 { label "A port" }
+}
+node N3 {
+	port P3_1 { label "A port" }
+}
+node N4 {
+	port P4_1 { label "A port" }
+}
+node N5 {
+	port P5_1 { label "A port" }
+}
+
+edge N1.North1 -> N2.P2_1 {
+	label "A first tail label" { edgeLabels.placement: TAIL }
+	label "A second tail label" { edgeLabels.placement: TAIL }
+	label "A third tail label" { edgeLabels.placement: TAIL }
+}
+edge N1.North2 -> N3.P3_1 {
+	label "A first tail label" { edgeLabels.placement: TAIL }
+	label "A second tail label" { edgeLabels.placement: TAIL }
+	label "A third tail label" { edgeLabels.placement: TAIL }
+}
+edge N1.South1 -> N4.P4_1 {
+	label "A first tail label" { edgeLabels.placement: TAIL }
+	label "A second tail label" { edgeLabels.placement: TAIL }
+	label "A third tail label" { edgeLabels.placement: TAIL }
+}
+edge N1.South2 -> N5.P5_1 {
+	label "A first tail label" { edgeLabels.placement: TAIL }
+	label "A second tail label" { edgeLabels.placement: TAIL }
+	label "A third tail label" { edgeLabels.placement: TAIL }
+}

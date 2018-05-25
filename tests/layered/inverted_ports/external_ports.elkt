@@ -1,0 +1,45 @@
+/*******************************************************************************
+ * Copyright (c) 2018 Kiel University and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *******************************************************************************/
+/**
+ * Example for ticket KIPRA-1488 
+ */
+node root {
+	portConstraints: FIXED_SIDE
+	edgeRouting: ORTHOGONAL
+	port w1 {
+		side: WEST
+	}
+	port w2 {
+		side: WEST
+	}
+	port e1 {
+		side: EAST
+	}
+	port e2 {
+		side: EAST
+	}
+	node child {
+		portConstraints: FIXED_SIDE
+		port cw1 {
+			side: WEST
+		}
+		port cw2 {
+			side: WEST
+		}
+		port ce1 {
+			side: EAST
+		}
+		port ce2 {
+			side: EAST
+		}
+	}
+	edge E1: w1 -> child.ce1
+	edge E2: w2 -> child.ce2
+	edge E3: child.cw1 -> e1
+	edge E4: child.cw2 -> e2
+}

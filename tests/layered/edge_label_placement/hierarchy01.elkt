@@ -1,0 +1,110 @@
+/*******************************************************************************
+ * Copyright (c) 2018 Kiel University and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *******************************************************************************/
+/* A graph with a lot of hierarchy and hierarchy-crossing edges, modelled
+ * somewhat after the example graph in KIPRA-1404. A similar graph can also
+ * be found in the port_merging folder, but this one has some edge labels
+ * to test edge label placement on hierarchy crossing edges.
+ */
+
+hierarchyHandling: INCLUDE_CHILDREN
+node N1 {
+	label L3: "N1"
+	node N1_1 {
+		label L5: "N1_1"
+		node N1_1_1 {
+			mergeEdges: true
+			mergeHierarchyEdges: true
+			label L6: "N1_1_1"
+			node Workflow {
+				nodeLabels.placement: "[H_CENTER, V_CENTER, INSIDE]"
+				nodeSize.constraints: "MINIMUM_SIZE NODE_LABELS"
+				label L7: "Workflow"
+			}
+			node Provenance {
+				nodeLabels.placement: "[H_CENTER, V_CENTER, INSIDE]"
+				nodeSize.constraints: "MINIMUM_SIZE NODE_LABELS"
+				label L8: "Provenance"
+			}
+			edge E7: Workflow -> Provenance
+		}
+	}
+	node N1_2 {
+		label L9: "N1_2"
+		node Cache {
+			nodeLabels.placement: "[H_CENTER, V_CENTER, INSIDE]"
+			nodeSize.constraints: "MINIMUM_SIZE NODE_LABELS"
+			label L10: "Cache"
+		}
+		node HyperSQL {
+			nodeLabels.placement: "[H_CENTER, V_CENTER, INSIDE]"
+			nodeSize.constraints: "MINIMUM_SIZE NODE_LABELS"
+			label L11: "HyperSQL"
+		}
+		edge E8: Cache -> HyperSQL
+	}
+	node N1_3 {
+		label L12: "N1_3"
+		node Neo4J {
+			nodeLabels.placement: "[H_CENTER, V_CENTER, INSIDE]"
+			nodeSize.constraints: "MINIMUM_SIZE NODE_LABELS"
+			label L13: "Neo4J"
+		}
+	}
+	edge E5: N1_1.N1_1_1.Workflow -> N1_2.Cache {
+		label L4: "Tail Label" {
+			edgeLabels.placement: TAIL
+		}
+	}
+	edge E6: N1_1.N1_1_1.Provenance -> N1_3.Neo4J
+}
+node N2 {
+	label L14: "N2"
+	node N2_1 {
+		label L15: "N2_1"
+		node FourD {
+			nodeLabels.placement: "[H_CENTER, V_CENTER, INSIDE]"
+			nodeSize.constraints: "MINIMUM_SIZE NODE_LABELS"
+			label L16: "4D"
+		}
+	}
+}
+node N3 {
+	label L17: "N3"
+	node N3_1 {
+		mergeEdges: true
+		label L18: "N3_1"
+		node Webinterface {
+			nodeLabels.placement: "[H_CENTER, V_CENTER, INSIDE]"
+			nodeSize.constraints: "MINIMUM_SIZE NODE_LABELS"
+			label L19: "Webinterface"
+		}
+	}
+}
+node N4 {
+	label L20: "N4"
+	node N4_1 {
+		label L21: "N4_1"
+		node Wiki {
+			nodeLabels.placement: "[H_CENTER, V_CENTER, INSIDE]"
+			nodeSize.constraints: "MINIMUM_SIZE NODE_LABELS"
+			label L22: "Wiki"
+		}
+	}
+}
+edge E1: N1.N1_1.N1_1_1.Workflow -> N2.N2_1.FourD
+edge E2: N1.N1_1.N1_1_1.Workflow -> N3.N3_1.Webinterface
+edge E3: N1.N1_1.N1_1_1.Workflow -> N4.N4_1.Wiki {
+	label L1: "Center Label" {
+		edgeLabels.placement: CENTER
+	}
+}
+edge E4: N1.N1_3.Neo4J -> N3.N3_1.Webinterface {
+	label L2: "Head Label" {
+		edgeLabels.placement: HEAD
+	}
+}

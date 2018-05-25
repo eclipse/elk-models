@@ -1,0 +1,32 @@
+/*******************************************************************************
+ * Copyright (c) 2018 Kiel University and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *******************************************************************************/
+graph G1
+edgeRouting: ORTHOGONAL
+node _1 {
+	layout [ size: 50, 50 ]
+	layerConstraint: FIRST
+	label L1: "fst"
+	port a
+}
+node _2 {
+	layout [ size: 50, 50 ]
+	label L2: "secon"
+}
+node _3 {
+	layout [ size: 50, 50 ]
+	layerConstraint: FIRST
+	label L3: "_3"
+}
+node _4 {
+	layout [ size: 50, 50 ]
+	layerConstraint: LAST
+	label L4: "last"
+}
+edge E1: _1 -> _4
+edge E2: _2 -> _4
+edge E3: _3 -> _4

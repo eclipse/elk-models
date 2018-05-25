@@ -1,0 +1,56 @@
+/*******************************************************************************
+ * Copyright (c) 2018 Kiel University and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *******************************************************************************/
+/* Compound graph with a compound node with free port constraints.
+ */
+node N1 {
+	layout [ size: 50, 50 ]
+	label L1: "N1"
+}
+node Compound {
+	edgeRouting: ORTHOGONAL
+	portConstraints: FREE
+	port CW1 {
+		layout [ size: 5, 5 ]
+	}
+	port CW2 {
+		layout [ size: 5, 5 ]
+	}
+	port CE1 {
+		layout [ size: 5, 5 ]
+	}
+	node NC1 {
+		layout [ size: 50, 50 ]
+		label L2: "NC1"
+	}
+	node NC2 {
+		layout [ size: 50, 50 ]
+		label L3: "NC2"
+	}
+	node NC3 {
+		layout [ size: 50, 50 ]
+		label L4: "NC3"
+	}
+	edge E6: CW1 -> NC1
+	edge E7: CW2 -> NC2
+	edge E8: NC1 -> NC3
+	edge E9: NC2 -> NC3
+	edge E10: NC3 -> CE1
+}
+node N2 {
+	layout [ size: 50, 50 ]
+	label L5: "N2"
+}
+node N3 {
+	layout [ size: 50, 50 ]
+	label L6: "N3"
+}
+edge E1: N1 -> Compound.CW1
+edge E2: N1 -> Compound.CW2
+edge E3: N1 -> N2
+edge E4: Compound.CE1 -> N2
+edge E5: Compound.CE1 -> N3
