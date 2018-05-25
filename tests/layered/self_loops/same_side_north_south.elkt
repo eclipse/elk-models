@@ -1,0 +1,120 @@
+/*******************************************************************************
+ * Copyright (c) 2018 Kiel University and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *******************************************************************************/
+algorithm: layered
+edgeRouting: ORTHOGONAL
+
+node N1 {
+	layout [ size: 40, 40 ]
+	portConstraints: FIXED_ORDER
+	label L1: "N1"
+	port N1_eout {
+		layout [
+			position: 39, 20
+			size: 8, 8
+		]
+		label L2: "eout"
+	}
+	port N1_sout {
+		layout [
+			position: 7, 39
+			size: 8, 8
+		]
+		label L3: "sout"
+	}
+	port N1_sin {
+		layout [
+			position: 28, 39
+			size: 8, 8
+		]
+		label L4: "sin"
+	}
+}
+node N2 {
+	layout [ size: 40, 40 ]
+	portConstraints: FIXED_ORDER
+	label L5: "N2"
+	port N2_win {
+		layout [
+			position: -7, 18
+			size: 8, 8
+		]
+		label L6: "win"
+	}
+	port N2_sout {
+		layout [
+			position: 26, 39
+			size: 8, 8
+		]
+		label L7: "sout"
+	}
+	port N2_sin {
+		layout [
+			position: 5, 39
+			size: 8, 8
+		]
+		label L8: "sin"
+	}
+}
+node N3 {
+	layout [ size: 40, 40 ]
+	portConstraints: FIXED_ORDER
+	label L9: "N3"
+	port N3_eout {
+		layout [
+			position: 39, 20
+			size: 8, 8
+		]
+		label L10: "eout"
+	}
+	port N3_nout {
+		layout [
+			position: 7, -7
+			size: 8, 8
+		]
+		label L11: "nout"
+	}
+	port N3_nin {
+		layout [
+			position: 27, -7
+			size: 8, 8
+		]
+		label L12: "nin"
+	}
+}
+node N4 {
+	layout [ size: 40, 40 ]
+	portConstraints: FIXED_ORDER
+	label L13: "N4"
+	port N4_win {
+		layout [
+			position: -7, 18
+			size: 8, 8
+		]
+		label L14: "win"
+	}
+	port N4_nout {
+		layout [
+			position: 26, -7
+			size: 8, 8
+		]
+		label L15: "nout"
+	}
+	port N4_nin {
+		layout [
+			position: 6, -7
+			size: 8, 8
+		]
+		label L16: "nin"
+	}
+}
+edge E1: N1.N1_sout -> N1.N1_sin 
+edge E2: N1.N1_eout -> N2.N2_win
+edge E3: N2.N2_sout -> N2.N2_sin
+edge E4: N3.N3_nout -> N3.N3_nin
+edge E5: N3.N3_eout -> N4.N4_win
+edge E6: N4.N4_nout -> N4.N4_nin

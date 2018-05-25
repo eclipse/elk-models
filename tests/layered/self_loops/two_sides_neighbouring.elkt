@@ -1,0 +1,185 @@
+/*******************************************************************************
+ * Copyright (c) 2018 Kiel University and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *******************************************************************************/
+algorithm: layered
+edgeRouting: ORTHOGONAL
+
+node N1 {
+	layout [ size: 40, 40 ]
+	portConstraints: FIXED_SIDE
+	label L1: "N1"
+	port N1_eout {
+		layout [ size: 8, 8 ]
+		side: EAST
+		label L2: "eout"
+	}
+	port N1_wout {
+		layout [ size: 8, 8 ]
+		side: WEST
+		label L3: "wout"
+	}
+	port N1_nin {
+		layout [ size: 8, 8 ]
+		side: NORTH
+		label L4: "nin"
+	}
+}
+node N2 {
+	layout [ size: 40, 40 ]
+	portConstraints: FIXED_SIDE
+	label L5: "N2"
+	port N2_win {
+		layout [ size: 8, 8 ]
+		side: WEST
+		label L6: "win"
+	}
+	port N2_eout {
+		layout [ size: 8, 8 ]
+		side: EAST
+		label L7: "eout"
+	}
+	port N2_nin {
+		layout [ size: 8, 8 ]
+		side: NORTH
+		label L8: "nin"
+	}
+}
+node N3 {
+	layout [ size: 40, 40 ]
+	portConstraints: FIXED_SIDE
+	label L9: "N3"
+	port N3_eout {
+		layout [ size: 8, 8 ]
+		side: EAST
+		label L10: "eout"
+	}
+	port N3_nout {
+		layout [ size: 8, 8 ]
+		side: NORTH
+		label L11: "nout"
+	}
+	port N3_win {
+		layout [ size: 8, 8 ]
+		side: WEST
+		label L12: "win"
+	}
+}
+node N4 {
+	layout [ size: 40, 40 ]
+	portConstraints: FIXED_SIDE
+	label L13: "N4"
+	port N4_win {
+		layout [ size: 8, 8 ]
+		side: WEST
+		label L14: "win"
+	}
+	port N4_nout {
+		layout [ size: 8, 8 ]
+		side: NORTH
+		label L15: "nout"
+	}
+	port N4_ein {
+		layout [ size: 8, 8 ]
+		side: EAST
+		label L16: "ein"
+	}
+}
+node N5 {
+	layout [ size: 40, 40 ]
+	portConstraints: FIXED_SIDE
+	label L17: "N5"
+	port N5_eout {
+		layout [ size: 8, 8 ]
+		side: EAST
+		label L18: "eout"
+	}
+	port N5_wout {
+		layout [ size: 8, 8 ]
+		side: WEST
+		label L19: "wout"
+	}
+	port N5_sin {
+		layout [ size: 8, 8 ]
+		side: SOUTH
+		label L20: "sin"
+	}
+}
+node N6 {
+	layout [ size: 40, 40 ]
+	portConstraints: FIXED_SIDE
+	label L21: "N6"
+	port N6_win {
+		layout [ size: 8, 8 ]
+		side: WEST
+		label L22: "win"
+	}
+	port N6_eout {
+		layout [ size: 8, 8 ]
+		side: EAST
+		label L23: "eout"
+	}
+	port N6_sin {
+		layout [ size: 8, 8 ]
+		side: SOUTH
+		label L24: "sin"
+	}
+}
+node N7 {
+	layout [ size: 40, 40 ]
+	portConstraints: FIXED_SIDE
+	label L25: "N7"
+	port N7_eout {
+		layout [ size: 8, 8 ]
+		side: EAST
+		label L26: "eout"
+	}
+	port N7_sout {
+		layout [ size: 8, 8 ]
+		side: SOUTH
+		label L27: "sout"
+	}
+	port N7_win {
+		layout [ size: 8, 8 ]
+		side: WEST
+		label L28: "win"
+	}
+}
+node N8 {
+	layout [
+		position: 445, 404
+		size: 40, 40
+	]
+	portConstraints: FIXED_SIDE
+	label L29: "N8"
+	port N8_win {
+		layout [ size: 8, 8 ]
+		side: WEST
+		label L30: "win"
+	}
+	port N8_sout {
+		layout [ size: 8, 8 ]
+		side: SOUTH
+		label L31: "sout"
+	}
+	port N8_ein {
+		layout [ size: 8, 8 ]
+		side: EAST
+		label L32: "ein"
+	}
+}
+edge E1: N1.N1_wout -> N1.N1_nin
+edge E2: N1.N1_eout -> N2.N2_win
+edge E3: N2.N2_eout -> N2.N2_nin
+edge E4: N3.N3_nout -> N3.N3_win
+edge E5: N3.N3_eout -> N4.N4_win
+edge E6: N4.N4_nout -> N4.N4_ein
+edge E7: N5.N5_wout -> N5.N5_sin
+edge E8: N5.N5_eout -> N6.N6_win
+edge E9: N6.N6_eout -> N6.N6_sin
+edge E10: N7.N7_sout -> N7.N7_win
+edge E11: N7.N7_eout -> N8.N8_win
+edge E12: N8.N8_sout -> N8.N8_ein

@@ -1,0 +1,66 @@
+/*******************************************************************************
+ * Copyright (c) 2018 Kiel University and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *******************************************************************************/
+/**
+ * During node placement it happened that the self loops 
+ * in this example became unnecessarily long.
+ * Both the bk and the network simplex placers should avoid this now.
+ */
+
+randomSeed: 13
+//nodePlacement.strategy: NETWORK_SIMPLEX
+
+node n0 {
+	layout [ size: 30, 30 ]
+}
+node n1 {
+	layout [ size: 30, 30 ]
+}
+node n2 {
+	layout [ size: 30, 30 ]
+}
+node n3 {
+	layout [ size: 30, 30 ]
+}
+node n4 {
+	layout [ size: 30, 30 ]
+}
+node n5 {
+	layout [ size: 30, 30 ]
+}
+node n6 {
+	layout [ size: 30, 30 ]
+}
+node n7 {
+	layout [ size: 30, 30 ]
+}
+node n8 {
+	layout [ size: 30, 30 ]
+}
+node n9 {
+	layout [ size: 30, 30 ]
+}
+edge E1: n0 -> n8 
+edge E2: n0 -> n4
+edge E3: n1 -> n0
+edge E4: n1 -> n4 
+edge E5: n2 -> n9 
+edge E6: n2 -> n9 
+edge E7: n2 -> n6 
+edge E8: n2 -> n7 
+edge E9: n2 -> n5
+edge E10: n2 -> n5 
+edge E11: n3 -> n0 
+edge E12: n4 -> n1
+edge E13: n4 -> n2
+edge E14: n6 -> n9 
+edge E15: n6 -> n9
+edge E16: n8 -> n4
+edge E17: n8 -> n6
+edge E18: n8 -> n8
+edge E19: n9 -> n8 
+edge E20: n9 -> n9

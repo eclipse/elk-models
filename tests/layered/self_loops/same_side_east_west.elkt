@@ -1,0 +1,90 @@
+/*******************************************************************************
+ * Copyright (c) 2018 Kiel University and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *******************************************************************************/
+algorithm: layered
+edgeRouting: ORTHOGONAL
+
+node N1 {
+	layout [ size: 40, 40 ]
+	portConstraints: FIXED_ORDER
+	label L1: "N1"
+	port P11 {
+		layout [
+			position: -7, 3
+			size: 8, 8
+		]
+		label L2: "out"
+	}
+	port P12 {
+		layout [
+			position: -7, 27
+			size: 8, 8
+		]
+		label L3: "in"
+	}
+}
+node N2 {
+	layout [ size: 40, 40 ]
+	portConstraints: FIXED_ORDER
+	label L4: "N2"
+	port P21 {
+		layout [
+			position: -7, 29
+			size: 8, 8
+		]
+		label L5: "out"
+	}
+	port P22 {
+		layout [
+			position: -7, 3
+			size: 8, 8
+		]
+		label L6: "in"
+	}
+}
+node N3 {
+	layout [ size: 40, 40 ]
+	portConstraints: FIXED_ORDER
+	label L7: "N3"
+	port P31 {
+		layout [
+			position: 39, 1
+			size: 8, 8
+		]
+		label L8: "out"
+	}
+	port P32 {
+		layout [
+			position: 39, 31
+			size: 8, 8
+		]
+		label L9: "in"
+	}
+}
+node N4 {
+	layout [ size: 40, 40 ]
+	portConstraints: FIXED_ORDER
+	label L10: "N4"
+	port P41 {
+		layout [
+			position: 39, 31
+			size: 8, 8
+		]
+		label L11: "out"
+	}
+	port P42 {
+		layout [
+			position: 39, 2
+			size: 8, 8
+		]
+		label L12: "in"
+	}
+}
+edge E1: N1.P11 -> N1.P12
+edge E2: N2.P21 -> N2.P22
+edge E3: N3.P31 -> N3.P32
+edge E4: N4.P41 -> N4.P42
