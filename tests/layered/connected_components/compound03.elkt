@@ -1,0 +1,131 @@
+/*******************************************************************************
+ * Copyright (c) 2018 Kiel University and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *******************************************************************************/
+/* A more complex compound graph with several connected components and a few
+ * hierarchical ports with fixed sides.
+ */
+node Compound {
+	edgeRouting: ORTHOGONAL
+	portConstraints: FIXED_SIDE
+	port CW1 {
+		layout [ size: 5, 5 ]
+		side: WEST
+	}
+	port CW2 {
+		layout [ size: 5, 5 ]
+		side: WEST
+	}
+	port CW3 {
+		layout [ size: 5, 5 ]
+		side: WEST
+	}
+	port CW4 {
+		layout [ size: 5, 5 ]
+		side: WEST
+	}
+	port CN1 {
+		layout [ size: 5, 5 ]
+		side: NORTH
+	}
+	node N1_1 {
+		layout [ size: 50, 50 ]
+		label L1: "N1_1"
+	}
+	node N1_2 {
+		layout [ size: 50, 50 ]
+		label L2: "N1_2"
+	}
+	node N2_1 {
+		layout [ size: 50, 50 ]
+		label L3: "N2_1"
+	}
+	node N2_2 {
+		layout [ size: 50, 50 ]
+		label L4: "N2_2"
+	}
+	node N2_3 {
+		layout [ size: 50, 50 ]
+		label L5: "N2_3"
+	}
+	node N2_4 {
+		layout [ size: 50, 50 ]
+		label L6: "N2_4"
+	}
+	node N2_5 {
+		layout [ size: 50, 50 ]
+		label L7: "N2_5"
+	}
+	node N3_1 {
+		layout [ size: 50, 50 ]
+		label L8: "N3_1"
+	}
+	node N4_1 {
+		layout [ size: 50, 50 ]
+		label L9: "N4_1"
+	}
+	node N5_1 {
+		layout [ size: 50, 50 ]
+		label L10: "N5_1"
+	}
+	node N6_1 {
+		layout [ size: 50, 50 ]
+		label L11: "N6_1"
+	}
+	node N7_1 {
+		layout [ size: 50, 50 ]
+		label L12: "N7_1"
+	}
+	node N8_1 {
+		layout [ size: 50, 50 ]
+		label L13: "N8_1"
+	}
+	node N8_2 {
+		layout [ size: 50, 50 ]
+		label L14: "N8_2"
+	}
+	node N8_3 {
+		layout [ size: 50, 50 ]
+		label L15: "N8_3"
+	}
+	node N9_1 {
+		layout [ size: 50, 50 ]
+		label L16: "N9_1"
+	}
+	node N9_2 {
+		layout [ size: 50, 50 ]
+		label L17: "N9_2"
+	}
+	node N9_3 {
+		layout [ size: 50, 50 ]
+		label L18: "N9_3"
+	}
+	node N9_4 {
+		layout [ size: 50, 50 ]
+		label L19: "N9_4"
+	}
+	node N9_5 {
+		layout [ size: 50, 50 ]
+		label L20: "N9_5"
+	}
+	edge E1: CW1 -> N1_1
+	edge E2: CW2 -> N3_1
+	edge E3: CW3 -> N4_1
+	edge E4: CN1 -> N1_2
+	edge E5: N1_1 -> N1_2
+	edge E6: N2_1 -> N2_2
+	edge E7: N2_1 -> N2_3
+	edge E8: N2_2 -> N2_4
+	edge E9: N2_3 -> N2_4
+	edge E10: N2_4 -> N2_5
+	edge E11: N5_1 -> CW4
+	edge E12: N8_1 -> N8_2
+	edge E13: N8_2 -> N8_3
+	edge E14: N9_1 -> N9_2
+	edge E15: N9_1 -> N9_3
+	edge E16: N9_1 -> N9_4
+	edge E17: N9_1 -> N9_5
+}

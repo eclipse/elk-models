@@ -1,0 +1,68 @@
+/*******************************************************************************
+ * Copyright (c) 2018 Kiel University and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *******************************************************************************/
+/* Example where the ComponentGroupGraphPlacer failed because of
+ * components connected to external ports on all four sides (see
+ * KIPRA-1423).
+ */
+ 
+edgeRouting: ORTHOGONAL
+node Compound {
+	edgeRouting: ORTHOGONAL
+	portConstraints: FIXED_SIDE
+	port N1 {
+		side: NORTH
+	}
+	port N2 {
+		side: NORTH
+	}
+	port N3 {
+		side: NORTH
+	}
+	port S1 {
+		side: SOUTH
+	}
+	port S2 {
+		side: SOUTH
+	}
+	port S3 {
+		side: SOUTH
+	}
+	port E1 {
+		side: EAST
+	}
+	port E2 {
+		side: EAST
+	}
+	port E3 {
+		side: EAST
+	}
+	port W1 {
+		side: WEST
+	}
+	port W2 {
+		side: WEST
+	}
+	port W3 {
+		side: WEST
+	}
+	node Child1
+	node Child2
+	node Child3
+	edge E4: W1 -> Child1
+	edge E5: W2 -> Child2
+	edge E6: W3 -> Child3
+	edge E7: Child1 -> N1
+	edge E8: Child1 -> S1
+	edge E9: Child1 -> E1
+	edge E10: Child2 -> N2
+	edge E11: Child2 -> S2
+	edge E12: Child2 -> E2
+	edge E13: Child3 -> N3
+	edge E14: Child3 -> S3
+	edge E15: Child3 -> E3
+}

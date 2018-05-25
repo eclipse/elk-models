@@ -1,0 +1,41 @@
+/*******************************************************************************
+ * Copyright (c) 2018 Kiel University and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *******************************************************************************/
+/* A compound graph with two connected components that can well be placed
+ * without edge crossings.
+ */
+node Compound {
+	separateConnectedComponents: true
+	edgeRouting: ORTHOGONAL
+	portConstraints: FIXED_SIDE
+	port CW1 {
+		side: WEST
+	}
+	port CW2 {
+		side: WEST
+	}
+	port CW3 {
+		side: WEST
+	}
+	port CW4 {
+		side: WEST
+	}
+	port CN1 {
+		side: NORTH
+	}
+	port CN2 {
+		side: NORTH
+	}
+	node N1_1
+	node N2_1
+	edge E1: CW1 -> N1_1
+	edge E2: CW2 -> N1_1
+	edge E3: CW3 -> N2_1
+	edge E4: CW4 -> N2_1
+	edge E5: N1_1 -> CN1
+	edge E6: N2_1 -> CN2
+}
