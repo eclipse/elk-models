@@ -1,0 +1,73 @@
+/*******************************************************************************
+ * Copyright (c) 2018 Kiel University and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *******************************************************************************/
+/* Demonstrates the placement of multiple port in compound nodes.
+ * 
+ * INSIDE
+ * The labels of ieastern ports should be aligned flush-right, the labels of western
+ * ports should be aligned flush-left.
+ * 
+ * OUTSIDE
+ * The labels of ieastern ports should be aligned flush-left, the labels of western
+ * ports should be aligned flush-right.
+ */
+node Inside {
+	nodeLabels.placement: "[H_CENTER, V_BOTTOM, OUTSIDE]"
+	portLabels.placement: INSIDE
+	portConstraints: FIXED_SIDE
+	port iwest1 {
+		side: WEST
+		label L1: "iwest1"
+		label L2: "[0]"
+	}
+	port iwest2 {
+		side: WEST
+		label L3: "iwest2"
+		label L4: "[13]"
+	}
+	port ieast1 {
+		side: EAST
+		label L5: "ieast1"
+		label L6: "[23]"
+	}
+	port ieast2 {
+		side: EAST
+		label L7: "ieast2"
+		label L8: "[42]"
+	}
+	node InsideChild
+	edge E1: iwest1 -> InsideChild
+	edge E2: InsideChild -> ieast1
+}
+node Outside {
+	nodeLabels.placement: "[H_CENTER, V_BOTTOM, OUTSIDE]"
+	portLabels.placement: OUTSIDE
+	portConstraints: FIXED_SIDE
+	port owest1 {
+		side: WEST
+		label L9: "owest1"
+		label L10: "[0]"
+	}
+	port owest2 {
+		side: WEST
+		label L11: "owest2"
+		label L12: "[13]"
+	}
+	port oeast1 {
+		side: EAST
+		label L13: "oeast1"
+		label L14: "[23]"
+	}
+	port oeast2 {
+		side: EAST
+		label L15: "oeast2"
+		label L16: "[42]"
+	}
+	node OutsideChild
+	edge E3: owest1 -> OutsideChild
+	edge E4: OutsideChild -> oeast1
+}

@@ -1,0 +1,70 @@
+/*******************************************************************************
+ * Copyright (c) 2018 Kiel University and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *******************************************************************************/
+/* Demonstrates the placement of multiple port labels.
+ * 
+ * INSIDE
+ * The labels of eastern ports should be aligned flush-right, the labels of western
+ * ports should be aligned flush-left.
+ * 
+ * OUTSIDE
+ * The labels of eastern ports should be aligned flush-left, the labels of western
+ * ports should be aligned flush-right.
+ */
+ 
+node Inside {
+	layout [ size: 80, 80 ]
+	nodeLabels.placement: "[H_CENTER, V_BOTTOM, OUTSIDE]"
+	portLabels.placement: INSIDE
+	portConstraints: FIXED_SIDE
+	port west1 {
+		side: WEST
+		label L1: "west1"
+		label L2: "[0]"
+	}
+	port west2 {
+		side: WEST
+		label L3: "west2"
+		label L4: "[13]"
+	}
+	port east1 {
+		side: EAST
+		label L5: "east1"
+		label L6: "[23]"
+	}
+	port east2 {
+		side: EAST
+		label L7: "east2"
+		label L8: "[42]"
+	}
+}
+node Outside {
+	layout [ size: 80, 80 ]
+	nodeLabels.placement: "[H_CENTER, V_BOTTOM, OUTSIDE]"
+	portLabels.placement: OUTSIDE
+	portConstraints: FIXED_SIDE
+	port west1_g9549 {
+		side: WEST
+		label L9: "west1"
+		label L10: "[0]"
+	}
+	port west2_g7476 {
+		side: WEST
+		label L11: "west2"
+		label L12: "[13]"
+	}
+	port east1_g5040 {
+		side: EAST
+		label L13: "east1"
+		label L14: "[23]"
+	}
+	port east2_g6675 {
+		side: EAST
+		label L15: "east2"
+		label L16: "[42]"
+	}
+}

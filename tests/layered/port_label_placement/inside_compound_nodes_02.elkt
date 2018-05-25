@@ -1,0 +1,68 @@
+/*******************************************************************************
+ * Copyright (c) 2018 Kiel University and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *******************************************************************************/
+/* Demonstrates the use of INSIDE port label placement with compound nodes. If everything
+ * works as expected, none of the labels overlaps a node in the compound node. The
+ * difference between the first model of this kind and this one is that the hierarchical
+ * ports are not connected to the inside. Once, this was the cause of a bug that caused
+ * inside port labels to overlap stuff.
+ */
+edgeRouting: ORTHOGONAL
+node n1 {
+	layout [ size: 50, 50 ]
+	nodeLabels.placement: "[H_CENTER, V_BOTTOM, OUTSIDE]"
+	portLabels.placement: OUTSIDE
+	portConstraints: FREE
+	label L1: "n1"
+	port n1_p1 {
+		layout [ size: 5, 5 ]
+		label L2: "p1"
+	}
+}
+node n2 {
+	layout [ size: 50, 50 ]
+	nodeLabels.placement: "[H_CENTER, V_BOTTOM, OUTSIDE]"
+	portLabels.placement: INSIDE
+	portConstraints: FREE
+	label L3: "n2"
+	port n2_p1 {
+		layout [ size: 5, 5 ]
+		label L4: "Ein erstes langes Port-Label"
+	}
+	port n2_p2 {
+		layout [ size: 5, 5 ]
+		label L5: "Ein zweites langes Port-Label"
+	}
+	node n2_1 {
+		layout [ size: 50, 50 ]
+		nodeLabels.placement: "[H_CENTER, V_BOTTOM, OUTSIDE]"
+		portLabels.placement: INSIDE
+		portConstraints: FREE
+		label L6: "n2_1"
+		port n2_1_p1 {
+			layout [ size: 5, 5 ]
+			label L7: "p1"
+		}
+		port n2_1_p2 {
+			layout [ size: 5, 5 ]
+			label L8: "p2"
+		}
+	}
+}
+node n3 {
+	layout [ size: 50, 50 ]
+	nodeLabels.placement: "[H_CENTER, V_BOTTOM, OUTSIDE]"
+	portLabels.placement: INSIDE
+	portConstraints: FREE
+	label L9: "n3"
+	port n3_p1 {
+		layout [ size: 5, 5 ]
+		label L10: "p1"
+	}
+}
+edge E1: n1.n1_p1 -> n2.n2_p1
+edge E2: n2.n2_p2 -> n3.n3_p1

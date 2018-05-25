@@ -1,0 +1,63 @@
+/*******************************************************************************
+ * Copyright (c) 2018 Kiel University and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *******************************************************************************/
+/* Demonstrates the use of INSIDE port label placement with compound nodes. If everything
+ * works as expected, none of the labels overlaps a node in the compound node and the
+ * hierarchical port labels of the ports without inside connections should be placed
+ * directly next to their ports instead of a bit underneath.
+ */
+
+edgeRouting: ORTHOGONAL
+node n1 {
+	portLabels.placement: OUTSIDE
+	portConstraints: FREE
+	port n1_p1
+}
+node n4 {
+	portLabels.placement: OUTSIDE
+	portConstraints: FREE
+	port n4_p1
+}
+node n2 {
+	portLabels.placement: INSIDE
+	portConstraints: FREE
+	port n2_p1 {
+		label L1: "Ein erstes langes Port-Label"
+	}
+	port n2_p3 {
+		label L2: "Ein drittes langes Port-Label"
+	}
+	port n2_p4 {
+		label L3: "Ein viertes langes Port-Label"
+	}
+	port n2_p5 {
+		label L4: "Ein fünftes langes Port-Label"
+	}
+	node n2_1 {
+		portLabels.placement: INSIDE
+		portConstraints: FREE
+		port n2_1_p1
+		port n2_1_p2
+	}
+	edge E5: n2_p1 -> n2_1.n2_1_p1
+	edge E6: n2_1.n2_1_p2 -> n2_p3
+	edge E7: n2_1.n2_1_p2 -> n2_p3
+}
+node n3 {
+	portLabels.placement: INSIDE
+	portConstraints: FREE
+	port n3_p1
+}
+node n5 {
+	portLabels.placement: INSIDE
+	portConstraints: FREE
+	port n5_p1
+}
+edge E1: n1.n1_p1 -> n2.n2_p1
+edge E2: n4.n4_p1 -> n2.n2_p4
+edge E3: n2.n2_p3 -> n3.n3_p1
+edge E4: n2.n2_p5 -> n5.n5_p1

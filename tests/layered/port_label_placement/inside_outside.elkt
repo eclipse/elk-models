@@ -1,0 +1,104 @@
+/*******************************************************************************
+ * Copyright (c) 2018 Kiel University and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *******************************************************************************/
+/* Basic test for the INSIDE and OUTSIDE port label placement options. */
+
+edgeRouting: ORTHOGONAL
+node N1 {
+	layout [ size: 156, 135 ]
+	portLabels.placement: INSIDE
+	portConstraints: FIXED_POS
+	port P1 {
+		layout [
+			position: -7, 35
+			size: 8, 8
+		]
+		label L1: "Port1"
+	}
+	port P2 {
+		layout [
+			position: -7, 68
+			size: 8, 8
+		]
+		label L2: "Port2"
+	}
+	port P3 {
+		layout [
+			position: -7, 101
+			size: 8, 8
+		]
+		label L3: "Port3"
+	}
+	port P4 {
+		layout [
+			position: 155, 35
+			size: 8, 8
+		]
+		label L4: "Port4"
+	}
+	port P5 {
+		layout [
+			position: 155, 67
+			size: 8, 8
+		]
+		label L5: "Port5"
+	}
+	port P6 {
+		layout [
+			position: 155, 101
+			size: 8, 8
+		]
+		label L6: "Port6"
+	}
+}
+node N2 {
+	layout [ size: 166, 133 ]
+	portLabels.placement: OUTSIDE
+	portConstraints: FIXED_POS
+	port P7 {
+		layout [
+			position: -7, 33
+			size: 8, 8
+		]
+		label L7: "Port10"
+	}
+	port P8 {
+		layout [
+			position: -7, 66
+			size: 8, 8
+		]
+		label L8: "Port11"
+	}
+	port P9 {
+		layout [
+			position: -7, 99
+			size: 8, 8
+		]
+		label L9: "Port12"
+	}
+	port P10 {
+		layout [
+			position: 165, 33
+			size: 8, 8
+		]
+		label L10: "Port13"
+	}
+	port P11 {
+		layout [
+			position: 165, 66
+			size: 8, 8
+		]
+		label L11: "Port14"
+	}
+	port P12 {
+		layout [
+			position: 165, 99
+			size: 8, 8
+		]
+		label L12: "Port15"
+	}
+}
