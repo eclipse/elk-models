@@ -1,0 +1,30 @@
+/*******************************************************************************
+ * Copyright (c) 2018 Kiel University and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *******************************************************************************/
+
+edgeRouting: ORTHOGONAL
+postCompaction.strategy: LEFT
+
+node startN {
+	layout [ size: 20, 20 ]
+}
+
+node large {
+	layout [ size: 200, 20 ]
+}
+
+node endN {
+	layout [ size: 20, 20 ]
+}
+
+edge startN -> large
+edge large -> endN
+
+edge startN -> endN {
+	label "But what if ..."
+}
+ 

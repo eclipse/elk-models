@@ -1,0 +1,31 @@
+/*******************************************************************************
+ * Copyright (c) 2018 Kiel University and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *******************************************************************************/
+postCompaction.strategy: LEFT
+
+node n1
+
+node n3 {
+	portConstraints: FIXED_POS
+	port p1 {
+		layout [ position: 9.3333, 0 ]
+		^port.side: SOUTH
+	}
+}
+node n4 {
+	layout [ size: 400,40]
+	portConstraints: FIXED_POS
+	port p1 {
+		^port.side: NORTH
+	}
+	
+}
+	
+edge n3.p1 -> n4.p1
+edge n1 -> n3
+  
+  

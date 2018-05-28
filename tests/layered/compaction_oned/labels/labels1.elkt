@@ -1,0 +1,68 @@
+/*******************************************************************************
+ * Copyright (c) 2018 Kiel University and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *******************************************************************************/
+edgeRouting: SPLINES
+postCompaction.strategy: LEFT
+
+node _Depth2 {
+	layout [ size: 80, 34 ]
+}
+node _Aborted {
+	layout [ size: 91, 40 ]
+}
+node _S {
+	layout [ size: 39, 34 ]
+}
+node A {
+	layout [ size: 34, 34 ]
+}
+node _Depth {
+	layout [ size: 72, 34 ]
+}
+node _S3 {
+	layout [ size: 47, 34 ]
+}
+node _Pause2 {
+	layout [ size: 81, 34 ]
+}
+edge _Aborted0: _Depth2 -> _Aborted {
+	label L3: "1: _trig" {
+		layout [ size: 49, 17 ]
+	}
+}
+edge _Pause20: _Depth2 -> _Pause2 {
+	label L4: "2: " {
+		layout [ size: 17, 17 ]
+	}
+}
+edge _Depth20: _S -> _Depth2 {
+	label L5: " / L1 = L1 || true" {
+		layout [ size: 108, 17 ]
+	}
+}
+edge _Depth0: A -> _Depth
+edge _S0: _Depth -> _S {
+	label L6: "1: I" {
+		layout [ size: 21, 17 ]
+	}
+}
+edge _S30: _Depth -> _S3 {
+	label L7: "2: " {
+		layout [ size: 17, 17 ]
+	}
+}
+edge _Aborted0_: _S3 -> _Aborted {
+	label L8: "1: _trig" {
+		layout [ size: 49, 17 ]
+	}
+}
+edge A0: _S3 -> A {
+	label L9: "2: " {
+		layout [ size: 17, 17 ]
+	}
+}
+edge _Depth20_: _Pause2 -> _Depth2
