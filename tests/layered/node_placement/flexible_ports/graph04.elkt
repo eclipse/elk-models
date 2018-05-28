@@ -1,0 +1,36 @@
+/*******************************************************************************
+ * Copyright (c) 2018 Kiel University and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *******************************************************************************/
+/* The example illustrates a scenario in which 
+ * the node placer must not move ports that have been fixed 
+ * "on the inside"; i.e. it must respect port constraints.  
+ */
+nodePlacement.strategy: NETWORK_SIMPLEX
+
+node parent {
+	nodeFlexibility: NODE_SIZE
+	nodePlacement.strategy: NETWORK_SIMPLEX
+	
+	port p1
+	port p2
+	port p3
+	port p4
+	node n1_1 {
+		layout [ size: 10, 20 ]
+		// note that this node is _not_ flexible
+		nodeSize.constraints: "PORTS MINIMUM_SIZE"
+		label L1: "n1_1"
+	}
+	edge E2: p1 -> n1_1
+	edge E3: n1_1 -> p2
+	edge E4: n1_1 -> p3
+	edge E5: n1_1 -> p4
+}
+node other {
+	layout [ size: 20, 40 ]
+}
+edge E1: other -> parent.p1

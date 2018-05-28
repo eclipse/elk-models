@@ -1,0 +1,99 @@
+/*******************************************************************************
+ * Copyright (c) 2018 Kiel University and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *******************************************************************************/
+
+edgeStraightening: IMPROVE_STRAIGHTNESS
+fixedAlignment: LEFTDOWN
+
+node stupidi
+node NN1 {
+	layout [ size: 50, 500 ]
+	label L1: "enen1"
+	port p1
+	port p2
+	port p3
+	port p4
+	port p9
+	port p3000
+}
+node N2 {
+	layout [ size: 50, 50 ]
+	label L2: "en31"
+}
+node N3 {
+	layout [ size: 50, 50 ]
+	label L3: "en21"
+}
+node nx {
+	layout [ size: 50, 50 ]
+}
+node N4 {
+	layout [ size: 50, 50 ]
+	label L4: "en12"
+	port p5
+}
+node N5 {
+	layout [ size: 50, 20 ]
+	label L5: "en41"
+}
+node N6 {
+	layout [ size: 30, 30 ]
+	label L6: "en51"
+	port p1000
+}
+node N7 {
+	layout [ size: 50, 50 ]
+	label L7: "en13"
+	port p6
+}
+node N8 {
+	layout [ size: 20, 20 ]
+	label L8: "en14"
+	port p20
+}
+node N9 {
+	layout [ size: 50, 20 ]
+	label L9: "en61"
+	port p40
+}
+node N10 {
+	layout [ size: 50, 50 ]
+	label L10: "en62"
+	port p500
+}
+node N11 {
+	layout [ size: 50, 50 ]
+	label L11: "en15"
+	port p30
+}
+node N12 {
+	layout [ size: 20, 20 ]
+	label L12: "en16"
+}
+node N14 {
+	layout [ size: 30, 30 ]
+	label L13: "en52"
+}
+node N100 {
+	layout [ size: 50, 50 ]
+	label L14: "en63"
+}
+edge E1: stupidi -> N6
+edge E2: NN1.p1 -> N2
+edge E3: NN1.p2 -> N3
+edge E4: NN1.p3 -> N4
+edge E5: NN1.p4 -> N6
+edge E6: NN1.p9 -> N5
+edge E7: NN1.p3000 -> N9
+edge E8: N3 -> nx
+edge E9: N4.p5 -> N7
+edge E10: N6.p1000 -> N14
+edge E11: N7.p6 -> N8
+edge E12: N8.p20 -> N11
+edge E13: N9.p40 -> N10
+edge E14: N10.p500 -> N100
+edge E15: N11.p30 -> N12

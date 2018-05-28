@@ -1,0 +1,141 @@
+/*******************************************************************************
+ * Copyright (c) 2018 Kiel University and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *******************************************************************************/
+aspectRatio: 1.3
+
+node c1 {
+	nodeLabels.placement: "[H_CENTER, V_TOP, OUTSIDE]"
+	edgeStraightening: IMPROVE_STRAIGHTNESS
+	fixedAlignment: LEFTUP
+	nodePlacement.strategy: BRANDES_KOEPF
+	label L1: "LEFT UP"
+	node c1n1 {
+		layout [ size: 50, 300 ]
+		label L2: "Large1"
+		port p1
+		port p2
+	}
+	node c1n0 {
+		layout [ size: 50, 50 ]
+		label L3: "en0"
+	}
+	node c1n2 {
+		layout [ size: 50, 50 ]
+		label L4: "en2"
+	}
+	node c1n3 {
+		layout [ size: 50, 50 ]
+		label L5: "en3"
+	}
+	node c1n4 {
+		layout [ size: 50, 50 ]
+		label L6: "en4"
+	}
+	edge E1: c1n1 -> c1n0
+	edge E2: c1n2 -> c1n1.p1
+	edge E3: c1n3 -> c1n1.p2
+	edge E4: c1n4 -> c1n3
+}
+node c2 {
+	nodeLabels.placement: "[H_CENTER, V_TOP, OUTSIDE]"
+	edgeStraightening: IMPROVE_STRAIGHTNESS
+	fixedAlignment: LEFTDOWN
+	nodePlacement.strategy: BRANDES_KOEPF
+	label L7: "LEFT DOWN"
+	node c2n1 {
+		layout [ size: 50, 300 ]
+		label L8: "Large1"
+		port p1_g5394
+		port p2_g6058
+	}
+	node c2n0 {
+		layout [ size: 50, 50 ]
+		label L9: "en0"
+	}
+	node c2n2 {
+		layout [ size: 50, 50 ]
+		label L10: "en2"
+	}
+	node c2n3 {
+		layout [ size: 50, 50 ]
+		label L11: "en3"
+	}
+	node c2n4 {
+		layout [ size: 50, 50 ]
+		label L12: "en4"
+	}
+	edge E5: c2n1 -> c2n0
+	edge E6: c2n2 -> c2n1.p1_g5394
+	edge E7: c2n3 -> c2n1.p2_g6058
+	edge E8: c2n4 -> c2n3
+}
+node c3 {
+	nodeLabels.placement: "[H_CENTER, V_TOP, OUTSIDE]"
+	edgeStraightening: IMPROVE_STRAIGHTNESS
+	fixedAlignment: RIGHTDOWN
+	nodePlacement.strategy: BRANDES_KOEPF
+	label L13: "RIGHT DOWN"
+	node c3n1 {
+		layout [ size: 50, 300 ]
+		label L14: "Large1"
+		port p1_g3397
+		port p2_g0681
+	}
+	node c3n0 {
+		layout [ size: 50, 50 ]
+		label L15: "en0"
+	}
+	node c3n2 {
+		layout [ size: 50, 50 ]
+		label L16: "en2"
+	}
+	node c3n3 {
+		layout [ size: 50, 50 ]
+		label L17: "en3"
+	}
+	node c3n4 {
+		layout [ size: 50, 50 ]
+		label L18: "en4"
+	}
+	edge E9: c3n1 -> c3n0
+	edge E10: c3n2 -> c3n1.p1_g3397
+	edge E11: c3n3 -> c3n1.p2_g0681
+	edge E12: c3n4 -> c3n3
+}
+node c4 {
+	nodeLabels.placement: "[H_CENTER, V_TOP, OUTSIDE]"
+	edgeStraightening: IMPROVE_STRAIGHTNESS
+	fixedAlignment: RIGHTUP
+	nodePlacement.strategy: BRANDES_KOEPF
+	label L19: "RIGHT UP"
+	node c4n1 {
+		layout [ size: 50, 300 ]
+		label L20: "Large1"
+		port p1_g0783
+		port p2_g5833
+	}
+	node c4n0 {
+		layout [ size: 50, 50 ]
+		label L21: "en0"
+	}
+	node c4n2 {
+		layout [ size: 50, 50 ]
+		label L22: "en2"
+	}
+	node c4n3 {
+		layout [ size: 50, 50 ]
+		label L23: "en3"
+	}
+	node c4n4 {
+		layout [ size: 50, 50 ]
+		label L24: "en4"
+	}
+	edge E13: c4n1 -> c4n0
+	edge E14: c4n2 -> c4n1.p1_g0783
+	edge E15: c4n3 -> c4n1.p2_g5833
+	edge E16: c4n4 -> c4n3
+}

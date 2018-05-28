@@ -1,0 +1,66 @@
+/*******************************************************************************
+ * Copyright (c) 2018 Kiel University and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *******************************************************************************/
+elk.direction: RIGHT
+edgeStraightening: IMPROVE_STRAIGHTNESS
+fixedAlignment: RIGHTDOWN
+nodePlacement.strategy: BRANDES_KOEPF
+
+node large {
+	layout [ size: 20, 200 ]
+	nodeLabels.placement: "[H_CENTER, V_CENTER, INSIDE]"
+	portConstraints: FIXED_POS
+	label L1: "large"
+	port p1 {
+		layout [
+			position: -5, 10
+			size: 5, 5
+		]
+	}
+	port p2 {
+		layout [
+			position: -5, 30
+			size: 5, 5
+		]
+	}
+	port p3 {
+		layout [
+			position: -5, 150
+			size: 5, 5
+		]
+	}
+}
+node n1 {
+	layout [ size: 20, 20 ]
+	nodeLabels.placement: "[H_CENTER, V_CENTER, INSIDE]"
+	label L2: "n1"
+}
+node n2 {
+	layout [ size: 20, 20 ]
+	nodeLabels.placement: "[H_CENTER, V_CENTER, INSIDE]"
+	label L3: "n2"
+}
+node n3 {
+	layout [ size: 20, 20 ]
+	nodeLabels.placement: "[H_CENTER, V_CENTER, INSIDE]"
+	label L4: "n3"
+}
+node n4 {
+	layout [ size: 20, 20 ]
+	nodeLabels.placement: "[H_CENTER, V_CENTER, INSIDE]"
+	label L5: "n4"
+}
+node n5 {
+	layout [ size: 20, 20 ]
+	nodeLabels.placement: "[H_CENTER, V_CENTER, INSIDE]"
+	label L6: "n5"
+}
+edge E1: n1 -> large.p1
+edge E2: n2 -> large.p2
+edge E3: n3 -> large.p3
+edge E4: n4 -> large.p3
+edge E5: n5 -> large.p3

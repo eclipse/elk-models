@@ -1,0 +1,121 @@
+/*******************************************************************************
+ * Copyright (c) 2018 Kiel University and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *******************************************************************************/
+/*
+ * This test checks that separations between classes are propagated properly 
+ * between classes that depend on each other.
+ * 
+ * For the traversal direction: LEFTUP
+ * 
+ * The sinks are: b1_2, b4_2, b6_2
+ */
+separateConnectedComponents: false
+fixedAlignment: LEFTUP
+crossingMinimization.strategy: INTERACTIVE
+layering.strategy: INTERACTIVE
+
+/*  
+ * Class1  
+ */
+ 
+node lu_b0_1 {
+	layout [ size: 50, 50 ]
+	label L1: "c1_b0_1"
+}
+node lu_b0_2 {
+	layout [
+		position: 100, 0
+		size: 50, 50
+	]
+	label L2: "c1_b0_2"
+}
+node lu_b1_1 {
+	layout [
+		position: 100, 100
+		size: 50, 50
+	]
+	label L3: "c1_b1_1"
+}
+node lu_b1_2 {
+	layout [
+		position: 200, 100
+		size: 50, 70
+	]
+	label L4: "c1_b1_2"
+}
+
+/*  
+ * Class2  
+ */
+ 
+node lu_b3_1 {
+	layout [
+		position: 200, 0
+		size: 50, 70
+	]
+	label L5: "c2_b3_1"
+}
+node lu_b3_2 {
+	layout [
+		position: 300, 0
+		size: 50, 50
+	]
+	label L6: "c2_b3_2"
+}
+node lu_b4_1 {
+	layout [
+		position: 300, 100
+		size: 50, 50
+	]
+	label L7: "c2_b4_1"
+}
+node lu_b4_2 {
+	layout [
+		position: 400, 100
+		size: 50, 70
+	]
+	label L8: "c2_b4_2"
+}
+
+/*  
+ * Class3  
+ */
+ 
+node lu_b5_1 {
+	layout [
+		position: 400, 0
+		size: 50, 100
+	]
+	label L9: "c3_b5_1"
+}
+node lu_b5_2 {
+	layout [
+		position: 500, 0
+		size: 50, 50
+	]
+	label L10: "c3_b5_2"
+}
+node lu_b6_1 {
+	layout [
+		position: 500, 100
+		size: 50, 50
+	]
+	label L11: "c3_b6_1"
+}
+node lu_b6_2 {
+	layout [
+		position: 600, 100
+		size: 50, 50
+	]
+	label L12: "c3_b6_2"
+}
+edge E1: lu_b0_1 -> lu_b0_2
+edge E2: lu_b1_1 -> lu_b1_2
+edge E3: lu_b3_1 -> lu_b3_2
+edge E4: lu_b4_1 -> lu_b4_2
+edge E5: lu_b5_1 -> lu_b5_2
+edge E6: lu_b6_1 -> lu_b6_2

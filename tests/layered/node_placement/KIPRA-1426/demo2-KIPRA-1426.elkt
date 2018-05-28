@@ -1,0 +1,44 @@
+/*******************************************************************************
+ * Copyright (c) 2018 Kiel University and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *******************************************************************************/
+/* Tests comment box placement.
+ */
+
+nodePlacement.strategy: BRANDES_KOEPF
+edgeRouting: POLYLINE
+
+node Comment1 {
+	commentBox: true
+}
+node Comment2 {
+	commentBox: true
+}
+node N1
+node N2
+node N3
+node N4
+node N5
+node N6
+node N7
+node N8
+node N9
+node N10
+node N11
+edge E1: Comment1 -> N2
+edge E2: Comment2 -> N2
+edge E3: N1 -> N2
+edge E4: N2 -> N3
+edge E5: N3 -> N4
+edge E6: N3 -> N5
+edge E7: N3 -> N6
+edge E8: N4 -> N7
+edge E9: N5 -> N10
+edge E10: N6 -> N10
+edge E11: N7 -> N8
+edge E12: N7 -> N9
+edge E13: N9 -> N10
+edge E14: N10 -> N11

@@ -1,0 +1,187 @@
+/*******************************************************************************
+ * Copyright (c) 2018 Kiel University and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *******************************************************************************/
+/* with high degree nodes treatment, all edges are expected to be straight. */
+
+nodePlacement.strategy: NETWORK_SIMPLEX
+spacing.nodeNode: 5
+
+highDegreeNodes.threshold: 10
+highDegreeNodes.treeHeight: 4
+highDegreeNodes.treatment: true
+
+node x1 {
+	layout [ size: 15, 15 ]
+}
+node x2 {
+	layout [ size: 15, 15 ]
+}
+node x3 {
+	layout [ size: 15, 15 ]
+}
+node x4 {
+	layout [ size: 15, 15 ]
+}
+node x5 {
+	layout [ size: 15, 15 ]
+}
+node x6 {
+	layout [ size: 15, 15 ]
+}
+node x7 {
+	layout [ size: 15, 15 ]
+}
+node x8 {
+	layout [ size: 15, 15 ]
+}
+node x9 {
+	layout [ size: 15, 15 ]
+}
+node x10 {
+	layout [ size: 15, 15 ]
+}
+node x11 {
+	layout [ size: 15, 15 ]
+}
+node x12 {
+	layout [ size: 15, 15 ]
+}
+node x13 {
+	layout [ size: 15, 15 ]
+}
+node x14 {
+	layout [ size: 15, 15 ]
+}
+node x15 {
+	layout [ size: 15, 15 ]
+}
+node x16 {
+	layout [ size: 15, 15 ]
+}
+node big1 {
+	layout [ size: 100, 800 ]
+}
+node y1 {
+	layout [ size: 15, 15 ]
+}
+node y2 {
+	layout [ size: 15, 15 ]
+}
+node y3 {
+	layout [ size: 15, 15 ]
+}
+node y4 {
+	layout [ size: 15, 15 ]
+}
+node y5 {
+	layout [ size: 15, 15 ]
+}
+node y6 {
+	layout [ size: 15, 15 ]
+}
+node y7 {
+	layout [ size: 15, 15 ]
+}
+node y8 {
+	layout [ size: 15, 15 ]
+}
+node y9 {
+	layout [ size: 15, 15 ]
+}
+node y10 {
+	layout [ size: 15, 15 ]
+}
+node y11 {
+	layout [ size: 15, 15 ]
+}
+node y12 {
+	layout [ size: 15, 15 ]
+}
+node y13 {
+	layout [ size: 15, 15 ]
+}
+node y14 {
+	layout [ size: 15, 15 ]
+}
+node y15 {
+	layout [ size: 15, 15 ]
+}
+node y16 {
+	layout [ size: 15, 15 ]
+}
+node y17 {
+	layout [ size: 15, 15 ]
+}
+node y18 {
+	layout [ size: 15, 15 ]
+}
+node y19 {
+	layout [ size: 15, 15 ]
+}
+node y20 {
+	layout [ size: 15, 15 ]
+}
+node big2 {
+	layout [ size: 100, 800 ]
+}
+node a1 {
+	layout [ size: 15, 15 ]
+}
+node a2 {
+	layout [ size: 15, 15 ]
+}
+node a3 {
+	layout [ size: 15, 15 ]
+}
+node b1 {
+	layout [ size: 15, 15 ]
+}
+node b2 {
+	layout [ size: 15, 15 ]
+}
+edge E1: x1 -> big1
+edge E2: x2 -> big1
+edge E3: x3 -> big1
+edge E4: x4 -> big1
+edge E5: x5 -> big1
+edge E6: x6 -> big1
+edge E7: x7 -> big1
+edge E8: x8 -> big1
+edge E9: x9 -> big1
+edge E10: x10 -> big1
+edge E11: x11 -> big1
+edge E12: x12 -> big1
+edge E13: x13 -> big1
+edge E14: x14 -> big1
+edge E15: x15 -> big1
+edge E16: x16 -> big1
+edge E17: big1 -> big2
+edge E18: y1 -> big2
+edge E19: y2 -> big2
+edge E20: y3 -> big2
+edge E21: y4 -> big2
+edge E22: y5 -> big2
+edge E23: y6 -> big2
+edge E24: y7 -> big2
+edge E25: y8 -> big2
+edge E26: y9 -> big2
+edge E27: y10 -> big2
+edge E28: y11 -> big2
+edge E29: y12 -> big2
+edge E30: y13 -> big2
+edge E31: y14 -> big2
+edge E32: y15 -> big2
+edge E33: y16 -> big2
+edge E34: y17 -> big2
+edge E35: y18 -> big2
+edge E36: y19 -> big2
+edge E37: y20 -> big2
+edge E38: a1 -> big2
+edge E39: a2 -> a1
+edge E40: a3 -> a2
+edge E41: b1 -> big2
+edge E42: b2 -> b1

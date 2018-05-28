@@ -1,0 +1,58 @@
+/*******************************************************************************
+ * Copyright (c) 2018 Kiel University and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *******************************************************************************/
+/*
+ * RIGHTDOWN
+ */
+fixedAlignment: RIGHTDOWN
+edgeRouting: POLYLINE
+crossingMinimization.strategy: INTERACTIVE
+node lu_b0_1 {
+	layout [ size: 50, 50 ]
+	label L1: "c1_b0_1"
+}
+node lu_b0_2 {
+	layout [
+		size: 50, 50
+		position: 0, -10
+	]
+	label L2: "c1_b0_2"
+}
+node lu_b1_1 {
+	layout [ size: 50, 50 ]
+	label L3: "c1_b1_1"
+}
+node lu_b1_2 {
+	layout [ size: 50, 50 ]
+	label L4: "c1_b1_2"
+}
+node lu_b1_3 {
+	layout [ size: 50, 50 ]
+	nodeLabels.placement: "[H_CENTER, V_TOP, OUTSIDE]"
+	label L5: "c1_b1_3"
+}
+node lu_b2_1 {
+	layout [
+		size: 50, 50
+		position: 0, -10
+	]
+	label L6: "c2_b2_1"
+}
+node lu_b2_2 {
+	layout [
+		size: 50, 50
+		position: 0, -10
+	]
+	nodeLabels.placement: "[H_CENTER, V_BOTTOM, OUTSIDE]"
+	label L7: "c2_b2_2"
+}
+edge E1: lu_b0_2 -> lu_b0_1
+edge E2: lu_b1_1 -> lu_b0_1
+edge E3: lu_b1_2 -> lu_b1_1
+edge E4: lu_b1_3 -> lu_b1_2
+edge E5: lu_b1_3 -> lu_b2_1
+edge E6: lu_b2_2 -> lu_b2_1

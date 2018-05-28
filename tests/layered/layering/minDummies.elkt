@@ -1,0 +1,25 @@
+/**
+ * There should be no dummy node in a layering with the network simplex
+ * layerer. However, once upon a time, there was a bug in our implementation
+ * resulting in two dummies for this graph.
+ */
+ 
+node n1
+node n2
+node n3
+node n4
+node n5
+node n6
+node n7
+node n8
+node n9
+node n10
+edge E1: n1 -> n2
+edge E2: n2 -> n3
+edge E3: n3 -> n4
+edge E4: n4 -> n5
+edge E5: n6 -> n7
+edge E6: n7 -> n8
+edge E7: n7 -> n5
+edge E8: n8 -> n9
+edge E9: n9 -> n10

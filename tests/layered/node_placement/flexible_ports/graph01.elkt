@@ -1,0 +1,29 @@
+/*******************************************************************************
+ * Copyright (c) 2018 Kiel University and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *******************************************************************************/
+portPort: 5
+nodeNode: 20
+spacing.portsSurrounding: "[top=10.0,left=0.0,bottom=10.0,right=0.0]"
+
+nodePlacement.strategy: NETWORK_SIMPLEX
+nodeFlexibility.default: NODE_SIZE
+
+node n1_1 {
+	layout [ size: 20, 20 ]
+	nodeSize.constraints: "PORTS MINIMUM_SIZE"
+	label L1: "n1_1"
+}
+node n1_2 {
+	nodeSize.constraints: "PORTS MINIMUM_SIZE"
+	label L2: "n1_2"
+}
+node n1_3 {
+	nodeSize.constraints: "PORTS MINIMUM_SIZE"
+	label L3: "n1_3"
+}
+edge E1: n1_1 -> n1_2
+edge E2: n1_1 -> n1_3

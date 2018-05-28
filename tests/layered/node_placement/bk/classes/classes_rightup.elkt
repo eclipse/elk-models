@@ -1,0 +1,55 @@
+/*******************************************************************************
+ * Copyright (c) 2018 Kiel University and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *******************************************************************************/
+/*
+ * RIGHTUP
+ */
+fixedAlignment: RIGHTUP
+edgeRouting: POLYLINE
+crossingMinimization.strategy: INTERACTIVE
+node ru_b0_2 {
+	layout [ size: 50, 50 ]
+	label L1: "c2_b0_2"
+}
+node ru_b0_1 {
+	layout [
+		size: 50, 50
+		position: 0, 10
+	]
+	nodeLabels.placement: "[H_CENTER, V_TOP, OUTSIDE]"
+	label L2: "c2_b0_1"
+}
+node ru_b1_3 {
+	layout [ size: 50, 50 ]
+	nodeLabels.placement: "[H_CENTER, V_BOTTOM, OUTSIDE]"
+	label L3: "c1_b1_3"
+}
+node ru_b1_2 {
+	layout [ size: 50, 50 ]
+	label L4: "c1_b1_2"
+}
+node ru_b1_1 {
+	layout [ size: 50, 50 ]
+	label L5: "c1_b1_1"
+}
+node ru_b2_2 {
+	layout [
+		size: 50, 50
+		position: 0, 10
+	]
+	label L6: "c1_b2_2"
+}
+node ru_b2_1 {
+	layout [ size: 50, 50 ]
+	label L7: "c1_b2_1"
+}
+edge E1: ru_b0_1 -> ru_b0_2
+edge E2: ru_b1_3 -> ru_b0_2
+edge E3: ru_b1_2 -> ru_b1_3
+edge E4: ru_b1_1 -> ru_b1_2
+edge E5: ru_b1_1 -> ru_b2_2
+edge E6: ru_b2_1 -> ru_b2_2

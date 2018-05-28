@@ -1,0 +1,65 @@
+/*******************************************************************************
+ * Copyright (c) 2018 Kiel University and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *******************************************************************************/
+/* with high degree nodes treatment, all edges are expected to be straight. */
+
+spacing.nodeNode: 5
+
+highDegreeNodes.threshold: 2
+highDegreeNodes.treatment: true
+
+node n4 {
+	layout [ size: 20, 200 ]
+}
+node n5 {
+	layout [ size: 20, 20 ]
+}
+node n6 {
+	layout [ size: 20, 20 ]
+}
+node n9 {
+	layout [ size: 20, 200 ]
+}
+node n7 {
+	layout [ size: 20, 20 ]
+}
+node n8 {
+	layout [ size: 20, 20 ]
+}
+node n10 {
+	layout [ size: 20, 20 ]
+}
+node n11 {
+	layout [ size: 20, 200 ]
+}
+node n12 {
+	layout [ size: 20, 20 ]
+}
+node n13 {
+	layout [ size: 20, 20 ]
+}
+node n14 {
+	layout [ size: 20, 20 ]
+}
+node n15 {
+	layout [ size: 20, 20 ]
+}
+node n16 {
+	layout [ size: 20, 20 ]
+}
+edge E1: n4 -> n11
+edge E2: n4 -> n12
+edge E3: n4 -> n13
+edge E4: n4 -> n14
+edge E5: n4 -> n15
+edge E6: n5 -> n4
+edge E7: n6 -> n4
+edge E8: n9 -> n4
+edge E9: n7 -> n4
+edge E10: n8 -> n4
+edge E11: n10 -> n9
+edge E12: n11 -> n16
