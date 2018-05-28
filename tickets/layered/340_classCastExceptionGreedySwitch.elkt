@@ -1,0 +1,75 @@
+/*******************************************************************************
+ * Copyright (c) 2018 Kiel University and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *******************************************************************************/
+algorithm: layered
+elk.direction: DOWN
+//greedySwitch.type: OFF
+
+node gen_node_1 {
+	layout [ size: 1368.7118072509766, 160.52679443359375 ]
+	portConstraints: FIXED_POS
+	port gen_node_1_in {
+		layout [ position: 80.26339721679688, -20 ]
+	}
+	port gen_node_1_yes {
+		layout [ position: 80.26339721679688, 180.52679443359375 ]
+	}
+	port gen_node_1_no {
+		layout [ position: 180.52679443359375, 80.26339721679688 ]
+	}
+	port gen_node_3_in {
+		layout [ position: 360.7901916503906, -20 ]
+	}
+	port gen_node_3_yes {
+		layout [ position: 360.7901916503906, 180.52679443359375 ]
+	}
+	port gen_node_3_no {
+		layout [ position: 461.0535888671875, 80.26339721679688 ]
+	}
+	port gen_node_5_in {
+		layout [ position: 641.3169860839844, -20 ]
+	}
+	port gen_node_5_yes {
+		layout [ position: 641.3169860839844, 180.52679443359375 ]
+	}
+	port gen_node_5_no {
+		layout [ position: 741.5803833007812, 80.26339721679688 ]
+	}
+	port gen_node_7_in {
+		layout [ position: 921.8437805175781, -20 ]
+	}
+	port gen_node_7_yes {
+		layout [ position: 921.8437805175781, 180.52679443359375 ]
+	}
+	port gen_node_7_no {
+		layout [ position: 1022.107177734375, 80.26339721679688 ]
+	}
+	port gen_node_9_in {
+		layout [ position: 1245.4094924926758, 29.945755004882812 ]
+	}
+	port gen_node_9_out {
+		layout [ position: 1245.4094924926758, 130.58103942871094 ]
+	}
+}
+node action_1 {
+	layout [
+		position: 268.9610824584961, 32
+		size: 246.60462951660156, 60.635284423828125
+	]
+	portConstraints: FIXED_POS
+	port action_1_in {
+		layout [ position: 123.30231475830078, -20 ]
+	}
+	port action_1_out {
+		layout [ position: 123.30231475830078, 80.63528442382812 ]
+	}
+}
+edge gen_link_2: action_1.action_1_out -> gen_node_1.gen_node_1_in
+edge gen_link_4: gen_node_1.gen_node_1_no -> gen_node_1.gen_node_3_in
+edge gen_link_6: gen_node_1.gen_node_3_no -> gen_node_1.gen_node_5_in
+edge gen_link_8: gen_node_1.gen_node_5_no -> gen_node_1.gen_node_7_in
+edge gen_link_10: gen_node_1.gen_node_7_no -> gen_node_1.gen_node_9_in
