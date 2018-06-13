@@ -7,9 +7,9 @@
  *******************************************************************************/
 /* Example where the ComponentGroupGraphPlacer failed because of
  * components connected to external ports on all four sides (see
- * KIPRA-1423).
+ * KIPRA-1423 and #342).
  */
- 
+
 edgeRouting: ORTHOGONAL
 node Compound {
 	edgeRouting: ORTHOGONAL
