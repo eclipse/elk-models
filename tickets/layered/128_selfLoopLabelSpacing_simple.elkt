@@ -5,30 +5,16 @@
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
  *******************************************************************************/
-// Demonstrates how on-edge labels are not placed on sloped polyline edge
-// segments.
-edgeRouting: POLYLINE
+// Demonstrates how edge-label and label-label spacings were not applied to
+// self loop labels.
 
-node A
-node B
-node C
+algorithm: layered
+spacing.edgeLabel: 10
+spacing.labelLabel: 20
 
-node D
-node E
-node F
+node n1
 
-edge A -> B {
-	label "Bla bla bla"
-}
-edge B -> C {
-	label "Bla bla bla"
-}
-edge C -> D {
-	label "Bla bla bla"
-}
-edge C -> E {
-	label "Bla bla bla"
-}
-edge C -> F {
-	label "Bla bla bla"
+edge n1 -> n1 {
+	label "Loop label"
+	label "Long loop label"
 }

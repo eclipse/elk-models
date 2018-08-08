@@ -5,30 +5,9 @@
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
  *******************************************************************************/
-// Demonstrates how on-edge labels are not placed on sloped polyline edge
-// segments.
-edgeRouting: POLYLINE
-
-node A
-node B
-node C
-
-node D
-node E
-node F
-
-edge A -> B {
-	label "Bla bla bla"
-}
-edge B -> C {
-	label "Bla bla bla"
-}
-edge C -> D {
-	label "Bla bla bla"
-}
-edge C -> E {
-	label "Bla bla bla"
-}
-edge C -> F {
-	label "Bla bla bla"
-}
+// Reproduces a case where spline self loops failed miserably.
+elk.edgeRouting: SPLINES
+node n1 {
+	portConstraints: FIXED_ORDER
+} 
+edge n1 -> n1

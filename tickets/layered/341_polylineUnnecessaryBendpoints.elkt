@@ -1,0 +1,38 @@
+/*******************************************************************************
+ * Copyright (c) 2018 Kiel University and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *******************************************************************************/
+// Without the bug fix, the edge from 'editor' to 'resolver' had a bend point
+// very close to the target point caused by the two nodes having almost, but
+// not quite identical height.
+algorithm: layered
+elk.direction: UP
+edgeRouting: POLYLINE
+
+node preview { layout [ size: 115.484375, 28.0625 ] }
+node core { layout [ size: 92.09375, 28 ] }
+node editor { layout [ size: 101.625, 28 ] }
+node languages { layout [ size: 133.125, 28.25 ] }
+node electron { layout [ size: 66.046875, 28 ] }
+node resolver { layout [ size: 176.71875, 28 ] }
+node output { layout [ size: 106.859375, 28.0625 ] }
+node process { layout [ size: 116.953125, 28.0625 ] }
+node download { layout [ size: 140.859375, 28  ] }
+
+edge preview -> core
+edge preview -> editor
+edge preview -> languages
+edge core -> electron
+edge editor -> core
+edge editor -> languages
+edge editor -> resolver
+edge languages -> core
+edge languages -> output
+edge languages -> process
+edge electron -> download
+edge resolver -> core
+edge output -> core
+edge process -> core

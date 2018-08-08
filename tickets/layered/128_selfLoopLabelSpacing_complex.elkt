@@ -1,0 +1,38 @@
+/*******************************************************************************
+ * Copyright (c) 2018 Kiel University and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *******************************************************************************/
+// Demonstrates how edge-label spacings were not applied to self loop labels.
+
+algorithm: layered
+spacing.edgeLabel: 10
+spacing.labelLabel: 20
+
+node n1
+node n2
+node n3
+
+edge n1 -> n2 {
+	label "Edge label"
+	label "Edge label"
+}
+
+edge n3 -> n3 {
+	label "Loop label"
+	label "Long loop label"
+}
+edge n3 -> n3 {
+	label "Loop label"
+	label "Long loop label"
+}
+edge n3 -> n3 {
+	label "Loop label"
+	label "Long loop label"
+}
+edge n3 -> n3 {
+	label "Loop label"
+	label "Long loop label"
+}

@@ -5,30 +5,10 @@
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
  *******************************************************************************/
-// Demonstrates how on-edge labels are not placed on sloped polyline edge
-// segments.
-edgeRouting: POLYLINE
+// Reproduces a case where labels on self loops don't work.
+org.eclipse.elk.edgeRouting: POLYLINE
 
-node A
-node B
-node C
-
-node D
-node E
-node F
-
-edge A -> B {
-	label "Bla bla bla"
-}
-edge B -> C {
-	label "Bla bla bla"
-}
-edge C -> D {
-	label "Bla bla bla"
-}
-edge C -> E {
-	label "Bla bla bla"
-}
-edge C -> F {
-	label "Bla bla bla"
+node n1
+edge n1 -> n1 {
+    label "litr, sed diam nonumy eirmod tempor invidunt u"
 }
