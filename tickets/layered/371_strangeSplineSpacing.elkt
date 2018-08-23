@@ -1,0 +1,30 @@
+/*******************************************************************************
+ * Copyright (c) 2018 Kiel University and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *******************************************************************************/
+
+// With SPLINES enabled, the two nodes touch each other. With ORTHOGONAL edges,
+// the usual layer spacing is respected.
+
+node N1 {
+	edgeRouting: SPLINES
+	
+	port P1
+	port P2
+	
+	node N2
+	node N3
+	node N4
+	node N5
+	
+	edge N2 -> N3
+	edge N3 -> N4
+	edge N4 -> N5
+	
+	
+	edge P1 -> N2
+	edge N5 -> P2
+}
