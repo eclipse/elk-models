@@ -1,0 +1,43 @@
+/*******************************************************************************
+ * Copyright (c) 2018 Kiel University and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *******************************************************************************/
+
+// Reproduces either an NPE or an AIOOBE.
+
+elk.direction: RIGHT
+hierarchyHandling: INCLUDE_CHILDREN
+//edgeRouting: SPLINES
+
+node N1
+
+node N2 {
+	node M1
+	node M2 {
+		port P1
+		port P2
+		port P3
+		port P4
+	}
+	node M3
+	
+	edge M2.P1 -> M3 {
+		label "1"
+	}
+	edge M2.P2 -> M1
+	edge M3 -> M2.P4
+	edge M3 -> M1
+}
+node N3
+node N4
+
+edge N1 -> N2.M2.P3
+edge N2 -> N2
+edge N2 -> N3
+edge N2 -> N4
+edge N2.M1 -> N3
+edge N2.M1 -> N4
+edge N3 -> N4
