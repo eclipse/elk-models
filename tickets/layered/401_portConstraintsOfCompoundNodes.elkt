@@ -1,0 +1,38 @@
+/*******************************************************************************
+ * Copyright (c) 2018 Kiel University and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *******************************************************************************/
+
+// A bug caused FIXED_POS port constraints of compound nodes to be reset to
+// FIXED_ORDER by the SweepCopy class which is run as part of crossing minimization.
+// This model reproduces the bug, which manifests itself in slanted edge segments
+// or edges that seem to be disconnected at the compound node's border.
+
+node N0 {
+	port P0
+}
+
+node N1 {
+	port P1
+}
+
+node N2 {
+	port P2a
+	port P2b
+	port P2c
+	
+	node N2_1 {
+		port P2_1a
+		port P2_1b
+	}
+	
+	edge P2a -> N2_1.P2_1a
+	edge P2b -> N2_1.P2_1a
+	edge N2_1.P2_1b -> P2c
+}
+
+edge N0.P0 -> N2.P2a
+edge N1.P1 -> N2.P2b
