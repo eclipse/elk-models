@@ -1,0 +1,42 @@
+/*******************************************************************************
+ * Copyright (c) 2019 Kiel University and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *******************************************************************************/
+
+// Self loop labels should stack vertically in the final picture. This model
+// reproduces a bug where they end up next to each other because the self-loop
+// label placement code doesn't combine them correctly in vertical layout
+// directions. The content of both pictures should be identical
+ 
+
+node Down {
+	elk.direction: DOWN
+	
+	node N1 {
+		port P1
+		port P2
+	}
+	
+	edge N1.P1 -> N1.P2 {
+		label "First label"
+		label "Second label"
+	}
+}
+ 
+
+node Up {
+	elk.direction: UP
+	
+	node N2 {
+		port P1
+		port P2
+	}
+	
+	edge N2.P1 -> N2.P2 {
+		label "First label"
+		label "Second label"
+	}
+}
