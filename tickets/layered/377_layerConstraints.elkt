@@ -1,0 +1,35 @@
+/*******************************************************************************
+ * Copyright (c) 2019 Kiel University and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *******************************************************************************/
+
+// Reproduces a problem with EdgeAndLayerConstraintEdgeReverser that would cause
+// all edges incident to N4 to be reversed. This would cause an edge to go into
+// the hierarchical port dummy created for P1, which is of course not acceptable
+// since that dummy has the FIRST_SEPARATE layer constraint set on it and doesn't
+// want any edges coming into it.
+
+node N1 {
+	portConstraints: FIXED_SIDE
+	
+	port P1 {
+		org.eclipse.elk.^port.side: WEST
+	}
+	
+	node N2
+	node N3
+	node N4 {
+		portConstraints: FIXED_SIDE
+		
+		port P7 {
+			org.eclipse.elk.^port.side: WEST
+		}
+	}
+	
+	edge N4.P7 -> N2
+	edge N4.P7 -> N3
+	edge P1 -> N4.P7
+}
