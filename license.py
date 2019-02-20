@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 ###############################################################################
 # Copyright (c) 2017 Kiel University and others.
 # All rights reserved. This program and the accompanying materials
