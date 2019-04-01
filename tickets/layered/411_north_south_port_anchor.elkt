@@ -1,0 +1,30 @@
+/*******************************************************************************
+ * Copyright (c) 2019 Kiel University and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *******************************************************************************/
+
+// Reproduces a problem where north-or-south ports placed on the southern side
+// have the same port anchor they had when they were considered for the northern
+// side, resulting in edge arrow heads that go through the ports instead of only
+// to the port boundaries.
+
+node N1
+node N2
+node N3 {
+	portConstraints: FIXED_SIDE
+	
+	port P3_1 {
+		northOrSouthPort: true
+		^port.side: NORTH
+	}
+	port P3_2 {
+		northOrSouthPort: true
+		^port.side: NORTH
+	}
+}
+
+edge N1 -> N3.P3_1
+edge N2 -> N3.P3_2
