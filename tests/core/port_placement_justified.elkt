@@ -7,7 +7,7 @@
  *******************************************************************************/
 node Node {
 	portConstraints: FIXED_SIDE
-	portAlignment.basic: JUSTIFIED
+	portAlignment.default: JUSTIFIED
 	
 	port N1 { ^port.side: NORTH }
 	port N2 { ^port.side: NORTH }
