@@ -11,6 +11,7 @@
 // side, resulting in edge arrow heads that go through the ports instead of only
 // to the port boundaries.
 
+elk.direction: RIGHT
 node N1
 node N2
 node N3 {
