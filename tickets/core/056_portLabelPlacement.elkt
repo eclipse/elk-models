@@ -13,18 +13,24 @@ node N1 {
 	layout [ size: 80, 80 ]
 	
 	portConstraints: FIXED_SIDE
-	portAlignment.basic: CENTER
+	portAlignment.default: CENTER
 	nodeSize.constraints: PORT_LABELS
 	
 	port P1 {
+		layout [ size: 10, 10 ]
 		^port.side: WEST
+		label "First port"
 	}
 	
 	port P2 {
+		layout [ size: 10, 10 ]
 		^port.side: WEST
+		label "Second port"
 	}
 	
 	port P3 {
+		layout [ size: 10, 10 ]
 		^port.side: WEST
+		label "Third port"
 	}
 }
