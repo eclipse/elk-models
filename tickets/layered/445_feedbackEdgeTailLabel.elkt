@@ -5,24 +5,22 @@
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
  *******************************************************************************/
-// The tail label in this graph with a feedback edge was not placed properly.
+ 
+// Head labels were not placed properly if the edge source is an inverted port.
 
 node a {
 	layering.layerConstraint: FIRST
 	portConstraints: FIXED_SIDE
 	
-	port in { ^port.side: WEST }
+	port out { ^port.side: WEST }
 }
 
 node b {
 	layering.layerConstraint: LAST
-	portConstraints: FIXED_SIDE
 	
-	port out { ^port.side: EAST }
+	port in { ^port.side: EAST }
 }
 
-edge b.out -> a.in {
-	label "A tail label with a bit of text" {
-		edgeLabels.placement: TAIL
-	}
+edge a.out -> b.in {
+	label "Faulty head label" { edgeLabels.placement: HEAD }
 }
