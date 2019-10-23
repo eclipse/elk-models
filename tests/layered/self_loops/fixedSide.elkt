@@ -1,0 +1,102 @@
+/*******************************************************************************
+ * Copyright (c) 2019 Kiel University and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *******************************************************************************/
+edgeRouting: SPLINES
+
+node one_side {
+	portConstraints: FIXED_SIDE
+	
+	port e1 { ^port.side: EAST }
+	port e2 { ^port.side: EAST }
+	port w1 { ^port.side: WEST }
+	port w2 { ^port.side: WEST }
+	port n1 { ^port.side: NORTH }
+	port n2 { ^port.side: NORTH }
+	port s1 { ^port.side: SOUTH }
+	port s2 { ^port.side: SOUTH }
+}
+
+edge one_side.e1 -> one_side.e2 { label "label" }
+edge one_side.w1 -> one_side.w2 { label "label" }
+edge one_side.n1 -> one_side.n2 { label "label" }
+edge one_side.s1 -> one_side.s2 { label "label" }
+
+
+
+node two_adjacent_sides {
+	portConstraints: FIXED_SIDE
+	
+	port a1 { ^port.side: EAST }
+	port a2 { ^port.side: NORTH }
+	port b1 { ^port.side: EAST }
+	port b2 { ^port.side: SOUTH }
+	port c1 { ^port.side: WEST }
+	port c2 { ^port.side: NORTH }
+	port d1 { ^port.side: WEST }
+	port d2 { ^port.side: SOUTH }
+}
+
+edge two_adjacent_sides.a1 -> two_adjacent_sides.a2 { label "label" }
+edge two_adjacent_sides.b1 -> two_adjacent_sides.b2 { label "label" }
+edge two_adjacent_sides.c1 -> two_adjacent_sides.c2 { label "label" }
+edge two_adjacent_sides.d1 -> two_adjacent_sides.d2 { label "label" }
+
+
+
+node north_south {
+	portConstraints: FIXED_SIDE
+	
+	port n1 { ^port.side: NORTH }
+	port n2 { ^port.side: NORTH }
+	port s1 { ^port.side: SOUTH }
+	port s2 { ^port.side: SOUTH }
+}
+
+edge north_south.n1 -> north_south.s1 { label "label" }
+edge north_south.n2 -> north_south.s2 { label "label" }
+
+
+
+node south_north {
+	portConstraints: FIXED_SIDE
+	
+	port n1 { ^port.side: NORTH }
+	port n2 { ^port.side: NORTH }
+	port s1 { ^port.side: SOUTH }
+	port s2 { ^port.side: SOUTH }
+}
+
+edge south_north.s1 -> south_north.n1 { label "label" }
+edge south_north.s2 -> south_north.n2 { label "label" }
+
+
+
+node east_west {
+	portConstraints: FIXED_SIDE
+	
+	port e1 { ^port.side: EAST }
+	port e2 { ^port.side: EAST }
+	port w1 { ^port.side: WEST }
+	port w2 { ^port.side: WEST }
+}
+
+edge east_west.e1 -> east_west.w1 { label "label" }
+edge east_west.e2 -> east_west.w2 { label "label" }
+
+
+
+node west_east {
+	portConstraints: FIXED_SIDE
+	
+	port e1 { ^port.side: EAST }
+	port e2 { ^port.side: EAST }
+	port w1 { ^port.side: WEST }
+	port w2 { ^port.side: WEST }
+}
+
+edge west_east.w1 -> west_east.e1 { label "label" }
+edge west_east.w2 -> west_east.e2 { label "label" }

@@ -1,0 +1,157 @@
+/*******************************************************************************
+ * Copyright (c) 2019 Kiel University and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *******************************************************************************/
+elk.direction: RIGHT
+edgeRouting: SPLINES
+
+/* Examples for self loops with FREE port constraints. */
+
+node simple {
+	layout [ size: 200, 50 ]
+	port p1
+	port p2
+}
+
+edge simple.p1 -> simple.p2 { label "label" }
+
+
+
+node north_stacked {
+	edgeRouting.selfLoopDistribution: NORTH
+	edgeRouting.selfLoopOrdering: STACKED
+	
+	port p1
+	port p2
+	port p3
+	port p4
+}
+
+edge north_stacked.p1 -> north_stacked.p2 { label "label" }
+edge north_stacked.p3 -> north_stacked.p4 { label "label" }
+
+
+
+node north_sequenced {
+	edgeRouting.selfLoopDistribution: NORTH
+	edgeRouting.selfLoopOrdering: SEQUENCED
+	
+	port p1
+	port p2
+	port p3
+	port p4
+}
+
+edge north_sequenced.p1 -> north_sequenced.p2 { label "label" }
+edge north_sequenced.p3 -> north_sequenced.p4 { label "label" }
+
+
+
+node north_south_stacked {
+	edgeRouting.selfLoopDistribution: NORTH_SOUTH
+	edgeRouting.selfLoopOrdering: STACKED
+	
+	port p1
+	port p2
+	port p3
+	port p4
+	port p5
+	port p6
+	port p7
+	port p8
+}
+
+edge north_south_stacked.p1 -> north_south_stacked.p2 { label "label" }
+edge north_south_stacked.p3 -> north_south_stacked.p4 { label "label" }
+edge north_south_stacked.p5 -> north_south_stacked.p6 { label "label" }
+edge north_south_stacked.p7 -> north_south_stacked.p8 { label "label" }
+
+
+
+node north_south_sequenced {
+	edgeRouting.selfLoopDistribution: NORTH_SOUTH
+	edgeRouting.selfLoopOrdering: SEQUENCED
+	
+	port p1
+	port p2
+	port p3
+	port p4
+	port p5
+	port p6
+	port p7
+	port p8
+}
+
+edge north_south_sequenced.p1 -> north_south_sequenced.p2 { label "label" }
+edge north_south_sequenced.p3 -> north_south_sequenced.p4 { label "label" }
+edge north_south_sequenced.p5 -> north_south_sequenced.p6 { label "label" }
+edge north_south_sequenced.p7 -> north_south_sequenced.p8 { label "label" }
+
+
+
+node equally_stacked {
+	edgeRouting.selfLoopDistribution: EQUALLY
+	edgeRouting.selfLoopOrdering: STACKED
+	
+	port p1
+	port p2
+	port p3
+	port p4
+	port p5
+	port p6
+	port p7
+	port p8
+	port p9
+	port p10
+	port p11
+	port p12
+	port p13
+	port p14
+	port p15
+	port p16
+}
+
+edge equally_stacked.p1 -> equally_stacked.p2 { label "long label" }
+edge equally_stacked.p3 -> equally_stacked.p4 { label "long label" }
+edge equally_stacked.p5 -> equally_stacked.p6 { label "long label" }
+edge equally_stacked.p7 -> equally_stacked.p8 { label "long label" }
+edge equally_stacked.p9 -> equally_stacked.p10 { label "long label" }
+edge equally_stacked.p11 -> equally_stacked.p12 { label "long label" }
+edge equally_stacked.p13 -> equally_stacked.p14 { label "long label" }
+edge equally_stacked.p15 -> equally_stacked.p16 { label "long label" }
+
+
+
+node equally_sequenced {
+	edgeRouting.selfLoopDistribution: EQUALLY
+	edgeRouting.selfLoopOrdering: SEQUENCED
+	
+	port p1
+	port p2
+	port p3
+	port p4
+	port p5
+	port p6
+	port p7
+	port p8
+	port p9
+	port p10
+	port p11
+	port p12
+	port p13
+	port p14
+	port p15
+	port p16
+}
+
+edge equally_sequenced.p1 -> equally_sequenced.p2 { label "long label 1" label "label" }
+edge equally_sequenced.p3 -> equally_sequenced.p4 { label "long label 2" label "label" }
+edge equally_sequenced.p5 -> equally_sequenced.p6 { label "long label 3" label "label" }
+edge equally_sequenced.p7 -> equally_sequenced.p8 { label "long label 4" label "label" }
+edge equally_sequenced.p9 -> equally_sequenced.p10 { label "long label 5" label "label" }
+edge equally_sequenced.p11 -> equally_sequenced.p12 { label "long label 6" label "label" }
+edge equally_sequenced.p13 -> equally_sequenced.p14 { label "long label 7" label "label" }
+edge equally_sequenced.p15 -> equally_sequenced.p16 { label "long label 8" label "label" }

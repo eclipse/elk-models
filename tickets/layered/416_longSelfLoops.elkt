@@ -1,0 +1,73 @@
+/*******************************************************************************
+ * Copyright (c) 2019 Kiel University and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *******************************************************************************/
+node N1 {
+	portConstraints: FIXED_SIDE
+	label "N1" { layout [ size: 14, 12] }
+	port P1 {
+		layout [ size: 5, 5 ]
+		^port.side: WEST
+		label "P1" { layout [ size: 10, 8] }
+	}
+	port P2 {
+		layout [ size: 5, 5 ]
+		^port.side: WEST
+		label "P2" { layout [ size: 10, 8] }
+	}
+	port P3 {
+		layout [ size: 5, 5 ]
+		^port.side: WEST
+		label "P3" { layout [ size: 10, 8] }
+	}
+	port P4 {
+		layout [ size: 5, 5 ]
+		^port.side: EAST
+		label "P4" { layout [ size: 10, 8] }
+	}
+	port P5 {
+		layout [ size: 5, 5 ]
+		^port.side: EAST
+		label "P5" { layout [ size: 10, 8] }
+	}
+	port P6 {
+		layout [ size: 5, 5 ]
+		^port.side: EAST
+		label "P6" { layout [ size: 10, 8] }
+	}
+	port P7 {
+		layout [ size: 5, 5 ]
+		^port.side: WEST
+		label "P7" { layout [ size: 10, 8] }
+	}
+	port P8 {
+		layout [ size: 5, 5 ]
+		^port.side: EAST
+		label "P8" { layout [ size: 10, 8] }
+	}
+	port P9 {
+		layout [ size: 5, 5 ]
+		^port.side: WEST
+		label "P9" { layout [ size: 10, 8] }
+	}
+	port P10 {
+		layout [ size: 5, 5 ]
+		^port.side: EAST
+		label "P10" { layout [ size: 14, 8] }
+	}
+	node N2 {
+		layout [ size: 20, 20 ]
+		label "N2" { layout [ size: 14, 12] }
+	}
+	edge E3: P1 -> N2
+	edge E4: P2 -> N2
+	edge E5: P3 -> N2
+	edge E6: N2 -> P4
+	edge E7: N2 -> P5
+	edge E8: N2 -> P6
+}
+edge E1: N1.P7 -> N1.P8
+edge E2: N1.P9 -> N1.P10

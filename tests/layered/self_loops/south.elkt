@@ -1,0 +1,21 @@
+/*******************************************************************************
+ * Copyright (c) 2019 Kiel University and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *******************************************************************************/
+elk.direction: RIGHT
+edgeRouting: SPLINES
+
+node north_south {
+	portConstraints: FIXED_SIDE
+	
+	port n1 { ^port.side: NORTH }
+	port n2 { ^port.side: NORTH }
+	port s1 { ^port.side: SOUTH }
+	port s2 { ^port.side: SOUTH }
+}
+
+edge north_south.n1 -> north_south.s1 { label "label" }
+edge north_south.n2 -> north_south.s2 { label "label" }
