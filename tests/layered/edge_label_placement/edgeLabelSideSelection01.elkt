@@ -10,12 +10,13 @@
  */
  
 sideSelection: ALWAYS_UP
-debugMode: true
 edgeRouting: ORTHOGONAL
+
 node N1
 node N2
 node N3
 node N4
+
 edge E1: N1 -> N2 {
 	label L1: "A cheese walks into a bar..."
 }

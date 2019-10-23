@@ -11,7 +11,9 @@ node N1 {
 	port P1
 	port P2
 }
+node N2
 
 edge N1.P1 -> N1.P2 {
 	label "A rather long self loop label that should contribute to the graph's size"
 }
+edge N1 -> N2
