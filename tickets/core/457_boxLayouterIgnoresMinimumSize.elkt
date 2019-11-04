@@ -1,0 +1,22 @@
+/*******************************************************************************
+ * Copyright (c) 2019 Kiel University and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *******************************************************************************/
+
+// Reproduces a problem where the box layouter interferes with a node's minimum
+// size if paddings are active.
+
+node n {
+	algorithm: box
+	elk.padding:"[top=25.0,left=25.0,bottom=0.0,right=0.0]"
+	nodeSize.constraints: MINIMUM_SIZE
+	nodeSize.minimum: "(60.0, 60.0)"
+	minimalNodeSize:"(60.0, 60.0)"
+	
+	node ni {
+		layout [ size: 10, 10 ]
+	}
+}
