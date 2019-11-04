@@ -15,7 +15,7 @@ node A5 { layout [ size: 30, 15 ] }
 
 node B {
 	org.eclipse.elk.nodeSize.constraints: "PORT_LABELS PORTS NODE_LABELS MINIMUM_SIZE"
-	de.cau.cs.kieler.klighd.minimalNodeSize: "(60.0,60.0)"
+	nodeSize.minimum: "(60.0,60.0)"
 	
 	node D1
 	

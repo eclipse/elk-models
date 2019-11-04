@@ -7,7 +7,7 @@
  *******************************************************************************/
 node root {
 	nodeSize.constraints: MINIMUM_SIZE	
-	minimalNodeSize: "(900.0,400.0)"
+	nodeSize.minimum: "(900.0,400.0)"
 	contentAlignment: "[V_CENTER, H_CENTER]"
 	portConstraints: FIXED_SIDE
 	edgeRouting: ORTHOGONAL
