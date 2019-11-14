@@ -17,6 +17,8 @@ node N1 {
 	insideSelfLoops.activate: true
 	port P1
 	port P2
+	
+	node N2
 }
 edge E1: N1.P1 -> N1.P2 {
 	yo: true
