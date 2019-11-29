@@ -1,0 +1,135 @@
+/*******************************************************************************
+ * Copyright (c) 2019 Kiel University and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *******************************************************************************/
+
+// This graph reproduces a NaN caused by the InteractiveCrossingMinimizer.
+
+algorithm: org.eclipse.elk.layered
+elk.direction: RIGHT
+layering.strategy: INTERACTIVE
+crossingMinimization.strategy: INTERACTIVE
+nodePlacement.strategy: INTERACTIVE
+interactiveReferencePoint: TOP_LEFT
+node s_n {
+	layout [
+		position: 131.2562484741211, 308
+		size: 148.953125, 28.5
+	]
+	portConstraints: FIXED_SIDE
+	label s_ln: "s" {
+		layout [
+			position: 10, 6.5
+			size: 6.5, 15.5
+		]
+
+	}
+	port s {
+		layout [ size: 9.800000190734863, 10.800000190734863 ]
+
+		org.eclipse.elk.^port.side: EAST
+		org.eclipse.elk.^port.borderOffset: 0.5
+	}
+}
+
+node f_n {
+	layout [
+		position: 193.6312484741211, 366.5
+		size: 86.578125, 28.5
+	]
+
+	nodeSize.minimum: "(86.578125,28.5)"
+	portConstraints: FIXED_SIDE
+	label f_ln: "f" {
+		layout [
+			position: 10, 6.5
+			size: 3.875, 15.5
+		]
+
+	}
+	port f {
+		layout [ size: 9.800000190734863, 10.800000190734863 ]
+
+		org.eclipse.elk.^port.side: EAST
+		org.eclipse.elk.^port.borderOffset: 0.5
+	}
+}
+
+node a {
+	layout [ size: 39.8125, 45 ]
+
+	nodeSize.minimum: "(79.65625,45.0)"
+	portLabels.placement: INSIDE
+	nodeSize.constraints: "[PORTS, PORT_LABELS, NODE_LABELS, MINIMUM_SIZE]"
+	portConstraints: FIXED_ORDER
+	port a_p0 {
+		layout [ size: 9.800000190734863, 10.800000190734863 ]
+
+		org.eclipse.elk.^port.side: WEST
+		label a_p0_l: "p0" {
+			layout [ size: 22.40625, 15.5 ]
+
+		}
+	}
+	port a_p1 {
+		layout [ size: 9.800000190734863, 10.800000190734863 ]
+
+		org.eclipse.elk.^port.side: WEST
+		label a_p1_l: "p1" {
+			layout [ size: 22.40625, 15.5 ]
+
+		}
+	}
+	port a_p3 {
+		layout [ size: 9.800000190734863, 10.800000190734863 ]
+
+		org.eclipse.elk.^port.side: EAST
+		label a_p3_l: "p3" {
+			layout [ size: 14.828125, 15.5 ]
+
+		}
+	}
+}
+
+node b {
+	layout [ size: 39.8125, 45 ]
+
+	nodeSize.minimum: "(79.65625,45.0)"
+	portLabels.placement: INSIDE
+	nodeSize.constraints: "[PORTS, PORT_LABELS, NODE_LABELS, MINIMUM_SIZE]"
+	portConstraints: FIXED_ORDER
+	port b_p0 {
+		layout [ size: 9.800000190734863, 10.800000190734863 ]
+
+		org.eclipse.elk.^port.side: WEST
+		label b_p0_l: "p0" {
+			layout [ size: 22.40625, 15.5 ]
+
+		}
+	}
+	port b_p1 {
+		layout [ size: 9.800000190734863, 10.800000190734863 ]
+
+		org.eclipse.elk.^port.side: WEST
+		label b_p1_l: "p1" {
+			layout [ size: 22.40625, 15.5 ]
+
+		}
+	}
+	port b_p3 {
+		layout [ size: 9.800000190734863, 10.800000190734863 ]
+
+		org.eclipse.elk.^port.side: EAST
+		label b_p3_l: "p3" {
+			layout [ size: 14.828125, 15.5 ]
+
+		}
+	}
+}
+
+edge s_e_: s_n.s -> b.b_p0
+edge f_e_: f_n.f -> a.a_p0
+edge b_p3_e_: b.b_p3 -> a.a_p1

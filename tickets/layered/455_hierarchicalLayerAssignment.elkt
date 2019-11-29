@@ -1,0 +1,30 @@
+/*******************************************************************************
+ * Copyright (c) 2019 Kiel University and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *******************************************************************************/
+
+// Reproduces a problem where it's not clear why nodes i1 and i2 are not placed
+// in the same layer, but in adjacent layers.
+
+hierarchyHandling: INCLUDE_CHILDREN
+
+node o {
+	node i1
+	node i2
+}
+
+node right {
+	portConstraints:FIXED_SIDE
+	port west {
+		^port.side:WEST
+	}
+	port east {
+		^port.side:EAST
+	}
+}
+
+edge o.i1->right.west
+edge right.east->o.i2

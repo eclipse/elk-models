@@ -1,0 +1,44 @@
+/*******************************************************************************
+ * Copyright (c) 2019 Kiel University and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *******************************************************************************/
+
+// Reproduces a problem where the long edge to n3_0 takes a much longer route
+// than necessary.
+
+node n0_0
+node n1_0
+node n1_1
+
+node n2_0
+node n2_1
+node n2_2
+node n2_3
+node n2_4
+node n2_5
+node n2_6
+node n2_7
+node n2_8
+node n2_9
+
+node n3_0
+
+edge n0_0->n1_0
+
+edge n1_1->n2_7
+edge n1_0->n2_0
+edge n1_0->n2_1
+edge n1_0->n2_2
+edge n1_0->n2_3
+edge n1_0->n2_4
+edge n1_0->n2_5
+edge n1_0->n2_6
+edge n1_0->n2_7
+edge n1_0->n2_8
+edge n1_0->n2_9
+
+edge n1_0->n3_0
+edge n2_0->n3_0
