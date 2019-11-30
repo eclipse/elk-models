@@ -1,0 +1,28 @@
+/*******************************************************************************
+ * Copyright (c) 2018 Kiel University and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *******************************************************************************/
+
+// Reproduces a bug that causes the width of a node label to not be taken into
+// account with INCLUDE_CHILDREN.
+algorithm: org.eclipse.elk.layered
+hierarchyHandling: INCLUDE_CHILDREN
+elk.direction: RIGHT
+
+node n3 {
+	nodeSize.constraints: "MINIMUM_SIZE NODE_LABELS"
+	label "This is a very long node label which should cause the node to be wider" {
+		nodeLabels.placement: "INSIDE V_TOP H_CENTER"
+	}
+	
+	port out
+	port in
+	
+	node n31
+	
+	edge n3.out -> n31
+	edge n31 -> n3.in
+}
