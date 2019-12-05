@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
 
 ###############################################################################
-# Copyright (c) 2017 Kiel University and others.
-# All rights reserved. This program and the accompanying materials
-# are made available under the terms of the Eclipse Public License v1.0
-# which accompanies this distribution, and is available at
-# http://www.eclipse.org/legal/epl-v10.html
+# Copyright (c) 2017, 2019 Kiel University and others.
+# 
+# This program and the accompanying materials are made available under the
+# terms of the Eclipse Public License 2.0 which is available at
+# http://www.eclipse.org/legal/epl-2.0.
+#
+# SPDX-License-Identifier: EPL-2.0
 ###############################################################################
 
 """A program to create and update license headers for different kinds of file types."""
@@ -34,10 +36,12 @@ import tempfile
 
 # The licence heaader is overwritten if a licence header file is specified
 LICENCE_HEADER = ["Copyright (c) {0} {1} and others.",
-                  "All rights reserved. This program and the accompanying materials",
-                  "are made available under the terms of the Eclipse Public License v1.0",
-                  "which accompanies this distribution, and is available at",
-                  "http://www.eclipse.org/legal/epl-v10.html"]
+                  ""
+                  "This program and the accompanying materials are made available under the",
+                  "terms of the Eclipse Public License 2.0 which is available at",
+                  "http://www.eclipse.org/legal/epl-2.0.",
+                  "",
+                  "SPDX-License-Identifier: EPL-2.0"]
 LICENCE_UPDATE = "Copyright (c) {0}, {1} {2} and others."
 LICENCE_RE = re.compile(r"Copyright \(c\) ((?P<year_one>\d{4})"
                         r"(?P<year_two_full>, (?P<year_two>\d{4}))?) (?P<company>.+) and others\.")
