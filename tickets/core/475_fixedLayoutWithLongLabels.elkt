@@ -1,0 +1,24 @@
+/*******************************************************************************
+ * Copyright (c) 2019 Kiel University and others.
+ * 
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ *******************************************************************************/
+
+// Reproduces a problem where the fixed layout provider always enlarges nodes
+// when their content does not fit inside.
+
+node compound {
+	layout[ size: 50, 50 position: 10, 10 ]
+	algorithm: fixed
+	
+	// If this is false, the node will resize to contain its child
+	nodeSize.fixedGraphSize: true
+	
+	node n1 {
+		layout[ position: 200, 200 ]
+	}
+}
