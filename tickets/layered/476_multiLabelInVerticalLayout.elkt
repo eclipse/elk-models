@@ -1,0 +1,85 @@
+/*******************************************************************************
+ * Copyright (c) 2019 Kiel University and others.
+ * 
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ *******************************************************************************/
+
+// Reproduces a problem where multiple labels in a node in vertical layouts
+// were not one under the other.
+graph root
+layout [ size: 660, 360 ]
+algorithm: org.eclipse.elk.layered
+elk.direction: DOWN
+noLayout: false
+node Node1 {
+	layout [
+		position: 20, 20
+		size: 200, 100
+	]
+	nodeSize.constraints: "[MINIMUM_SIZE]"
+	nodeSize.minimum: "(200.0,100.0)"
+	label L1: "Node1-L1" {
+		layout [
+			position: 72, 0
+			size: 56, 15
+		]
+		nodeLabels.placement: "[H_CENTER, V_TOP, INSIDE]"
+	}
+	label L2: "Node1-L2" {
+		layout [
+			position: 72, 15
+			size: 56, 15
+		]
+		nodeLabels.placement: "[H_CENTER, V_TOP, INSIDE]"
+	}
+}
+node Node2 {
+	layout [
+		position: 230, 130
+		size: 200, 100
+	]
+	nodeSize.constraints: "[MINIMUM_SIZE]"
+	nodeSize.minimum: "(200.0,100.0)"
+	label L2: "Node2" {
+		layout [
+			position: 80, 0
+			size: 40, 15
+		]
+		nodeLabels.placement: "[H_CENTER, V_TOP, INSIDE]"
+	}
+}
+node Node3 {
+	layout [
+		position: 440, 240
+		size: 200, 100
+	]
+	nodeSize.constraints: "[MINIMUM_SIZE]"
+	nodeSize.minimum: "(200.0,100.0)"
+	label L3: "Node3" {
+		layout [
+			position: 80, 0
+			size: 40, 15
+		]
+		nodeLabels.placement: "[H_CENTER, V_TOP, INSIDE]"
+	}
+}
+edge E1: Node1 -> Node2 {
+	layout [
+		section ES1 [
+			start: 120,120
+			end: 230,180
+		]
+	]
+}
+edge E2: Node2 -> Node3 {
+	layout [
+		section ES1 [
+			start: 330,230
+			end: 440,290
+		]
+	]
+}
