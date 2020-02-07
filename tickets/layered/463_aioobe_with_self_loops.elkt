@@ -1,0 +1,171 @@
+/*******************************************************************************
+ * Copyright (c) 2020 Kiel University and others.
+ * 
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ *******************************************************************************/
+
+// The old self loop code produced an ArrayIndexOutOfBoundsException for this
+// graph. It remains here to be sure that this doesn't happen with the new code.
+
+elk.direction: RIGHT
+algorithm: org.eclipse.elk.layered
+edgeRouting: POLYLINE
+
+node _602056680 {
+	portConstraints: FIXED_ORDER
+	port usedByBundles {
+		org.eclipse.elk.^port.side: WEST
+	}
+	port requiredBundles {
+		org.eclipse.elk.^port.index: 0
+		org.eclipse.elk.^port.side: EAST
+	}
+	port importedPackages {
+		org.eclipse.elk.^port.index: 1
+		org.eclipse.elk.^port.side: EAST
+	}
+}
+
+node _64848977 {
+	portConstraints: FIXED_ORDER
+	port requiredBundles_g1105 {
+		org.eclipse.elk.^port.index: 0
+		org.eclipse.elk.^port.side: EAST
+	}
+	port importedPackages_g5634 {
+		org.eclipse.elk.^port.index: 1
+		org.eclipse.elk.^port.side: EAST
+	}
+}
+
+node _70157338 {
+	portConstraints: FIXED_ORDER
+	port usedByBundles_g5642 {
+		org.eclipse.elk.^port.side: WEST
+	}
+	port requiredBundles_g1328 {
+		org.eclipse.elk.^port.index: 0
+		org.eclipse.elk.^port.side: EAST
+	}
+	port importedPackages_g1486 {
+		org.eclipse.elk.^port.index: 1
+		org.eclipse.elk.^port.side: EAST
+	}
+}
+
+node _028333589 {
+	portConstraints: FIXED_ORDER
+	port usedByBundles_g0820 {
+		org.eclipse.elk.^port.side: WEST
+	}
+	port requiredBundles_g1236 {
+		org.eclipse.elk.^port.index: 0
+		org.eclipse.elk.^port.side: EAST
+	}
+	port importedPackages_g2397 {
+		org.eclipse.elk.^port.index: 1
+		org.eclipse.elk.^port.side: EAST
+	}
+}
+
+node _059186116 {
+	portConstraints: FIXED_ORDER
+	port requiredBundles_g0569 {
+		org.eclipse.elk.^port.index: 0
+		org.eclipse.elk.^port.side: EAST
+	}
+	port importedPackages_g0544 {
+		org.eclipse.elk.^port.index: 1
+		org.eclipse.elk.^port.side: EAST
+	}
+}
+
+node _300065557 {
+	portConstraints: FIXED_ORDER
+	port usedByBundles_g1147 {
+		org.eclipse.elk.^port.side: WEST
+	}
+	port requiredBundles_g3615 {
+		org.eclipse.elk.^port.index: 0
+		org.eclipse.elk.^port.side: EAST
+	}
+	port importedPackages_g0309 {
+		org.eclipse.elk.^port.index: 1
+		org.eclipse.elk.^port.side: EAST
+	}
+}
+
+node _99497112 {
+	portConstraints: FIXED_ORDER
+	port requiredBundles_g6160 {
+		org.eclipse.elk.^port.index: 0
+		org.eclipse.elk.^port.side: EAST
+	}
+	port importedPackages_g8959 {
+		org.eclipse.elk.^port.index: 1
+		org.eclipse.elk.^port.side: EAST
+	}
+}
+
+node _771720125 {
+	portConstraints: FIXED_ORDER
+	port usedByBundles_g8518 {
+		org.eclipse.elk.^port.side: WEST
+	}
+	port requiredBundles_g6212 {
+		org.eclipse.elk.^port.index: 0
+		org.eclipse.elk.^port.side: EAST
+	}
+}
+
+node _41566503 {
+	portConstraints: FIXED_ORDER
+	port usedByBundles_g9796 {
+		org.eclipse.elk.^port.side: WEST
+	}
+	port requiredBundles_g8566 {
+		org.eclipse.elk.^port.index: 0
+		org.eclipse.elk.^port.side: EAST
+	}
+	port importedPackages_g5870 {
+		org.eclipse.elk.^port.index: 1
+		org.eclipse.elk.^port.side: EAST
+	}
+}
+
+node _070714256 {
+	portConstraints: FIXED_ORDER
+	port requiredBundles_g0598 {
+		org.eclipse.elk.^port.index: 0
+		org.eclipse.elk.^port.side: EAST
+	}
+}
+
+node _638070934 {
+	portConstraints: FIXED_ORDER
+	port requiredBundles_g9293 {
+		org.eclipse.elk.^port.index: 0
+		org.eclipse.elk.^port.side: EAST
+	}
+	port importedPackages_g0760 {
+		org.eclipse.elk.^port.index: 1
+		org.eclipse.elk.^port.side: EAST
+	}
+}
+
+edge E2: _602056680.requiredBundles -> _602056680.usedByBundles
+edge E3: _602056680.requiredBundles -> _70157338.usedByBundles_g5642
+edge E4: _602056680.requiredBundles -> _028333589.usedByBundles_g0820
+edge E5: _64848977.requiredBundles_g1105 -> _602056680.usedByBundles
+edge E6: _64848977.requiredBundles_g1105 -> _300065557.usedByBundles_g1147
+edge E7: _059186116.requiredBundles_g0569 -> _028333589.usedByBundles_g0820
+edge E8: _99497112.requiredBundles_g6160 -> _028333589.usedByBundles_g0820
+edge E9: _99497112.requiredBundles_g6160 -> _300065557.usedByBundles_g1147
+edge E10: _771720125.requiredBundles_g6212 -> _028333589.usedByBundles_g0820
+edge E11: _41566503.requiredBundles_g8566 -> _300065557.usedByBundles_g1147
+edge E12: _070714256.requiredBundles_g0598 -> _300065557.usedByBundles_g1147
+edge E13: _638070934.requiredBundles_g9293 -> _300065557.usedByBundles_g1147
