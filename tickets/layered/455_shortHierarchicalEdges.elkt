@@ -11,22 +11,15 @@
 // Reproduces a problem where it's not clear why nodes i1 and i2 are not placed
 // in the same layer, but in adjacent layers.
 
-hierarchyHandling: INCLUDE_CHILDREN
-
 node o {
+	separateConnectedComponents: false
+	
+	port out
+	port in
+	
 	node i1
 	node i2
+	
+	edge o.out -> i2
+	edge i1 -> o.in
 }
-
-node right {
-	portConstraints:FIXED_SIDE
-	port west {
-		^port.side:WEST
-	}
-	port east {
-		^port.side:EAST
-	}
-}
-
-edge o.i1->right.west
-edge right.east->o.i2
