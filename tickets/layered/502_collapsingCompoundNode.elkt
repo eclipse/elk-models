@@ -1,0 +1,33 @@
+/*******************************************************************************
+ * Copyright (c) 2020 Kiel University and others.
+ * 
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ *******************************************************************************/
+
+// Reproduces a problem where the node's height is reset as soon as p2 is active.
+
+node n1 {
+	portConstraints: FIXED_SIDE
+
+	port p1 { ^port.side: SOUTH }
+	port p2 { ^port.side: SOUTH }
+	
+	node n2
+	
+	edge n1.p1 -> n2
+}
+
+node n3 {
+	portConstraints: FIXED_SIDE
+
+	port p1 { ^port.side: NORTH }
+	port p2 { ^port.side: NORTH }
+	
+	node n4
+	
+	edge n3.p1 -> n4
+}
