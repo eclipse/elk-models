@@ -1,0 +1,30 @@
+/*******************************************************************************
+ * Copyright (c) 2020 Kiel University and others.
+ * 
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ *******************************************************************************/
+
+node n1 {
+	portLabels.nextToPortIfPossible: true
+	portLabels.placement: INSIDE
+	portConstraints: FIXED_SIDE
+	
+	port in1 { ^port.side: WEST }
+	port in2 { ^port.side: WEST }
+	port in3 { ^port.side: WEST }
+	port out1 { ^port.side: EAST }
+	port out2 { ^port.side: EAST }
+	port out3 { ^port.side: EAST }
+}
+
+node n2 {
+	portLabels.nextToPortIfPossible: true
+	
+	port in1
+}
+
+edge n1.out2 -> n2.in1
