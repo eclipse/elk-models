@@ -1,0 +1,51 @@
+spacing.portPort: 0
+spacing.labelPort: 0
+spacing.portsSurrounding: 0
+elk.direction: RIGHT
+
+node outer {
+	portConstraints: FIXED_ORDER
+	portLabels.nextToPortIfPossible: true
+	portLabels.treatAsGroup: true
+	nodeSize.constraints: "PORTS PORT_LABELS MINIMUM_SIZE"
+	elk.direction: RIGHT
+	
+	port a {
+		layout[ size: 20, 10 ]
+		^port.side: WEST
+		^port.index: 2
+		
+		label "afoo"
+	}
+	
+	port b {
+		layout[ size: 20, 10 ]
+		^port.side: WEST
+		^port.index: 1
+		
+		label "bfoo"
+		label "baz"
+		label "bar"
+	}
+	
+	port c {
+		layout[ size: 20, 10 ]
+		^port.side: WEST
+		^port.index: 0
+		
+		label "dfoo"
+		label "baz"
+	}
+	
+	node inner {
+		layout[ size: 50, 20 ]
+		
+		port b
+	}
+	
+	edge outer.a -> inner.b
+}
+
+node sibling
+
+edge sibling -> outer.b
