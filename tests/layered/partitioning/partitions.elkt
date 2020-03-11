@@ -1,0 +1,32 @@
+/*******************************************************************************
+ * Copyright (c) 2020 Kiel University and others.
+ * 
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ *******************************************************************************/
+ 
+partitioning.activate: true
+
+node n1 { partitioning.partition: 0 }
+node n2 { partitioning.partition: 1 }
+node n3 { partitioning.partition: 2 }
+node n4 { partitioning.partition: 0 }
+node n5 { partitioning.partition: 1 }
+node n6 { partitioning.partition: 3 }
+node n7 { partitioning.partition: 2 }
+node n8 { partitioning.partition: 0 }
+node n9 { partitioning.partition: 0 }
+node n10 { partitioning.partition: 1 }
+
+edge n1 -> n2
+edge n2 -> n3
+edge n3 -> n4
+edge n4 -> n5
+edge n6 -> n7
+edge n7 -> n8
+edge n8 -> n5
+edge n8 -> n9
+edge n9 -> n10
