@@ -7,30 +7,22 @@
  *
  * SPDX-License-Identifier: EPL-2.0
  *******************************************************************************/
-/**
- * Test case for KIPRA-1563
- */
+
+// Reproduces a case where empty layers are produced.
+// In this case first will get a separate layer from n0 which is not really required.
  
-node extDummyFirst {
-	layerConstraint: FIRST_SEPARATE
-}
+node firstSeparate { layerConstraint: FIRST_SEPARATE }
 node n0
 node n1
-/**
- * In this case first will get a separate layer from n0 which is not really required.
- */
-node first {
-	layerConstraint: FIRST
-}
+node first { layerConstraint: FIRST }
 node n2
 node n3
-node extDummyLast {
-	layerConstraint: LAST_SEPARATE
-}
-edge E1: extDummyFirst -> n0
+node lastSeparate { layerConstraint: LAST_SEPARATE }
+
+edge E1: firstSeparate -> n0
 edge E2: n0 -> n1
 edge E3: n1 -> n2
 edge E4: n1 -> first
 edge E5: first -> n2
 edge E6: n2 -> n3
-edge E7: n3 -> extDummyLast
+edge E7: n3 -> lastSeparate

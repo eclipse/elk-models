@@ -7,25 +7,16 @@
  *
  * SPDX-License-Identifier: EPL-2.0
  *******************************************************************************/
-/**
- * Test case for KIPRA-1561
- */
- 
-// as our testing framework does not support recursive layout we 
-// explicitly create dummy nodes that would be created for external ports
 
-node extDummyFirst {
-	layerConstraint: FIRST_SEPARATE
-}
-node first {
-	layerConstraint: FIRST
-}
+// Reproduces a case where empty layers are produced.
+
+node firstSeparate { layerConstraint: FIRST_SEPARATE }
+node first { layerConstraint: FIRST }
 node n
 node n2
-node extDummyLast {
-	layerConstraint: LAST_SEPARATE
-}
-edge E1: extDummyFirst -> first
+node lastSeparate { layerConstraint: LAST_SEPARATE }
+
+edge E1: firstSeparate -> first
 edge E2: first -> n
 edge E3: n -> n2
-edge E4: n2 -> extDummyLast
+edge E4: n2 -> lastSeparate
