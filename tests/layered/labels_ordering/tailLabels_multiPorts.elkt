@@ -1,0 +1,50 @@
+/*******************************************************************************
+ * Copyright (c) 2020 Kiel University and others.
+ * 
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ *******************************************************************************/
+
+// Reproduces the case where tail labels do not reflect the order in which the
+// target nodes appear in their respective layers.
+
+node left {
+	port source
+}
+node right {
+	portConstraints: FIXED_ORDER
+	
+	// Sort ports from top to bottom
+	port target1 {
+		^port.side: WEST
+		^port.index: 4
+	}
+	port target2 {
+		^port.side: WEST
+		^port.index: 3
+	}
+	port target3 {
+		^port.side: WEST
+		^port.index: 2
+	}
+	port target4 {
+		^port.side: WEST
+		^port.index: 1
+	}
+}
+
+edge left.source -> right.target4 {
+    label "4" { edgeLabels.placement: TAIL }
+}
+edge left.source -> right.target3 {
+    label "3" { edgeLabels.placement: TAIL }
+}
+edge left.source -> right.target2 {
+    label "2" { edgeLabels.placement: TAIL }
+}
+edge left.source -> right.target1 {
+    label "1" { edgeLabels.placement: TAIL }
+}
