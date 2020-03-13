@@ -1,0 +1,41 @@
+/*******************************************************************************
+ * Copyright (c) 2020 Kiel University and others.
+ * 
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ *******************************************************************************/
+
+// Reproduces the case where tail labels do not reflect the order in which the
+// target nodes appear in their respective layers.
+
+mergeEdges: true
+crossingMinimization.semiInteractive: true
+
+node left
+node mid1 { ^position: "0, 300" }
+node mid2 { ^position: "0, 200" }
+node mid3 { ^position: "0, 100" }
+node right1 { ^position: "0, 200" }
+node right2 { ^position: "0, 100" }
+
+edge left -> mid1 {
+    label "3" { edgeLabels.placement: TAIL }
+}
+edge left -> mid2 {
+    label "2" { edgeLabels.placement: TAIL }
+}
+edge left -> mid3 {
+    label "1" { edgeLabels.placement: TAIL }
+}
+edge left -> right1 {
+    label "5" { edgeLabels.placement: TAIL }
+}
+edge left -> right2 {
+    label "4" { edgeLabels.placement: TAIL }
+}
+
+edge mid1 -> right1
+edge mid1 -> right2
