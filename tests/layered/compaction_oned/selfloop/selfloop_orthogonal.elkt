@@ -9,7 +9,7 @@
  *******************************************************************************/
 
 //edgeRouting: SPLINES
-postCompaction.strategy:LEFT
+//postCompaction.strategy:LEFT
 
 node n1
 
