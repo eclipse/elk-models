@@ -1,0 +1,2058 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  /*******************************************************************************
+   * Copyright (c) 1997-2013 The Regents of the University of California.
+   * All rights reserved.
+   * Permission is hereby granted, without written agreement and without
+   * license or royalty fees, to use, copy, modify, and distribute this
+   * software and its documentation for any purpose, provided that the above
+   * copyright notice and the following two paragraphs appear in all copies
+   * of this software.
+   *
+   * IN NO EVENT SHALL THE UNIVERSITY OF CALIFORNIA BE LIABLE TO ANY PARTY
+   * FOR DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES
+   * ARISING OUT OF THE USE OF THIS SOFTWARE AND ITS DOCUMENTATION, EVEN IF
+   * THE UNIVERSITY OF CALIFORNIA HAS BEEN ADVISED OF THE POSSIBILITY OF
+   * SUCH DAMAGE.
+   *
+   * THE UNIVERSITY OF CALIFORNIA SPECIFICALLY DISCLAIMS ANY WARRANTIES,
+   * INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+   * MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE SOFTWARE
+   * PROVIDED HEREUNDER IS ON AN "AS IS" BASIS, AND THE UNIVERSITY OF
+   * CALIFORNIA HAS NO OBLIGATION TO PROVIDE MAINTENANCE, SUPPORT, UPDATES,
+   * ENHANCEMENTS, OR MODIFICATIONS.
+   *******************************************************************************/
+-->
+<graph:ElkNode xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:graph="http://www.eclipse.org/elk/ElkGraph" identifier="G1">
+  <properties key="org.eclipse.elk.portConstraints" value="FREE"/>
+  <children identifier="N1" height="41.0" width="41.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L1" height="15.0" width="144.0" text="reserveFeedPaperRadius"/>
+    <ports identifier="P1" height="8.0" width="8.0" x="-8.0" y="16.5" incomingEdges="//@containedEdges.48">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+  </children>
+  <children identifier="N2" height="46.0" width="66.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L2" height="15.0" width="68.0" text="SingleEvent"/>
+    <ports identifier="P2" height="8.0" width="8.0" x="66.0" y="19.0" outgoingEdges="//@containedEdges.0 //@containedEdges.1">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+  </children>
+  <children identifier="N3" height="25.0" width="18.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L3" height="15.0" width="34.0" text="Const"/>
+    <ports identifier="P3" height="8.0" width="8.0" x="18.0" y="8.5" outgoingEdges="//@containedEdges.2">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+    <ports identifier="P4" height="8.0" width="8.0" x="-8.0" y="8.5" incomingEdges="//@containedEdges.25">
+      <properties key="org.eclipse.elk.port.index" value="-1"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+  </children>
+  <children identifier="N4" height="41.0" width="61.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L4" height="15.0" width="73.0" text="WaitingTime"/>
+    <ports identifier="P5" height="8.0" width="8.0" x="61.0" y="16.5" outgoingEdges="//@containedEdges.3">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+    <ports identifier="P6" height="8.0" width="8.0" x="-8.0" y="8.333333015441895" incomingEdges="//@containedEdges.102">
+      <properties key="org.eclipse.elk.port.index" value="-1"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P7" height="8.0" width="8.0" x="-8.0" y="24.66666603088379" incomingEdges="//@containedEdges.77">
+      <properties key="org.eclipse.elk.port.index" value="-2"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+  </children>
+  <children identifier="N5" height="31.0" width="41.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L5" height="15.0" width="68.0" text="ModelDelay"/>
+    <ports identifier="P8" height="8.0" width="8.0" x="-8.0" y="11.5" incomingEdges="//@containedEdges.3">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+  </children>
+  <children identifier="N6" height="46.0" width="44.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L6" height="15.0" width="55.0" text="Integrator"/>
+    <ports identifier="P9" height="8.0" width="8.0" x="9.333333015441895" y="46.0">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="SOUTH"/>
+    </ports>
+    <ports identifier="P10" height="8.0" width="8.0" x="-8.0" y="19.0" incomingEdges="//@containedEdges.9">
+      <properties key="org.eclipse.elk.port.index" value="-1"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P11" height="8.0" width="8.0" x="44.0" y="19.0" outgoingEdges="//@containedEdges.4 //@containedEdges.5 //@containedEdges.6 //@containedEdges.7 //@containedEdges.8">
+      <properties key="org.eclipse.elk.port.index" value="2"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+    <ports identifier="P12" height="8.0" width="8.0" x="26.66666603088379" y="46.0">
+      <properties key="org.eclipse.elk.port.index" value="-3"/>
+      <properties key="org.eclipse.elk.port.side" value="SOUTH"/>
+    </ports>
+  </children>
+  <children identifier="N7" height="46.0" width="44.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L7" height="15.0" width="62.0" text="Integrator2"/>
+    <ports identifier="P13" height="8.0" width="8.0" x="9.333333015441895" y="46.0">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="SOUTH"/>
+    </ports>
+    <ports identifier="P14" height="8.0" width="8.0" x="-8.0" y="19.0" incomingEdges="//@containedEdges.11">
+      <properties key="org.eclipse.elk.port.index" value="-1"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P15" height="8.0" width="8.0" x="44.0" y="19.0" outgoingEdges="//@containedEdges.9 //@containedEdges.10">
+      <properties key="org.eclipse.elk.port.index" value="2"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+    <ports identifier="P16" height="8.0" width="8.0" x="26.66666603088379" y="46.0">
+      <properties key="org.eclipse.elk.port.index" value="-3"/>
+      <properties key="org.eclipse.elk.port.side" value="SOUTH"/>
+    </ports>
+  </children>
+  <children identifier="N8" height="41.0" width="41.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L8" height="15.0" width="72.0" text="AddSubtract"/>
+    <ports identifier="P17" height="8.0" width="8.0" x="-8.0" y="8.333333015441895" incomingEdges="//@containedEdges.22">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P18" height="8.0" width="8.0" x="-8.0" y="24.66666603088379" incomingEdges="//@containedEdges.15 //@containedEdges.16">
+      <properties key="org.eclipse.elk.port.index" value="-1"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P19" height="8.0" width="8.0" x="41.0" y="16.5" outgoingEdges="//@containedEdges.11">
+      <properties key="org.eclipse.elk.port.index" value="2"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+  </children>
+  <children identifier="N9" height="46.0" width="66.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L9" height="15.0" width="34.0" text="Scale"/>
+    <ports identifier="P20" height="8.0" width="8.0" x="-8.0" y="19.0" incomingEdges="//@containedEdges.14">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P21" height="8.0" width="8.0" x="66.0" y="19.0" outgoingEdges="//@containedEdges.12">
+      <properties key="org.eclipse.elk.port.index" value="1"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+  </children>
+  <children identifier="N10" height="46.0" width="66.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L10" height="15.0" width="41.0" text="Scale4"/>
+    <ports identifier="P22" height="8.0" width="8.0" x="-8.0" y="19.0" incomingEdges="//@containedEdges.4">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P23" height="8.0" width="8.0" x="66.0" y="19.0" outgoingEdges="//@containedEdges.13">
+      <properties key="org.eclipse.elk.port.index" value="1"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+  </children>
+  <children identifier="N11" height="41.0" width="61.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L11" height="15.0" width="84.0" text="ZeroOrderHold"/>
+    <ports identifier="P24" height="8.0" width="8.0" x="-8.0" y="16.5" incomingEdges="//@containedEdges.154">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P25" height="8.0" width="8.0" x="61.0" y="16.5" outgoingEdges="//@containedEdges.14">
+      <properties key="org.eclipse.elk.port.index" value="1"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+  </children>
+  <children identifier="N12" height="41.0" width="41.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L12" height="15.0" width="87.0" text="MultiplyDivide2"/>
+    <ports identifier="P26" height="8.0" width="8.0" x="-8.0" y="8.333333015441895" incomingEdges="//@containedEdges.13">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P27" height="8.0" width="8.0" x="-8.0" y="24.66666603088379" incomingEdges="//@containedEdges.62">
+      <properties key="org.eclipse.elk.port.index" value="-1"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P28" height="8.0" width="8.0" x="41.0" y="16.5" outgoingEdges="//@containedEdges.15">
+      <properties key="org.eclipse.elk.port.index" value="2"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+  </children>
+  <children identifier="N13" height="41.0" width="41.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L13" height="15.0" width="87.0" text="MultiplyDivide3"/>
+    <ports identifier="P29" height="8.0" width="8.0" x="-8.0" y="8.333333015441895" incomingEdges="//@containedEdges.10 //@containedEdges.21">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P30" height="8.0" width="8.0" x="-8.0" y="24.66666603088379">
+      <properties key="org.eclipse.elk.port.index" value="-1"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P31" height="8.0" width="8.0" x="41.0" y="16.5" outgoingEdges="//@containedEdges.16">
+      <properties key="org.eclipse.elk.port.index" value="2"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+  </children>
+  <children identifier="N14" height="41.0" width="41.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L14" height="15.0" width="87.0" text="MultiplyDivide4"/>
+    <ports identifier="P32" height="8.0" width="8.0" x="-8.0" y="8.333333015441895" incomingEdges="//@containedEdges.19">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P33" height="8.0" width="8.0" x="-8.0" y="24.66666603088379" incomingEdges="//@containedEdges.63">
+      <properties key="org.eclipse.elk.port.index" value="-1"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P34" height="8.0" width="8.0" x="41.0" y="16.5" outgoingEdges="//@containedEdges.17 //@containedEdges.18">
+      <properties key="org.eclipse.elk.port.index" value="2"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+  </children>
+  <children identifier="N15" height="25.0" width="18.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L15" height="15.0" width="42.0" text="Const2"/>
+    <ports identifier="P35" height="8.0" width="8.0" x="18.0" y="8.5" outgoingEdges="//@containedEdges.19">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+    <ports identifier="P36" height="8.0" width="8.0" x="-8.0" y="8.5" incomingEdges="//@containedEdges.64">
+      <properties key="org.eclipse.elk.port.index" value="-1"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+  </children>
+  <children identifier="N16" height="25.0" width="31.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L16" height="15.0" width="42.0" text="Const3"/>
+    <ports identifier="P37" height="8.0" width="8.0" x="31.0" y="8.5" outgoingEdges="//@containedEdges.20">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+    <ports identifier="P38" height="8.0" width="8.0" x="-8.0" y="8.5" incomingEdges="//@containedEdges.17">
+      <properties key="org.eclipse.elk.port.index" value="-1"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+  </children>
+  <children identifier="N17" height="41.0" width="41.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L17" height="15.0" width="80.0" text="AddSubtract3"/>
+    <ports identifier="P39" height="8.0" width="8.0" x="-8.0" y="8.333333015441895" incomingEdges="//@containedEdges.18 //@containedEdges.20">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P40" height="8.0" width="8.0" x="-8.0" y="24.66666603088379">
+      <properties key="org.eclipse.elk.port.index" value="-1"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P41" height="8.0" width="8.0" x="41.0" y="16.5" outgoingEdges="//@containedEdges.21">
+      <properties key="org.eclipse.elk.port.index" value="2"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+  </children>
+  <children identifier="N18" height="41.0" width="41.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L18" height="15.0" width="87.0" text="MultiplyDivide5"/>
+    <ports identifier="P42" height="8.0" width="8.0" x="-8.0" y="8.333333015441895" incomingEdges="//@containedEdges.12">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P43" height="8.0" width="8.0" x="-8.0" y="24.66666603088379" incomingEdges="//@containedEdges.65">
+      <properties key="org.eclipse.elk.port.index" value="-1"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P44" height="8.0" width="8.0" x="41.0" y="16.5" outgoingEdges="//@containedEdges.22">
+      <properties key="org.eclipse.elk.port.index" value="2"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+  </children>
+  <children identifier="N19" height="41.0" width="41.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L19" height="15.0" width="80.0" text="MultiplyDivide"/>
+    <ports identifier="P45" height="8.0" width="8.0" x="-8.0" y="8.333333015441895" incomingEdges="//@containedEdges.5 //@containedEdges.43">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P46" height="8.0" width="8.0" x="-8.0" y="24.66666603088379">
+      <properties key="org.eclipse.elk.port.index" value="-1"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P47" height="8.0" width="8.0" x="41.0" y="16.5" outgoingEdges="//@containedEdges.23 //@containedEdges.24">
+      <properties key="org.eclipse.elk.port.index" value="2"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+  </children>
+  <children identifier="N20" height="41.0" width="61.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L20" height="15.0" width="96.0" text="PeriodicSampler"/>
+    <ports identifier="P48" height="8.0" width="8.0" x="-8.0" y="16.5" incomingEdges="//@containedEdges.44">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P49" height="8.0" width="8.0" x="61.0" y="16.5" outgoingEdges="//@containedEdges.25">
+      <properties key="org.eclipse.elk.port.index" value="1"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+  </children>
+  <children identifier="N21" height="41.0" width="41.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L21" height="15.0" width="72.0" text="AddSubtract"/>
+    <ports identifier="P50" height="8.0" width="8.0" x="-8.0" y="8.333333015441895" incomingEdges="//@containedEdges.30">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P51" height="8.0" width="8.0" x="-8.0" y="24.66666603088379" incomingEdges="//@containedEdges.27">
+      <properties key="org.eclipse.elk.port.index" value="-1"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P52" height="8.0" width="8.0" x="41.0" y="16.5" outgoingEdges="//@containedEdges.26">
+      <properties key="org.eclipse.elk.port.index" value="2"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+  </children>
+  <children identifier="N22" height="46.0" width="66.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L22" height="15.0" width="34.0" text="Scale"/>
+    <ports identifier="P53" height="8.0" width="8.0" x="-8.0" y="19.0" incomingEdges="//@containedEdges.35">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P54" height="8.0" width="8.0" x="66.0" y="19.0" outgoingEdges="//@containedEdges.27 //@containedEdges.28">
+      <properties key="org.eclipse.elk.port.index" value="1"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+  </children>
+  <children identifier="N23" height="25.0" width="407.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L23" height="15.0" width="119.0" text="initialRadiusSquared"/>
+    <ports identifier="P55" height="8.0" width="8.0" x="407.0" y="8.5" outgoingEdges="//@containedEdges.29">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+    <ports identifier="P56" height="8.0" width="8.0" x="-8.0" y="8.5" incomingEdges="//@containedEdges.28">
+      <properties key="org.eclipse.elk.port.index" value="-1"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+  </children>
+  <children identifier="N24" height="25.0" width="32.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L24" height="15.0" width="114.0" text="UnaryMathFunction"/>
+    <ports identifier="P57" height="8.0" width="8.0" x="-8.0" y="8.5" incomingEdges="//@containedEdges.29">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P58" height="8.0" width="8.0" x="32.0" y="8.5" outgoingEdges="//@containedEdges.30">
+      <properties key="org.eclipse.elk.port.index" value="1"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+  </children>
+  <children identifier="N25" height="41.0" width="61.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L25" height="15.0" width="40.0" text="Limiter"/>
+    <ports identifier="P59" height="8.0" width="8.0" x="-8.0" y="16.5" incomingEdges="//@containedEdges.26">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P60" height="8.0" width="8.0" x="61.0" y="16.5" outgoingEdges="//@containedEdges.31 //@containedEdges.32 //@containedEdges.33">
+      <properties key="org.eclipse.elk.port.index" value="1"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+  </children>
+  <children identifier="N26" height="25.0" width="29.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L26" height="15.0" width="58.0" text="constzero"/>
+    <ports identifier="P61" height="8.0" width="8.0" x="29.0" y="8.5" outgoingEdges="//@containedEdges.34">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+    <ports identifier="P62" height="8.0" width="8.0" x="-8.0" y="8.5" incomingEdges="//@containedEdges.6">
+      <properties key="org.eclipse.elk.port.index" value="-1"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+  </children>
+  <children identifier="N27" height="46.0" width="44.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L27" height="15.0" width="40.0" text="omega"/>
+    <ports identifier="P63" height="8.0" width="8.0" x="9.333333015441895" y="46.0">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="SOUTH"/>
+    </ports>
+    <ports identifier="P64" height="8.0" width="8.0" x="-8.0" y="19.0" incomingEdges="//@containedEdges.42">
+      <properties key="org.eclipse.elk.port.index" value="-1"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P65" height="8.0" width="8.0" x="44.0" y="19.0" outgoingEdges="//@containedEdges.35">
+      <properties key="org.eclipse.elk.port.index" value="2"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+    <ports identifier="P66" height="8.0" width="8.0" x="26.66666603088379" y="46.0">
+      <properties key="org.eclipse.elk.port.index" value="-3"/>
+      <properties key="org.eclipse.elk.port.side" value="SOUTH"/>
+    </ports>
+  </children>
+  <children identifier="N28" height="25.0" width="18.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L28" height="15.0" width="65.0" text="constzero2"/>
+    <ports identifier="P67" height="8.0" width="8.0" x="18.0" y="8.5" outgoingEdges="//@containedEdges.36">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+    <ports identifier="P68" height="8.0" width="8.0" x="-8.0" y="8.5" incomingEdges="//@containedEdges.72">
+      <properties key="org.eclipse.elk.port.index" value="-1"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+  </children>
+  <children identifier="N29" height="25.0" width="75.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L29" height="15.0" width="65.0" text="coreRadius"/>
+    <ports identifier="P69" height="8.0" width="8.0" x="75.0" y="8.5" outgoingEdges="//@containedEdges.37 //@containedEdges.38">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+    <ports identifier="P70" height="8.0" width="8.0" x="-8.0" y="8.5" incomingEdges="//@containedEdges.31">
+      <properties key="org.eclipse.elk.port.index" value="-1"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+  </children>
+  <children identifier="N30" height="31.0" width="61.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L30" height="15.0" width="68.0" text="Comparator"/>
+    <ports identifier="P71" height="8.0" width="8.0" x="-8.0" y="5.0" incomingEdges="//@containedEdges.32">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P72" height="8.0" width="8.0" x="-8.0" y="18.0" incomingEdges="//@containedEdges.37">
+      <properties key="org.eclipse.elk.port.index" value="-1"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P73" height="8.0" width="8.0" x="61.0" y="11.5" outgoingEdges="//@containedEdges.39">
+      <properties key="org.eclipse.elk.port.index" value="2"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+  </children>
+  <children identifier="N31" height="31.0" width="41.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L31" height="15.0" width="54.0" text="TrueGate"/>
+    <ports identifier="P74" height="8.0" width="8.0" x="-8.0" y="11.5" incomingEdges="//@containedEdges.39">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P75" height="8.0" width="8.0" x="41.0" y="11.5" outgoingEdges="//@containedEdges.40">
+      <properties key="org.eclipse.elk.port.index" value="1"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+  </children>
+  <children identifier="N32" height="29.0" width="66.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L32" height="15.0" width="59.0" text="Sequence"/>
+    <ports identifier="P76" height="8.0" width="8.0" x="-8.0" y="10.5" incomingEdges="//@containedEdges.40">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P77" height="8.0" width="8.0" x="66.0" y="10.5" outgoingEdges="//@containedEdges.41">
+      <properties key="org.eclipse.elk.port.index" value="1"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+  </children>
+  <children identifier="N33" height="47.0" width="41.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L33" height="15.0" width="37.0" text="Select"/>
+    <ports identifier="P78" height="8.0" width="8.0" x="-8.0" y="19.5" incomingEdges="//@containedEdges.7 //@containedEdges.34">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P79" height="8.0" width="8.0" x="41.0" y="19.5" outgoingEdges="//@containedEdges.42">
+      <properties key="org.eclipse.elk.port.index" value="1"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+    <ports identifier="P80" height="8.0" width="8.0" x="16.5" y="47.0" incomingEdges="//@containedEdges.36">
+      <properties key="org.eclipse.elk.port.index" value="-2"/>
+      <properties key="org.eclipse.elk.port.side" value="SOUTH"/>
+    </ports>
+  </children>
+  <children identifier="N34" height="47.0" width="41.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L34" height="15.0" width="45.0" text="Select2"/>
+    <ports identifier="P81" height="8.0" width="8.0" x="-8.0" y="19.5" incomingEdges="//@containedEdges.33 //@containedEdges.38">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P82" height="8.0" width="8.0" x="41.0" y="19.5" outgoingEdges="//@containedEdges.43 //@containedEdges.44 //@containedEdges.45 //@containedEdges.46 //@containedEdges.47 //@containedEdges.48">
+      <properties key="org.eclipse.elk.port.index" value="1"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+    <ports identifier="P83" height="8.0" width="8.0" x="16.5" y="47.0" incomingEdges="//@containedEdges.41">
+      <properties key="org.eclipse.elk.port.index" value="-2"/>
+      <properties key="org.eclipse.elk.port.side" value="SOUTH"/>
+    </ports>
+  </children>
+  <children identifier="N35" height="25.0" width="50.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L35" height="15.0" width="114.0" text="UnaryMathFunction"/>
+    <ports identifier="P84" height="8.0" width="8.0" x="-8.0" y="8.5" incomingEdges="//@containedEdges.56">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P85" height="8.0" width="8.0" x="50.0" y="8.5" outgoingEdges="//@containedEdges.49">
+      <properties key="org.eclipse.elk.port.index" value="1"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+  </children>
+  <children identifier="N36" height="41.0" width="41.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L36" height="15.0" width="80.0" text="MultiplyDivide"/>
+    <ports identifier="P86" height="8.0" width="8.0" x="-8.0" y="8.333333015441895" incomingEdges="//@containedEdges.58">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P87" height="8.0" width="8.0" x="-8.0" y="24.66666603088379" incomingEdges="//@containedEdges.54">
+      <properties key="org.eclipse.elk.port.index" value="-1"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P88" height="8.0" width="8.0" x="41.0" y="16.5" outgoingEdges="//@containedEdges.50">
+      <properties key="org.eclipse.elk.port.index" value="2"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+  </children>
+  <children identifier="N37" height="25.0" width="50.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L37" height="15.0" width="121.0" text="UnaryMathFunction2"/>
+    <ports identifier="P89" height="8.0" width="8.0" x="-8.0" y="8.5" incomingEdges="//@containedEdges.55">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P90" height="8.0" width="8.0" x="50.0" y="8.5" outgoingEdges="//@containedEdges.51 //@containedEdges.52 //@containedEdges.53">
+      <properties key="org.eclipse.elk.port.index" value="1"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+  </children>
+  <children identifier="N38" height="41.0" width="41.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L38" height="15.0" width="72.0" text="AddSubtract"/>
+    <ports identifier="P91" height="8.0" width="8.0" x="-8.0" y="8.333333015441895" incomingEdges="//@containedEdges.49">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P92" height="8.0" width="8.0" x="-8.0" y="24.66666603088379" incomingEdges="//@containedEdges.51">
+      <properties key="org.eclipse.elk.port.index" value="-1"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P93" height="8.0" width="8.0" x="41.0" y="16.5" outgoingEdges="//@containedEdges.54">
+      <properties key="org.eclipse.elk.port.index" value="2"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+  </children>
+  <children identifier="N39" height="25.0" width="75.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L39" height="15.0" width="34.0" text="Const"/>
+    <ports identifier="P94" height="8.0" width="8.0" x="75.0" y="8.5" outgoingEdges="//@containedEdges.55">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+    <ports identifier="P95" height="8.0" width="8.0" x="-8.0" y="8.5" incomingEdges="//@containedEdges.45">
+      <properties key="org.eclipse.elk.port.index" value="-1"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+  </children>
+  <children identifier="N40" height="25.0" width="88.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L40" height="15.0" width="42.0" text="Const2"/>
+    <ports identifier="P96" height="8.0" width="8.0" x="88.0" y="8.5" outgoingEdges="//@containedEdges.56">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+    <ports identifier="P97" height="8.0" width="8.0" x="-8.0" y="8.5" incomingEdges="//@containedEdges.46">
+      <properties key="org.eclipse.elk.port.index" value="-1"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+  </children>
+  <children identifier="N41" height="25.0" width="50.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L41" height="15.0" width="121.0" text="UnaryMathFunction3"/>
+    <ports identifier="P98" height="8.0" width="8.0" x="-8.0" y="8.5" incomingEdges="//@containedEdges.47">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P99" height="8.0" width="8.0" x="50.0" y="8.5" outgoingEdges="//@containedEdges.57">
+      <properties key="org.eclipse.elk.port.index" value="1"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+  </children>
+  <children identifier="N42" height="46.0" width="66.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L42" height="15.0" width="121.0" text="halfOfmassOfFullRoll"/>
+    <ports identifier="P100" height="8.0" width="8.0" x="-8.0" y="19.0" incomingEdges="//@containedEdges.61">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P101" height="8.0" width="8.0" x="66.0" y="19.0" outgoingEdges="//@containedEdges.58">
+      <properties key="org.eclipse.elk.port.index" value="1"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+  </children>
+  <children identifier="N43" height="25.0" width="50.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L43" height="15.0" width="121.0" text="UnaryMathFunction4"/>
+    <ports identifier="P102" height="8.0" width="8.0" x="-8.0" y="8.5" incomingEdges="//@containedEdges.52">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P103" height="8.0" width="8.0" x="50.0" y="8.5" outgoingEdges="//@containedEdges.59">
+      <properties key="org.eclipse.elk.port.index" value="1"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+  </children>
+  <children identifier="N44" height="25.0" width="50.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L44" height="15.0" width="121.0" text="UnaryMathFunction6"/>
+    <ports identifier="P104" height="8.0" width="8.0" x="-8.0" y="8.5" incomingEdges="//@containedEdges.57">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P105" height="8.0" width="8.0" x="50.0" y="8.5" outgoingEdges="//@containedEdges.60">
+      <properties key="org.eclipse.elk.port.index" value="1"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+  </children>
+  <children identifier="N45" height="41.0" width="41.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L45" height="15.0" width="80.0" text="AddSubtract2"/>
+    <ports identifier="P106" height="8.0" width="8.0" x="-8.0" y="8.333333015441895" incomingEdges="//@containedEdges.60">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P107" height="8.0" width="8.0" x="-8.0" y="24.66666603088379" incomingEdges="//@containedEdges.59">
+      <properties key="org.eclipse.elk.port.index" value="-1"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P108" height="8.0" width="8.0" x="41.0" y="16.5" outgoingEdges="//@containedEdges.61">
+      <properties key="org.eclipse.elk.port.index" value="2"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+  </children>
+  <children identifier="N46" height="41.0" width="41.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L46" height="15.0" width="80.0" text="AddSubtract3"/>
+    <ports identifier="P109" height="8.0" width="8.0" x="-8.0" y="8.333333015441895" incomingEdges="//@containedEdges.50 //@containedEdges.66">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P110" height="8.0" width="8.0" x="-8.0" y="24.66666603088379">
+      <properties key="org.eclipse.elk.port.index" value="-1"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P111" height="8.0" width="8.0" x="41.0" y="16.5" outgoingEdges="//@containedEdges.62 //@containedEdges.63 //@containedEdges.64 //@containedEdges.65">
+      <properties key="org.eclipse.elk.port.index" value="2"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+  </children>
+  <children identifier="N47" height="46.0" width="66.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L47" height="15.0" width="91.0" text="coreMassScale"/>
+    <ports identifier="P112" height="8.0" width="8.0" x="-8.0" y="19.0" incomingEdges="//@containedEdges.53">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P113" height="8.0" width="8.0" x="66.0" y="19.0" outgoingEdges="//@containedEdges.66">
+      <properties key="org.eclipse.elk.port.index" value="1"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+  </children>
+  <children identifier="N48" height="41.0" width="61.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L48" height="15.0" width="101.0" text="CompositeActor4"/>
+    <ports identifier="P114" height="8.0" width="8.0" x="-8.0" y="16.5" outgoingEdges="//@containedEdges.67" incomingEdges="//@containedEdges.0">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P115" height="8.0" width="8.0" x="61.0" y="16.5" incomingEdges="//@containedEdges.67">
+      <properties key="org.eclipse.elk.port.index" value="1"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+  </children>
+  <children identifier="N49" height="41.0" width="61.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L49" height="15.0" width="101.0" text="CompositeActor5"/>
+    <ports identifier="P116" height="8.0" width="8.0" x="-8.0" y="16.5" outgoingEdges="//@containedEdges.68">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P117" height="8.0" width="8.0" x="61.0" y="16.5" outgoingEdges="//@containedEdges.69 //@containedEdges.70" incomingEdges="//@containedEdges.68">
+      <properties key="org.eclipse.elk.port.index" value="1"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+  </children>
+  <children identifier="N50" height="41.0" width="61.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L50" height="15.0" width="101.0" text="CompositeActor7"/>
+    <ports identifier="P118" height="8.0" width="8.0" x="-8.0" y="16.5" outgoingEdges="//@containedEdges.71">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P119" height="8.0" width="8.0" x="61.0" y="16.5" outgoingEdges="//@containedEdges.72 //@containedEdges.73" incomingEdges="//@containedEdges.71">
+      <properties key="org.eclipse.elk.port.index" value="1"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+  </children>
+  <children identifier="N51" height="41.0" width="61.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L51" height="15.0" width="101.0" text="CompositeActor2"/>
+    <ports identifier="P120" height="8.0" width="8.0" x="-8.0" y="16.5" outgoingEdges="//@containedEdges.74" incomingEdges="//@containedEdges.103">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P121" height="8.0" width="8.0" x="61.0" y="16.5" incomingEdges="//@containedEdges.74">
+      <properties key="org.eclipse.elk.port.index" value="1"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+  </children>
+  <children identifier="N52" height="41.0" width="61.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L52" height="15.0" width="101.0" text="CompositeActor6"/>
+    <ports identifier="P122" height="8.0" width="8.0" x="-8.0" y="16.5" outgoingEdges="//@containedEdges.75" incomingEdges="//@containedEdges.106">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P123" height="8.0" width="8.0" x="61.0" y="16.5" incomingEdges="//@containedEdges.75">
+      <properties key="org.eclipse.elk.port.index" value="1"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+  </children>
+  <children identifier="N53" height="41.0" width="61.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L53" height="15.0" width="101.0" text="CompositeActor8"/>
+    <ports identifier="P124" height="8.0" width="8.0" x="-8.0" y="16.5" outgoingEdges="//@containedEdges.76">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P125" height="8.0" width="8.0" x="61.0" y="16.5" outgoingEdges="//@containedEdges.77" incomingEdges="//@containedEdges.76">
+      <properties key="org.eclipse.elk.port.index" value="1"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+  </children>
+  <children identifier="N54" height="41.0" width="61.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L54" height="15.0" width="101.0" text="CompositeActor3"/>
+    <ports identifier="P126" height="8.0" width="8.0" x="-8.0" y="16.5" outgoingEdges="//@containedEdges.78" incomingEdges="//@containedEdges.2">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P127" height="8.0" width="8.0" x="61.0" y="16.5" incomingEdges="//@containedEdges.78">
+      <properties key="org.eclipse.elk.port.index" value="1"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+  </children>
+  <children identifier="N55" height="25.0" width="32.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L55" height="15.0" width="34.0" text="Const"/>
+    <ports identifier="P128" height="8.0" width="8.0" x="32.0" y="8.5" outgoingEdges="//@containedEdges.79">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+    <ports identifier="P129" height="8.0" width="8.0" x="-8.0" y="8.5" incomingEdges="//@containedEdges.82">
+      <properties key="org.eclipse.elk.port.index" value="-1"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+  </children>
+  <children identifier="N56" height="25.0" width="38.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L56" height="15.0" width="42.0" text="Const2"/>
+    <ports identifier="P130" height="8.0" width="8.0" x="38.0" y="8.5" outgoingEdges="//@containedEdges.80">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+    <ports identifier="P131" height="8.0" width="8.0" x="-8.0" y="8.5" incomingEdges="//@containedEdges.93">
+      <properties key="org.eclipse.elk.port.index" value="-1"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+  </children>
+  <children identifier="N57" height="25.0" width="136.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L57" height="15.0" width="42.0" text="Const3"/>
+    <ports identifier="P132" height="8.0" width="8.0" x="136.0" y="8.5" outgoingEdges="//@containedEdges.81">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+    <ports identifier="P133" height="8.0" width="8.0" x="-8.0" y="8.5" incomingEdges="//@containedEdges.83">
+      <properties key="org.eclipse.elk.port.index" value="-1"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+  </children>
+  <children identifier="N58" height="46.0" width="66.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L58" height="15.0" width="61.0" text="TimeDelay"/>
+    <ports identifier="P134" height="8.0" width="8.0" x="-8.0" y="19.0" incomingEdges="//@containedEdges.94">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P135" height="8.0" width="8.0" x="66.0" y="19.0">
+      <properties key="org.eclipse.elk.port.index" value="1"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+    <ports identifier="P136" height="8.0" width="8.0" x="29.0" y="46.0">
+      <properties key="org.eclipse.elk.port.index" value="-2"/>
+      <properties key="org.eclipse.elk.port.side" value="SOUTH"/>
+    </ports>
+  </children>
+  <children identifier="N59" height="46.0" width="66.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L59" height="15.0" width="53.0" text="TimeGap"/>
+    <ports identifier="P137" height="8.0" width="8.0" x="-8.0" y="19.0">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P138" height="8.0" width="8.0" x="66.0" y="19.0" outgoingEdges="//@containedEdges.82 //@containedEdges.83 //@containedEdges.84 //@containedEdges.85">
+      <properties key="org.eclipse.elk.port.index" value="1"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+  </children>
+  <children identifier="N60" height="41.0" width="41.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L60" height="15.0" width="80.0" text="MultiplyDivide"/>
+    <ports identifier="P139" height="8.0" width="8.0" x="-8.0" y="8.333333015441895" incomingEdges="//@containedEdges.79">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P140" height="8.0" width="8.0" x="-8.0" y="24.66666603088379" incomingEdges="//@containedEdges.84">
+      <properties key="org.eclipse.elk.port.index" value="-1"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P141" height="8.0" width="8.0" x="41.0" y="16.5" outgoingEdges="//@containedEdges.86 //@containedEdges.87">
+      <properties key="org.eclipse.elk.port.index" value="2"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+  </children>
+  <children identifier="N61" height="41.0" width="21.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L61" height="15.0" width="49.0" text="Register"/>
+    <ports identifier="P142" height="8.0" width="8.0" x="-8.0" y="16.5" incomingEdges="//@containedEdges.92">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P143" height="8.0" width="8.0" x="21.0" y="16.5" outgoingEdges="//@containedEdges.88">
+      <properties key="org.eclipse.elk.port.index" value="1"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+    <ports identifier="P144" height="8.0" width="8.0" x="6.5" y="41.0">
+      <properties key="org.eclipse.elk.port.index" value="-2"/>
+      <properties key="org.eclipse.elk.port.side" value="SOUTH"/>
+    </ports>
+  </children>
+  <children identifier="N62" height="25.0" width="32.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L62" height="15.0" width="82.0" text="LogicFunction"/>
+    <ports identifier="P145" height="8.0" width="8.0" x="-8.0" y="8.5" incomingEdges="//@containedEdges.88">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P146" height="8.0" width="8.0" x="32.0" y="8.5" outgoingEdges="//@containedEdges.89">
+      <properties key="org.eclipse.elk.port.index" value="1"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+  </children>
+  <children identifier="N63" height="41.0" width="41.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L63" height="15.0" width="87.0" text="MultiplyDivide2"/>
+    <ports identifier="P147" height="8.0" width="8.0" x="-8.0" y="8.333333015441895" incomingEdges="//@containedEdges.86 //@containedEdges.91">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P148" height="8.0" width="8.0" x="-8.0" y="24.66666603088379">
+      <properties key="org.eclipse.elk.port.index" value="-1"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P149" height="8.0" width="8.0" x="41.0" y="16.5" outgoingEdges="//@containedEdges.90">
+      <properties key="org.eclipse.elk.port.index" value="2"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+  </children>
+  <children identifier="N64" height="46.0" width="66.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L64" height="15.0" width="69.0" text="TimeDelay2"/>
+    <ports identifier="P150" height="8.0" width="8.0" x="-8.0" y="19.0" incomingEdges="//@containedEdges.90">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P151" height="8.0" width="8.0" x="66.0" y="19.0">
+      <properties key="org.eclipse.elk.port.index" value="1"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+    <ports identifier="P152" height="8.0" width="8.0" x="29.0" y="46.0">
+      <properties key="org.eclipse.elk.port.index" value="-2"/>
+      <properties key="org.eclipse.elk.port.side" value="SOUTH"/>
+    </ports>
+  </children>
+  <children identifier="N65" height="41.0" width="21.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L65" height="15.0" width="56.0" text="Register2"/>
+    <ports identifier="P153" height="8.0" width="8.0" x="-8.0" y="16.5">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P154" height="8.0" width="8.0" x="21.0" y="16.5" outgoingEdges="//@containedEdges.91">
+      <properties key="org.eclipse.elk.port.index" value="1"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+    <ports identifier="P155" height="8.0" width="8.0" x="6.5" y="41.0" incomingEdges="//@containedEdges.87">
+      <properties key="org.eclipse.elk.port.index" value="-2"/>
+      <properties key="org.eclipse.elk.port.side" value="SOUTH"/>
+    </ports>
+  </children>
+  <children identifier="N66" height="41.0" width="21.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L66" height="15.0" width="37.0" text="Merge"/>
+    <ports identifier="P156" height="8.0" width="8.0" x="-8.0" y="16.5" incomingEdges="//@containedEdges.80">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P157" height="8.0" width="8.0" x="21.0" y="16.5" outgoingEdges="//@containedEdges.92">
+      <properties key="org.eclipse.elk.port.index" value="1"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+  </children>
+  <children identifier="N67" height="31.0" width="41.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L67" height="15.0" width="54.0" text="TrueGate"/>
+    <ports identifier="P158" height="8.0" width="8.0" x="-8.0" y="11.5" incomingEdges="//@containedEdges.89">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P159" height="8.0" width="8.0" x="41.0" y="11.5" outgoingEdges="//@containedEdges.93 //@containedEdges.94 //@containedEdges.95">
+      <properties key="org.eclipse.elk.port.index" value="1"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+  </children>
+  <children identifier="N68" height="41.0" width="41.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L68" height="15.0" width="87.0" text="MultiplyDivide3"/>
+    <ports identifier="P160" height="8.0" width="8.0" x="-8.0" y="8.333333015441895" incomingEdges="//@containedEdges.81 //@containedEdges.85">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P161" height="8.0" width="8.0" x="-8.0" y="24.66666603088379">
+      <properties key="org.eclipse.elk.port.index" value="-1"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P162" height="8.0" width="8.0" x="41.0" y="16.5" outgoingEdges="//@containedEdges.96">
+      <properties key="org.eclipse.elk.port.index" value="2"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+  </children>
+  <children identifier="N69" height="46.0" width="66.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L69" height="15.0" width="69.0" text="TimeDelay3"/>
+    <ports identifier="P163" height="8.0" width="8.0" x="-8.0" y="19.0" incomingEdges="//@containedEdges.95">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P164" height="8.0" width="8.0" x="66.0" y="19.0">
+      <properties key="org.eclipse.elk.port.index" value="1"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+    <ports identifier="P165" height="8.0" width="8.0" x="29.0" y="46.0" incomingEdges="//@containedEdges.96">
+      <properties key="org.eclipse.elk.port.index" value="-2"/>
+      <properties key="org.eclipse.elk.port.side" value="SOUTH"/>
+    </ports>
+  </children>
+  <children identifier="N70" height="25.0" width="36.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L70" height="15.0" width="34.0" text="Const"/>
+    <ports identifier="P166" height="8.0" width="8.0" x="36.0" y="8.5" outgoingEdges="//@containedEdges.97">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+    <ports identifier="P167" height="8.0" width="8.0" x="-8.0" y="8.5" incomingEdges="//@containedEdges.105">
+      <properties key="org.eclipse.elk.port.index" value="-1"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+  </children>
+  <children identifier="N71" height="46.0" width="44.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L71" height="15.0" width="55.0" text="Integrator"/>
+    <ports identifier="P168" height="8.0" width="8.0" x="9.333333015441895" y="46.0" incomingEdges="//@containedEdges.97">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="SOUTH"/>
+    </ports>
+    <ports identifier="P169" height="8.0" width="8.0" x="-8.0" y="19.0" incomingEdges="//@containedEdges.100">
+      <properties key="org.eclipse.elk.port.index" value="-1"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P170" height="8.0" width="8.0" x="44.0" y="19.0" outgoingEdges="//@containedEdges.98 //@containedEdges.99">
+      <properties key="org.eclipse.elk.port.index" value="2"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+    <ports identifier="P171" height="8.0" width="8.0" x="26.66666603088379" y="46.0">
+      <properties key="org.eclipse.elk.port.index" value="-3"/>
+      <properties key="org.eclipse.elk.port.side" value="SOUTH"/>
+    </ports>
+  </children>
+  <children identifier="N72" height="41.0" width="61.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L72" height="15.0" width="84.0" text="ZeroOrderHold"/>
+    <ports identifier="P172" height="8.0" width="8.0" x="-8.0" y="16.5" incomingEdges="//@containedEdges.8">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P173" height="8.0" width="8.0" x="61.0" y="16.5" outgoingEdges="//@containedEdges.100">
+      <properties key="org.eclipse.elk.port.index" value="1"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+  </children>
+  <children identifier="N73" height="46.0" width="73.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L73" height="15.0" width="130.0" text="LevelCrossingDetector"/>
+    <ports identifier="P174" height="8.0" width="8.0" x="73.0" y="19.0" outgoingEdges="//@containedEdges.101 //@containedEdges.102 //@containedEdges.103 //@containedEdges.104">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+    <ports identifier="P175" height="8.0" width="8.0" x="-8.0" y="19.0" incomingEdges="//@containedEdges.98">
+      <properties key="org.eclipse.elk.port.index" value="-1"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+  </children>
+  <children identifier="N74" height="46.0" width="66.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L74" height="15.0" width="61.0" text="TimeDelay"/>
+    <ports identifier="P176" height="8.0" width="8.0" x="-8.0" y="19.0" incomingEdges="//@containedEdges.101">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P177" height="8.0" width="8.0" x="66.0" y="19.0" outgoingEdges="//@containedEdges.105">
+      <properties key="org.eclipse.elk.port.index" value="1"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+    <ports identifier="P178" height="8.0" width="8.0" x="29.0" y="46.0">
+      <properties key="org.eclipse.elk.port.index" value="-2"/>
+      <properties key="org.eclipse.elk.port.side" value="SOUTH"/>
+    </ports>
+  </children>
+  <children identifier="N75" height="46.0" width="73.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L75" height="15.0" width="137.0" text="LevelCrossingDetector2"/>
+    <ports identifier="P179" height="8.0" width="8.0" x="73.0" y="19.0" outgoingEdges="//@containedEdges.106">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+    <ports identifier="P180" height="8.0" width="8.0" x="-8.0" y="19.0" incomingEdges="//@containedEdges.99">
+      <properties key="org.eclipse.elk.port.index" value="-1"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+  </children>
+  <children identifier="N76" height="31.0" width="31.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L76" height="15.0" width="112.0" text="BooleanToAnything"/>
+    <ports identifier="P181" height="8.0" width="8.0" x="-8.0" y="11.5" incomingEdges="//@containedEdges.73">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P182" height="8.0" width="8.0" x="31.0" y="11.5" outgoingEdges="//@containedEdges.107">
+      <properties key="org.eclipse.elk.port.index" value="1"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+  </children>
+  <children identifier="N77" height="31.0" width="31.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L77" height="15.0" width="119.0" text="BooleanToAnything2"/>
+    <ports identifier="P183" height="8.0" width="8.0" x="-8.0" y="11.5" incomingEdges="//@containedEdges.69">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P184" height="8.0" width="8.0" x="31.0" y="11.5" outgoingEdges="//@containedEdges.108">
+      <properties key="org.eclipse.elk.port.index" value="1"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+  </children>
+  <children identifier="N78" height="31.0" width="31.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L78" height="15.0" width="119.0" text="BooleanToAnything3"/>
+    <ports identifier="P185" height="8.0" width="8.0" x="-8.0" y="11.5" incomingEdges="//@containedEdges.104">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P186" height="8.0" width="8.0" x="31.0" y="11.5" outgoingEdges="//@containedEdges.109">
+      <properties key="org.eclipse.elk.port.index" value="1"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+  </children>
+  <children identifier="N79" height="31.0" width="31.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L79" height="15.0" width="119.0" text="BooleanToAnything4"/>
+    <ports identifier="P187" height="8.0" width="8.0" x="-8.0" y="11.5" incomingEdges="//@containedEdges.1">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P188" height="8.0" width="8.0" x="31.0" y="11.5" outgoingEdges="//@containedEdges.110">
+      <properties key="org.eclipse.elk.port.index" value="1"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+  </children>
+  <children identifier="N80" height="41.0" width="41.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L80" height="15.0" width="128.0" text="contactControlMonitor"/>
+    <ports identifier="P189" height="8.0" width="8.0" x="-8.0" y="16.5" incomingEdges="//@containedEdges.107 //@containedEdges.108 //@containedEdges.109 //@containedEdges.110">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+  </children>
+  <children identifier="N81" height="41.0" width="61.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L81" height="15.0" width="101.0" text="CompositeActor3"/>
+    <ports identifier="P190" height="8.0" width="8.0" x="-8.0" y="16.5" outgoingEdges="//@containedEdges.111" incomingEdges="//@containedEdges.114">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P191" height="8.0" width="8.0" x="61.0" y="16.5" incomingEdges="//@containedEdges.111">
+      <properties key="org.eclipse.elk.port.index" value="1"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+  </children>
+  <children identifier="N82" height="41.0" width="61.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L82" height="15.0" width="49.0" text="Sampler"/>
+    <ports identifier="P192" height="8.0" width="8.0" x="-8.0" y="16.5" incomingEdges="//@containedEdges.23">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P193" height="8.0" width="8.0" x="61.0" y="16.5">
+      <properties key="org.eclipse.elk.port.index" value="1"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+    <ports identifier="P194" height="8.0" width="8.0" x="26.5" y="41.0" incomingEdges="//@containedEdges.112">
+      <properties key="org.eclipse.elk.port.index" value="-2"/>
+      <properties key="org.eclipse.elk.port.side" value="SOUTH"/>
+    </ports>
+  </children>
+  <children identifier="N83" height="41.0" width="41.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L83" height="15.0" width="81.0" text="DiscreteClock"/>
+    <ports identifier="P195" height="8.0" width="8.0" x="41.0" y="16.5" outgoingEdges="//@containedEdges.112">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+    <ports identifier="P196" height="8.0" width="8.0" x="-8.0" y="8.333333015441895">
+      <properties key="org.eclipse.elk.port.index" value="-1"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P197" height="8.0" width="8.0" x="-8.0" y="24.66666603088379">
+      <properties key="org.eclipse.elk.port.index" value="-2"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P198" height="8.0" width="8.0" x="8.333333015441895" y="41.0">
+      <properties key="org.eclipse.elk.port.index" value="-3"/>
+      <properties key="org.eclipse.elk.port.side" value="SOUTH"/>
+    </ports>
+    <ports identifier="P199" height="8.0" width="8.0" x="24.66666603088379" y="41.0">
+      <properties key="org.eclipse.elk.port.index" value="-4"/>
+      <properties key="org.eclipse.elk.port.side" value="SOUTH"/>
+    </ports>
+  </children>
+  <children identifier="N84" height="41.0" width="61.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L84" height="15.0" width="101.0" text="CompositeActor3"/>
+    <ports identifier="P200" height="8.0" width="8.0" x="-8.0" y="16.5" outgoingEdges="//@containedEdges.113">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P201" height="8.0" width="8.0" x="61.0" y="16.5" outgoingEdges="//@containedEdges.114 //@containedEdges.115" incomingEdges="//@containedEdges.113">
+      <properties key="org.eclipse.elk.port.index" value="1"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+  </children>
+  <children identifier="N85" height="41.0" width="41.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L85" height="15.0" width="81.0" text="DiscreteClock"/>
+    <ports identifier="P202" height="8.0" width="8.0" x="41.0" y="16.5" outgoingEdges="//@containedEdges.116">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+    <ports identifier="P203" height="8.0" width="8.0" x="-8.0" y="8.333333015441895">
+      <properties key="org.eclipse.elk.port.index" value="-1"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P204" height="8.0" width="8.0" x="-8.0" y="24.66666603088379">
+      <properties key="org.eclipse.elk.port.index" value="-2"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P205" height="8.0" width="8.0" x="8.333333015441895" y="41.0">
+      <properties key="org.eclipse.elk.port.index" value="-3"/>
+      <properties key="org.eclipse.elk.port.side" value="SOUTH"/>
+    </ports>
+    <ports identifier="P206" height="8.0" width="8.0" x="24.66666603088379" y="41.0">
+      <properties key="org.eclipse.elk.port.index" value="-4"/>
+      <properties key="org.eclipse.elk.port.side" value="SOUTH"/>
+    </ports>
+  </children>
+  <children identifier="N86" height="41.0" width="41.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L86" height="15.0" width="71.0" text="CurrentTime"/>
+    <ports identifier="P207" height="8.0" width="8.0" x="41.0" y="16.5" outgoingEdges="//@containedEdges.117 //@containedEdges.118">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+    <ports identifier="P208" height="8.0" width="8.0" x="-8.0" y="16.5" incomingEdges="//@containedEdges.135">
+      <properties key="org.eclipse.elk.port.index" value="-1"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+  </children>
+  <children identifier="N87" height="46.0" width="66.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L87" height="15.0" width="34.0" text="Scale"/>
+    <ports identifier="P209" height="8.0" width="8.0" x="-8.0" y="19.0" incomingEdges="//@containedEdges.132">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P210" height="8.0" width="8.0" x="66.0" y="19.0" outgoingEdges="//@containedEdges.119 //@containedEdges.120">
+      <properties key="org.eclipse.elk.port.index" value="1"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+  </children>
+  <children identifier="N88" height="25.0" width="31.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L88" height="15.0" width="72.0" text="TrigFunction"/>
+    <ports identifier="P211" height="8.0" width="8.0" x="-8.0" y="8.5" incomingEdges="//@containedEdges.119">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P212" height="8.0" width="8.0" x="31.0" y="8.5" outgoingEdges="//@containedEdges.121">
+      <properties key="org.eclipse.elk.port.index" value="1"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+  </children>
+  <children identifier="N89" height="25.0" width="29.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L89" height="15.0" width="34.0" text="Const"/>
+    <ports identifier="P213" height="8.0" width="8.0" x="29.0" y="8.5" outgoingEdges="//@containedEdges.122">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+    <ports identifier="P214" height="8.0" width="8.0" x="-8.0" y="8.5" incomingEdges="//@containedEdges.120">
+      <properties key="org.eclipse.elk.port.index" value="-1"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+  </children>
+  <children identifier="N90" height="41.0" width="41.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L90" height="15.0" width="72.0" text="AddSubtract"/>
+    <ports identifier="P215" height="8.0" width="8.0" x="-8.0" y="8.333333015441895" incomingEdges="//@containedEdges.122">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P216" height="8.0" width="8.0" x="-8.0" y="24.66666603088379" incomingEdges="//@containedEdges.121">
+      <properties key="org.eclipse.elk.port.index" value="-1"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P217" height="8.0" width="8.0" x="41.0" y="16.5" outgoingEdges="//@containedEdges.123">
+      <properties key="org.eclipse.elk.port.index" value="2"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+  </children>
+  <children identifier="N91" height="46.0" width="66.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L91" height="15.0" width="41.0" text="Scale2"/>
+    <ports identifier="P218" height="8.0" width="8.0" x="-8.0" y="19.0" incomingEdges="//@containedEdges.123">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P219" height="8.0" width="8.0" x="66.0" y="19.0" outgoingEdges="//@containedEdges.124">
+      <properties key="org.eclipse.elk.port.index" value="1"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+  </children>
+  <children identifier="N92" height="46.0" width="66.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L92" height="15.0" width="41.0" text="Scale3"/>
+    <ports identifier="P220" height="8.0" width="8.0" x="-8.0" y="19.0" incomingEdges="//@containedEdges.133">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P221" height="8.0" width="8.0" x="66.0" y="19.0" outgoingEdges="//@containedEdges.125 //@containedEdges.126">
+      <properties key="org.eclipse.elk.port.index" value="1"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+  </children>
+  <children identifier="N93" height="25.0" width="28.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L93" height="15.0" width="79.0" text="TrigFunction2"/>
+    <ports identifier="P222" height="8.0" width="8.0" x="-8.0" y="8.5" incomingEdges="//@containedEdges.125">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P223" height="8.0" width="8.0" x="28.0" y="8.5" outgoingEdges="//@containedEdges.127">
+      <properties key="org.eclipse.elk.port.index" value="1"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+  </children>
+  <children identifier="N94" height="25.0" width="59.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L94" height="15.0" width="42.0" text="Const2"/>
+    <ports identifier="P224" height="8.0" width="8.0" x="59.0" y="8.5" outgoingEdges="//@containedEdges.128">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+    <ports identifier="P225" height="8.0" width="8.0" x="-8.0" y="8.5" incomingEdges="//@containedEdges.126">
+      <properties key="org.eclipse.elk.port.index" value="-1"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+  </children>
+  <children identifier="N95" height="41.0" width="41.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L95" height="15.0" width="80.0" text="AddSubtract2"/>
+    <ports identifier="P226" height="8.0" width="8.0" x="-8.0" y="8.333333015441895" incomingEdges="//@containedEdges.127 //@containedEdges.128">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P227" height="8.0" width="8.0" x="-8.0" y="24.66666603088379">
+      <properties key="org.eclipse.elk.port.index" value="-1"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P228" height="8.0" width="8.0" x="41.0" y="16.5" outgoingEdges="//@containedEdges.129">
+      <properties key="org.eclipse.elk.port.index" value="2"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+  </children>
+  <children identifier="N96" height="46.0" width="66.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L96" height="15.0" width="41.0" text="Scale4"/>
+    <ports identifier="P229" height="8.0" width="8.0" x="-8.0" y="19.0" incomingEdges="//@containedEdges.129">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P230" height="8.0" width="8.0" x="66.0" y="19.0" outgoingEdges="//@containedEdges.130">
+      <properties key="org.eclipse.elk.port.index" value="1"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+  </children>
+  <children identifier="N97" height="46.0" width="66.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L97" height="15.0" width="41.0" text="Scale5"/>
+    <ports identifier="P231" height="8.0" width="8.0" x="-8.0" y="19.0" incomingEdges="//@containedEdges.139">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P232" height="8.0" width="8.0" x="66.0" y="19.0" outgoingEdges="//@containedEdges.131">
+      <properties key="org.eclipse.elk.port.index" value="1"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+  </children>
+  <children identifier="N98" height="46.0" width="39.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L98" height="15.0" width="87.0" text="BooleanSwitch"/>
+    <ports identifier="P233" height="8.0" width="8.0" x="-8.0" y="19.0" incomingEdges="//@containedEdges.138">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P234" height="8.0" width="8.0" x="15.5" y="46.0" incomingEdges="//@containedEdges.134">
+      <properties key="org.eclipse.elk.port.index" value="-1"/>
+      <properties key="org.eclipse.elk.port.side" value="SOUTH"/>
+    </ports>
+    <ports identifier="P235" height="8.0" width="8.0" x="39.0" y="10.0" outgoingEdges="//@containedEdges.132">
+      <properties key="org.eclipse.elk.port.index" value="2"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+    <ports identifier="P236" height="8.0" width="8.0" x="39.0" y="28.0" outgoingEdges="//@containedEdges.133">
+      <properties key="org.eclipse.elk.port.index" value="3"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+  </children>
+  <children identifier="N99" height="41.0" width="21.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L99" height="15.0" width="37.0" text="Merge"/>
+    <ports identifier="P237" height="8.0" width="8.0" x="-8.0" y="16.5" incomingEdges="//@containedEdges.150">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P238" height="8.0" width="8.0" x="21.0" y="16.5" outgoingEdges="//@containedEdges.134">
+      <properties key="org.eclipse.elk.port.index" value="1"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+  </children>
+  <children identifier="N100" height="46.0" width="39.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L100" height="15.0" width="94.0" text="BooleanSwitch2"/>
+    <ports identifier="P239" height="8.0" width="8.0" x="-8.0" y="19.0" incomingEdges="//@containedEdges.116">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P240" height="8.0" width="8.0" x="15.5" y="46.0" incomingEdges="//@containedEdges.137">
+      <properties key="org.eclipse.elk.port.index" value="-1"/>
+      <properties key="org.eclipse.elk.port.side" value="SOUTH"/>
+    </ports>
+    <ports identifier="P241" height="8.0" width="8.0" x="39.0" y="10.0" outgoingEdges="//@containedEdges.135">
+      <properties key="org.eclipse.elk.port.index" value="2"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+    <ports identifier="P242" height="8.0" width="8.0" x="39.0" y="28.0" outgoingEdges="//@containedEdges.136">
+      <properties key="org.eclipse.elk.port.index" value="3"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+  </children>
+  <children identifier="N101" height="41.0" width="21.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L101" height="15.0" width="44.0" text="Merge2"/>
+    <ports identifier="P243" height="8.0" width="8.0" x="-8.0" y="16.5" incomingEdges="//@containedEdges.148">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P244" height="8.0" width="8.0" x="21.0" y="16.5" outgoingEdges="//@containedEdges.137">
+      <properties key="org.eclipse.elk.port.index" value="1"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+  </children>
+  <children identifier="N102" height="41.0" width="21.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L102" height="15.0" width="44.0" text="Merge3"/>
+    <ports identifier="P245" height="8.0" width="8.0" x="-8.0" y="16.5" incomingEdges="//@containedEdges.124 //@containedEdges.130 //@containedEdges.141">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P246" height="8.0" width="8.0" x="21.0" y="16.5">
+      <properties key="org.eclipse.elk.port.index" value="1"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+  </children>
+  <children identifier="N103" height="41.0" width="41.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L103" height="15.0" width="80.0" text="AddSubtract3"/>
+    <ports identifier="P247" height="8.0" width="8.0" x="-8.0" y="8.333333015441895" incomingEdges="//@containedEdges.117">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P248" height="8.0" width="8.0" x="-8.0" y="24.66666603088379" incomingEdges="//@containedEdges.145">
+      <properties key="org.eclipse.elk.port.index" value="-1"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P249" height="8.0" width="8.0" x="41.0" y="16.5" outgoingEdges="//@containedEdges.138">
+      <properties key="org.eclipse.elk.port.index" value="2"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+  </children>
+  <children identifier="N104" height="46.0" width="39.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L104" height="15.0" width="94.0" text="BooleanSwitch3"/>
+    <ports identifier="P250" height="8.0" width="8.0" x="-8.0" y="19.0" incomingEdges="//@containedEdges.136">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P251" height="8.0" width="8.0" x="15.5" y="46.0" incomingEdges="//@containedEdges.143">
+      <properties key="org.eclipse.elk.port.index" value="-1"/>
+      <properties key="org.eclipse.elk.port.side" value="SOUTH"/>
+    </ports>
+    <ports identifier="P252" height="8.0" width="8.0" x="39.0" y="10.0" outgoingEdges="//@containedEdges.139">
+      <properties key="org.eclipse.elk.port.index" value="2"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+    <ports identifier="P253" height="8.0" width="8.0" x="39.0" y="28.0" outgoingEdges="//@containedEdges.140">
+      <properties key="org.eclipse.elk.port.index" value="3"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+  </children>
+  <children identifier="N105" height="41.0" width="21.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L105" height="15.0" width="44.0" text="Merge4"/>
+    <ports identifier="P254" height="8.0" width="8.0" x="-8.0" y="16.5" incomingEdges="//@containedEdges.131 //@containedEdges.142">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P255" height="8.0" width="8.0" x="21.0" y="16.5" outgoingEdges="//@containedEdges.141">
+      <properties key="org.eclipse.elk.port.index" value="1"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+  </children>
+  <children identifier="N106" height="25.0" width="29.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L106" height="15.0" width="42.0" text="Const3"/>
+    <ports identifier="P256" height="8.0" width="8.0" x="29.0" y="8.5" outgoingEdges="//@containedEdges.142">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+    <ports identifier="P257" height="8.0" width="8.0" x="-8.0" y="8.5" incomingEdges="//@containedEdges.140">
+      <properties key="org.eclipse.elk.port.index" value="-1"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+  </children>
+  <children identifier="N107" height="31.0" width="31.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L107" height="15.0" width="61.0" text="LogicalNot"/>
+    <ports identifier="P258" height="8.0" width="8.0" x="-8.0" y="11.5" incomingEdges="//@containedEdges.149">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P259" height="8.0" width="8.0" x="31.0" y="11.5" outgoingEdges="//@containedEdges.143">
+      <properties key="org.eclipse.elk.port.index" value="1"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+  </children>
+  <children identifier="N108" height="41.0" width="41.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L108" height="15.0" width="78.0" text="CurrentTime2"/>
+    <ports identifier="P260" height="8.0" width="8.0" x="41.0" y="16.5" outgoingEdges="//@containedEdges.144">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+    <ports identifier="P261" height="8.0" width="8.0" x="-8.0" y="16.5">
+      <properties key="org.eclipse.elk.port.index" value="-1"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+  </children>
+  <children identifier="N109" height="41.0" width="21.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L109" height="15.0" width="49.0" text="Register"/>
+    <ports identifier="P262" height="8.0" width="8.0" x="-8.0" y="16.5" incomingEdges="//@containedEdges.144">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P263" height="8.0" width="8.0" x="21.0" y="16.5" outgoingEdges="//@containedEdges.145">
+      <properties key="org.eclipse.elk.port.index" value="1"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+    <ports identifier="P264" height="8.0" width="8.0" x="6.5" y="41.0" incomingEdges="//@containedEdges.118">
+      <properties key="org.eclipse.elk.port.index" value="-2"/>
+      <properties key="org.eclipse.elk.port.side" value="SOUTH"/>
+    </ports>
+  </children>
+  <children identifier="N110" height="46.0" width="66.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L110" height="15.0" width="61.0" text="TimeDelay"/>
+    <ports identifier="P265" height="8.0" width="8.0" x="-8.0" y="19.0">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P266" height="8.0" width="8.0" x="66.0" y="19.0" outgoingEdges="//@containedEdges.146">
+      <properties key="org.eclipse.elk.port.index" value="1"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+    <ports identifier="P267" height="8.0" width="8.0" x="29.0" y="46.0">
+      <properties key="org.eclipse.elk.port.index" value="-2"/>
+      <properties key="org.eclipse.elk.port.side" value="SOUTH"/>
+    </ports>
+  </children>
+  <children identifier="N111" height="46.0" width="66.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L111" height="15.0" width="69.0" text="TimeDelay2"/>
+    <ports identifier="P268" height="8.0" width="8.0" x="-8.0" y="19.0">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P269" height="8.0" width="8.0" x="66.0" y="19.0" outgoingEdges="//@containedEdges.147">
+      <properties key="org.eclipse.elk.port.index" value="1"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+    <ports identifier="P270" height="8.0" width="8.0" x="29.0" y="46.0">
+      <properties key="org.eclipse.elk.port.index" value="-2"/>
+      <properties key="org.eclipse.elk.port.side" value="SOUTH"/>
+    </ports>
+  </children>
+  <children identifier="N112" height="31.0" width="31.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L112" height="15.0" width="69.0" text="LogicalNot2"/>
+    <ports identifier="P271" height="8.0" width="8.0" x="-8.0" y="11.5" incomingEdges="//@containedEdges.146">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P272" height="8.0" width="8.0" x="31.0" y="11.5" outgoingEdges="//@containedEdges.148 //@containedEdges.149">
+      <properties key="org.eclipse.elk.port.index" value="1"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+  </children>
+  <children identifier="N113" height="31.0" width="31.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L113" height="15.0" width="69.0" text="LogicalNot3"/>
+    <ports identifier="P273" height="8.0" width="8.0" x="-8.0" y="11.5" incomingEdges="//@containedEdges.147">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P274" height="8.0" width="8.0" x="31.0" y="11.5" outgoingEdges="//@containedEdges.150">
+      <properties key="org.eclipse.elk.port.index" value="1"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+  </children>
+  <children identifier="N114" height="41.0" width="61.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L114" height="15.0" width="101.0" text="CompositeActor3"/>
+    <ports identifier="P275" height="8.0" width="8.0" x="-8.0" y="16.5" outgoingEdges="//@containedEdges.151" incomingEdges="//@containedEdges.115">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P276" height="8.0" width="8.0" x="61.0" y="16.5" incomingEdges="//@containedEdges.151">
+      <properties key="org.eclipse.elk.port.index" value="1"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+  </children>
+  <children identifier="N115" height="41.0" width="61.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L115" height="15.0" width="101.0" text="CompositeActor5"/>
+    <ports identifier="P277" height="8.0" width="8.0" x="-8.0" y="16.5" outgoingEdges="//@containedEdges.152" incomingEdges="//@containedEdges.70">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P278" height="8.0" width="8.0" x="61.0" y="16.5" incomingEdges="//@containedEdges.152">
+      <properties key="org.eclipse.elk.port.index" value="1"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+  </children>
+  <children identifier="N116" height="41.0" width="61.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L116" height="15.0" width="101.0" text="CompositeActor6"/>
+    <ports identifier="P279" height="8.0" width="8.0" x="-8.0" y="16.5" outgoingEdges="//@containedEdges.153">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P280" height="8.0" width="8.0" x="61.0" y="16.5" outgoingEdges="//@containedEdges.154" incomingEdges="//@containedEdges.153">
+      <properties key="org.eclipse.elk.port.index" value="1"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+  </children>
+  <children identifier="N117" height="41.0" width="61.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L117" height="15.0" width="49.0" text="Sampler"/>
+    <ports identifier="P281" height="8.0" width="8.0" x="-8.0" y="16.5" incomingEdges="//@containedEdges.24">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P282" height="8.0" width="8.0" x="61.0" y="16.5">
+      <properties key="org.eclipse.elk.port.index" value="1"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+    <ports identifier="P283" height="8.0" width="8.0" x="26.5" y="41.0" incomingEdges="//@containedEdges.155">
+      <properties key="org.eclipse.elk.port.index" value="-2"/>
+      <properties key="org.eclipse.elk.port.side" value="SOUTH"/>
+    </ports>
+  </children>
+  <children identifier="N118" height="41.0" width="41.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L118" height="15.0" width="81.0" text="DiscreteClock"/>
+    <ports identifier="P284" height="8.0" width="8.0" x="41.0" y="16.5" outgoingEdges="//@containedEdges.155">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+    <ports identifier="P285" height="8.0" width="8.0" x="-8.0" y="8.333333015441895">
+      <properties key="org.eclipse.elk.port.index" value="-1"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P286" height="8.0" width="8.0" x="-8.0" y="24.66666603088379">
+      <properties key="org.eclipse.elk.port.index" value="-2"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P287" height="8.0" width="8.0" x="8.333333015441895" y="41.0">
+      <properties key="org.eclipse.elk.port.index" value="-3"/>
+      <properties key="org.eclipse.elk.port.side" value="SOUTH"/>
+    </ports>
+    <ports identifier="P288" height="8.0" width="8.0" x="24.66666603088379" y="41.0">
+      <properties key="org.eclipse.elk.port.index" value="-4"/>
+      <properties key="org.eclipse.elk.port.side" value="SOUTH"/>
+    </ports>
+  </children>
+  <children identifier="N119" height="41.0" width="61.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L119" height="15.0" width="22.0" text="PID"/>
+    <ports identifier="P289" height="8.0" width="8.0" x="-8.0" y="8.333333015441895" incomingEdges="//@containedEdges.160">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P290" height="8.0" width="8.0" x="61.0" y="16.5" outgoingEdges="//@containedEdges.156 //@containedEdges.157">
+      <properties key="org.eclipse.elk.port.index" value="1"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+    <ports identifier="P291" height="8.0" width="8.0" x="-8.0" y="24.66666603088379">
+      <properties key="org.eclipse.elk.port.index" value="-2"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+  </children>
+  <children identifier="N120" height="46.0" width="66.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L120" height="15.0" width="68.0" text="TimedDelay"/>
+    <ports identifier="P292" height="8.0" width="8.0" x="-8.0" y="19.0" incomingEdges="//@containedEdges.163">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P293" height="8.0" width="8.0" x="66.0" y="19.0">
+      <properties key="org.eclipse.elk.port.index" value="1"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+  </children>
+  <children identifier="N121" height="41.0" width="21.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L121" height="15.0" width="49.0" text="Register"/>
+    <ports identifier="P294" height="8.0" width="8.0" x="-8.0" y="16.5">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P295" height="8.0" width="8.0" x="21.0" y="16.5" outgoingEdges="//@containedEdges.158 //@containedEdges.159">
+      <properties key="org.eclipse.elk.port.index" value="1"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+    <ports identifier="P296" height="8.0" width="8.0" x="6.5" y="41.0">
+      <properties key="org.eclipse.elk.port.index" value="-2"/>
+      <properties key="org.eclipse.elk.port.side" value="SOUTH"/>
+    </ports>
+  </children>
+  <children identifier="N122" height="41.0" width="41.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L122" height="15.0" width="72.0" text="AddSubtract"/>
+    <ports identifier="P297" height="8.0" width="8.0" x="-8.0" y="8.333333015441895">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P298" height="8.0" width="8.0" x="-8.0" y="24.66666603088379" incomingEdges="//@containedEdges.158">
+      <properties key="org.eclipse.elk.port.index" value="-1"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P299" height="8.0" width="8.0" x="41.0" y="16.5" outgoingEdges="//@containedEdges.160">
+      <properties key="org.eclipse.elk.port.index" value="2"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+  </children>
+  <children identifier="N123" height="25.0" width="18.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L123" height="15.0" width="34.0" text="Const"/>
+    <ports identifier="P300" height="8.0" width="8.0" x="18.0" y="8.5" outgoingEdges="//@containedEdges.161">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+    <ports identifier="P301" height="8.0" width="8.0" x="-8.0" y="8.5" incomingEdges="//@containedEdges.156">
+      <properties key="org.eclipse.elk.port.index" value="-1"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+  </children>
+  <children identifier="N124" height="25.0" width="70.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L124" height="15.0" width="42.0" text="Const2"/>
+    <ports identifier="P302" height="8.0" width="8.0" x="70.0" y="8.5" outgoingEdges="//@containedEdges.162">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+    <ports identifier="P303" height="8.0" width="8.0" x="-8.0" y="8.5">
+      <properties key="org.eclipse.elk.port.index" value="-1"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+  </children>
+  <children identifier="N125" height="41.0" width="41.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L125" height="15.0" width="80.0" text="AddSubtract2"/>
+    <ports identifier="P304" height="8.0" width="8.0" x="-8.0" y="8.333333015441895" incomingEdges="//@containedEdges.159">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P305" height="8.0" width="8.0" x="-8.0" y="24.66666603088379">
+      <properties key="org.eclipse.elk.port.index" value="-1"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P306" height="8.0" width="8.0" x="41.0" y="16.5">
+      <properties key="org.eclipse.elk.port.index" value="2"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+  </children>
+  <children identifier="N126" height="47.0" width="41.0">
+    <properties key="org.eclipse.elk.nodeLabels.placement" value="[H_LEFT, V_TOP, OUTSIDE]"/>
+    <properties key="org.eclipse.elk.portConstraints" value="FIXED_ORDER"/>
+    <labels identifier="L126" height="15.0" width="37.0" text="Select"/>
+    <ports identifier="P307" height="8.0" width="8.0" x="-8.0" y="19.5" incomingEdges="//@containedEdges.157 //@containedEdges.161">
+      <properties key="org.eclipse.elk.port.index" value="0"/>
+      <properties key="org.eclipse.elk.port.side" value="WEST"/>
+    </ports>
+    <ports identifier="P308" height="8.0" width="8.0" x="41.0" y="19.5" outgoingEdges="//@containedEdges.163">
+      <properties key="org.eclipse.elk.port.index" value="1"/>
+      <properties key="org.eclipse.elk.port.side" value="EAST"/>
+    </ports>
+    <ports identifier="P309" height="8.0" width="8.0" x="16.5" y="47.0" incomingEdges="//@containedEdges.162">
+      <properties key="org.eclipse.elk.port.index" value="-2"/>
+      <properties key="org.eclipse.elk.port.side" value="SOUTH"/>
+    </ports>
+  </children>
+  <containedEdges identifier="E1" sources="//@children.1/@ports.0" targets="//@children.47/@ports.0"/>
+  <containedEdges identifier="E2" sources="//@children.1/@ports.0" targets="//@children.78/@ports.0"/>
+  <containedEdges identifier="E3" sources="//@children.2/@ports.0" targets="//@children.53/@ports.0"/>
+  <containedEdges identifier="E4" sources="//@children.3/@ports.0" targets="//@children.4/@ports.0"/>
+  <containedEdges identifier="E5" sources="//@children.5/@ports.2" targets="//@children.9/@ports.0"/>
+  <containedEdges identifier="E6" sources="//@children.5/@ports.2" targets="//@children.18/@ports.0"/>
+  <containedEdges identifier="E7" sources="//@children.5/@ports.2" targets="//@children.25/@ports.1"/>
+  <containedEdges identifier="E8" sources="//@children.5/@ports.2" targets="//@children.32/@ports.0"/>
+  <containedEdges identifier="E9" sources="//@children.5/@ports.2" targets="//@children.71/@ports.0"/>
+  <containedEdges identifier="E10" sources="//@children.6/@ports.2" targets="//@children.5/@ports.1"/>
+  <containedEdges identifier="E11" sources="//@children.6/@ports.2" targets="//@children.12/@ports.0"/>
+  <containedEdges identifier="E12" sources="//@children.7/@ports.2" targets="//@children.6/@ports.1"/>
+  <containedEdges identifier="E13" sources="//@children.8/@ports.1" targets="//@children.17/@ports.0"/>
+  <containedEdges identifier="E14" sources="//@children.9/@ports.1" targets="//@children.11/@ports.0"/>
+  <containedEdges identifier="E15" sources="//@children.10/@ports.1" targets="//@children.8/@ports.0"/>
+  <containedEdges identifier="E16" sources="//@children.11/@ports.2" targets="//@children.7/@ports.1"/>
+  <containedEdges identifier="E17" sources="//@children.12/@ports.2" targets="//@children.7/@ports.1"/>
+  <containedEdges identifier="E18" sources="//@children.13/@ports.2" targets="//@children.15/@ports.1"/>
+  <containedEdges identifier="E19" sources="//@children.13/@ports.2" targets="//@children.16/@ports.0"/>
+  <containedEdges identifier="E20" sources="//@children.14/@ports.0" targets="//@children.13/@ports.0"/>
+  <containedEdges identifier="E21" sources="//@children.15/@ports.0" targets="//@children.16/@ports.0"/>
+  <containedEdges identifier="E22" sources="//@children.16/@ports.2" targets="//@children.12/@ports.0"/>
+  <containedEdges identifier="E23" sources="//@children.17/@ports.2" targets="//@children.7/@ports.0"/>
+  <containedEdges identifier="E24" sources="//@children.18/@ports.2" targets="//@children.81/@ports.0"/>
+  <containedEdges identifier="E25" sources="//@children.18/@ports.2" targets="//@children.116/@ports.0"/>
+  <containedEdges identifier="E26" sources="//@children.19/@ports.1" targets="//@children.2/@ports.1"/>
+  <containedEdges identifier="E27" sources="//@children.20/@ports.2" targets="//@children.24/@ports.0"/>
+  <containedEdges identifier="E28" sources="//@children.21/@ports.1" targets="//@children.20/@ports.1"/>
+  <containedEdges identifier="E29" sources="//@children.21/@ports.1" targets="//@children.22/@ports.1"/>
+  <containedEdges identifier="E30" sources="//@children.22/@ports.0" targets="//@children.23/@ports.0"/>
+  <containedEdges identifier="E31" sources="//@children.23/@ports.1" targets="//@children.20/@ports.0"/>
+  <containedEdges identifier="E32" sources="//@children.24/@ports.1" targets="//@children.28/@ports.1"/>
+  <containedEdges identifier="E33" sources="//@children.24/@ports.1" targets="//@children.29/@ports.0"/>
+  <containedEdges identifier="E34" sources="//@children.24/@ports.1" targets="//@children.33/@ports.0"/>
+  <containedEdges identifier="E35" sources="//@children.25/@ports.0" targets="//@children.32/@ports.0"/>
+  <containedEdges identifier="E36" sources="//@children.26/@ports.2" targets="//@children.21/@ports.0"/>
+  <containedEdges identifier="E37" sources="//@children.27/@ports.0" targets="//@children.32/@ports.2"/>
+  <containedEdges identifier="E38" sources="//@children.28/@ports.0" targets="//@children.29/@ports.1"/>
+  <containedEdges identifier="E39" sources="//@children.28/@ports.0" targets="//@children.33/@ports.0"/>
+  <containedEdges identifier="E40" sources="//@children.29/@ports.2" targets="//@children.30/@ports.0"/>
+  <containedEdges identifier="E41" sources="//@children.30/@ports.1" targets="//@children.31/@ports.0"/>
+  <containedEdges identifier="E42" sources="//@children.31/@ports.1" targets="//@children.33/@ports.2"/>
+  <containedEdges identifier="E43" sources="//@children.32/@ports.1" targets="//@children.26/@ports.1"/>
+  <containedEdges identifier="E44" sources="//@children.33/@ports.1" targets="//@children.18/@ports.0"/>
+  <containedEdges identifier="E45" sources="//@children.33/@ports.1" targets="//@children.19/@ports.0"/>
+  <containedEdges identifier="E46" sources="//@children.33/@ports.1" targets="//@children.38/@ports.1"/>
+  <containedEdges identifier="E47" sources="//@children.33/@ports.1" targets="//@children.39/@ports.1"/>
+  <containedEdges identifier="E48" sources="//@children.33/@ports.1" targets="//@children.40/@ports.0"/>
+  <containedEdges identifier="E49" sources="//@children.33/@ports.1" targets="//@children.0/@ports.0"/>
+  <containedEdges identifier="E50" sources="//@children.34/@ports.1" targets="//@children.37/@ports.0"/>
+  <containedEdges identifier="E51" sources="//@children.35/@ports.2" targets="//@children.45/@ports.0"/>
+  <containedEdges identifier="E52" sources="//@children.36/@ports.1" targets="//@children.37/@ports.1"/>
+  <containedEdges identifier="E53" sources="//@children.36/@ports.1" targets="//@children.42/@ports.0"/>
+  <containedEdges identifier="E54" sources="//@children.36/@ports.1" targets="//@children.46/@ports.0"/>
+  <containedEdges identifier="E55" sources="//@children.37/@ports.2" targets="//@children.35/@ports.1"/>
+  <containedEdges identifier="E56" sources="//@children.38/@ports.0" targets="//@children.36/@ports.0"/>
+  <containedEdges identifier="E57" sources="//@children.39/@ports.0" targets="//@children.34/@ports.0"/>
+  <containedEdges identifier="E58" sources="//@children.40/@ports.1" targets="//@children.43/@ports.0"/>
+  <containedEdges identifier="E59" sources="//@children.41/@ports.1" targets="//@children.35/@ports.0"/>
+  <containedEdges identifier="E60" sources="//@children.42/@ports.1" targets="//@children.44/@ports.1"/>
+  <containedEdges identifier="E61" sources="//@children.43/@ports.1" targets="//@children.44/@ports.0"/>
+  <containedEdges identifier="E62" sources="//@children.44/@ports.2" targets="//@children.41/@ports.0"/>
+  <containedEdges identifier="E63" sources="//@children.45/@ports.2" targets="//@children.11/@ports.1"/>
+  <containedEdges identifier="E64" sources="//@children.45/@ports.2" targets="//@children.13/@ports.1"/>
+  <containedEdges identifier="E65" sources="//@children.45/@ports.2" targets="//@children.14/@ports.1"/>
+  <containedEdges identifier="E66" sources="//@children.45/@ports.2" targets="//@children.17/@ports.1"/>
+  <containedEdges identifier="E67" sources="//@children.46/@ports.1" targets="//@children.45/@ports.0"/>
+  <containedEdges identifier="E68" sources="//@children.47/@ports.0" targets="//@children.47/@ports.1"/>
+  <containedEdges identifier="E69" sources="//@children.48/@ports.0" targets="//@children.48/@ports.1"/>
+  <containedEdges identifier="E70" sources="//@children.48/@ports.1" targets="//@children.76/@ports.0"/>
+  <containedEdges identifier="E71" sources="//@children.48/@ports.1" targets="//@children.114/@ports.0"/>
+  <containedEdges identifier="E72" sources="//@children.49/@ports.0" targets="//@children.49/@ports.1"/>
+  <containedEdges identifier="E73" sources="//@children.49/@ports.1" targets="//@children.27/@ports.1"/>
+  <containedEdges identifier="E74" sources="//@children.49/@ports.1" targets="//@children.75/@ports.0"/>
+  <containedEdges identifier="E75" sources="//@children.50/@ports.0" targets="//@children.50/@ports.1"/>
+  <containedEdges identifier="E76" sources="//@children.51/@ports.0" targets="//@children.51/@ports.1"/>
+  <containedEdges identifier="E77" sources="//@children.52/@ports.0" targets="//@children.52/@ports.1"/>
+  <containedEdges identifier="E78" sources="//@children.52/@ports.1" targets="//@children.3/@ports.2"/>
+  <containedEdges identifier="E79" sources="//@children.53/@ports.0" targets="//@children.53/@ports.1"/>
+  <containedEdges identifier="E80" sources="//@children.54/@ports.0" targets="//@children.59/@ports.0"/>
+  <containedEdges identifier="E81" sources="//@children.55/@ports.0" targets="//@children.65/@ports.0"/>
+  <containedEdges identifier="E82" sources="//@children.56/@ports.0" targets="//@children.67/@ports.0"/>
+  <containedEdges identifier="E83" sources="//@children.58/@ports.1" targets="//@children.54/@ports.1"/>
+  <containedEdges identifier="E84" sources="//@children.58/@ports.1" targets="//@children.56/@ports.1"/>
+  <containedEdges identifier="E85" sources="//@children.58/@ports.1" targets="//@children.59/@ports.1"/>
+  <containedEdges identifier="E86" sources="//@children.58/@ports.1" targets="//@children.67/@ports.0"/>
+  <containedEdges identifier="E87" sources="//@children.59/@ports.2" targets="//@children.62/@ports.0"/>
+  <containedEdges identifier="E88" sources="//@children.59/@ports.2" targets="//@children.64/@ports.2"/>
+  <containedEdges identifier="E89" sources="//@children.60/@ports.1" targets="//@children.61/@ports.0"/>
+  <containedEdges identifier="E90" sources="//@children.61/@ports.1" targets="//@children.66/@ports.0"/>
+  <containedEdges identifier="E91" sources="//@children.62/@ports.2" targets="//@children.63/@ports.0"/>
+  <containedEdges identifier="E92" sources="//@children.64/@ports.1" targets="//@children.62/@ports.0"/>
+  <containedEdges identifier="E93" sources="//@children.65/@ports.1" targets="//@children.60/@ports.0"/>
+  <containedEdges identifier="E94" sources="//@children.66/@ports.1" targets="//@children.55/@ports.1"/>
+  <containedEdges identifier="E95" sources="//@children.66/@ports.1" targets="//@children.57/@ports.0"/>
+  <containedEdges identifier="E96" sources="//@children.66/@ports.1" targets="//@children.68/@ports.0"/>
+  <containedEdges identifier="E97" sources="//@children.67/@ports.2" targets="//@children.68/@ports.2"/>
+  <containedEdges identifier="E98" sources="//@children.69/@ports.0" targets="//@children.70/@ports.0"/>
+  <containedEdges identifier="E99" sources="//@children.70/@ports.2" targets="//@children.72/@ports.1"/>
+  <containedEdges identifier="E100" sources="//@children.70/@ports.2" targets="//@children.74/@ports.1"/>
+  <containedEdges identifier="E101" sources="//@children.71/@ports.1" targets="//@children.70/@ports.1"/>
+  <containedEdges identifier="E102" sources="//@children.72/@ports.0" targets="//@children.73/@ports.0"/>
+  <containedEdges identifier="E103" sources="//@children.72/@ports.0" targets="//@children.3/@ports.1"/>
+  <containedEdges identifier="E104" sources="//@children.72/@ports.0" targets="//@children.50/@ports.0"/>
+  <containedEdges identifier="E105" sources="//@children.72/@ports.0" targets="//@children.77/@ports.0"/>
+  <containedEdges identifier="E106" sources="//@children.73/@ports.1" targets="//@children.69/@ports.1"/>
+  <containedEdges identifier="E107" sources="//@children.74/@ports.0" targets="//@children.51/@ports.0"/>
+  <containedEdges identifier="E108" sources="//@children.75/@ports.1" targets="//@children.79/@ports.0"/>
+  <containedEdges identifier="E109" sources="//@children.76/@ports.1" targets="//@children.79/@ports.0"/>
+  <containedEdges identifier="E110" sources="//@children.77/@ports.1" targets="//@children.79/@ports.0"/>
+  <containedEdges identifier="E111" sources="//@children.78/@ports.1" targets="//@children.79/@ports.0"/>
+  <containedEdges identifier="E112" sources="//@children.80/@ports.0" targets="//@children.80/@ports.1"/>
+  <containedEdges identifier="E113" sources="//@children.82/@ports.0" targets="//@children.81/@ports.2"/>
+  <containedEdges identifier="E114" sources="//@children.83/@ports.0" targets="//@children.83/@ports.1"/>
+  <containedEdges identifier="E115" sources="//@children.83/@ports.1" targets="//@children.80/@ports.0"/>
+  <containedEdges identifier="E116" sources="//@children.83/@ports.1" targets="//@children.113/@ports.0"/>
+  <containedEdges identifier="E117" sources="//@children.84/@ports.0" targets="//@children.99/@ports.0"/>
+  <containedEdges identifier="E118" sources="//@children.85/@ports.0" targets="//@children.102/@ports.0"/>
+  <containedEdges identifier="E119" sources="//@children.85/@ports.0" targets="//@children.108/@ports.2"/>
+  <containedEdges identifier="E120" sources="//@children.86/@ports.1" targets="//@children.87/@ports.0"/>
+  <containedEdges identifier="E121" sources="//@children.86/@ports.1" targets="//@children.88/@ports.1"/>
+  <containedEdges identifier="E122" sources="//@children.87/@ports.1" targets="//@children.89/@ports.1"/>
+  <containedEdges identifier="E123" sources="//@children.88/@ports.0" targets="//@children.89/@ports.0"/>
+  <containedEdges identifier="E124" sources="//@children.89/@ports.2" targets="//@children.90/@ports.0"/>
+  <containedEdges identifier="E125" sources="//@children.90/@ports.1" targets="//@children.101/@ports.0"/>
+  <containedEdges identifier="E126" sources="//@children.91/@ports.1" targets="//@children.92/@ports.0"/>
+  <containedEdges identifier="E127" sources="//@children.91/@ports.1" targets="//@children.93/@ports.1"/>
+  <containedEdges identifier="E128" sources="//@children.92/@ports.1" targets="//@children.94/@ports.0"/>
+  <containedEdges identifier="E129" sources="//@children.93/@ports.0" targets="//@children.94/@ports.0"/>
+  <containedEdges identifier="E130" sources="//@children.94/@ports.2" targets="//@children.95/@ports.0"/>
+  <containedEdges identifier="E131" sources="//@children.95/@ports.1" targets="//@children.101/@ports.0"/>
+  <containedEdges identifier="E132" sources="//@children.96/@ports.1" targets="//@children.104/@ports.0"/>
+  <containedEdges identifier="E133" sources="//@children.97/@ports.2" targets="//@children.86/@ports.0"/>
+  <containedEdges identifier="E134" sources="//@children.97/@ports.3" targets="//@children.91/@ports.0"/>
+  <containedEdges identifier="E135" sources="//@children.98/@ports.1" targets="//@children.97/@ports.1"/>
+  <containedEdges identifier="E136" sources="//@children.99/@ports.2" targets="//@children.85/@ports.1"/>
+  <containedEdges identifier="E137" sources="//@children.99/@ports.3" targets="//@children.103/@ports.0"/>
+  <containedEdges identifier="E138" sources="//@children.100/@ports.1" targets="//@children.99/@ports.1"/>
+  <containedEdges identifier="E139" sources="//@children.102/@ports.2" targets="//@children.97/@ports.0"/>
+  <containedEdges identifier="E140" sources="//@children.103/@ports.2" targets="//@children.96/@ports.0"/>
+  <containedEdges identifier="E141" sources="//@children.103/@ports.3" targets="//@children.105/@ports.1"/>
+  <containedEdges identifier="E142" sources="//@children.104/@ports.1" targets="//@children.101/@ports.0"/>
+  <containedEdges identifier="E143" sources="//@children.105/@ports.0" targets="//@children.104/@ports.0"/>
+  <containedEdges identifier="E144" sources="//@children.106/@ports.1" targets="//@children.103/@ports.1"/>
+  <containedEdges identifier="E145" sources="//@children.107/@ports.0" targets="//@children.108/@ports.0"/>
+  <containedEdges identifier="E146" sources="//@children.108/@ports.1" targets="//@children.102/@ports.1"/>
+  <containedEdges identifier="E147" sources="//@children.109/@ports.1" targets="//@children.111/@ports.0"/>
+  <containedEdges identifier="E148" sources="//@children.110/@ports.1" targets="//@children.112/@ports.0"/>
+  <containedEdges identifier="E149" sources="//@children.111/@ports.1" targets="//@children.100/@ports.0"/>
+  <containedEdges identifier="E150" sources="//@children.111/@ports.1" targets="//@children.106/@ports.0"/>
+  <containedEdges identifier="E151" sources="//@children.112/@ports.1" targets="//@children.98/@ports.0"/>
+  <containedEdges identifier="E152" sources="//@children.113/@ports.0" targets="//@children.113/@ports.1"/>
+  <containedEdges identifier="E153" sources="//@children.114/@ports.0" targets="//@children.114/@ports.1"/>
+  <containedEdges identifier="E154" sources="//@children.115/@ports.0" targets="//@children.115/@ports.1"/>
+  <containedEdges identifier="E155" sources="//@children.115/@ports.1" targets="//@children.10/@ports.0"/>
+  <containedEdges identifier="E156" sources="//@children.117/@ports.0" targets="//@children.116/@ports.2"/>
+  <containedEdges identifier="E157" sources="//@children.118/@ports.1" targets="//@children.122/@ports.1"/>
+  <containedEdges identifier="E158" sources="//@children.118/@ports.1" targets="//@children.125/@ports.0"/>
+  <containedEdges identifier="E159" sources="//@children.120/@ports.1" targets="//@children.121/@ports.1"/>
+  <containedEdges identifier="E160" sources="//@children.120/@ports.1" targets="//@children.124/@ports.0"/>
+  <containedEdges identifier="E161" sources="//@children.121/@ports.2" targets="//@children.118/@ports.0"/>
+  <containedEdges identifier="E162" sources="//@children.122/@ports.0" targets="//@children.125/@ports.0"/>
+  <containedEdges identifier="E163" sources="//@children.123/@ports.0" targets="//@children.125/@ports.2"/>
+  <containedEdges identifier="E164" sources="//@children.125/@ports.1" targets="//@children.119/@ports.0"/>
+</graph:ElkNode>
