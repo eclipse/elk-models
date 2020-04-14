@@ -1,0 +1,74 @@
+/*******************************************************************************
+ * Copyright (c) 2020 Kiel University and others.
+ * 
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ *******************************************************************************/
+
+// For the two nodes below, N1, N2, the positions of the ports 
+// P1 and P2 should be the same irrespective of the layout direction
+// (only that the vertical order of P1 and P2 is swapped).
+// The same should hold for corresponding labels attached to the two ports.
+
+node Down {
+	elk.direction: DOWN
+	nodeLabels.placement: "H_CENTER V_TOP INSIDE"
+	node N1 {
+		nodeLabels.placement: "H_CENTER V_CENTER INSIDE"
+		portConstraints: FIXED_SIDE
+		port P1 {
+			^port.side: WEST
+		}
+		port P2 {
+			^port.side: WEST
+		}
+	}
+}
+ 
+node Up {
+	elk.direction: UP
+	nodeLabels.placement: "H_CENTER V_TOP INSIDE"
+	node N2 {
+		nodeLabels.placement: "H_CENTER V_CENTER INSIDE"
+		portConstraints: FIXED_SIDE
+		port P1 {
+			^port.side: WEST 
+		}   
+		port P2 { 
+			^port.side: WEST
+		} 
+	}
+}
+
+node Left {
+	elk.direction: LEFT
+	nodeLabels.placement: "H_CENTER V_TOP INSIDE"
+	node N2 {
+		nodeLabels.placement: "H_CENTER V_CENTER INSIDE"
+		portConstraints: FIXED_SIDE
+		port P1 {
+			^port.side: WEST 
+		}   
+		port P2 { 
+			^port.side: WEST
+		} 
+	}
+}
+
+node Right {
+	elk.direction: RIGHT
+	nodeLabels.placement: "H_CENTER V_TOP INSIDE"
+	node N2 {
+		nodeLabels.placement: "H_CENTER V_CENTER INSIDE"
+		portConstraints: FIXED_SIDE
+		port P1 {
+			^port.side: WEST 
+		}   
+		port P2 { 
+			^port.side: WEST
+		} 
+	}
+}

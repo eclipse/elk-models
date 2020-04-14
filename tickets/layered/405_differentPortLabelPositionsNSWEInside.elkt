@@ -1,0 +1,108 @@
+/*******************************************************************************
+ * Copyright (c) 2020 Kiel University and others.
+ * 
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ *******************************************************************************/
+
+node Right {
+	elk.direction: RIGHT
+	nodeLabels.placement: "H_CENTER V_TOP INSIDE"
+	spacing.labelPort: 11
+	node N1 {
+		layout [ size: 70, 70 ]
+		nodeLabels.placement: "H_CENTER V_CENTER INSIDE"
+		portConstraints: FIXED_SIDE
+		portLabels.placement: INSIDE
+		port W {
+			^port.side: WEST
+		}
+		port N {
+			^port.side: NORTH
+		}
+		port E {
+			^port.side: EAST
+		}
+		port S {
+			^port.side: SOUTH
+		}
+	}
+}
+
+node Down {
+	elk.direction: DOWN
+	nodeLabels.placement: "H_CENTER V_TOP INSIDE"
+	spacing.labelPort: 11
+	node N1 {
+		layout [ size: 70, 70 ]
+		nodeLabels.placement: "H_CENTER V_CENTER INSIDE"
+		portConstraints: FIXED_SIDE
+		portLabels.placement: INSIDE
+		port W {
+			^port.side: WEST
+		}
+		port N {
+			^port.side: NORTH
+		}
+		port E {
+			^port.side: EAST
+		}
+		port S {
+			^port.side: SOUTH
+		}
+	}
+}
+
+
+node Left {
+	elk.direction: LEFT
+	nodeLabels.placement: "H_CENTER V_TOP INSIDE"
+	spacing.labelPort: 11
+	node N1 {
+		layout [ size: 70, 70 ]
+		nodeLabels.placement: "H_CENTER V_CENTER INSIDE"
+		portConstraints: FIXED_SIDE
+		portLabels.placement: INSIDE
+		port W {
+			^port.side: WEST
+		}
+		port N {
+			^port.side: NORTH
+		}
+		port E {
+			^port.side: EAST
+		}
+		port S {
+			^port.side: SOUTH
+		}
+	}
+}
+
+
+node Up {
+	elk.direction: UP   
+	nodeLabels.placement: "H_CENTER V_TOP INSIDE"
+	spacing.labelPort: 11
+	node N1 {
+		layout [ size: 70, 70 ]
+		nodeLabels.placement: "H_CENTER V_CENTER INSIDE"
+		portConstraints: FIXED_SIDE
+		portLabels.placement: INSIDE
+		port W {
+			^port.side: WEST
+		} 
+		port N {
+			^port.side: NORTH
+		}
+		port E {
+			^port.side: EAST
+		}
+		port S {
+			^port.side: SOUTH
+		}
+	}
+}
+
