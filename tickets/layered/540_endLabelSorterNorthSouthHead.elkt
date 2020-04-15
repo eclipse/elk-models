@@ -1,0 +1,44 @@
+/*******************************************************************************
+ * Copyright (c) 2020 Kiel University and others.
+ * 
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ *******************************************************************************/
+
+// Reproduces a nasty NPE in EndLabelSorter.
+
+node n1 {
+	portConstraints: FIXED_SIDE
+	
+	port north { ^port.side: NORTH }
+	port south { ^port.side: SOUTH }
+}
+
+node n2
+node n3
+node n4
+node n5
+
+edge n2 -> n1.north {
+	label "Edge n1.north -> n2" {
+		edgeLabels.placement: HEAD
+	}
+}
+edge n3 -> n1.north {
+	label "Edge n1.north -> n3" {
+		edgeLabels.placement: HEAD
+	}
+}
+edge n4 -> n1.south {
+	label "Edge n1.south -> n4" {
+		edgeLabels.placement: HEAD
+	}
+}
+edge n5 -> n1.south {
+	label "Edge n1.south -> n5" {
+		edgeLabels.placement: HEAD
+	}
+}
