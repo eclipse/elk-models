@@ -8,37 +8,29 @@
  * SPDX-License-Identifier: EPL-2.0
  *******************************************************************************/
 
-// Reproduces a nasty NPE in EndLabelSorter.
+// Reproduces a nasty NPE in EndLabelSorter. #541
+
+cycleBreaking.strategy: INTERACTIVE
+layering.strategy: INTERACTIVE
 
 node n1 {
+	layout [ position: 0, 0 ]
+	
 	portConstraints: FIXED_SIDE
 	
-	port north { ^port.side: NORTH }
-	port south { ^port.side: SOUTH }
+	port p1 { ^port.side: WEST }
 }
 
-node n2
-node n3
-node n4
-node n5
+node n2 {
+	layout [ position: 100, 0 ]
+	
+	portConstraints: FIXED_SIDE
+	
+	port east { ^port.side: EAST }
+}
 
-edge n2 -> n1.north {
-	label "Edge n1.north -> n2" {
-		edgeLabels.placement: HEAD
-	}
-}
-edge n3 -> n1.north {
-	label "Edge n1.north -> n3" {
-		edgeLabels.placement: HEAD
-	}
-}
-edge n4 -> n1.south {
-	label "Edge n1.south -> n4" {
-		edgeLabels.placement: HEAD
-	}
-}
-edge n5 -> n1.south {
-	label "Edge n1.south -> n5" {
+edge n1.p1 -> n2.east {
+	label "Edge n1.p1 -> n2.east" {
 		edgeLabels.placement: HEAD
 	}
 }
