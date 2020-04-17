@@ -1,0 +1,20 @@
+node N1 {
+	node N2 {
+		insideSelfLoops.activate: true
+		portConstraints: FIXED_POS
+		
+		port P1 {
+			layout [ position: 0, 41 ]
+			org.eclipse.elk.^port.side: WEST
+		}
+		
+		port P2 {
+			layout [ position: 0, 12 ]
+			org.eclipse.elk.^port.side: EAST
+		}
+	}
+	
+	edge N2.P1 -> N2.P2 {
+		insideSelfLoops.yo: true
+	}
+}
