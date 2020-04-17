@@ -1,15 +1,35 @@
+/*******************************************************************************
+ * Copyright (c) 2020 Kiel University and others.
+ * 
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ *******************************************************************************/
+
+// Reproduces an NPE with inside self loops.
+
 node N1 {
 	node N2 {
+		layout [ size: 100, 100 ]
+		
 		insideSelfLoops.activate: true
 		portConstraints: FIXED_POS
 		
 		port P1 {
-			layout [ position: 0, 41 ]
+			layout [
+				position: -10, 41
+				size: 10, 10
+			]
 			org.eclipse.elk.^port.side: WEST
 		}
 		
 		port P2 {
-			layout [ position: 0, 12 ]
+			layout [
+				position: 100, 61
+				size: 10, 10
+			]
 			org.eclipse.elk.^port.side: EAST
 		}
 	}
