@@ -1,0 +1,38 @@
+/*******************************************************************************
+ * Copyright (c) 2020 Kiel University and others.
+ * 
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ *******************************************************************************/
+
+// Reproduces a bug where edge 'e2' used to overlap node n4 with polyline edge routes
+
+algorithm: layered
+edgeRouting: POLYLINE
+nodePlacement.strategy: SIMPLE
+crossingMinimization.strategy: INTERACTIVE // make sure n4 is above n3
+
+node n1 {
+    layout [ size: 20, 50 ]
+}
+node n3 {
+	layout [ 
+		position: 0, 100  
+		size: 50, 20
+	]
+    portConstraints: FIXED_SIDE
+    port p1 {
+        ^port.side: NORTH
+    }
+}
+node n4 {  
+    layout [
+    	position: 0, 0
+    	size: 50, 100
+    ]
+} 
+edge e1: n1 -> n3.p1
+edge e2: n1 -> n4
