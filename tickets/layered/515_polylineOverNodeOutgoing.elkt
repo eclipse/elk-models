@@ -24,15 +24,15 @@ node n3 {
 		size: 50, 20
 	]
     portConstraints: FIXED_SIDE
-    port p1 {
+    port p1 { 
         ^port.side: NORTH
     }
 }
-node n4 {  
+node n4 {   
     layout [
     	position: 0, 0
-    	size: 50, 100
+    	size: 50, 100   
     ]
 } 
-edge e1: n1 -> n3.p1
-edge e2: n1 -> n4
+edge e1: n3.p1 -> n1
+edge e2: n4 -> n1
