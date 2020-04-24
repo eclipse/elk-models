@@ -8,10 +8,10 @@
  * SPDX-License-Identifier: EPL-2.0
  *******************************************************************************/
 
-// For the two nodes below, N1, N2, the positions of the ports 
-// P1 and P2 should be the same irrespective of the layout direction
-// (only that the vertical order of P1 and P2 is swapped).
-// The same should hold for corresponding labels attached to the two ports.
+// Note that for the corresponding unit test to work, it is important that 
+//  a) the two ports of each node have a different width
+//  b) the relative position of the port labels to their ports is different 
+//    (hence the underscore behind P2 to make the label longer)
 
 node Down {
     elk.direction: DOWN
@@ -19,12 +19,13 @@ node Down {
     node N1 {
         nodeLabels.placement: "H_CENTER V_CENTER INSIDE"
         portConstraints: FIXED_SIDE
+        portLabels.nextToPortIfPossible: true
         port P1 {
             layout [ size: 31, 7 ]
             ^port.side: WEST
         }
-        port P2 {
-            layout [ size: 31, 7 ]
+        port P2_ {
+            layout [ size: 27, 7 ]
             ^port.side: WEST
         }
     }
@@ -36,12 +37,13 @@ node Up {
     node N1 {
         nodeLabels.placement: "H_CENTER V_CENTER INSIDE"
         portConstraints: FIXED_SIDE
+        portLabels.nextToPortIfPossible: true
         port P1 {
             layout [ size: 31, 7 ]
             ^port.side: WEST
         }
-        port P2 {
-            layout [ size: 31, 7 ]
+        port P2_ {
+            layout [ size: 27, 7 ]
             ^port.side: WEST
         }
     }
@@ -53,12 +55,13 @@ node Left {
     node N1 {
         nodeLabels.placement: "H_CENTER V_CENTER INSIDE"
         portConstraints: FIXED_SIDE
+        portLabels.nextToPortIfPossible: true
         port P1 {
             layout [ size: 31, 7 ]
             ^port.side: WEST
         }
-        port P2 {
-            layout [ size: 31, 7 ]
+        port P2_ {
+            layout [ size: 27, 7 ]
             ^port.side: WEST
         }
     }
@@ -70,12 +73,13 @@ node Right {
     node N1 {
         nodeLabels.placement: "H_CENTER V_CENTER INSIDE"
         portConstraints: FIXED_SIDE
+        portLabels.nextToPortIfPossible: true
         port P1 {
             layout [ size: 31, 7 ]
             ^port.side: WEST
         }
-        port P2 {
-            layout [ size: 31, 7 ]
+        port P2_ {
+            layout [ size: 27, 7 ]
             ^port.side: WEST
         }
     }

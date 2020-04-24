@@ -9,88 +9,103 @@
  *******************************************************************************/
 
 node Right {
-	elk.direction: RIGHT
-	nodeLabels.placement: "H_CENTER V_TOP INSIDE"
-	node N1 {
-		nodeLabels.placement: "H_CENTER V_CENTER INSIDE"
-		portConstraints: FIXED_SIDE
-		port P1 {
-			^port.side: WEST
-		}
-		port P2 {
-			^port.side: NORTH
-		}
-		port P3 {
-			^port.side: EAST
-		}
-		port P4 {
-			^port.side: SOUTH
-		}
-	}
+    elk.direction: RIGHT
+    nodeLabels.placement: "H_CENTER V_TOP INSIDE"
+    node N1 {
+        nodeLabels.placement: "H_CENTER V_CENTER INSIDE"
+        portConstraints: FIXED_SIDE
+        port P1 {
+            layout [ size: 42, 21 ]
+            ^port.side: WEST
+        }
+        port P2 {
+            layout [ size: 21, 42 ] 
+            ^port.side: NORTH
+        }
+        port P3 {
+            layout [ size: 43, 23 ]
+            ^port.side: EAST
+        }
+        port P4 {
+            layout [ size: 23, 43 ] 
+            ^port.side: SOUTH
+        }
+    }
 }
 
 node Down {
-	elk.direction: DOWN
-	nodeLabels.placement: "H_CENTER V_TOP INSIDE"
-	node N1 {
-		nodeLabels.placement: "H_CENTER V_CENTER INSIDE"
-		portConstraints: FIXED_SIDE
-		port P1 {
-			^port.side: WEST
-		}
-		port P2 {
-			^port.side: NORTH
-		}
-		port P3 {
-			^port.side: EAST
-		}
-		port P4 {
-			^port.side: SOUTH
-		}
-	}
+    elk.direction: DOWN
+    nodeLabels.placement: "H_CENTER V_TOP INSIDE"
+    node N1 {
+        nodeLabels.placement: "H_CENTER V_CENTER INSIDE"
+        portConstraints: FIXED_SIDE
+        port P1 {
+            layout [ size: 42, 21 ]
+            ^port.side: WEST
+        }
+        port P2 {
+            layout [ size: 21, 42 ] 
+            ^port.side: NORTH
+        }
+        port P3 {
+            layout [ size: 43, 23 ]
+            ^port.side: EAST
+        }
+        port P4 {
+            layout [ size: 23, 43 ] 
+            ^port.side: SOUTH
+        }
+    }
 }
 
 
 node Left {
-	elk.direction: LEFT
-	nodeLabels.placement: "H_CENTER V_TOP INSIDE"
-	node N1 {
-		nodeLabels.placement: "H_CENTER V_CENTER INSIDE"
-		portConstraints: FIXED_SIDE
-		port P1 {
-			^port.side: WEST
-		}
-		port P2 {
-			^port.side: NORTH
-		}
-		port P3 {
-			^port.side: EAST
-		}
-		port P4 {
-			^port.side: SOUTH
-		}
-	}
+    elk.direction: LEFT
+    nodeLabels.placement: "H_CENTER V_TOP INSIDE"
+    node N1 {
+        nodeLabels.placement: "H_CENTER V_CENTER INSIDE"
+        portConstraints: FIXED_SIDE
+        port P1 {
+            layout [ size: 42, 21 ]
+            ^port.side: WEST
+        }
+        port P2 {
+            layout [ size: 21, 42 ] 
+            ^port.side: NORTH
+        }
+        port P3 {
+            layout [ size: 43, 23 ]
+            ^port.side: EAST
+        }
+        port P4 {
+            layout [ size: 23, 43 ] 
+            ^port.side: SOUTH
+        }
+    }
 }
 
-
+ 
 node Up {
-	elk.direction: UP   
-	nodeLabels.placement: "H_CENTER V_TOP INSIDE"
-	node N1 {
-		nodeLabels.placement: "H_CENTER V_CENTER INSIDE"
-		portConstraints: FIXED_SIDE
-		port P1 {
-			^port.side: WEST
-		}
-		port P2 {
-			^port.side: NORTH
-		}
-		port P3 {
-			^port.side: EAST
-		}
-		port P4 {
-			^port.side: SOUTH
-		}
-	}
+    elk.direction: UP   
+    nodeLabels.placement: "H_CENTER V_TOP INSIDE"
+    node N1 {
+        nodeLabels.placement: "H_CENTER V_CENTER INSIDE"      
+        portConstraints: FIXED_SIDE
+        port P1 {
+            layout [ size: 42, 21 ]
+            ^port.side: WEST
+        }
+        port P2 {
+            layout [ size: 21, 42 ] 
+            ^port.side: NORTH
+        }
+        port P3 {
+            layout [ size: 43, 23 ]
+            ^port.side: EAST
+        }
+        port P4 {
+            layout [ size: 23, 43 ] 
+            ^port.side: SOUTH
+        }
+    }   
 }
-
