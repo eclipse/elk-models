@@ -17,7 +17,7 @@ Horizontal Order
 
 // elkex:doc
 The example illustrates how the user can influence the 
-_horizontal order_ of the nodes in a _left-to-right_ layout 
+_horizontal order_ of the nodes in a _left-to-right_ layout using `elk.layered`
 (or the vertical order in a top-down layout). 
 
 The `Default` node shows the result without any user-hints: 
