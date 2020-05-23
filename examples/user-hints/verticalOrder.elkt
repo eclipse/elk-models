@@ -1,0 +1,106 @@
+/*******************************************************************************
+ * Copyright (c) 2020 Kiel University and others.
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ *******************************************************************************/
+
+/*
+// elkex:category
+User-Hints > Topology
+
+// elkex:label
+Vertical Order
+
+// elkex:doc
+The example illustrates how the user can influence the 
+_vertical order_ of the nodes in a _left-to-right_ layout
+(or the vertical order in a top-down layout),
+i.e. the order of the nodes _within_ their layers.
+
+The `Default` node shows the result without any user-hints: 
+the vertical order of the nodes `2` and `3` is computed in a way 
+such that no edge crossings exist.
+Since the order of `1`'s ports is fixed
+this means `2` must be placed above `3`. 
+
+The `Semi-Interactive` node and the `Interactive` node show two independent 
+possibilities to influence the node order. 
+
+Setting `crossingMinimization.semiInteractive: true` allows to 
+use the y-coordinates of the nodes' `position` layout option
+to enforce a certain vertical order
+(use the x-coordinates in a top-down layout). 
+Note that not a node's position itself is used but the 
+_position layout option_.
+This allows to specify the relative order of certain pairs of nodes
+only by simply omitting the layout option for all other nodes. 
+
+The same drawing can be achieved using `crossingMinimization.strategy: INTERACTIVE`.
+This time assigning y-coordinates to the nodes 
+enforces the corresponding vertical order (x-coordinates for top-down layout). 
+Most of the time this mechanism is inferior to semi-interactive crossing minimization:
+no crossing minimization is performed at all, 
+the vertical node order is solely determined based on the specified positions.
+This particularly becomes a problem if longer edges exist that span across layers. 
+*/
+
+// elkex:graph
+aspectRatio: 0.1 // for presentation only
+
+node default {
+    algorithm: layered
+    nodeLabels.placement: "INSIDE V_TOP H_CENTER"
+    label "Default" { layout [ size: 43, 15 ] }
+    node n1 {
+        portConstraints: FIXED_ORDER
+        port p1 { side: EAST index: 0 }
+        port p2 { side: EAST index: 1 }
+        label "1" 
+    }
+    node n2 { label "2" }
+    node n3 { label "3" }
+    edge n1.p1 -> n2
+    edge n1.p2 -> n3
+}
+
+node semiInteractive {
+    algorithm: layered
+    crossingMinimization.semiInteractive: true
+    
+    nodeLabels.placement: "INSIDE V_TOP H_CENTER"
+    label "Semi-Interactive" { layout [ size: 97, 15 ] }
+
+    node n1 {
+        portConstraints: FIXED_ORDER
+        port p1 { side: EAST index: 0 }
+        port p2 { side: EAST index: 1 }
+        label "1" 
+    }
+    node n2 { ^position: "(0.0, 100.0)" label "2" }
+    node n3 { ^position: "(0.0, 0.0)" label "3" }
+    edge n1.p1 -> n2
+    edge n1.p2 -> n3
+}
+
+node interactive {
+    algorithm: layered
+    crossingMinimization.strategy: INTERACTIVE
+
+    nodeLabels.placement: "INSIDE V_TOP H_CENTER"
+    nodeSize.constraints: NODE_LABELS
+    label "Interactive" { layout [ size: 58, 15 ] }
+    node n1 {
+        portConstraints: FIXED_ORDER
+        port p1 { side: EAST index: 0 }
+        port p2 { side: EAST index: 1 }
+        label "1" 
+    }
+    node n2 { layout [ position: 0, 100 ] label "2" }
+    node n3 { layout [ position: 0, 0 ] label "3" }
+    edge n1.p1 -> n2
+    edge n1.p2 -> n3
+}

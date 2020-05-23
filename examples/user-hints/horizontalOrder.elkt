@@ -1,0 +1,92 @@
+/*******************************************************************************
+ * Copyright (c) 2020 Kiel University and others.
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ *******************************************************************************/
+
+/*
+// elkex:category
+User-Hints > Topology
+
+// elkex:label
+Horizontal Order
+
+// elkex:doc
+The example illustrates how the user can influence the 
+_horizontal order_ of the nodes in a _left-to-right_ layout 
+(or the vertical order in a top-down layout). 
+
+The `Default` node shows the result without any user-hints: 
+the horizontal order of the nodes is computed in a way 
+such that all edges point rightwards (which is one of the underlying goals of the layer-based approach).
+
+The `Interactive` node and the `Partitions` node show two independent 
+possibilities to influence the node order. 
+
+Partitions are activated by setting `partitioning.activate: true`
+and by specifying `partition` indices for those nodes that shall end up
+in different layers. In the example all nodes must thus be placed in different
+with the node `3` on the very left resulting in an edge pointing backwards
+and being longer than usually necessary. 
+
+The same drawing can be achieved using a different mechanism:
+setting `cycleBreaking.strategy: INTERACTIVE` and `layering.strategy: INTERACTIVE`.
+And assigning x-coordinates to the nodes that reflect the desired order.
+The concrete values are irrelevant as long as they clearly specify 
+the node order; under consideration of the nodes' dimensions.
+Note that for a top-down layout the y-coordinates have to be used. 
+
+Interactive cycle breaking only influences the horizontal order, 
+not the arrangement of nodes into layers. 
+In other words, placing `3` left of `1` is only possible when using 
+interactive layering. 
+Further note, that contrary to partitions, likely all nodes require
+sensible positions to achieve a reasonable result.
+*/
+
+// elkex:graph
+aspectRatio: 0.1 // for presentation only
+
+node default {
+    algorithm: layered
+    nodeLabels.placement: "INSIDE V_TOP H_CENTER"
+    label "Default" { layout [ size: 43, 15 ] }
+    node n1 { label "1" }
+    node n2 { label "2" }
+    node n3 { label "3" }
+    edge n1 -> n2
+    edge n2 -> n3
+}
+
+node partitions {
+    algorithm: layered
+    partitioning.activate: true
+    
+    nodeLabels.placement: "INSIDE V_TOP H_CENTER"
+    label "Partitions" { layout [ size: 56, 15 ] }
+
+    node n1 { partition: 1 label "1" }
+    node n2 { partition: 2 label "2" }
+    node n3 { partition: 0 label "3" }
+    edge n1 -> n2
+    edge n2 -> n3
+}
+
+node interactive {
+    algorithm: layered
+    cycleBreaking.strategy: INTERACTIVE
+    layering.strategy: INTERACTIVE
+    
+    nodeLabels.placement: "INSIDE V_TOP H_CENTER"
+    label "Interactive" { layout [ size: 58, 15 ] }
+
+    node n1 { layout [ position: 200, 0 ] label "1" }
+    node n2 { layout [ position: 300, 0 ] label "2" }
+    node n3 { layout [ position: 100, 0 ] label "3" }
+    edge n1 -> n2
+    edge n2 -> n3
+}
