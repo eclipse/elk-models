@@ -1,0 +1,81 @@
+/*******************************************************************************
+ * Copyright (c) 2020 Kiel University and others.
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ *******************************************************************************/
+/*
+// elkex:category
+General > Spacing
+
+// elkex:label
+Nodes and Edges
+
+// elkex:doc
+The example illustrates how the space to be left free between
+nodes and edges can be configured.
+Check with the individual algorithms which spacings are supported.
+Also, it can happen that certain configurations do not behave as one would expect.
+This could be due to methodological restrictions of a certain algorithm
+or due to certain parts of the implementation not properly considering
+the configuration (yet). Feel free to create an issue if something feels odd.
+
+For a left-to-right layout direction the `layered` algorithm creates
+_layers_ that extend vertically.
+Hence, the spacing values ending in `*BetweenLayers` influence the _horizontal spacing_
+while the others influence the _vertical_ spacing between elements.
+
+As shown in this example,
+the spacing values are configured for hierarchical nodes (possibly the root node)
+and apply to all their children (nodes, edges, ports, and labels).
+If one desires a different configuration for a single child node only,
+the `elk.spacing.individualOverride` layout option can be used.
+Unfortunately, it is not possible to show this here as the
+`elkt` format does not support it at this point.
+*/
+
+// elkex:graph
+algorithm: layered
+// For presentation purposes,
+// enforce node 4 to be above 5
+crossingMinimization.semiInteractive: true
+nodePlacement.strategy: NETWORK_SIMPLEX
+
+spacing.nodeNode: 70
+spacing.nodeNodeBetweenLayers: 25
+spacing.edgeNode: 25
+spacing.edgeNodeBetweenLayers: 20
+spacing.edgeEdge: 20
+spacing.edgeEdgeBetweenLayers: 15
+
+node n1 {
+	label "1"
+}
+node n3 {
+	elk.^position: "0, 100"
+	label "3"
+}
+node n5 {
+	label "5"
+}
+node n4 {
+	label "4"
+}
+node n2 {
+	elk.^position: "0, 0"
+	label "2"
+}
+node n6 {
+	label "6"
+}
+
+edge n1 -> n2
+edge n2 -> n4
+edge n2 -> n5
+edge n2 -> n6
+edge n2 -> n6
+edge n3 -> n5
+edge n4 -> n6

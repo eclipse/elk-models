@@ -1,0 +1,36 @@
+/*******************************************************************************
+ * Copyright (c) 2020 Kiel University and others.
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ *******************************************************************************/
+/*
+// elkex:category
+General > Spacing
+
+// elkex:label
+Selfloops
+
+// elkex:doc
+The example illustrates how the space to be left free between
+nodes and their selfloops as well as between the selfloops of a single node can be configured.
+*/
+
+// elkex:graph
+spacing.nodeSelfLoop: 30
+spacing.edgeEdge: 10
+
+node n1 {
+	portConstraints: FIXED_SIDE
+	port p1 { ^port.side: WEST }
+	port p2 { ^port.side: EAST }
+}
+
+edge n1 -> n1
+edge n1 -> n1
+edge n1 -> n1
+
+edge n1.p1 -> n1.p2

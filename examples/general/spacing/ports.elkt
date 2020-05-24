@@ -1,0 +1,132 @@
+/*******************************************************************************
+ * Copyright (c) 2020 Kiel University and others.
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ *******************************************************************************/
+/*
+// elkex:category
+General > Spacing
+
+// elkex:label
+Ports
+
+// elkex:doc
+The examples shows how the space to be left free ports can be configured.
+
+As illustrated by the `Distribution` node,
+it depends on the used `portAlignment` whether `spacing.portPort` takes effect:
+For `BEGIN`, `END`, and `CENTER` it's considered if the node's size permits it.
+For `JUSTIFIED` and `DISTRIBUTED` it's sort of irrelevant
+as the ports are evenly distributed.
+
+The `Node Resize` node shows what happens
+if a node's size prevents the specified spacing from being satisfied:
+without further configuration, the ports are squeezed together
+as much as required to place all of them on a specific side.
+However, the `nodeSize.constraints` option can be used
+to allow the algorithm to automatically enlarge the node such that
+the ports can be placed with the desired `spacing.portPort` in-between.
+
+The last node shown, `Border Offset`,
+shows how a port can be moved away from the node's border
+using the `port.borderOffset` option
+(for non-`FIXED_POS` port constraints).
+*/
+
+// elkex:graph
+algorithm: layered
+aspectRatio: 4 // for presentation only
+
+node portDistribution {
+    nodeLabels.placement: "INSIDE V_TOP H_CENTER"
+
+    // Only considered by certain 'portAlignment's
+    spacing.portPort: 10
+    node inner {
+        layout [ size: 100, 100 ]
+        portConstraints: FIXED_SIDE
+
+
+        portAlignment.west:  BEGIN // or END
+        portAlignment.north: CENTER
+        portAlignment.east:  DISTRIBUTED
+        portAlignment.south: JUSTIFIED
+
+        port pw1 { ^port.side: WEST }
+        port pw2 { ^port.side: WEST }
+        port pw3 { ^port.side: WEST }
+        port pw4 { ^port.side: WEST }
+
+        port pn1 { ^port.side: NORTH }
+        port pn2 { ^port.side: NORTH }
+        port pn3 { ^port.side: NORTH }
+        port pn4 { ^port.side: NORTH }
+
+        port pe1 { ^port.side: EAST }
+        port pe2 { ^port.side: EAST }
+        port pe3 { ^port.side: EAST }
+        port pe4 { ^port.side: EAST }
+
+        port ps1 { ^port.side: SOUTH }
+        port ps2 { ^port.side: SOUTH }
+        port ps3 { ^port.side: SOUTH }
+        port ps4 { ^port.side: SOUTH }
+    }
+    label "Distribution" { layout [ size: 66, 15 ] }
+}
+
+node resizeNode {
+    nodeLabels.placement: "INSIDE V_TOP H_CENTER"
+
+    spacing.portPort: 20
+
+    node notSatisfied {
+        layout [ size: 40, 40 ]
+        portConstraints: FIXED_SIDE
+        portAlignment.default: CENTER
+
+        port pw1 { ^port.side: WEST }
+        port pw2 { ^port.side: WEST }
+        port pw3 { ^port.side: WEST }
+        port pw4 { ^port.side: WEST }
+    }
+
+    node satisfied {
+        portConstraints: FIXED_SIDE
+        portAlignment.default: CENTER
+        nodeSize.minimum: "(40.0,40.0)"
+        nodeSize.constraints: "[PORTS MINIMUM_SIZE]"
+
+        port pw1 { ^port.side: WEST }
+        port pw2 { ^port.side: WEST }
+        port pw3 { ^port.side: WEST }
+        port pw4 { ^port.side: WEST }
+    }
+    label "Node Resize" { layout [ size: 77, 15 ] }
+}
+
+node borderOffset {
+    layout [ size: 50, 50 ]
+    nodeLabels.placement: "OUTSIDE V_TOP H_CENTER"
+    portConstraints: FIXED_SIDE
+
+    port pw1 {
+        ^port.side: WEST
+        ^port.borderOffset: 15
+    }
+    port pw2 {
+        ^port.side: WEST
+    }
+    port ps1 {
+        ^port.side: SOUTH
+        ^port.borderOffset: 25
+    }
+    port ps2 {
+        ^port.side: SOUTH
+    }
+    label "Border Offset" { layout [ size: 77, 15 ] }
+}

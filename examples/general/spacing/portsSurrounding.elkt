@@ -1,0 +1,73 @@
+/*******************************************************************************
+ * Copyright (c) 2020 Kiel University and others.
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ *******************************************************************************/
+/*
+// elkex:category
+General > Spacing
+
+// elkex:label
+Port Surrounding
+
+// elkex:doc
+The example illustrates the usage of the `spacing.portsSurrounding` layout option.
+As with the `spacing.portPort` option,
+the concrete effect depends on the used `portAlignment`.
+Note that the while the option is specified using an instance of `ElkMargin`,
+the semantics of the four values is slightly different:
+`top` refers to the upper part of a node's eastern and western border,
+and `left` refers to the left part of a node's northern and southern border.
+`bottom` and `right` work analogously.
+The allowed span of a node's border in which ports may be
+placed is then the area in-between to of these specified values.
+
+#### `BEGIN`, `CENTER`
+The western and eastern border of the shown node illustrate
+the behavior for a `portAlignment` of `BEGIN` and `CENTER`,
+respectively.
+For `BEGIN` the value specified as `top` is left free
+and afterwards the ports are placed with `spacing.portPort` in-between.
+For `CENTER` the ports are placed starting from this center point
+of the allowed span outwards with `spacing.portPort` in-between.
+
+#### `JUSTIFIED`, `DISTRIBUTED`
+These two option values are illustrated by the northern and the southern border.
+In both cases the ports are distributed evenly within the allowed
+span with the difference that for `DISTRIBUTED`
+the resulting distance between pairs of ports is
+additionally added to the outer parts of the allowed span.
+*/
+
+// elkex:graph
+nodeLabels.placement: "INSIDE V_TOP H_CENTER"
+
+spacing.portPort: 5
+spacing.portsSurrounding: "[top=20.0,left=5.0,bottom=0.0,right=15.0]"
+
+node inner {
+    layout [ size: 100, 100 ]
+    portConstraints: FIXED_SIDE
+
+    portAlignment.west: BEGIN
+    portAlignment.east: CENTER
+
+    portAlignment.north: JUSTIFIED
+    portAlignment.south: DISTRIBUTED
+
+    port pw1 { ^port.side: WEST }
+    port pw2 { ^port.side: WEST }
+
+    port pn1 { ^port.side: NORTH }
+    port pn2 { ^port.side: NORTH }
+
+    port pe1 { ^port.side: EAST }
+    port pe2 { ^port.side: EAST }
+
+    port ps1 { ^port.side: SOUTH }
+    port ps2 { ^port.side: SOUTH }
+}
