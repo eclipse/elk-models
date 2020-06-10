@@ -1,0 +1,231 @@
+/*******************************************************************************
+ * Copyright (c) 2020 Kiel University and others.
+ * 
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ *******************************************************************************/
+
+// Two notes:
+// 1) No port side is specified here, the test takes care of properly configuring them
+// 2) portConstraints are set to FIXED_ORDER to ensure a deterministic port order 
+
+node outside_two_default {
+    portLabels.placement: "OUTSIDE"
+    portConstraints: FIXED_ORDER 
+    port p1 {
+        layout [ size: 8, 8 ]
+        ^port.index: 1
+        label l1: "Port 1"
+    }
+    port p2 {
+        layout [ size: 8, 8 ]
+        ^port.index: 0
+        label l1: "Port 2"
+    }
+}
+
+node outside_two_same_side {
+    portLabels.placement: "OUTSIDE ALWAYS_SAME_SIDE"
+    portConstraints: FIXED_ORDER 
+    port p1 {
+        layout [ size: 8, 8 ]
+        ^port.index: 1
+        label l1: "Port 1"
+    }
+    port p2 {
+        layout [ size: 8, 8 ]
+        ^port.index: 0
+        label l1: "Port 2"
+    }
+}
+
+node outside_two_next_to_port {
+    portLabels.placement: "OUTSIDE NEXT_TO_PORT_IF_POSSIBLE"
+    portConstraints: FIXED_ORDER 
+    port p1 {
+        layout [ size: 8, 8 ]
+        ^port.index: 1
+        label l1: "Port 1"
+    }
+    port p2 {
+        layout [ size: 8, 8 ]
+        ^port.index: 0
+        label l1: "Port 2"
+    }
+}
+
+node outside_three_default {
+    portLabels.placement: "OUTSIDE"
+    portConstraints: FIXED_ORDER 
+    port p1 {
+        layout [ size: 8, 8 ]
+        ^port.index: 1
+        label l1: "Port 1"
+    }
+    port p2 {
+        layout [ size: 8, 8 ]
+        ^port.index: 0
+        label l1: "Port 2"
+    }
+    port p3 {
+        layout [ size: 8, 8 ]
+        ^port.index: -1
+        label l1: "Port 3"
+    }
+}
+
+node outside_three_space_efficient {
+    portLabels.placement: "OUTSIDE SPACE_EFFICIENT"
+    portConstraints: FIXED_ORDER 
+    port p1 {
+        layout [ size: 8, 8 ]
+        ^port.index: 1
+        label l1: "Port 1"
+    }
+    port p2 {
+        layout [ size: 8, 8 ]
+        ^port.index: 0
+        label l1: "Port 2"
+    }
+    port p3 {
+        layout [ size: 8, 8 ]
+        ^port.index: -1
+        label l1: "Port 3"
+    }
+}
+
+
+
+/* - - - INSIDE - - - */
+
+node inside_two_default {
+    portLabels.placement: "INSIDE"
+    portConstraints: FIXED_ORDER 
+    port p1 {
+        layout [ size: 8, 8 ]
+        ^port.index: 1
+        label l1: "Port 1"
+    }
+    port p2 {
+        layout [ size: 8, 8 ]
+        ^port.index: 0
+        label l1: "Port 2"
+    }
+}
+
+node inside_two_default_hierarchical {
+    portLabels.placement: "INSIDE"
+    portConstraints: FIXED_ORDER 
+    port p1 {
+        layout [ size: 8, 8 ]
+        ^port.index: 1
+        label l1: "Port 1"
+    }
+    port p2 {
+        layout [ size: 8, 8 ]
+        ^port.index: 0
+        label l1: "Port 2"
+    }
+    node inner
+}
+
+node inside_two_next_to_port_hierarchical {
+    portLabels.placement: "INSIDE NEXT_TO_PORT_IF_POSSIBLE"
+    portConstraints: FIXED_ORDER 
+    port p1 {
+        layout [ size: 8, 8 ]
+        ^port.index: 1
+        label l1: "Port 1"
+    }
+    port p2 {
+        layout [ size: 8, 8 ]
+        ^port.index: 0
+        label l1: "Port 2"
+    }
+    node inner
+}
+
+node inside_two_with_one_edge {
+    portLabels.placement: "INSIDE"
+    portConstraints: FIXED_ORDER 
+    port p1 {
+        layout [ size: 8, 8 ]
+        ^port.index: 1
+        label l1: "Port 1"
+    }
+    port p2 {
+        layout [ size: 8, 8 ]
+        ^port.index: 0
+        label l1: "Port 2"
+    }
+    
+    node inner
+    edge inside_two_with_one_edge.p2 -> inner
+}
+
+node inside_two_with_one_edge_next_to_port {
+    portLabels.placement: "INSIDE NEXT_TO_PORT_IF_POSSIBLE"
+    portConstraints: FIXED_ORDER 
+    port p1 {
+        layout [ size: 8, 8 ]
+        ^port.index: 1
+        label l1: "Port 1"
+    }
+    port p2 {
+        layout [ size: 8, 8 ]
+        ^port.index: 0
+        label l1: "Port 2"
+    }
+    
+    node inner
+    edge inside_two_with_one_edge_next_to_port.p2 -> inner
+}
+
+node inside_three_with_one_edge {
+    portLabels.placement: "INSIDE"
+    portConstraints: FIXED_ORDER 
+    port p1 {
+        layout [ size: 8, 8 ]
+        ^port.index: 1
+        label l1: "Port 1"
+    }
+    port p2 {
+        layout [ size: 8, 8 ]
+        ^port.index: 0
+        label l1: "Port 2"
+    }
+    port p3 {
+        layout [ size: 8, 8 ]
+        ^port.index: -1
+        label l1: "Port 3"
+    }
+    
+    node inner
+    edge inside_three_with_one_edge.p2 -> inner
+}
+
+node inside_three_with_one_edge_next_to_port { 
+    portLabels.placement: "INSIDE NEXT_TO_PORT_IF_POSSIBLE"
+    portConstraints: FIXED_ORDER 
+    port p1 {
+        layout [ size: 8, 8 ]
+        ^port.index: 1
+        label l1: "Port 1"
+    }
+    port p2 {
+        layout [ size: 8, 8 ]
+        ^port.index: 0
+        label l1: "Port 2"
+    }
+    port p3 {
+        layout [ size: 8, 8 ]
+        ^port.index: -1
+        label l1: "Port 3"
+    }
+    
+    node inner
+    edge inside_three_with_one_edge_next_to_port.p2 -> inner
+}
