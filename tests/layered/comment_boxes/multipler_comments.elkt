@@ -1,0 +1,28 @@
+/*******************************************************************************
+ * Copyright (c) 2020 Kiel University and others.
+ * 
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ *******************************************************************************/
+
+spacing.commentComment: 50
+spacing.commentNode: 100
+
+node n1
+
+node c1 { commentBox: true }
+node c2 { commentBox: true }
+node c3 { commentBox: true }
+node c4 { commentBox: true }
+node c5 { commentBox: true }
+node c6 { commentBox: true }
+
+edge c1 -> n1
+edge c2 -> n1
+edge c3 -> n1
+edge c4 -> n1
+edge c5 -> n1
+edge c6 -> n1
