@@ -11,9 +11,8 @@
 node n1 {
 	nodeSize.constraints: "MINIMUM_SIZE PORTS PORT_LABELS"
 	portConstraints: FIXED_SIDE
-	portLabels.nextToPortIfPossible: true
+    portLabels.placement: "OUTSIDE NEXT_TO_PORT_IF_POSSIBLE"
 	portLabels.treatAsGroup: false
-	portLabels.placement: OUTSIDE
 	
 	port west1 {
 		^port.side: WEST

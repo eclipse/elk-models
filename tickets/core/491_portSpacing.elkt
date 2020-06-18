@@ -8,12 +8,12 @@
  *******************************************************************************/
 spacing.portPort: 0
 spacing.labelPort: 0
-spacing.portsSurrounding: 0
+spacing.portsSurrounding: "[top=0.0,left=0.0,bottom=0.0,right=0.0]"
 elk.direction: RIGHT
 
 node outer {
 	portConstraints: FIXED_ORDER
-	portLabels.nextToPortIfPossible: true
+	portLabels.placement: "OUTSIDE NEXT_TO_PORT_IF_POSSIBLE" 
 	portLabels.treatAsGroup: true
 	nodeSize.constraints: "PORTS PORT_LABELS MINIMUM_SIZE"
 	elk.direction: RIGHT

@@ -19,7 +19,7 @@ node Down {
     node N1 {
         nodeLabels.placement: "H_CENTER V_CENTER INSIDE"
         portConstraints: FIXED_SIDE
-        portLabels.nextToPortIfPossible: true
+        portLabels.placement: "OUTSIDE NEXT_TO_PORT_IF_POSSIBLE"
         port P1 {
             layout [ size: 31, 7 ]
             ^port.side: WEST
@@ -37,7 +37,7 @@ node Up {
     node N1 {
         nodeLabels.placement: "H_CENTER V_CENTER INSIDE"
         portConstraints: FIXED_SIDE
-        portLabels.nextToPortIfPossible: true
+        portLabels.placement: "OUTSIDE NEXT_TO_PORT_IF_POSSIBLE"
         port P1 {
             layout [ size: 31, 7 ]
             ^port.side: WEST
@@ -55,7 +55,7 @@ node Left {
     node N1 {
         nodeLabels.placement: "H_CENTER V_CENTER INSIDE"
         portConstraints: FIXED_SIDE
-        portLabels.nextToPortIfPossible: true
+        portLabels.placement: "OUTSIDE NEXT_TO_PORT_IF_POSSIBLE"
         port P1 {
             layout [ size: 31, 7 ]
             ^port.side: WEST
@@ -73,7 +73,7 @@ node Right {
     node N1 {
         nodeLabels.placement: "H_CENTER V_CENTER INSIDE"
         portConstraints: FIXED_SIDE
-        portLabels.nextToPortIfPossible: true
+        portLabels.placement: "OUTSIDE NEXT_TO_PORT_IF_POSSIBLE"
         port P1 {
             layout [ size: 31, 7 ]
             ^port.side: WEST

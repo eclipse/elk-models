@@ -9,8 +9,7 @@
  *******************************************************************************/
 
 node n1 {
-	portLabels.nextToPortIfPossible: true
-	portLabels.placement: INSIDE
+	portLabels.placement: "INSIDE NEXT_TO_PORT_IF_POSSIBLE"
 	portConstraints: FIXED_SIDE
 	
 	port in1 { ^port.side: WEST }
@@ -22,7 +21,7 @@ node n1 {
 }
 
 node n2 {
-	portLabels.nextToPortIfPossible: true
+	portLabels.placement: "OUTSIDE NEXT_TO_PORT_IF_POSSIBLE"
 	
 	port in1
 }
