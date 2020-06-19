@@ -1,0 +1,27 @@
+node N1 {
+	cycleBreaking.strategy: DEPTH_FIRST
+    
+    port P1_1
+    
+    node N2 {
+        port P2_1
+        port P2_2
+    }
+    node N3 {
+        port P3_1
+        port P3_2
+    }
+    node N4 {
+        port P4_1
+    }
+    node N5 {
+        port P5_1
+        port P5_2
+    }
+    
+    edge N2.P2_2 -> P1_1
+    edge N3.P3_2 -> N2.P2_1
+    edge N4.P4_1 -> P1_1
+    edge N4.P4_1 -> N5.P5_1
+    edge N5.P5_2 -> N3.P3_1
+}
