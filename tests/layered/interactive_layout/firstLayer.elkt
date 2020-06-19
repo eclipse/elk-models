@@ -1,0 +1,20 @@
+/*******************************************************************************
+ * Copyright (c) 2020 Kiel University and others.
+ * 
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ *******************************************************************************/
+interactiveLayout: true
+
+// Node n2 should be placed in the first layer.
+
+node n1
+
+node n2 {
+  layering.layerChoiceConstraint: 0
+}
+
+edge n1 -> n2

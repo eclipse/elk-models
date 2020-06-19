@@ -1,0 +1,31 @@
+/*******************************************************************************
+ * Copyright (c) 2020 Kiel University and others.
+ * 
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ *******************************************************************************/
+interactiveLayout: true
+
+// Nodes that are not forced on a specific position are positioned on the position they had
+// Before the interactive layout run.
+// The old order was n4, n5, n2, n3.
+// If I force n2 on the first position the other nodes remain in this order.
+// The new order should be n2, n4, n5, n3.
+
+node n1
+
+node n2 {
+  layered.crossingMinimization.positionChoiceConstraint: 0
+}
+
+node n3
+node n4
+node n5
+
+edge n1 -> n2
+edge n1 -> n3
+edge n1 -> n4
+edge n1 -> n5
