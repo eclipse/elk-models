@@ -1,0 +1,25 @@
+/*******************************************************************************
+ * Copyright (c) 2020 Kiel University and others.
+ * 
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ *******************************************************************************/
+
+// Reproduces an issue where the EndLabelPreprocessor fails an assertion due to
+// the port indices of N2's ports.
+
+node N1 {
+	port P1
+}
+
+node N2 {
+	port P2_1 { index: 1 }
+	port P2_2 { index: 2 }
+}
+
+edge N1.P1 -> N2.P2_1 {
+	label "L" { edgeLabels.placement: TAIL }
+}
