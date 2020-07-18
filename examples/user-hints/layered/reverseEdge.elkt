@@ -1,0 +1,54 @@
+/*******************************************************************************
+ * Copyright (c) 2020 Kiel University and others.
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ *******************************************************************************/
+
+/*
+// elkex:category
+User-Hints > Topology
+
+// elkex:label
+Edge Reversal
+
+// elkex:doc
+The layer-based layout approach tries to let all edges point
+into the specified layout direction.
+For cyclic graphs this is not possible.
+The algorithm thus selects a preferably small set of
+edge that will end up pointing in the opposite direction.
+
+A user can influence which edges to favor in this case
+by using the `priority.direction` option.
+The _higher_ the priority, the likelier it is that
+the corresponding edge will _not_ be reversed.
+
+See the two examples below,
+one time the edge `(1, 2)` is reversed,
+while in the other case edge `(3, 1)` is reversed. 
+*/
+
+// elkex:graph
+algorithm: layered
+
+node outer1 {
+    node n1 { label "1" }
+    node n2 { label "2" }
+    node n3 { label "3" }
+    edge n1 -> n2 { priority.direction: 1 }
+    edge n2 -> n3 { priority.direction: 3 }
+    edge n3 -> n1 { priority.direction: 3 }
+}
+
+node outer2 {
+    node n1 { label "1" }
+    node n2 { label "2" }
+    node n3 { label "3" }
+    edge n1 -> n2 { priority.direction: 3 }
+    edge n2 -> n3 { priority.direction: 3 }
+    edge n3 -> n1 { priority.direction: 1 }
+}

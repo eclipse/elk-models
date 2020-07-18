@@ -1,0 +1,73 @@
+/*******************************************************************************
+ * Copyright (c) 2020 Kiel University and others.
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ *******************************************************************************/
+
+/*
+// elkex:category
+Ports > Constraints
+
+// elkex:label
+Switch Sides
+
+// elkex:doc
+With the regular _port constraints_, 
+it is not possible to allow ports to switch sides
+unless `FREE` is used. 
+
+Let _non-flow port_ denote a port on a side 
+that is not part of the currently configured layout flow,
+for instance, given a left-to-right layout direction, north and south ports
+would be considered non-flow ports.
+
+Using the `allowNonFlowPortsToSwitchSides` a non-flow port
+can be allowed to switch between these two sides. 
+
+Consider the example,
+in which `pns1` is allowed to switch sides
+resulting in a crossing-free drawing.
+
+Note, however, that the underlying criterion whether to switch sides or not 
+solely relies on the minimization of edge crossings. 
+Hence, edge length and other aesthetics criteria are not addressed. 
+*/
+
+// elkex:graph
+algorithm: layered
+
+node n3 {
+    portConstraints: FIXED_SIDE
+
+    port pns1 {
+        ^port.side: NORTH
+        allowNonFlowPortsToSwitchSides: true
+    }
+    port pns2 {
+        ^port.side: NORTH
+    }
+}
+
+node n4 {
+    portConstraints: FIXED_ORDER
+    port pe1 {
+        ^port.side: WEST
+        ^port.index: 1
+    }
+    port pe2 {
+        ^port.side: WEST
+        ^port.index: 2
+    }
+    port pe3 {
+        ^port.side: WEST
+        ^port.index: 3
+    }
+}
+
+edge n3.pns1 -> n4.pe1
+edge n3.pns2 -> n4.pe3
+edge n3 -> n4.pe2
