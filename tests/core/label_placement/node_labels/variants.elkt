@@ -1,0 +1,38 @@
+/*******************************************************************************
+ * Copyright (c) 2020 Kiel University and others.
+ * 
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ *******************************************************************************/
+
+// Used to test that node size computation and label placement are properly executed
+// for more than just layered.
+
+// Hint: when looking at the diagram using KLighD, the minimum size may not properly 
+// be applied as KLighD overwrites it at some point. This is irrelevant for the 
+// unit test though.
+
+node N1 {
+    layout [ size: 100, 100 ]
+    nodeSize.constraints: "MINIMUM_SIZE"
+    nodeSize.minimum: "101, 102"
+    label "A" {
+        layout [ position: 0, 0  size: 10, 10 ]
+        nodeLabels.placement: "INSIDE V_TOP H_CENTER"
+    }
+    label "B" {
+        layout [ position: 0, 0 size: 10, 10 ]
+        nodeLabels.placement: "INSIDE V_BOTTOM H_RIGHT"
+    }
+    label "C" {
+        layout [ position: 0, 0 size: 10, 10 ]
+        nodeLabels.placement: "OUTSIDE V_BOTTOM H_CENTER" 
+    }
+    label "D" {
+        layout [ position: 0, 0 size: 10, 10 ]
+        nodeLabels.placement: "OUTSIDE V_CENTER H_LEFT"
+    }
+} 
