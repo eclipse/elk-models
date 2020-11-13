@@ -1,0 +1,67 @@
+/*******************************************************************************
+ * Copyright (c) 2020 Kiel University and others.
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ *******************************************************************************/
+/*
+// elkex:category
+General > Spacing
+
+// elkex:label
+Padding
+
+// elkex:doc
+The examples show the effect of `elk.padding` option in the children of the container.
+They also show the impact of using `nodeLabels.placement` in the same time.
+*/
+
+// elkex:graph
+algorithm: layered
+layered.considerModelOrder: NODES_AND_EDGES
+
+// Without nothing the default padding, 12 pixels on each side, is used.
+node n1 {
+    label "Node 1" { layout [ size: 40, 17 ] }
+    node subNode
+}
+
+// Without nothing the default padding, 12 pixels on each side, is used.
+node n2 {
+    elk.padding : "[top=20.0,left=20.0,bottom=20.0,right=20.0]"
+    label "Node 2" { layout [ size: 40, 17 ] }
+    node subNode
+}
+
+
+// If a specific node label placement is added, the padding can be "changed" according to this new option.
+node n3 {
+    nodeLabels.placement: "INSIDE V_TOP H_CENTER"
+    label "Node 3" { layout [ size: 40, 17 ] }
+    node subNode
+}
+
+// The padding only change the area available for children. The label is not concerned by this option.
+node n4 {
+    elk.padding : "[top=20.0,left=5.0,bottom=0.0,right=35.0]"
+    label "Node 4" { layout [ size: 40, 17 ] }
+    node subNode
+}
+
+// As for n3 case, the combination of 'padding' and 'node labels placement' are cumulative. 
+// You can observe the difference between n5 and n6 (same 'padding' but not same 'node labels placement').
+node n5 {
+    elk.padding : "[top=0.0,left=5.0,bottom=0.0,right=15.0]"
+    label "Node 5" { layout [ size: 40, 17 ] }
+    node subNode
+}
+
+node n6 {
+    elk.padding : "[top=0.0,left=5.0,bottom=0.0,right=15.0]"
+    nodeLabels.placement: "[H_CENTER, V_TOP, INSIDE]"
+    label "Node 6" { layout [ size: 40, 17 ] }
+    node subNode
+}
