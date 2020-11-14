@@ -1,0 +1,121 @@
+/*******************************************************************************
+ * Copyright (c) 2020 Kiel University and others.
+ * 
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ *******************************************************************************/
+
+// Reproduces an issue where an edge (n5.p5_1 -> n2.p2_1) doesn't have bend
+// points assigned to it even though it should.
+
+node n1 {
+    layout [ size: 60, 40 ]
+    portConstraints: FIXED_ORDER
+    port p1_1 {
+        org.eclipse.elk.^port.side: EAST
+        org.eclipse.elk.^port.index: 0
+    }
+    port p1_2 {
+        org.eclipse.elk.^port.side: EAST
+        org.eclipse.elk.^port.index: 1
+    }
+    port p1_3 {
+        org.eclipse.elk.^port.side: EAST
+        org.eclipse.elk.^port.index: 2
+    }
+}
+node n2 {
+    layout [ size: 60, 40 ]
+    portConstraints: FIXED_ORDER
+    port p2_1 {
+        org.eclipse.elk.^port.side: WEST
+        org.eclipse.elk.^port.index: 0
+    }
+    port p2_2 {
+        org.eclipse.elk.^port.side: WEST
+        org.eclipse.elk.^port.index: 1
+    }
+    port p2_3 {
+        org.eclipse.elk.^port.side: WEST
+        org.eclipse.elk.^port.index: 2
+    }
+}
+node n3 {
+    layout [ size: 60, 40 ]
+    portConstraints: FIXED_ORDER
+    port p3_1 {
+        org.eclipse.elk.^port.side: WEST
+        org.eclipse.elk.^port.index: 0
+    }
+    port p3_2 {
+        org.eclipse.elk.^port.side: WEST
+        org.eclipse.elk.^port.index: 1
+    }
+    port p3_3 {
+        org.eclipse.elk.^port.side: WEST
+        org.eclipse.elk.^port.index: 2
+    }
+}
+node n4 {
+    layout [ size: 60, 40 ]
+    portConstraints: FIXED_ORDER
+    port p4_1 {
+        org.eclipse.elk.^port.side: EAST
+        org.eclipse.elk.^port.index: 0
+    }
+    port p4_2 {
+        org.eclipse.elk.^port.side: WEST
+        org.eclipse.elk.^port.index: 1
+    }
+    port p4_3 {
+        org.eclipse.elk.^port.side: WEST
+        org.eclipse.elk.^port.index: 2
+    }
+}
+node n5 {
+    layout [ size: 60, 40 ]
+    portConstraints: FIXED_ORDER
+    port p5_1 {
+        org.eclipse.elk.^port.side: EAST
+        org.eclipse.elk.^port.index: 0
+    }
+    port p5_2 {
+        org.eclipse.elk.^port.side: WEST
+        org.eclipse.elk.^port.index: 1
+    }
+    port p5_3 {
+        org.eclipse.elk.^port.side: WEST
+        org.eclipse.elk.^port.index: 2
+    }
+}
+node n6 {
+    layout [ size: 60, 40 ]
+    portConstraints: FIXED_ORDER
+    port p6_1 {
+        org.eclipse.elk.^port.side: EAST
+        org.eclipse.elk.^port.index: 0
+    }
+    port p6_2 {
+        org.eclipse.elk.^port.side: WEST
+        org.eclipse.elk.^port.index: 1
+    }
+    port p6_3 {
+        org.eclipse.elk.^port.side: WEST
+        org.eclipse.elk.^port.index: 2
+    }
+}
+
+edge n1.p1_1 -> n2.p2_3
+edge n1.p1_1 -> n3.p3_3
+edge n4.p4_1 -> n1.p1_2
+edge n1.p1_3 -> n5.p5_3
+edge n1.p1_3 -> n6.p6_3
+edge n5.p5_1 -> n2.p2_1  // <-- offending edge
+edge n2.p2_2 -> n4.p4_3
+edge n2.p2_2 -> n6.p6_2
+edge n6.p6_1 -> n3.p3_1
+edge n3.p3_2 -> n4.p4_2
+edge n3.p3_2 -> n5.p5_2
