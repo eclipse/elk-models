@@ -1,0 +1,43 @@
+/*******************************************************************************
+ * Copyright (c) 2020 Kiel University and others.
+ * 
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ *******************************************************************************/
+
+// If everything goes according to plan, the child node should be centered
+// inside its parent node.
+
+algorithm: layered
+
+node compound {
+	algorithm: layered
+	elk.direction: DOWN
+	portConstraints: FIXED_SIDE
+	
+	port pNorth {
+		layout[ size: 15, 25 ]
+		^port.side: NORTH
+	}
+	port pSouth {
+		layout[ size: 15, 15 ]
+		^port.side: SOUTH
+	}
+	
+	node child {
+		layout[ size: 30, 30 ]
+		
+		port p1 {
+			layout[ size: 15, 15 ]
+		}
+		port p2 {
+			layout[ size: 15, 15 ]
+		}
+	}
+	
+	edge child.p1 -> compound.pNorth
+	edge compound.pSouth -> child.p2
+}
