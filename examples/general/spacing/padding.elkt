@@ -21,7 +21,7 @@ They also show the impact of using `nodeLabels.placement` in the same time.
 
 // elkex:graph
 algorithm: layered
-layered.considerModelOrder: NODES_AND_EDGES
+layered.considerModelOrder: NODES_AND_EDGES // Only for presentation purposes
 
 // Without nothing the default padding, 12 pixels on each side, is used.
 node n1 {
@@ -29,13 +29,12 @@ node n1 {
     node subNode
 }
 
-// Without nothing the default padding, 12 pixels on each side, is used.
+// Setting a padding of 20 on each side.
 node n2 {
     elk.padding : "[top=20.0,left=20.0,bottom=20.0,right=20.0]"
     label "Node 2" { layout [ size: 40, 17 ] }
     node subNode
 }
-
 
 // If a specific node label placement is added, the padding can be "changed" according to this new option.
 node n3 {
