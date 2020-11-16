@@ -11,11 +11,22 @@
 // Reproduces a bug that causes ordinary edges to not be laid out properly
 // anymore once hierarchy handling is set to INCLUDE_CHILDREN.
 
-node outer {
+node n1 {
     hierarchyHandling: INCLUDE_CHILDREN
     
-    node n1 { layout[ size: 50, 50 ] }
-    node n2 { layout[ size: 50, 50 ] }
+    node n1_1 { layout[ size: 50, 50 ] }
+    node n1_2 { layout[ size: 50, 50 ] }
     
-    edge n1 -> n2
+    edge n1_1 -> n1_2
+}
+
+node n2 {
+    hierarchyHandling: INCLUDE_CHILDREN
+    
+	node n2_1 {
+		node n2_1_1 { layout[ size: 50, 50 ] }
+    	node n2_1_2 { layout[ size: 50, 50 ] }
+    	
+    	edge n2_1_1 -> n2_1_2
+	}
 }
