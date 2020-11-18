@@ -1,0 +1,1353 @@
+/*******************************************************************************
+ * Copyright (c) 2020 Kiel University and others.
+ * 
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ *******************************************************************************/
+graph G1
+layout [ size: 2000, 1000 ]
+nodeSize.constraints: "[PORTS, NODE_LABELS, PORT_LABELS]"
+algorithm: org.eclipse.elk.layered
+hierarchyHandling: INCLUDE_CHILDREN
+noLayout: false
+
+node ContainerWithFixedLabels {
+	layout [
+		position: 0, 0
+		size: 1000, 1000
+		]
+	label L1: "ContainerWithFixedLabels" {
+			layout [
+				position: 425, 5
+				size: 150, 17
+			]
+			nodeLabels.placement: "[H_CENTER, V_TOP, INSIDE]"
+	}
+	node Container_OneBorderNode_LabelFixedPartiallyInside {
+		layout [
+			position: 10, 10
+			size: 400, 200
+			]
+		nodeSize.constraints: "[PORTS, NODE_LABELS, PORT_LABELS]"
+		label L1: "Container_OneBorderNode_LabelFixedPartiallyInside" {
+			layout [
+				position: 50, 5
+				size: 300, 17
+			]
+			nodeLabels.placement: "[H_CENTER, V_TOP, INSIDE]"
+		}
+		node MyNode1 {
+			layout [
+				position: 20, 20
+				size: 100, 50
+				]
+			nodeSize.constraints: "[PORTS, NODE_LABELS, PORT_LABELS]"
+			portConstraints: FIXED_SIDE
+			portLabels.placement: "[]"
+			label L1: "MyNode1" {
+				layout [
+					position: 25, 5
+					size: 50, 17
+				]
+				nodeLabels.placement: "[H_CENTER, V_TOP, INSIDE]"
+			}
+			port P1 {
+				layout [
+					position: 92, 10
+					size: 20, 20
+				]
+				org.eclipse.elk.^port.borderOffset: -8.0
+				^port.side: NORTH
+				label L1: "MyNorthFixedLabelPort" {
+				layout [
+					position: -40, 21
+					size: 100, 17
+				]
+			}
+			}
+		}
+		
+		node MyNode2 {
+			layout [
+				position: 200, 20
+				size: 100, 50
+				]
+			nodeSize.constraints: "[PORTS, NODE_LABELS, PORT_LABELS]"
+			portConstraints: FIXED_SIDE
+			portLabels.placement: "[]"
+			label L1: "MyNode2" {
+				layout [
+					position: 25, 5
+					size: 50, 17
+				]
+				nodeLabels.placement: "[H_CENTER, V_TOP, INSIDE]"
+			}
+			port P1 {
+				layout [
+					position: 92, 10
+					size: 20, 20
+				]
+				org.eclipse.elk.^port.borderOffset: -8.0
+				^port.side: EAST
+				label L1: "MyEastFixedLabelPort" {
+				layout [
+					position: -101, -8
+					size: 100, 36
+				]
+			}
+			}
+		}
+		
+		node MyNode2Bis {
+			layout [
+				position: 200, 20
+				size: 100, 50
+				]
+			nodeSize.constraints: "[PORTS, NODE_LABELS, PORT_LABELS]"
+			portConstraints: FIXED_SIDE
+			portLabels.placement: "[]"
+			label L1: "MyNode2Bis" {
+				layout [
+					position: 15, 5
+					size: 70, 17
+				]
+				nodeLabels.placement: "[H_CENTER, V_TOP, INSIDE]"
+			}
+			port P1 {
+				layout [
+					position: 92, 10
+					size: 20, 20
+				]
+				org.eclipse.elk.^port.borderOffset: -8.0
+				^port.side: EAST
+				label L1: "MyEastFixedLabelPort" {
+				layout [
+					position: -40, 21
+					size: 100, 36
+				]
+			}
+			}
+		}
+
+		node MyNode3 {
+			layout [
+				position: 20, 100
+				size: 100, 50
+				]
+			nodeSize.constraints: "[PORTS, NODE_LABELS, PORT_LABELS]"
+			portConstraints: FIXED_SIDE
+			portLabels.placement: "[]"
+			label L1: "MyNode3" {
+				layout [
+					position: 25, 5
+					size: 50, 17
+				]
+				nodeLabels.placement: "[H_CENTER, V_TOP, INSIDE]"
+			}
+			port P1 {
+				layout [
+					position: 92, 27
+					size: 20, 20
+				]
+				org.eclipse.elk.^port.borderOffset: -8.0
+				^port.side: SOUTH
+				label L1: "MySouthFixedLabelPort" {
+				layout [
+					position: -40, -18
+					size: 100, 17
+				]
+			}
+			}
+		}
+		
+		node MyNode4 {
+			layout [
+				position: 200, 100
+				size: 100, 50
+				]
+			nodeSize.constraints: "[PORTS, NODE_LABELS, PORT_LABELS]"
+			portConstraints: FIXED_SIDE
+			portLabels.placement: "[]"
+			label L1: "MyNode4" {
+				layout [
+					position: 25, 5
+					size: 50, 17
+				]
+				nodeLabels.placement: "[H_CENTER, V_TOP, INSIDE]"
+			}
+			port P1 {
+				layout [
+					position: 92, 10
+					size: 20, 20
+				]
+				org.eclipse.elk.^port.borderOffset: -8.0
+				^port.side: WEST
+				label L1: "MyWestFixedLabelPort" {
+					layout [
+						position: 21, 2
+						size: 100, 17
+					]
+				}
+			}
+		}
+		node MyNode4Bis {
+			layout [
+				position: 200, 100
+				size: 100, 50
+				]
+			nodeSize.constraints: "[PORTS, NODE_LABELS, PORT_LABELS]"
+			portConstraints: FIXED_SIDE
+			portLabels.placement: "[]"
+			label L1: "MyNode4Bis" {
+				layout [
+					position: 15, 5
+					size: 70, 17
+				]
+				nodeLabels.placement: "[H_CENTER, V_TOP, INSIDE]"
+			}
+			port P1 {
+				layout [
+					position: 92, 10
+					size: 20, 20
+				]
+				org.eclipse.elk.^port.borderOffset: -8.0
+				^port.side: WEST
+				label L1: "MyWestFixedLabelPort" {
+					layout [
+						position: -40, 21
+						size: 100, 17
+					]
+				}
+			}
+		}
+	}
+	
+	node Container_OneBorderNode_LabelFixedOutside {
+		layout [
+			position: 450, 10
+			size: 400, 200
+			]
+		nodeSize.constraints: "[PORTS, NODE_LABELS, PORT_LABELS]"
+		label L1: "Container_OneBorderNode_LabelFixedOutside" {
+			layout [
+				position: 80, 5
+				size: 260, 17
+			]
+			nodeLabels.placement: "[H_CENTER, V_TOP, INSIDE]"
+		}
+		node MyNode1 {
+			layout [
+				position: 20, 20
+				size: 100, 50
+				]
+			nodeSize.constraints: "[PORTS, NODE_LABELS, PORT_LABELS]"
+			portConstraints: FIXED_SIDE
+			portLabels.placement: "[]"
+			label L1: "MyNode1" {
+				layout [
+					position: 25, 5
+					size: 50, 17
+				]
+				nodeLabels.placement: "[H_CENTER, V_TOP, INSIDE]"
+			}
+			port P1 {
+				layout [
+					position: 92, 10
+					size: 20, 20
+				]
+				org.eclipse.elk.^port.borderOffset: -8.0
+				^port.side: NORTH
+				label L1: "MyNorthFixedLabelPort" {
+				layout [
+					position: -40, -18
+					size: 100, 17
+				]
+			}
+			}
+		}
+		
+		node MyNode2 {
+			layout [
+				position: 200, 20
+				size: 100, 50
+				]
+			nodeSize.constraints: "[PORTS, NODE_LABELS, PORT_LABELS]"
+			portConstraints: FIXED_SIDE
+			portLabels.placement: "[]"
+			label L1: "MyNode2" {
+				layout [
+					position: 25, 5
+					size: 50, 17
+				]
+				nodeLabels.placement: "[H_CENTER, V_TOP, INSIDE]"
+			}
+			port P1 {
+				layout [
+					position: 92, 10
+					size: 20, 20
+				]
+				org.eclipse.elk.^port.borderOffset: -8.0
+				^port.side: EAST
+				label L1: "MyEastFixedLabelPort" {
+				layout [
+					position: 21, 2
+					size: 100, 17
+				]
+			}
+			}
+		}
+		
+		node MyNode3 {
+			layout [
+				position: 20, 100
+				size: 100, 50
+				]
+			nodeSize.constraints: "[PORTS, NODE_LABELS, PORT_LABELS]"
+			portConstraints: FIXED_SIDE
+			portLabels.placement: "[]"
+			label L1: "MyNode3" {
+				layout [
+					position: 25, 5
+					size: 50, 17
+				]
+				nodeLabels.placement: "[H_CENTER, V_TOP, INSIDE]"
+			}
+			port P1 {
+				layout [
+					position: 92, 27
+					size: 20, 20
+				]
+				org.eclipse.elk.^port.borderOffset: -8.0
+				^port.side: SOUTH
+				label L1: "MySouthFixedLabelPort" {
+				layout [
+					position: -40, 21
+					size: 100, 17
+				]
+			}
+			}
+		}
+		
+		node MyNode4 {
+			layout [
+				position: 200, 100
+				size: 100, 50
+				]
+			nodeSize.constraints: "[PORTS, NODE_LABELS, PORT_LABELS]"
+			portConstraints: FIXED_SIDE
+			portLabels.placement: "[]"
+			label L1: "MyNode4" {
+				layout [
+					position: 25, 5
+					size: 50, 17
+				]
+				nodeLabels.placement: "[H_CENTER, V_TOP, INSIDE]"
+			}
+			port P1 {
+				layout [
+					position: 92, 10
+					size: 20, 20
+				]
+				org.eclipse.elk.^port.borderOffset: -8.0
+				^port.side: WEST
+				label L1: "MyWestFixedLabelPort" {
+				layout [
+					position: -101, -7
+					size: 100, 34
+				]
+			}
+			}
+		}
+	}
+	
+	node Container_SeveralBorderNodes_LabelFixedPartiallyInside {
+		layout [
+			position: 10, 220
+			size: 400, 600
+			]
+		nodeSize.constraints: "[PORTS, NODE_LABELS, PORT_LABELS]"
+		label L1: "Container_SeveralBorderNodes_LabelFixedPartiallyInside" {
+			layout [
+				position: 40, 5
+				size: 320, 17
+			]
+			nodeLabels.placement: "[H_CENTER, V_TOP, INSIDE]"
+		}
+		node MyNode1 {
+			layout [
+				position: 20, 20
+				size: 100, 50
+				]
+			nodeSize.constraints: "[PORTS, NODE_LABELS, PORT_LABELS]"
+			portConstraints: FIXED_SIDE
+			portLabels.placement: "[]"
+			label L1: "MyNode1" {
+				layout [
+					position: 25, 5
+					size: 50, 17
+				]
+				nodeLabels.placement: "[H_CENTER, V_TOP, INSIDE]"
+			}
+			port P1 {
+				layout [
+					position: 92, 10
+					size: 20, 20
+				]
+				org.eclipse.elk.^port.borderOffset: -8.0
+				^port.side: NORTH
+				label L1: "MyNorthFixedLabelPort" {
+					layout [
+						position: -40, 21
+						size: 100, 27
+					]
+				}
+			}
+			port P2 {
+				layout [
+					position: -12, 10
+					size: 20, 20
+				]
+				org.eclipse.elk.^port.borderOffset: -8.0
+				^port.side: SOUTH
+				label L1: "MySouthFixedLabelPort" {
+					layout [
+						position: -40, -18
+						size: 80, 17
+					]
+				}
+			}
+		}
+		
+		node MyNode2 {
+			layout [
+				position: 200, 20
+				size: 100, 50
+				]
+			nodeSize.constraints: "[PORTS, NODE_LABELS, PORT_LABELS]"
+			portConstraints: FIXED_SIDE
+			portLabels.placement: "[]"
+			label L1: "MyNode2" {
+				layout [
+					position: 25, 5
+					size: 50, 17
+				]
+				nodeLabels.placement: "[H_CENTER, V_TOP, INSIDE]"
+			}
+			port P1 {
+				layout [
+					position: 92, 10
+					size: 20, 20
+				]
+				org.eclipse.elk.^port.borderOffset: -8.0
+				^port.side: EAST
+				label L1: "MyEastFixedLabelPort" {
+					layout [
+						position: -101, -8
+						size: 100, 36
+					]
+				}
+			}
+			port P2 {
+				layout [
+					position: -12, 10
+					size: 20, 20
+				]
+				org.eclipse.elk.^port.borderOffset: -8.0
+				^port.side: WEST
+				label L1: "MyWestFixedLabelPort" {
+					layout [
+						position: 21, 2
+						size: 150, 17
+					]
+				}
+			}
+		}
+		
+		node MyNode2Bis {
+			layout [
+				position: 200, 20
+				size: 100, 50
+				]
+			nodeSize.constraints: "[PORTS, NODE_LABELS, PORT_LABELS]"
+			portConstraints: FIXED_SIDE
+			portLabels.placement: "[]"
+			label L1: "MyNode2Bis" {
+				layout [
+					position: 15, 5
+					size: 70, 17
+				]
+				nodeLabels.placement: "[H_CENTER, V_TOP, INSIDE]"
+			}
+			port P1 {
+				layout [
+					position: 92, 10
+					size: 20, 20
+				]
+				org.eclipse.elk.^port.borderOffset: -8.0
+				^port.side: EAST
+				label L1: "MyEastFixedLabelPort" {
+					layout [
+						position: -40, 21
+						size: 100, 36
+					]
+				}
+			}
+			port P2 {
+				layout [
+					position: -12, 10
+					size: 20, 20
+				]
+				org.eclipse.elk.^port.borderOffset: -8.0
+				^port.side: WEST
+				label L1: "MyWestFixedLabelPort" {
+					layout [
+						position: -40, 21
+						size: 150, 17
+					]
+				}
+			}
+		}
+		
+		node MyContainer2 {
+			layout [
+				position: 20, 100
+				size: 120, 100
+				]
+			nodeSize.constraints: "[PORTS, NODE_LABELS, PORT_LABELS]"
+			portConstraints: FIXED_SIDE
+			portLabels.placement: "[]"
+			label L1: "MyCont2" {
+				layout [
+					position: 35, 5
+					size: 50, 17
+				]
+				nodeLabels.placement: "[H_CENTER, V_TOP, INSIDE]"
+			}
+			node MyNode2 {
+				layout [
+					position: 20, 30
+					size: 85, 50
+					]
+				label L2: "MyNode2" {
+					layout [
+						position: 5, 5
+						size: 75, 17
+					]
+					nodeLabels.placement: "[H_CENTER, V_TOP, INSIDE]"
+				}
+			}
+			port P1 {
+				layout [
+					position: 112, 10
+					size: 20, 20
+				]
+				org.eclipse.elk.^port.borderOffset: -8.0
+				^port.side: EAST
+				label L1: "MyEastFixedLabelPort" {
+					layout [
+						position: -40, 21
+						size: 100, 17
+					]
+				}
+			}
+			port P2 {
+				layout [
+					position: -12, 10
+					size: 20, 20
+				]
+				org.eclipse.elk.^port.borderOffset: -8.0
+				^port.side: WEST
+				label L1: "MyWestFixedLabelPort" {
+					layout [
+						position: -40, 21
+						size: 150, 17
+					]
+				}
+			}
+		}
+		
+		node MyCont3 {
+			layout [
+				position: 200, 100
+				size: 120, 100
+				]
+			nodeSize.constraints: "[PORTS, NODE_LABELS, PORT_LABELS]"
+			portConstraints: FIXED_SIDE
+			portLabels.placement: "[]"
+			label L1: "MyCont3" {
+				layout [
+					position: 35, 5
+					size: 50, 17
+				]
+				nodeLabels.placement: "[H_CENTER, V_TOP, INSIDE]"
+			}
+			node MyNode2 {
+				layout [
+					position: 20, 30
+					size: 85, 50
+					]
+				label L2: "MyNode2" {
+					layout [
+						position: 5, 5
+						size: 75, 17
+					]
+					nodeLabels.placement: "[H_CENTER, V_TOP, INSIDE]"
+				}
+			}
+			port P1 {
+				layout [
+					position: 112, 10
+					size: 20, 20
+				]
+				org.eclipse.elk.^port.borderOffset: -8.0
+				^port.side: EAST
+				label L1: "MyEastFixedLabelPort" {
+					layout [
+						position: -40, 21
+						size: 100, 17
+					]
+				}
+			}
+			port P2 {
+				layout [
+					position: -12, 10
+					size: 20, 20
+				]
+				org.eclipse.elk.^port.borderOffset: -8.0
+				^port.side: WEST
+				label L1: "MyWestFixedLabelPort" {
+					layout [
+						position: -40, 21
+						size: 150, 17
+					]
+				}
+			}
+			edge E1: MyCont3.MyNode2 -> MyCont3.P1 {
+				layout [
+					section ES1 [
+						start: 20, 55
+						end: 8, 20
+					]
+				]
+			}
+			edge E2: MyCont3.P2 -> MyCont3.MyNode2 {
+				layout [
+					section ES2 [
+						start: 112, 20
+						end: 105, 55
+					]
+				]
+			}
+		
+		}
+		
+		node MyNode3 {
+			layout [
+				position: 200, 450
+				size: 180, 50
+			]
+			nodeSize.constraints: "[PORTS, NODE_LABELS, PORT_LABELS]"
+			label L1: "MyNode3" {
+				layout [
+					position: 43, 5
+					size: 85, 17
+				]
+				nodeLabels.placement: "[H_CENTER, V_TOP, INSIDE]"
+			}
+		}
+		node MyCont4 {
+			layout [
+				position: 20, 220
+				size: 200, 200
+			]
+			nodeSize.constraints: "[PORTS, NODE_LABELS, PORT_LABELS]"
+			portLabels.placement: "[]"
+			label L2: "MyCont4" {
+				layout [
+					position: 66, 5
+					size: 68, 17
+				]
+				nodeLabels.placement: "[H_CENTER, V_TOP, INSIDE]"
+			}
+			port P1 {
+				layout [
+					position: 192, 70
+					size: 20, 20
+				]
+				org.eclipse.elk.^port.borderOffset: -8.0
+				label L3: "MyPortLabelFixed1" {
+					layout [
+						position: -40, 21
+						size: 100, 17
+					]
+				}
+			}
+			node MyNode1 {
+				layout [
+					position: 20, 35
+					size: 150, 100
+				]
+				nodeSize.constraints: "[PORTS, NODE_LABELS, PORT_LABELS]"
+				portLabels.placement: "[]"
+				label L4: "MyNode1" {
+					layout [
+						position: 25, 5
+						size: 100, 17
+					]
+					nodeLabels.placement: "[H_CENTER, V_TOP, INSIDE]"
+				}
+				port P1 {
+					layout [
+						position: 142, 35
+						size: 20, 20
+					]
+					org.eclipse.elk.^port.borderOffset: -8.0
+					label L5: "MyPortLabelFixed2" {
+					layout [
+						position: -39.5, 21
+						size: 99, 17
+					]
+				}
+				}
+			}
+			edge E2: MyNode1.P1 -> P1 {
+				layout [
+					section ES2 [
+						start: 182, 80
+						end: 192, 80
+					]
+				]
+			}
+		}
+		edge E1: MyCont4.P1 -> MyNode3 {
+			layout [
+				section ES1 [
+					start: 232, 300
+					end: 290, 450
+					bends: 290, 300
+				]
+			]
+		}
+	}
+}
+node ContainerWithLabelsInsideAndOutside {
+	layout [
+		position: 1000, 0
+		size: 1000, 1000
+		]
+	label L1: "ContainerWithLabelsInsideAndOutside" {
+			layout [
+				position: 390, 5
+				size: 220, 17
+			]
+			nodeLabels.placement: "[H_CENTER, V_TOP, INSIDE]"
+	}
+node Container_OneBorderNode_LabelInside {
+	layout [
+		position: 10, 10
+		size: 400, 200
+		]
+	nodeSize.constraints: "[PORTS, NODE_LABELS, PORT_LABELS]"
+	label L1: "Container_OneBorderNode_LabelInside" {
+		layout [
+			position: 85, 5
+			size: 230, 17
+		]
+		nodeLabels.placement: "[H_CENTER, V_TOP, INSIDE]"
+	}
+	node MyNode1 {
+		layout [
+			position: 20, 20
+			size: 100, 50
+			]
+		nodeSize.constraints: "[PORTS, NODE_LABELS, PORT_LABELS]"
+		portConstraints: FIXED_SIDE
+		portLabels.placement: "[INSIDE]"
+		label L1: "MyNode1" {
+			layout [
+				position: 25, 5
+				size: 50, 17
+			]
+			nodeLabels.placement: "[H_CENTER, V_TOP, INSIDE]"
+		}
+		port P1 {
+			layout [
+				position: 92, 10
+				size: 20, 20
+			]
+			org.eclipse.elk.^port.borderOffset: -8.0
+			^port.side: NORTH
+			label L1: "MyNorthInsideLabelPort" {
+			layout [
+				position: -40, 21
+				size: 100, 17
+			]
+		}
+		}
+	}
+	
+	node MyNode2 {
+		layout [
+			position: 200, 20
+			size: 100, 50
+			]
+		nodeSize.constraints: "[PORTS, NODE_LABELS, PORT_LABELS]"
+		portConstraints: FIXED_SIDE
+		portLabels.placement: "[INSIDE]"
+		label L1: "MyNode2" {
+			layout [
+				position: 25, 5
+				size: 50, 17
+			]
+			nodeLabels.placement: "[H_CENTER, V_TOP, INSIDE]"
+		}
+		port P1 {
+			layout [
+				position: 92, 10
+				size: 20, 20
+			]
+			org.eclipse.elk.^port.borderOffset: -8.0
+			^port.side: EAST
+			label L1: "MyEastInsideLabelPort" {
+			layout [
+				position: -40, 21
+				size: 100, 36
+			]
+		}
+		}
+	}
+	
+	node MyNode3 {
+		layout [
+			position: 20, 100
+			size: 100, 50
+			]
+		nodeSize.constraints: "[PORTS, NODE_LABELS, PORT_LABELS]"
+		portConstraints: FIXED_SIDE
+		portLabels.placement: "[INSIDE]"
+		label L1: "MyNode3" {
+			layout [
+				position: 25, 5
+				size: 50, 17
+			]
+			nodeLabels.placement: "[H_CENTER, V_TOP, INSIDE]"
+		}
+		port P1 {
+			layout [
+				position: 92, 27
+				size: 20, 20
+			]
+			org.eclipse.elk.^port.borderOffset: -8.0
+			^port.side: SOUTH
+			label L1: "MySouthInsideLabelPort" {
+			layout [
+				position: -40, -18
+				size: 100, 17
+			]
+		}
+		}
+	}
+	
+	node MyNode4 {
+		layout [
+			position: 200, 100
+			size: 100, 50
+			]
+		nodeSize.constraints: "[PORTS, NODE_LABELS, PORT_LABELS]"
+		portConstraints: FIXED_SIDE
+		portLabels.placement: "[INSIDE]"
+		label L1: "MyNode4" {
+			layout [
+				position: 25, 5
+				size: 50, 17
+			]
+			nodeLabels.placement: "[H_CENTER, V_TOP, INSIDE]"
+		}
+		port P1 {
+			layout [
+				position: 92, 10
+				size: 20, 20
+			]
+			org.eclipse.elk.^port.borderOffset: -8.0
+			^port.side: WEST
+			label L1: "MyWestInsideLabelPort" {
+			layout [
+				position: -40, 21
+				size: 100, 17
+			]
+		}
+		}
+	}
+}
+
+node Container_OneBorderNode_LabelOutside {
+	layout [
+		position: 450, 10
+		size: 400, 200
+		]
+	nodeSize.constraints: "[PORTS, NODE_LABELS, PORT_LABELS]"
+	label L1: "Container_OneBorderNode_LabelOutside" {
+		layout [
+			position: 85, 5
+			size: 230, 17
+		]
+		nodeLabels.placement: "[H_CENTER, V_TOP, INSIDE]"
+	}
+	node MyNode1 {
+		layout [
+			position: 20, 20
+			size: 100, 50
+			]
+		nodeSize.constraints: "[PORTS, NODE_LABELS, PORT_LABELS]"
+		portConstraints: FIXED_SIDE
+		portLabels.placement: "[OUTSIDE]"
+		label L1: "MyNode1" {
+			layout [
+				position: 25, 5
+				size: 50, 17
+			]
+			nodeLabels.placement: "[H_CENTER, V_TOP, INSIDE]"
+		}
+		port P1 {
+			layout [
+				position: 92, 10
+				size: 20, 20
+			]
+			org.eclipse.elk.^port.borderOffset: -8.0
+			^port.side: NORTH
+			label L1: "MyNorthOutsideLabelPort" {
+			layout [
+				position: -40, -18
+				size: 100, 17
+			]
+		}
+		}
+	}
+	
+	node MyNode2 {
+		layout [
+			position: 200, 20
+			size: 100, 50
+			]
+		nodeSize.constraints: "[PORTS, NODE_LABELS, PORT_LABELS]"
+		portConstraints: FIXED_SIDE
+		portLabels.placement: "[OUTSIDE]"
+		label L1: "MyNode2" {
+			layout [
+				position: 25, 5
+				size: 50, 17
+			]
+			nodeLabels.placement: "[H_CENTER, V_TOP, INSIDE]"
+		}
+		port P1 {
+			layout [
+				position: 92, 10
+				size: 20, 20
+			]
+			org.eclipse.elk.^port.borderOffset: -8.0
+			^port.side: EAST
+			label L1: "MyEastOutsideLabelPort" {
+			layout [
+				position: 21, 2
+				size: 100, 17
+			]
+		}
+		}
+	}
+	
+	node MyNode3 {
+		layout [
+			position: 20, 100
+			size: 100, 50
+			]
+		nodeSize.constraints: "[PORTS, NODE_LABELS, PORT_LABELS]"
+		portConstraints: FIXED_SIDE
+		portLabels.placement: "[OUTSIDE]"
+		label L1: "MyNode3" {
+			layout [
+				position: 25, 5
+				size: 50, 17
+			]
+			nodeLabels.placement: "[H_CENTER, V_TOP, INSIDE]"
+		}
+		port P1 {
+			layout [
+				position: 92, 27
+				size: 20, 20
+			]
+			org.eclipse.elk.^port.borderOffset: -8.0
+			^port.side: SOUTH
+			label L1: "MySouthOutsideLabelPort" {
+			layout [
+				position: -40, 21
+				size: 100, 17
+			]
+		}
+		}
+	}
+	
+	node MyNode4 {
+		layout [
+			position: 200, 100
+			size: 100, 50
+			]
+		nodeSize.constraints: "[PORTS, NODE_LABELS, PORT_LABELS]"
+		portConstraints: FIXED_SIDE
+		portLabels.placement: "[OUTSIDE]"
+		label L1: "MyNode4" {
+			layout [
+				position: 25, 5
+				size: 50, 17
+			]
+			nodeLabels.placement: "[H_CENTER, V_TOP, INSIDE]"
+		}
+		port P1 {
+			layout [
+				position: 92, 10
+				size: 20, 20
+			]
+			org.eclipse.elk.^port.borderOffset: -8.0
+			^port.side: WEST
+			label L1: "MyWestOutsideLabelPort" {
+			layout [
+				position: -101, -7
+				size: 100, 34
+			]
+		}
+		}
+	}
+}
+
+node Container_SeveralBorderNodes_LabelInsideAndOutside {
+	layout [
+		position: 10, 220
+		size: 400, 600
+		]
+	nodeSize.constraints: "[PORTS, NODE_LABELS, PORT_LABELS]"
+	label L1: "Container_SeveralBorderNodes_LabelInsideAndOutside" {
+		layout [
+			position: 40, 5
+			size: 320, 17
+		]
+		nodeLabels.placement: "[H_CENTER, V_TOP, INSIDE]"
+	}
+	node MyNode1 {
+		layout [
+			position: 20, 20
+			size: 100, 50
+			]
+		nodeSize.constraints: "[PORTS, NODE_LABELS, PORT_LABELS]"
+		portConstraints: FIXED_SIDE
+		portLabels.placement: "[INSIDE]"
+		label L1: "MyNode1" {
+			layout [
+				position: 25, 5
+				size: 50, 17
+			]
+			nodeLabels.placement: "[H_CENTER, V_TOP, INSIDE]"
+		}
+		port P1 {
+			layout [
+				position: 92, 10
+				size: 20, 20
+			]
+			org.eclipse.elk.^port.borderOffset: -8.0
+			^port.side: NORTH
+			label L1: "MyNorthInsideLabelPort" {
+				layout [
+					position: -40, 21
+					size: 100, 27
+				]
+			}
+		}
+		port P2 {
+			layout [
+				position: -12, 10
+				size: 20, 20
+			]
+			org.eclipse.elk.^port.borderOffset: -8.0
+			^port.side: SOUTH
+			label L1: "MySouthInsideLabelPort" {
+				layout [
+					position: -40, -18
+					size: 80, 17
+				]
+			}
+		}
+	}
+	
+	node MyNode2 {
+		layout [
+			position: 200, 20
+			size: 100, 50
+			]
+		nodeSize.constraints: "[PORTS, NODE_LABELS, PORT_LABELS]"
+		portConstraints: FIXED_SIDE
+		portLabels.placement: "[INSIDE]"
+		label L1: "MyNode2" {
+			layout [
+				position: 25, 5
+				size: 50, 17
+			]
+			nodeLabels.placement: "[H_CENTER, V_TOP, INSIDE]"
+		}
+		port P1 {
+			layout [
+				position: 92, 10
+				size: 20, 20
+			]
+			org.eclipse.elk.^port.borderOffset: -8.0
+			^port.side: EAST
+			label L1: "MyEastInsideLabelPort" {
+				layout [
+					position: -40, 21
+					size: 100, 36
+				]
+			}
+		}
+		port P2 {
+			layout [
+				position: -12, 10
+				size: 20, 20
+			]
+			org.eclipse.elk.^port.borderOffset: -8.0
+			^port.side: WEST
+			label L1: "MyWestInsideLabelPort" {
+				layout [
+					position: -40, 21
+					size: 150, 17
+				]
+			}
+		}
+	}
+	
+	
+	node MyContainer2 {
+		layout [
+			position: 20, 100
+			size: 120, 100
+			]
+		nodeSize.constraints: "[PORTS, NODE_LABELS, PORT_LABELS]"
+		portConstraints: FIXED_SIDE
+		portLabels.placement: "[INSIDE]"
+		label L1: "MyCont2" {
+			layout [
+				position: 35, 5
+				size: 50, 17
+			]
+			nodeLabels.placement: "[H_CENTER, V_TOP, INSIDE]"
+		}
+		node MyNode2 {
+			layout [
+				position: 20, 30
+				size: 85, 50
+				]
+			label L2: "MyNode2" {
+				layout [
+					position: 5, 5
+					size: 75, 17
+				]
+				nodeLabels.placement: "[H_CENTER, V_TOP, INSIDE]"
+			}
+		}
+		port P1 {
+			layout [
+				position: 112, 10
+				size: 20, 20
+			]
+			org.eclipse.elk.^port.borderOffset: -8.0
+			^port.side: EAST
+			label L1: "MyEastInsideLabelPort" {
+				layout [
+					position: -40, 21
+					size: 100, 17
+				]
+			}
+		}
+		port P2 {
+			layout [
+				position: -12, 10
+				size: 20, 20
+			]
+			org.eclipse.elk.^port.borderOffset: -8.0
+			^port.side: WEST
+			label L1: "MyWestInsideLabelPort" {
+				layout [
+					position: -40, 21
+					size: 150, 17
+				]
+			}
+		}
+	}
+	
+	node MyCont3 {
+		layout [
+			position: 200, 100
+			size: 120, 100
+			]
+		nodeSize.constraints: "[PORTS, NODE_LABELS, PORT_LABELS]"
+		portConstraints: FIXED_SIDE
+		portLabels.placement: "[INSIDE]"
+		label L1: "MyCont3" {
+			layout [
+				position: 35, 5
+				size: 50, 17
+			]
+			nodeLabels.placement: "[H_CENTER, V_TOP, INSIDE]"
+		}
+		node MyNode2 {
+			layout [
+				position: 20, 30
+				size: 85, 50
+				]
+			label L2: "MyNode2" {
+				layout [
+					position: 5, 5
+					size: 75, 17
+				]
+				nodeLabels.placement: "[H_CENTER, V_TOP, INSIDE]"
+			}
+		}
+		port P1 {
+			layout [
+				position: 112, 10
+				size: 20, 20
+			]
+			org.eclipse.elk.^port.borderOffset: -8.0
+			^port.side: EAST
+			label L1: "MyEastInsideLabelPort" {
+				layout [
+					position: -40, 21
+					size: 100, 17
+				]
+			}
+		}
+		port P2 {
+			layout [
+				position: -12, 10
+				size: 20, 20
+			]
+			org.eclipse.elk.^port.borderOffset: -8.0
+			^port.side: WEST
+			label L1: "MyWestInsideLabelPort" {
+				layout [
+					position: -40, 21
+					size: 150, 17
+				]
+			}
+		}
+		edge E1: MyCont3.MyNode2 -> MyCont3.P1 {
+			layout [
+				section ES1 [
+					start: 20, 55
+					end: 8, 20
+				]
+			]
+		}
+		edge E2: MyCont3.P2 -> MyCont3.MyNode2 {
+			layout [
+				section ES2 [
+					start: 112, 20
+					end: 105, 55
+				]
+			]
+		}
+	
+	}
+	
+	node MyNode3 {
+		layout [
+			position: 200, 450
+			size: 180, 50
+		]
+		nodeSize.constraints: "[PORTS, NODE_LABELS, PORT_LABELS]"
+		label L1: "MyNode3" {
+			layout [
+				position: 43, 5
+				size: 85, 17
+			]
+			nodeLabels.placement: "[H_CENTER, V_TOP, INSIDE]"
+		}
+	}
+	node MyCont4 {
+		layout [
+			position: 20, 220
+			size: 200, 200
+		]
+		nodeSize.constraints: "[PORTS, NODE_LABELS, PORT_LABELS]"
+		portLabels.placement: "[INSIDE]"
+		label L2: "MyCont4" {
+			layout [
+				position: 66, 5
+				size: 68, 17
+			]
+			nodeLabels.placement: "[H_CENTER, V_TOP, INSIDE]"
+		}
+		port P1 {
+			layout [
+				position: 192, 70
+				size: 20, 20
+			]
+			org.eclipse.elk.^port.borderOffset: -8.0
+			label L3: "MyPortLabelInside" {
+				layout [
+					position: -40, 21
+					size: 100, 17
+				]
+			}
+		}
+		node MyNode1 {
+			layout [
+				position: 20, 35
+				size: 150, 100
+			]
+			nodeSize.constraints: "[PORTS, NODE_LABELS, PORT_LABELS]"
+			portLabels.placement: "[OUTSIDE]"
+			label L4: "MyNode1" {
+				layout [
+					position: 25, 5
+					size: 100, 17
+				]
+				nodeLabels.placement: "[H_CENTER, V_TOP, INSIDE]"
+			}
+			port P1 {
+				layout [
+					position: 142, 35
+					size: 20, 20
+				]
+				org.eclipse.elk.^port.borderOffset: -8.0
+				label L5: "MyPortLabelOutside" {
+				layout [
+					position: -39.5, 21
+					size: 99, 17
+				]
+			}
+			}
+		}
+		edge E2: MyNode1.P1 -> P1 {
+			layout [
+				section ES2 [
+					start: 182, 80
+					end: 192, 80
+				]
+			]
+		}
+	}
+	edge E1: MyCont4.P1 -> MyNode3 {
+		layout [
+			section ES1 [
+				start: 232, 300
+				end: 290, 450
+				bends: 290, 300
+			]
+		]
+	}
+	}
+}
+
+// Just an edge to have both containers next to each other
+edge E1: ContainerWithFixedLabels -> ContainerWithLabelsInsideAndOutside
+
