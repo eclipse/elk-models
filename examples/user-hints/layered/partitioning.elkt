@@ -1,0 +1,182 @@
+/*******************************************************************************
+ * Copyright (c) 2021 Kiel University and others.
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ *******************************************************************************/
+
+/*
+// elkex:category
+User-Hints > Topology
+
+// elkex:label
+Partitioning
+
+// elkex:doc
+The example illustrates how the user can influence the 
+_horizontal order_ of the nodes in a _left-to-right_ layout using `elk.layered`
+(or the vertical order in a top-down layout). 
+
+The `Default` node shows the result without any user-hints: 
+the vertical order of the nodes is computed in a way 
+such that all source nodes are just above the target nodes they are connected to.
+
+The `Partitions` node show how to influence tht node order to group them using the notion of `partitions`.
+
+Partitions are activated by setting `partitioning.activate: true`
+and by specifying `partition` indices for those nodes that shall end up
+in different layers. In the example all nodes starting with "N1" should be on the first line, using 
+`partitioning.partition: 1`, all nodes starting with N2 should be on the second line, using 
+`partitioning.partition: 2` and so on.
+*/
+
+// elkex:graph
+considerModelOrder: NODES_AND_EDGES // for presentation only
+node default {
+    algorithm: layered
+    elk.direction: DOWN
+    nodeLabels.placement: "[H_CENTER, V_TOP, INSIDE]"
+    nodeSize.constraints: "[NODE_LABELS]"
+    label "Default" { layout [ size: 43, 15 ] }
+    
+    node n11 {
+        nodeLabels.placement: "[H_CENTER, V_CENTER, INSIDE]"
+        label "N11" { layout [ size: 24, 16 ] }
+    }
+    node n12 {
+        nodeLabels.placement: "[H_CENTER, V_CENTER, INSIDE]"
+        label "N12" { layout [ size: 24, 16 ] }
+    }
+    node n13 {
+        nodeLabels.placement: "[H_CENTER, V_CENTER, INSIDE]"
+        label "N13" { layout [ size: 24, 16 ] }
+    }
+    node n14 {
+        nodeLabels.placement: "[H_CENTER, V_CENTER, INSIDE]"
+        label "N14" { layout [ size: 24, 16 ] }
+    }
+    node n15 {
+        nodeLabels.placement: "[H_CENTER, V_CENTER, INSIDE]"
+        label "N15" { layout [ size: 24, 16 ] }
+    }
+    node n21 {
+        nodeLabels.placement: "[H_CENTER, V_CENTER, INSIDE]"
+        label "N21" { layout [ size: 24, 16 ] }
+    }
+    node n22 {
+        nodeLabels.placement: "[H_CENTER, V_CENTER, INSIDE]"
+        label "N22" { layout [ size: 24, 16 ] }
+    }
+    node n23 {
+        nodeLabels.placement: "[H_CENTER, V_CENTER, INSIDE]"
+        label "N23" { layout [ size: 24, 16 ] }
+    }
+    node n24 {
+        nodeLabels.placement: "[H_CENTER, V_CENTER, INSIDE]"
+        label "N24" { layout [ size: 24, 16 ] }
+    }
+    node n31 {
+        nodeLabels.placement: "[H_CENTER, V_CENTER, INSIDE]"
+        label "N31" { layout [ size: 24, 16 ] }
+    }
+    node n41 {
+        nodeLabels.placement: "[H_CENTER, V_CENTER, INSIDE]"
+        label "N41" { layout [ size: 24, 16 ] }
+    }
+    edge n11 -> n21
+    edge n12 -> n22
+    edge n12 -> n31
+    edge n13 -> n22
+    edge n13 -> n23
+    edge n14 -> n31
+    edge n15 -> n31
+    edge n15 -> n24
+    edge n21 -> n41
+    edge n22 -> n31
+    edge n22 -> n41
+    edge n23 -> n31
+    edge n24 -> n41
+    edge n31 -> n41
+}
+
+node partioning {
+    algorithm: layered
+    elk.direction: DOWN
+    nodeLabels.placement: "[H_CENTER, V_TOP, INSIDE]"
+    nodeSize.constraints: "[NODE_LABELS]"
+    partitioning.activate: true
+    label "Partitioning" { layout [ size: 60, 15 ] }
+
+    node n11 {
+        partitioning.partition: 1
+        nodeLabels.placement: "[H_CENTER, V_CENTER, INSIDE]"
+        label "N11" { layout [ size: 24, 16 ] }
+    }
+    node n12 {
+        partitioning.partition: 1
+        nodeLabels.placement: "[H_CENTER, V_CENTER, INSIDE]"
+        label "N12" { layout [ size: 24, 16 ] }
+    }
+    node n13 {
+        partitioning.partition: 1
+        nodeLabels.placement: "[H_CENTER, V_CENTER, INSIDE]"
+        label "N13" { layout [ size: 24, 16 ] }
+    }
+    node n14 {
+        partitioning.partition: 1
+        nodeLabels.placement: "[H_CENTER, V_CENTER, INSIDE]"
+        label "N14" { layout [ size: 24, 16 ] }
+    }
+    node n15 {
+        partitioning.partition: 1
+        nodeLabels.placement: "[H_CENTER, V_CENTER, INSIDE]"
+        label "N15" { layout [ size: 24, 16 ] }
+    }
+    node n21 {
+        partitioning.partition: 2
+        nodeLabels.placement: "[H_CENTER, V_CENTER, INSIDE]"
+        label "N21" { layout [ size: 24, 16 ] }
+    }
+    node n22 {
+        partitioning.partition: 2
+        nodeLabels.placement: "[H_CENTER, V_CENTER, INSIDE]"
+        label "N22" { layout [ size: 24, 16 ] }
+    }
+    node n23 {
+        partitioning.partition: 2
+        nodeLabels.placement: "[H_CENTER, V_CENTER, INSIDE]"
+        label "N23" { layout [ size: 24, 16 ] }
+    }
+    node n24 {
+        partitioning.partition: 2
+        nodeLabels.placement: "[H_CENTER, V_CENTER, INSIDE]"
+        label "N24" { layout [ size: 24, 16 ] }
+    }
+    node n31 {
+        partitioning.partition: 3
+        nodeLabels.placement: "[H_CENTER, V_CENTER, INSIDE]"
+        label "N31" { layout [ size: 24, 16 ] }
+    }
+    node n41 {
+        partitioning.partition: 4
+        nodeLabels.placement: "[H_CENTER, V_CENTER, INSIDE]"
+        label "N41" { layout [ size: 24, 16 ] }
+    }
+    edge n11 -> n21
+    edge n12 -> n22
+    edge n12 -> n31
+    edge n13 -> n22
+    edge n13 -> n23
+    edge n14 -> n31
+    edge n15 -> n31
+    edge n15 -> n24
+    edge n21 -> n41
+    edge n22 -> n31
+    edge n22 -> n41
+    edge n23 -> n31
+    edge n24 -> n41
+    edge n31 -> n41
+}
