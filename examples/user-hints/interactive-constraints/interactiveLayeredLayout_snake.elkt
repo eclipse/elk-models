@@ -1,0 +1,46 @@
+/*******************************************************************************
+ * Copyright (c) 2021 Kiel University and others.
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ *******************************************************************************/
+interactiveLayout: true
+elk.direction: RIGHT
+
+node n1
+node n2
+node n3 {
+	layering.layerChoiceConstraint: 0
+}
+node n4
+node n5 {
+	layering.layerChoiceConstraint: 0
+}
+node n6
+node n7 {
+	layering.layerChoiceConstraint: 0
+}
+node n8
+node n9
+node n10
+node n11 {
+	layering.layerChoiceConstraint: 0
+}
+node n12 {
+	crossingMinimization.positionChoiceConstraint: 1
+	layering.layerChoiceConstraint: 3
+}
+edge n1 -> n2
+edge n2 -> n3
+edge n3 -> n4
+edge n4 -> n5
+edge n5 -> n6
+edge n6 -> n7
+edge n7 -> n8
+edge n8 -> n9
+edge n9 -> n10
+edge n10 -> n11
+edge n11 -> n12

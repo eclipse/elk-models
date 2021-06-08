@@ -1,0 +1,31 @@
+/*******************************************************************************
+ * Copyright (c) 2021 Kiel University and others.
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ *******************************************************************************/
+algorithm: rectpacking
+interactiveLayout: true
+optimizationGoal: ASPECT_RATIO_DRIVEN
+aspectRatio: 1.0625
+elk.spacing.nodeNode: 20
+// Simple example to use interactive rectpacking in Keith
+node n1
+node n2
+node n3
+node n4
+node n5
+node n6
+node n6_1
+node n6_2
+node n6_3
+node n6_4
+node n7 {
+	layout [size: 200, 200]
+}
+node n8
+node n9
+node n10

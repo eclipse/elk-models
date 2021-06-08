@@ -1,0 +1,27 @@
+/*******************************************************************************
+ * Copyright (c) 2021 Kiel University and others.
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ *******************************************************************************/
+interactiveLayout: true
+algorithm: rectpacking
+expandNodes: false
+aspectRatio: 1.908321167883212
+// Simple example for rectpacking and layered interactive in the same model. To be used in Keith
+node n11
+node n12
+node n13 {
+  interactiveLayout: true
+  elk.direction: RIGHT
+  separateConnectedComponents: false
+  label "Test"
+  node n1
+  node n2 {
+  	layering.layerChoiceConstraint: 0 // set to 1 to have effect
+  	crossingMinimization.positionChoiceConstraint: 0
+  }
+}

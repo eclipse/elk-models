@@ -1,0 +1,37 @@
+/*******************************************************************************
+ * Copyright (c) 2021 Kiel University and others.
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ *******************************************************************************/
+interactiveLayout: true
+elk.direction: RIGHT
+
+/*
+ * Expected result after interactive layout:
+ * 
+ *  ________________
+ * |n2 ____    ____  |   ____
+ * |  |n2_2|__|n2_1| |__|n1  |
+ * |  |____|  |____| |  |____|
+ * |_________________|
+ * 
+ */
+node n1
+
+node n2 {
+	elk.direction: RIGHT
+	layering.layerChoiceConstraint: 0
+	node n2_1
+
+	node n2_2 {
+		layering.layerChoiceConstraint: 0
+	}
+
+	edge n2_1 -> n2_2
+}
+
+edge n1 -> n2
