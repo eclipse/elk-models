@@ -7,9 +7,39 @@
  *
  * SPDX-License-Identifier: EPL-2.0
  *******************************************************************************/
+/*
+// elkex:category
+Interactive > Layered
+
+// elkex:label
+Direction Test
+
+// elkex:doc
+This can only be used within an editor that configures two consecutive layout runs, e.g. KIELER, Keith
+but not Elklive.
+ 
+The interactiveLayout property allows to move nodes in diagram view that supports this (e.g. Klighd VSCode extension).
+Internally it sets via a GraphVisitor all other necessary properties, such as interactive and interactive strategies
+for the different phases.
+
+
+Used to test different directions and the available drag and drop spots
+ 
+Expected layout:
+
+
+ ____ <_ ____ <_ ____
+|n3  |<_|n2  |<_|n1  |
+|____| _|____|  |____|
+ ____ | 
+|n4  |< 
+|____|   
+
+*/
+
+// elkex:graph
 interactiveLayout: true
 elk.direction: LEFT
-// Used to test different directions and the available drag and drop spots
 node n1 node n2 node n3 node n4
 
 

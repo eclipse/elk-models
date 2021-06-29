@@ -7,6 +7,24 @@
  *
  * SPDX-License-Identifier: EPL-2.0
  *******************************************************************************/
+/*
+// elkex:category
+Interactive > Layered
+
+// elkex:label
+Hierarchy with all directions.
+
+// elkex:doc
+This can only be used within an editor that configures two consecutive layout runs, e.g. KIELER, Keith
+but not Elklive.
+ 
+The interactiveLayout property allows to move nodes in diagram view that supports this (e.g. Klighd VSCode extension).
+Internally it sets via a GraphVisitor all other necessary properties, such as interactive and interactive strategies
+for the different phases.
+
+*/
+
+// elkex:graph
 interactiveLayout: true
 elk.direction: RIGHT
 
