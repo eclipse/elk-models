@@ -24,13 +24,13 @@ Internally it sets via a GraphVisitor all other necessary properties, such as in
 for the different phases.
 
 Expected result after interactive layout:
-
+<pre>
  ________________
 |n2 ____    ____  |   ____
 |  |n2_2|__|n2_1| |__|n1  |
 |  |____|  |____| |  |____|
 |_________________|
-
+</pre>
 */
 
 // elkex:graph
