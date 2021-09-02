@@ -1,0 +1,36 @@
+/*******************************************************************************
+ * Copyright (c) 2018 Kiel University and others.
+ * 
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ *******************************************************************************/
+
+// Reproduces an issue where two vertical edge segments come really close
+// and should thus be assigned to different routing slots. To reproduce
+// this, we'll have to set all sizes as well as port positions ourselves.
+
+nodePlacement.strategy: SIMPLE
+
+node n1 {
+	layout[ size: 40, 100 ]
+	
+	portConstraints: FIXED_POS
+	
+	port p1_1 { layout[ size: 3, 3 position: 40, 33 ] }
+	port p1_2 { layout[ size: 3, 3 position: 40, 42	] }
+}
+
+node n2 {
+	layout[ size: 40, 40 ]
+	
+	portConstraints: FIXED_POS
+	
+	port p2_1 { layout[ size: 3, 3 position: -3, 10 ] }
+	port p2_2 { layout[ size: 3, 3 position: -3, 27 ] }
+}
+
+edge n1.p1_1 -> n2.p2_1
+edge n1.p1_2 -> n2.p2_2

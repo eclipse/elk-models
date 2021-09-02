@@ -1,0 +1,57 @@
+/*******************************************************************************
+ * Copyright (c) 2021 Kiel University and others.
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ *******************************************************************************/
+
+/*
+// elkex:category
+Interactive > Layered
+
+// elkex:label
+Motor reversed
+
+// elkex:doc
+This can only be used within an editor that configures two consecutive layout runs, e.g. KIELER, Keith
+but not Elklive.
+ 
+The interactiveLayout property allows to move nodes in diagram view that supports this (e.g. Klighd VSCode extension).
+Internally it sets via a GraphVisitor all other necessary properties, such as interactive and interactive strategies
+for the different phases.
+
+Visualizes the layout problem from the motor SCChart. If a new edge from Accel to CheckMin is added nodes might
+change their positions which is undesired.
+*/
+
+// elkex:graph
+interactiveLayout: true
+elk.direction: RIGHT
+
+node Pause {
+	crossingMinimization.positionChoiceConstraint: 0
+	layering.layerChoiceConstraint: 3
+} node Accel node Deccel {
+	layering.layerChoiceConstraint: 2
+	crossingMinimization.positionChoiceConstraint: 1
+}
+node CheckMax {
+	crossingMinimization.positionChoiceConstraint: 0
+	layering.layerChoiceConstraint: 1
+} node CheckMin {
+	crossingMinimization.positionChoiceConstraint: 1
+	layering.layerChoiceConstraint: 1
+}
+node SetPeriod edge Pause -> Accel
+edge Pause -> Deccel
+edge Accel -> CheckMax
+edge Deccel -> CheckMin
+// edge Accel -> CheckMin
+edge CheckMax -> SetPeriod
+edge CheckMin -> SetPeriod
+edge SetPeriod -> Pause
+edge SetPeriod -> Pause
+edge CheckMax -> SetPeriod

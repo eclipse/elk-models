@@ -1,0 +1,41 @@
+/*******************************************************************************
+ * Copyright (c) 2021 Kiel University and others.
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ *******************************************************************************/
+/*
+// elkex:category
+Interactive > Layered
+
+// elkex:label
+Sorting task
+
+// elkex:doc
+This can only be used within an editor that configures two consecutive layout runs, e.g. KIELER, Keith
+but not Elklive.
+ 
+The interactiveLayout property allows to move nodes in diagram view that supports this (e.g. Klighd VSCode extension).
+Internally it sets via a GraphVisitor all other necessary properties, such as interactive and interactive strategies
+for the different phases.
+
+This model was used as a sorting task. 
+
+*/
+
+// elkex:graph
+interactiveLayout: true
+elk.direction: RIGHT
+// Task: Sort the nodes via layer and position constraints. Used in Keith
+node A node AA node AAA node B node BB node BBB node C node CC node CCC edge AA -> B
+edge AA -> BB
+edge B -> A
+edge B -> C
+edge BB -> C
+edge BB -> CC
+edge BBB -> AAA
+edge CCC -> AAA
+edge AAA -> CC

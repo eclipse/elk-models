@@ -15,7 +15,7 @@ General > Spacing
 Ports
 
 // elkex:doc
-The examples shows how the space to be left free ports can be configured.
+The examples show how the space to be left free ports can be configured.
 
 As illustrated by the `Distribution` node,
 it depends on the used `portAlignment` whether `spacing.portPort` takes effect:

@@ -1,0 +1,55 @@
+/*******************************************************************************
+ * Copyright (c) 2021 Kiel University and others.
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ *******************************************************************************/
+/*
+// elkex:category
+Interactive > Rectpacking
+
+// elkex:label
+Hierarchy
+
+// elkex:doc
+This can only be used within an editor that configures two consecutive layout runs, e.g. KIELER, Keith
+but not Elklive.
+ 
+The interactiveLayout property allows to move nodes in diagram view that supports this (e.g. Klighd VSCode extension).
+Internally it sets via a GraphVisitor all other necessary properties, such as interactive and interactive strategies.
+
+Expected the following drawing using interactive layout:
+
+ _____________
+|n2____  ____  |
+| |n2_2||n2_1| |
+| |____||____| | 
+|______________|
+ ____
+|n1  |
+|____|
+
+
+*/
+
+// elkex:graph
+algorithm: rectpacking
+interactiveLayout: true
+
+
+
+node n1
+
+node n2 {
+  algorithm: rectpacking
+  desiredPosition: 0
+  
+  node n2_1
+  
+  node n2_2 {
+    desiredPosition: 0
+  }
+}

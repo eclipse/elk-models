@@ -18,14 +18,16 @@ node Down {
     nodeLabels.placement: "H_CENTER V_TOP INSIDE"
     node N1 {
         nodeLabels.placement: "H_CENTER V_CENTER INSIDE"
-        portConstraints: FIXED_SIDE
+        portConstraints: FIXED_ORDER
         port P1 {
             layout [ size: 31, 7 ]
             ^port.side: WEST
+            ^port.index: 1
         }
         port P2 {
             layout [ size: 31, 7 ]
             ^port.side: WEST
+            ^port.index: 2
         }
     }
 }
@@ -35,14 +37,16 @@ node Up {
     nodeLabels.placement: "H_CENTER V_TOP INSIDE"
     node N1 {
         nodeLabels.placement: "H_CENTER V_CENTER INSIDE"
-        portConstraints: FIXED_SIDE
+        portConstraints: FIXED_ORDER
         port P1 {
             layout [ size: 31, 7 ]
             ^port.side: WEST
+            ^port.index: 1
         }
         port P2 {
             layout [ size: 31, 7 ]
             ^port.side: WEST
+            ^port.index: 2
         }
     }
 }
@@ -52,14 +56,16 @@ node Left {
     nodeLabels.placement: "H_CENTER V_TOP INSIDE"
     node N1 {
         nodeLabels.placement: "H_CENTER V_CENTER INSIDE"
-        portConstraints: FIXED_SIDE
+        portConstraints: FIXED_ORDER
         port P1 {
             layout [ size: 31, 7 ]
             ^port.side: WEST
+            ^port.index: 1
         }
         port P2 {
             layout [ size: 31, 7 ]
             ^port.side: WEST
+            ^port.index: 2
         }
     }
 }
@@ -69,14 +75,16 @@ node Right {
     nodeLabels.placement: "H_CENTER V_TOP INSIDE"
     node N1 {
         nodeLabels.placement: "H_CENTER V_CENTER INSIDE"
-        portConstraints: FIXED_SIDE
+        portConstraints: FIXED_ORDER
         port P1 {
             layout [ size: 31, 7 ]
             ^port.side: WEST
+            ^port.index: 1
         }
         port P2 {
             layout [ size: 31, 7 ]
             ^port.side: WEST
+            ^port.index: 2
         }
     }
 }

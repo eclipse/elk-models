@@ -1,0 +1,60 @@
+/*******************************************************************************
+ * Copyright (c) 2020 Kiel University and others.
+ * 
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ *******************************************************************************/
+
+edgeRouting: POLYLINE
+
+node n1
+{
+  port a
+  port b
+  label "n1"
+}
+
+node n2
+{
+  port a
+  port b
+  label "n2"
+}
+
+node n3
+{
+  port a
+  port b
+  label "n3"
+}
+
+node n4
+{
+  port a
+  port b
+  label "n4"
+}
+
+node n5
+{
+  port a
+  port b
+  label "n5"
+}
+
+node n6
+{
+  port a
+  port b
+  label "n6"
+}
+
+edge n1.a -> n2.b
+edge n2.a -> n4.b
+edge n4.a -> n3.b
+edge n3.a -> n5.b
+edge n5.a -> n6.b
+edge n6.a -> n2.b

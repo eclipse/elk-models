@@ -1,0 +1,47 @@
+/*******************************************************************************
+ * Copyright (c) 2021 Kiel University and others.
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ *******************************************************************************/
+/*
+// elkex:category
+Interactive > Layered
+
+// elkex:label
+Mixed interactive Layout
+
+// elkex:doc
+This can only be used within an editor that configures two consecutive layout runs, e.g. KIELER, Keith
+but not Elklive.
+ 
+The interactiveLayout property allows to move nodes in diagram view that supports this (e.g. Klighd VSCode extension).
+Internally it sets via a GraphVisitor all other necessary properties, such as interactive and interactive strategies
+for the different phases.
+
+Rectpacking interactive mixed with layered interactive works.  
+
+*/
+
+// elkex:graph
+interactiveLayout: true
+algorithm: rectpacking
+expandNodes: false
+aspectRatio: 1.908321167883212
+// Simple example for rectpacking and layered interactive in the same model. To be used in Keith
+node n11
+node n12
+node n13 {
+  interactiveLayout: true
+  elk.direction: RIGHT
+  separateConnectedComponents: false
+  label "Test"
+  node n1
+  node n2 {
+  	layering.layerChoiceConstraint: 0 // set to 1 to have effect
+  	crossingMinimization.positionChoiceConstraint: 0
+  }
+}

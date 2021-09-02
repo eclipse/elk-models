@@ -1,0 +1,25 @@
+/*******************************************************************************
+ * Copyright (c) 2020 Kiel University and others.
+ * 
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ *******************************************************************************/
+
+// Reproduces a problem where layer constraint processing moves nodes around to
+// compact the layering when it shouldn't actually do so. The expected results
+// contains three layers with one node each:
+//    L1[n3]   L2[n1]   L3[n2]
+
+algorithm: layered
+cycleBreaking.strategy: INTERACTIVE
+layering.strategy: INTERACTIVE 
+
+node n1 { layout [ position: 100, 0 ] }
+node n2 { layout [ position: 200, 0 ] }
+node n3 { layout [ position: 00, 0 ] }
+
+edge n1 -> n2
+edge n2 -> n3

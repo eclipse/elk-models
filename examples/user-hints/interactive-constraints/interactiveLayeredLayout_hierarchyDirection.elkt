@@ -1,0 +1,75 @@
+/*******************************************************************************
+ * Copyright (c) 2021 Kiel University and others.
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ *******************************************************************************/
+/*
+// elkex:category
+Interactive > Layered
+
+// elkex:label
+Hierarchy with all directions.
+
+// elkex:doc
+This can only be used within an editor that configures two consecutive layout runs, e.g. KIELER, Keith
+but not Elklive.
+ 
+The interactiveLayout property allows to move nodes in diagram view that supports this (e.g. Klighd VSCode extension).
+Internally it sets via a GraphVisitor all other necessary properties, such as interactive and interactive strategies
+for the different phases.
+
+*/
+
+// elkex:graph
+interactiveLayout: true
+elk.direction: RIGHT
+
+node n1 {
+	interactiveLayout: true
+	elk.direction: DOWN
+	separateConnectedComponents: false
+
+	node n11 {
+		interactiveLayout: true
+		elk.direction: UP
+
+		node n111
+		node n112
+		edge n111 -> n112
+	}
+	node n12 {
+		crossingMinimization.positionChoiceConstraint: 0
+	}
+}
+node n2
+node n3
+node n4
+node n5
+node n6 {
+	interactiveLayout: true
+	separateConnectedComponents: false
+	elk.direction: LEFT
+
+	node n61 {
+		interactiveLayout: true
+		elk.direction: RIGHT
+
+		node n611
+		node n612
+	}
+	node n62 {
+		layering.layerChoiceConstraint: 1
+	}
+}
+
+edge n2 -> n6
+edge n1 -> n6
+edge n4 -> n6
+edge n1 -> n3
+edge n6 -> n3
+edge n2 -> n5
+edge n5 -> n1

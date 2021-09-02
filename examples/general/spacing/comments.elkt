@@ -1,0 +1,43 @@
+/*******************************************************************************
+ * Copyright (c) 2020 Kiel University and others.
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ *******************************************************************************/
+/*
+// elkex:category
+General > Spacing
+
+// elkex:label
+Comments
+
+// elkex:doc
+This example illustrates how the space to be left between comments and nodes
+can be configured. Comments are modelled as regular nodes in ELK.
+
+In horizontal layouts, ELK Layered distributes comments over the areas above
+and below their node. How much space is left between the comments and their node
+is controlled by the comment-node spacing. If several comments share an area,
+the space between them is controlled by the comment-comment spacing.
+*/
+
+// elkex:graph
+algorithm: layered
+spacing.commentComment: 30   // Space between comments connected to the same node
+spacing.commentNode: 5       // Space between a node and its comments
+
+// Comments are nodes that have their commentBox property set to true. They
+// can be connected to their node by an edge in either direction.
+node n1
+node c1_1 { commentBox: true }
+node c1_2 { commentBox: true }
+node c1_3 { commentBox: true }
+node c1_4 { commentBox: true }
+
+edge n1 -> c1_1
+edge n1 -> c1_2
+edge c1_3 -> n1
+edge c1_4 -> n1

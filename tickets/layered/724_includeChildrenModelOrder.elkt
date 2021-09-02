@@ -1,0 +1,51 @@
+/*******************************************************************************
+ * Copyright (c) 2021 Kiel University and others.
+ * 
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ *******************************************************************************/
+
+// Reproduces an issue that causes on NPE if a non NONE considerModelOrder is used together with
+// hierarchyHandling: includeChildren
+
+graph G1
+layout [ size: 200, 200 ]
+nodeSize.constraints: "[NODE_LABELS]"
+hierarchyHandling: INCLUDE_CHILDREN
+algorithm: org.eclipse.elk.layered
+considerModelOrder: NODES_AND_EDGES
+noLayout: false
+node Node1 {
+	layout [
+		position: 35, 35
+		size: 30, 30
+	]
+	nodeSize.constraints: "[NODE_LABELS]"
+	label L1: "Node1" {
+		layout [ size: 64, 21 ]
+		nodeLabels.placement: "[H_CENTER, V_CENTER, INSIDE]"
+	}
+}
+node Node2 {
+	layout [
+		position: 35, 35
+		size: 30, 30
+	]
+	nodeSize.constraints: "[NODE_LABELS]"
+	label L2: "Node2" {
+		layout [ size: 64, 21 ]
+		nodeLabels.placement: "[H_CENTER, V_CENTER, INSIDE]"
+	}
+}
+edge E1: Node1 -> Node2 {
+	layout [
+		section ES1 [
+			start: 0, 0
+			end: 0, 30
+			bends: -20, -20 | -20, 51
+		]
+	]
+}

@@ -1,0 +1,38 @@
+/*******************************************************************************
+ * Copyright (c) 2021 Kiel University and others.
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ *******************************************************************************/
+/*
+// elkex:category
+Interactive > Layered
+
+// elkex:label
+Nodes Sizes
+
+// elkex:doc
+This can only be used within an editor that configures two consecutive layout runs, e.g. KIELER, Keith
+but not Elklive.
+ 
+The interactiveLayout property allows to move nodes in diagram view that supports this (e.g. Klighd VSCode extension).
+Internally it sets via a GraphVisitor all other necessary properties, such as interactive and more.
+
+*/
+
+// elkex:graph
+interactiveLayout: true
+separateConnectedComponents: false // Has to be set to work properly
+elk.direction: RIGHT
+node n1{
+	layout [size: 200, 200]
+	positionChoiceConstraint: 0
+}
+
+node n2 {
+	
+	positionChoiceConstraint: 1
+}

@@ -1,0 +1,36 @@
+/*******************************************************************************
+ * Copyright (c) 2020 Kiel University and others.
+ * 
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ *******************************************************************************/
+
+// Fixes an issue where the resulting drawing was broken due to the fact that 
+// greedy switch was configured differently for different hierarchy levels.
+
+hierarchyHandling: INCLUDE_CHILDREN
+
+node l1 {
+    elk.padding: "[top=0.0;left=0.0,bottom=0.0,right=0.0]"
+    spacing.nodeNodeBetweenLayers: 10
+    // As part of the fix a separate option for the hierarchical case has been introduced. 
+    // To check that the correct one is evaluated, we set both options here.
+    crossingMinimization.greedySwitch.type: OFF
+    crossingMinimization.greedySwitchHierarchical.type: OFF
+    node l2_1 {
+        layout [ size: 20, 100 ]
+        elk.padding: "[top=0.0,left=0.0,bottom=0.0,right=0.0]"
+        crossingMinimization.greedySwitch.type: TWO_SIDED
+        crossingMinimization.greedySwitchHierarchical.type: TWO_SIDED
+        node l3 {
+            layout [ size: 20, 20 ] 
+        }
+    }
+    node l2_2 {
+        layout [ size: 20, 20 ] 
+    }
+    edge l2_1 -> l2_2
+}

@@ -18,13 +18,17 @@ Port Surrounding
 The example illustrates the usage of the `spacing.portsSurrounding` layout option.
 As with the `spacing.portPort` option,
 the concrete effect depends on the used `portAlignment`.
-Note that the while the option is specified using an instance of `ElkMargin`,
+Note that while the option is specified using an instance of `ElkMargin`,
 the semantics of the four values is slightly different:
 `top` refers to the upper part of a node's eastern and western border,
 and `left` refers to the left part of a node's northern and southern border.
 `bottom` and `right` work analogously.
 The allowed span of a node's border in which ports may be
 placed is then the area in-between to of these specified values.
+
+The second node, inner2UsingSpacingIndividual, illustrates the capability to override 
+default `spacing.portsSurrounding` for a specific node with the `spacing.individual`
+ layout option.
 
 #### `BEGIN`, `CENTER`
 The western and eastern border of the shown node illustrate
@@ -51,6 +55,33 @@ spacing.portsSurrounding: "[top=20.0,left=5.0,bottom=0.0,right=15.0]"
 
 node inner {
     layout [ size: 100, 100 ]
+    portConstraints: FIXED_SIDE
+
+    portAlignment.west: BEGIN
+    portAlignment.east: CENTER
+
+    portAlignment.north: JUSTIFIED
+    portAlignment.south: DISTRIBUTED
+
+    port pw1 { ^port.side: WEST }
+    port pw2 { ^port.side: WEST }
+
+    port pn1 { ^port.side: NORTH }
+    port pn2 { ^port.side: NORTH }
+
+    port pe1 { ^port.side: EAST }
+    port pe2 { ^port.side: EAST }
+
+    port ps1 { ^port.side: SOUTH }
+    port ps2 { ^port.side: SOUTH }
+}
+
+// The parent's portsSurrounding are overridden for this second node.
+node inner2 {
+    layout [ size: 100, 100 ]
+
+    // The only difference with the first node is the below line.
+    spacing.individual: "spacing.portsSurrounding:[top=40.0,left=10.0,bottom=10.0,right=30.0]"
     portConstraints: FIXED_SIDE
 
     portAlignment.west: BEGIN

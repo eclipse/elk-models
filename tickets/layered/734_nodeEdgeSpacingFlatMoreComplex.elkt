@@ -1,0 +1,42 @@
+/*******************************************************************************
+ * Copyright (c) 2020 Kiel University and others.
+ * 
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ *******************************************************************************/
+
+// Reproduces an issue that causes the space between a node and the edge routing
+// area at the last layer than at the first.
+layering.strategy: INTERACTIVE
+cycleBreaking.strategy: INTERACTIVE
+
+node n1 {
+	layout[ size: 50, 50 position: 0, 0 ]
+	
+	portConstraints: FIXED_SIDE
+	
+	port in { ^port.side: WEST }
+	port out { ^port.side: EAST }
+}
+node n2 {
+	layout[ size: 50, 50 position: 100, 0 ]
+	
+	portConstraints: FIXED_SIDE
+	
+	port in { ^port.side: WEST }
+	port out { ^port.side: EAST }
+}
+node n3 {
+	layout[ size: 50, 50 position: 100, 0 ]
+	
+	portConstraints: FIXED_SIDE
+	
+	port in { ^port.side: WEST }
+}
+
+edge n1.out -> n2.in
+edge n1.out -> n3.in
+edge n2.out -> n1.in
