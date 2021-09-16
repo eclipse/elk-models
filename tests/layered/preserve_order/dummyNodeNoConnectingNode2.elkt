@@ -7,10 +7,6 @@
  *
  * SPDX-License-Identifier: EPL-2.0
  *******************************************************************************/
-preserveOrder: PREFER_EDGES
-
-// Potential problem: n3 is placed below the long edge dummy label node,
-// since n3 has no connections to the previous layer.
 
 node l0p0
 edge l0p0 -> l2p0 {

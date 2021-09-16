@@ -12,7 +12,7 @@
 Interactive > Layered
 
 // elkex:label
-Mixed interactive Layout
+Mixed Interactive Layout
 
 // elkex:doc
 This can only be used within an editor that configures two consecutive layout runs, e.g. KIELER, Keith
