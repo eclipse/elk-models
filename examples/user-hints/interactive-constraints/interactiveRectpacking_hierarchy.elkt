@@ -22,7 +22,7 @@ The interactiveLayout property allows to move nodes in diagram view that support
 Internally it sets via a GraphVisitor all other necessary properties, such as interactive and interactive strategies.
 
 Expected the following drawing using interactive layout:
-
+<pre>
  _____________
 |n2____  ____  |
 | |n2_2||n2_1| |
@@ -32,7 +32,7 @@ Expected the following drawing using interactive layout:
 |n1  |
 |____|
 
-
+</pre>
 */
 
 // elkex:graph

@@ -27,14 +27,14 @@ Used to test different directions and the available drag and drop spots
  
 Expected layout:
 
-
+<pre>
  ____ <_ ____ <_ ____
 |n3  |<_|n2  |<_|n1  |
 |____| _|____|  |____|
  ____ | 
 |n4  |< 
 |____|   
-
+</pre>
 */
 
 // elkex:graph

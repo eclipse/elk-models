@@ -13,7 +13,7 @@
 Interactive > Layered
 
 // elkex:label
-Motor reversed
+Motor Reversed
 
 // elkex:doc
 This can only be used within an editor that configures two consecutive layout runs, e.g. KIELER, Keith

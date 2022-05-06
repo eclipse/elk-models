@@ -27,14 +27,14 @@ Otherwise position and layer constraints become confusing.
  
 Expected layout:
 
-
+<pre>
  ____    ____
 |n3  |  |n4  |
 |____|  |____|
          ____    ____
         |n2  |<_|n1  |
         |____|  |____|
-
+</pre>
 */
 
 // elkex:graph
