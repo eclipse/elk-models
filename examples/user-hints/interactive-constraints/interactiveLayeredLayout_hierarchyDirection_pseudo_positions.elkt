@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2021-2022 Kiel University and others.
+ * Copyright (c) 2022 Kiel University and others.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License 2.0 which is available at
@@ -12,31 +12,32 @@
 Interactive > Layered
 
 // elkex:label
-Hierarchy with all directions.
+Hierarchy with all directions (Pseudo Positions)
 
 // elkex:doc
-This can only be used within an editor that configures two consecutive layout runs, e.g. KIELER, Keith
-but not Elklive.
- 
-The interactiveLayout property allows to move nodes in diagram view that supports this (e.g. Klighd VSCode extension).
-Internally it sets via a GraphVisitor all other necessary properties, such as interactive and interactive strategies
-for the different phases.
+Pseudo positions are set which emulate what would be done by the interactiveLayout property.
 
 */
 
 // elkex:graph
-interactiveLayout: true
 elk.direction: RIGHT
 
+
 node n1 {
-	interactiveLayout: true
 	elk.direction: DOWN
-	separateConnectedComponents: false
+  cycleBreaking.strategy: INTERACTIVE
+  layering.strategy: INTERACTIVE
+  crossingMinimization.semiInteractive: true
+  separateConnectedComponents: false
   label "n1"
 
 	node n11 {
-		interactiveLayout: true
+    layout [position: 0, 100] // y coordinate since DOWN
 		elk.direction: UP
+    cycleBreaking.strategy: INTERACTIVE
+    layering.strategy: INTERACTIVE
+    crossingMinimization.semiInteractive: true
+    separateConnectedComponents: false
     label "n11"
 
 		node n111 {
@@ -48,7 +49,7 @@ node n1 {
 		edge n111 -> n112
 	}
 	node n12 {
-		crossingMinimization.positionChoiceConstraint: 0
+		layout [position: 0, 0]
     label "n12"
 	}
 }
@@ -65,13 +66,14 @@ node n5 {
   label "n5"
 }
 node n6 {
-	interactiveLayout: true
 	separateConnectedComponents: false
+  cycleBreaking.strategy: INTERACTIVE
+  layering.strategy: INTERACTIVE
 	elk.direction: LEFT
   label "n6"
 
 	node n61 {
-		interactiveLayout: true
+    layout [position: 100, 0] // x-coordinate for LEFT layout
 		elk.direction: RIGHT
     label "n61"
 
@@ -83,7 +85,7 @@ node n6 {
 		}
 	}
 	node n62 {
-		layering.layerChoiceConstraint: 1
+    layout [position: 0, 0]
     label "n62"
 	}
 }

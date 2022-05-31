@@ -30,9 +30,11 @@ elk.direction: RIGHT
 node n1{
 	layout [size: 200, 200]
 	positionChoiceConstraint: 0
+  label "n1"
 }
 
 node n2 {
 	
 	positionChoiceConstraint: 1
+  label "n2"
 }
