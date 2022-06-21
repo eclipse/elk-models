@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2021 Kiel University and others.
+ * Copyright (c) 2022 Kiel University and others.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License 2.0 which is available at
@@ -34,7 +34,7 @@ in different layers. In the example all nodes starting with "N1" should be on th
 */
 
 // elkex:graph
-considerModelOrder: NODES_AND_EDGES // for presentation only
+considerModelOrder.components: FORCE_MODEL_ORDER // for presentation only
 node default {
     algorithm: layered
     elk.direction: DOWN
