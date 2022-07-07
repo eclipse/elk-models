@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2021-2022 Kiel University and others.
+ * Copyright (c) 2022 Kiel University and others.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License 2.0 which is available at
@@ -12,7 +12,7 @@
 Interactive > Layered
 
 // elkex:label
-Sorting Task
+Sorting task (Pseudo Positions)
 
 // elkex:doc
 This can only be used within an editor that configures two consecutive layout runs, e.g. KIELER, Keith
@@ -22,57 +22,50 @@ The interactiveLayout property allows to move nodes in diagram view that support
 Internally it sets via a GraphVisitor all other necessary properties, such as interactive and interactive strategies
 for the different phases.
 
-This model was used as a sorting task. 
+This model was used as a sorting task. However, the vertical sorting does not work here.
 
 */
 
 // elkex:graph
-interactiveLayout: true
 elk.direction: RIGHT
-// Task: Sort the nodes via layer and position constraints. Used in Keith
+cycleBreaking.strategy: INTERACTIVE
+layering.strategy: INTERACTIVE
+crossingMinimization.semiInteractive: true
+separateConnectedComponents: false
 node A {
-  layering.layerChoiceConstraint: 0
-  crossingMinimization.positionChoiceConstraint: 0
+  layout [position: 0, 0]
   label "A"
 }
 node AA {
-  layering.layerChoiceConstraint: 0
-  crossingMinimization.positionChoiceConstraint: 1
+  layout [position: 0, 100]
   label "AA"
 }
 node AAA {
-  layering.layerChoiceConstraint: 0
-  crossingMinimization.positionChoiceConstraint: 2
+  layout [position: 0, 200]
   label "AAA"
 }
 node B {
-  layering.layerChoiceConstraint: 1
-  crossingMinimization.positionChoiceConstraint: 0
+  layout [position: 100, 0]
   label "B"
 }
 node BB {
-  layering.layerChoiceConstraint: 1
-  crossingMinimization.positionChoiceConstraint: 1
+  layout [position: 100, 100]
   label "BB"
 }
 node BBB {
-  layering.layerChoiceConstraint: 1
-  crossingMinimization.positionChoiceConstraint: 2
+  layout [position: 100, 200]
   label "BBB"
 }
 node C {
-  layering.layerChoiceConstraint: 2
-  crossingMinimization.positionChoiceConstraint: 0
+  layout [position: 200, 0]
   label "C"
 }
 node CC {
-  layering.layerChoiceConstraint: 2
-  crossingMinimization.positionChoiceConstraint: 1
+  layout [position: 200, 100]
   label "CC"
 }
 node CCC {
-  layering.layerChoiceConstraint: 2
-  crossingMinimization.positionChoiceConstraint: 2
+  layout [position: 200, 200]
   label "CCC"
 }
 edge AA -> B

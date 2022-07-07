@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2021-2022 Kiel University and others.
+ * Copyright (c) 2022 Kiel University and others.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License 2.0 which is available at
@@ -13,45 +13,47 @@
 Interactive > Layered
 
 // elkex:label
-Hierarchy
+Hierarchy (Pseudo Positions)
 
 // elkex:doc
-This can only be used within an editor that configures two consecutive layout runs, e.g. KIELER, Keith
-but not Elklive.
- 
-The interactiveLayout property allows to move nodes in diagram view that supports this (e.g. Klighd VSCode extension).
-Internally it sets via a GraphVisitor all other necessary properties, such as interactive and interactive strategies
-for the different phases.
+Pseudo positions are set which emulate what would be done by the interactiveLayout property.
 
 Expected result after interactive layout:
-<pre>
+
  ________________
 |n2 ____    ____  |   ____
 |  |n2_2|__|n2_1| |__|n1  |
 |  |____|  |____| |  |____|
 |_________________|
-</pre>
+
 */
 
 // elkex:graph
-interactiveLayout: true
 elk.direction: RIGHT
+cycleBreaking.strategy: INTERACTIVE
+layering.strategy: INTERACTIVE
 
 node n1 {
+  layout [position: 100, 0]
   label "n1"
 }
 
 node n2 {
+  layout [position: 0, 0]
 	elk.direction: RIGHT
-	layering.layerChoiceConstraint: 0
+  cycleBreaking.strategy: INTERACTIVE
+  layering.strategy: INTERACTIVE
   label "n2"
-	node n2_1 {
+	
+	node n2_1  {
+    layout [position: 100, 0]
     label "n2_1"
 	}
 
 	node n2_2 {
+    layout [position: 0, 0]
 		layering.layerChoiceConstraint: 0
-    label "n2_2"
+  label "n2_2"
 	}
 
 	edge n2_1 -> n2_2

@@ -1,0 +1,36 @@
+/*******************************************************************************
+ * Copyright (c) 2022 Kiel University and others.
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ *******************************************************************************/
+/*
+// elkex:category
+Interactive > Layered
+
+// elkex:label
+Nodes Sizes (Pseudo Positions)
+
+// elkex:doc
+Pseudo positions are set which emulate what would be done by the interactiveLayout property.
+*/
+
+// elkex:graph
+elk.direction: RIGHT
+// Has to be set to false otherwise separate conencted graphs are not on the same layer grid.
+separateConnectedComponents: false 
+cycleBreaking.strategy: INTERACTIVE
+layering.strategy: INTERACTIVE
+crossingMinimization.semiInteractive: true
+node n1 {
+	layout [position: 0, 0 size: 200, 200]
+	label "n1"
+}
+
+node n2 {
+  layout [position: 100, 0]
+  label "n2"
+}

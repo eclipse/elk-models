@@ -1,0 +1,522 @@
+/*******************************************************************************
+ * Copyright (c) 2022 Kiel University and others.
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ *******************************************************************************/
+ 
+/*
+// elkex:category
+Model Order > Crossing Minimization
+
+// elkex:label
+Tie Breaker
+
+// elkex:doc
+Ordering of nodes and edges in a layer can be influenced by model order.*/
+
+// elkex:graph
+// Orders components based on the minimal model order of their nodes for presentation purposes.
+considerModelOrder.components: FORCE_MODEL_ORDER
+
+node dummyNodesBetween {
+  // PREFER_EDGES Edge order is respected yields same result, since crossing has to be prevented
+  considerModelOrder.strategy: NODES_AND_EDGES
+  // Potential problem: n3 is placed below the long edge dummy label node,
+  // since n3 has no connections to the previous layer.
+  // Because of this the long edge to n6 produces a crossing.
+  nodeSize.constraints: NODE_LABELS
+  
+  label "dummyNodesBetween"
+
+  node v1 {
+    layout [size: 20, 20]
+    layering.layerConstraint: FIRST
+    label "n1"
+  }
+  edge v1 -> v2 {
+    label "e11"
+  }
+  edge v1 -> v8 {
+    label "e12"
+  }
+  edge v1 -> v5 {
+    label "e13"
+  }
+  
+  node v2 {
+    layout [size: 20, 20]
+    label "n2"
+  }
+  edge v2 -> v6 {
+    label "e21"
+  }
+  
+  node v3 {
+    layout [size: 20, 20]
+    label "n3"
+  }
+  edge v3 -> v6 {
+    label "e31"
+  }
+  
+  node v4 {
+    layout [size: 20, 20]
+    label "n4"
+  }
+  edge v4 -> v7 {
+    label "e41"
+  }
+  
+  
+  node v5 {
+    layout [size: 20, 20]
+    label "n5"
+  }
+  edge v5 -> v7 {
+    label "e51"
+  }
+  
+  node v6 {
+    layout [size: 20, 20]
+    label "n6"
+  }
+  edge v6 -> v8 {
+    label "e61"
+  }
+  
+  node v7 {
+    layout [size: 20, 20]
+    label "n7"
+  }
+  edge v7 -> v8 {
+    label "e71"
+  }
+  
+  node v8 {
+    layout [size: 20, 20]
+    label "n8"
+  }
+}
+node dummyNodesOver {
+  considerModelOrder.strategy: PREFER_EDGES
+  elk.direction: RIGHT
+  // considerModelOrder.longEdgeStrategy: DUMMY_NODE_OVER // set as default
+  nodeSize.constraints: NODE_LABELS
+  
+  label "dummyNodesOver"
+  
+  node v1 {
+    layout [size: 20, 20]
+    label "n1"
+  }
+  edge v1 -> v6 {
+    label "e11"
+  }
+  edge v1 -> v2 {
+    label "e12"
+  }
+  
+  node v2 {
+    layout [size: 20, 20]
+    label "n2"
+  }
+  edge v2 -> v5 {
+    label "e21"
+  }
+  
+  node v3 {
+    layout [size: 20, 20]
+    label "n3"
+  }
+  edge v3 -> v5 {
+    label "e31"
+  }
+  
+  node v4 {
+    layout [size: 20, 20]
+    label "n4"
+  }
+  edge v4 -> v5 {
+    label "e41"
+  }
+  
+  node v5 {
+    layout [size: 20, 20]
+    label "n5"
+  }
+  edge v5 -> v6 {
+    label "e51"
+  }
+  
+  node v6 {
+    layout [size: 20, 20]
+    label "n6"
+  }
+}
+
+node dummyNodesUnder {
+  considerModelOrder.strategy: PREFER_EDGES
+  elk.direction: RIGHT
+  // Default would produce a crossing or violate the model order.
+  considerModelOrder.longEdgeStrategy: DUMMY_NODE_UNDER
+  nodeSize.constraints: NODE_LABELS
+  
+  label "dummyNodesUnder"
+  
+  node v1 {
+    layout [size: 20, 20]
+    label "n1"
+  }
+  edge v1 -> v2 {
+    label "e11"
+  }
+  edge v1 -> v6 {
+    label "e12"
+  }
+  
+  node v2 {
+    layout [size: 20, 20]
+    label "n2"
+  }
+  edge v2 -> v5 {
+    label "e21"
+  }
+  
+  node v3 {
+    layout [size: 20, 20]
+    label "n3"
+  }
+  edge v3 -> v5 {
+    label "e31"
+  }
+  
+  node v4 {
+    layout [size: 20, 20]
+    label "n4"
+  }
+  edge v4 -> v5 {
+    label "e41"
+  }
+  
+  node v5 {
+    layout [size: 20, 20]
+    label "n5"
+  }
+  edge v5 -> v6 {
+    label "e51"
+  }
+  
+  node v6 {
+    layout [size: 20, 20]
+    label "n6"
+  }
+}
+
+node dummyNodesUnderNoCM {
+  considerModelOrder.strategy: PREFER_EDGES
+  elk.direction: RIGHT
+  // Default would produce a crossing or violate the model order.
+  crossingMinimization.strategy: NONE
+  crossingMinimization.greedySwitch.type: OFF
+  nodeSize.constraints: NODE_LABELS
+  
+  label "dummyNodesUnderNoCM"
+  
+  node v1 {
+    layout [size: 20, 20]
+    label "n1"
+  }
+  edge v1 -> v2 {
+    label "e11"
+  }
+  edge v1 -> v6 {
+    label "e12"
+  }
+  
+  node v2 {
+    layout [size: 20, 20]
+    label "n2"
+  }
+  edge v2 -> v5 {
+    label "e21"
+  }
+  
+  node v3 {
+    layout [size: 20, 20]
+    label "n3"
+  }
+  edge v3 -> v5 {
+    label "e31"
+  }
+  
+  node v4 {
+    layout [size: 20, 20]
+    label "n4"
+  }
+  edge v4 -> v5 {
+    label "e41"
+  }
+  
+  node v5 {
+    layout [size: 20, 20]
+    label "n5"
+  }
+  edge v5 -> v6 {
+    label "e51"
+  }
+  
+  node v6 {
+    layout [size: 20, 20]
+    label "n6"
+  }
+}
+
+node noMO {
+  // No model order just randomized crossing minimization focused on crossings.
+  // Neither nodes nor edges are ordered even though it would be easily possible
+  nodeSize.constraints: NODE_LABELS
+  
+  label "noMO"
+  node v1 {
+    layout [size: 20, 20]
+    label "n1"
+  }
+  edge v1 -> v2 {
+    label "e11"
+  }
+  edge v1 -> v3 {
+    label "e12"
+  }
+  edge v1 -> v4 {
+    label "e13"
+  }
+  
+  node v2 {
+    layout [size: 20, 20]
+    label "n2"
+  }
+  
+  node v3 {
+    layout [size: 20, 20]
+    label "n3"
+  }
+  
+  node v4 {
+    layout [size: 20, 20]
+    label "n4"
+  }
+}
+
+node preferEdges {
+  // Crossings as a primary model order as secondary criterion.
+  // Model order is respected if it is crossing minimal.
+  // Otherwise other random solutions are tried out.
+  // If small adjustments are to be made they are still often found.
+  
+  // Node order is disregarded in favor of edge order.
+  considerModelOrder.strategy: PREFER_EDGES
+  nodeSize.constraints: NODE_LABELS
+  
+  label "preferEdges"
+  node v1 {
+    layout [size: 20, 20]
+    label "n1"
+  }
+  edge v1 -> v2 {
+    label "e11"
+  }
+  edge v1 -> v4 {
+    label "e12"
+  }
+  edge v1 -> v3 {
+    label "e13"
+  }
+  
+  node v2 {
+    layout [size: 20, 20]
+    label "n2"
+  }
+  
+  node v3 {
+    layout [size: 20, 20]
+    label "n3"
+  }
+  
+  node v4 {
+    layout [size: 20, 20]
+    label "n4"
+  }
+}
+
+node nodesAndEdges {
+  // Crossings as a primary model order as secondary criterion.
+  // Model order is respected if it is crossing minimal.
+  // Otherwise other random solutions are tried out.
+  // If small adjustments are to be made they are still often found.
+  
+  // If both are considered node order is often overruled by edges order,
+  // since crossing minimization itself is centered around edges.
+  considerModelOrder.strategy: NODES_AND_EDGES
+  nodeSize.constraints: NODE_LABELS
+  
+  label "nodesAndEdges"
+  node v1 {
+    layout [size: 20, 20]
+    label "n1"
+  }
+  edge v1 -> v2 {
+    label "e11"
+  }
+  edge v1 -> v4 {
+    label "e12"
+  }
+  edge v1 -> v3 {
+    label "e13"
+  }
+  
+  node v2 {
+    layout [size: 20, 20]
+    label "n2"
+  }
+  
+  node v3 {
+    layout [size: 20, 20]
+    label "n3"
+  }
+  
+  node v4 {
+    layout [size: 20, 20]
+    label "n4"
+  }
+}
+
+node nodesAndEdgesPreferNodes {
+  
+  // If both are considered node order is often overruled by edges order,
+  // since crossing minimization itself is centered around edges.
+  // This can be influenced by the crossingCounterNodeInfluence.
+  considerModelOrder.strategy: NODES_AND_EDGES
+  thoroughness: 100 // More random tries
+  // 100 node order violations is as important as 1 crossing (also available for ports/edges).
+  // This option together with crossingCounterPortInfluence can be set to a small value, e.g. 0.01
+  // to choose the crossing minimal and optimal ordered solution from all crossing minimization runs.
+  // The way the different runs are configured does not guarantee that the optimal solution will ever be chosen.
+  considerModelOrder.crossingCounterNodeInfluence: 100.0
+  nodeSize.constraints: NODE_LABELS
+  
+  label "nodesAndEdgesPreferNodes"
+  
+  node v1 {
+    layout [size: 20, 20]
+    label "n1"
+  }
+  edge v1 -> v2 {
+    label "e11"
+  }
+  edge v1 -> v4 {
+    label "e12"
+  }
+  edge v1 -> v3 {
+    label "e13"
+  }
+  
+  node v2 {
+    layout [size: 20, 20]
+    label "n2"
+  }
+  
+  node v3 {
+    layout [size: 20, 20]
+    label "n3"
+  }
+  
+  node v4 {
+    layout [size: 20, 20]
+    label "n4"
+  }
+}
+
+node nodesAndEdgesForceNodeMO {
+  
+  // Should be set together with forceNodeModelOrder to define a node order before crossing minimization.
+  considerModelOrder.strategy: NODES_AND_EDGES 
+  // Order of nodes before crossing minimization does not change during crossing minimization.
+  crossingMinimization.forceNodeModelOrder: true
+  nodeSize.constraints: NODE_LABELS
+  
+  label "nodesAndEdgesForceNodeMO"
+  
+  node v1 {
+    layout [size: 20, 20]
+    label "n1"
+  }
+  edge v1 -> v2 {
+    label "e11"
+  }
+  edge v1 -> v4 {
+    label "e12"
+  }
+  edge v1 -> v3 {
+    label "e13"
+  }
+  
+  node v2 {
+    layout [size: 20, 20]
+    label "n2"
+  }
+  
+  node v3 {
+    layout [size: 20, 20]
+    label "n3"
+  }
+  
+  node v4 {
+    layout [size: 20, 20]
+    label "n4"
+  }
+}
+
+node nodesAndEdgesNoCM {
+  // For reference the solution without crossing minimization.
+  
+  // As one can see in this model 
+  considerModelOrder.strategy: NODES_AND_EDGES
+  crossingMinimization.strategy: NONE
+  crossingMinimization.greedySwitch.type: OFF
+  nodeSize.constraints: NODE_LABELS
+  
+  label "nodesAndEdgesNoCM"
+  
+  node v1 {
+    layout [size: 20, 20]
+    label "n1"
+  }
+  edge v1 -> v2 {
+    label "e11"
+  }
+  edge v1 -> v4 {
+    label "e12"
+  }
+  edge v1 -> v3 {
+    label "e13"
+  }
+  
+  node v2 {
+    layout [size: 20, 20]
+    label "n2"
+  }
+  
+  node v3 {
+    layout [size: 20, 20]
+    label "n3"
+  }
+  
+  node v4 {
+    layout [size: 20, 20]
+    label "n4"
+  }
+}

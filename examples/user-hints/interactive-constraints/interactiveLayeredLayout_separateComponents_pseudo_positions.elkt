@@ -12,53 +12,46 @@
 Interactive > Layered
 
 // elkex:label
-Separate Components
+Separate Components (Pseudo Positions)
 
 // elkex:doc
-This can only be used within an editor that configures two consecutive layout runs, e.g. KIELER, Keith
-but not Elklive.
- 
-The interactiveLayout property allows to move nodes in diagram view that supports this (e.g. Klighd VSCode extension).
-Internally it sets via a GraphVisitor all other necessary properties, such as interactive and interactive strategies
-for the different phases.
+Pseudo positions are set which emulate what would be done by the interactiveLayout property.
 
 One has to make sure that separate connected components is disabled by the interactiveLayout property.
 Otherwise position and layer constraints become confusing.
  
 Expected layout:
 
-<pre>
+
  ____    ____
 |n3  |  |n4  |
 |____|  |____|
          ____    ____
         |n2  |<_|n1  |
         |____|  |____|
-</pre>
+
 */
 
 // elkex:graph
-interactiveLayout: true
 elk.direction: RIGHT
+cycleBreaking.strategy: INTERACTIVE
+layering.strategy: INTERACTIVE
+crossingMinimization.semiInteractive: true
 separateConnectedComponents: false
 node n1 {
-  layering.layerChoiceConstraint: 3
-  crossingMinimization.positionChoiceConstraint: 0
+  layout [position: 300, 0]
   label "n1"
 }
 node n2 {
-  crossingMinimization.positionChoiceConstraint: 0
-  layering.layerChoiceConstraint: 2
+  layout [position: 200, 0]
   label "n2"
 }
 node n3 {
-  layering.layerChoiceConstraint: 1
-  crossingMinimization.positionChoiceConstraint: 0
+  layout [position: 100, 0]
   label "n3"
 }
 node n4 {
-  layering.layerChoiceConstraint: 2
-  crossingMinimization.positionChoiceConstraint: 0
+  layout [position: 200, 0]
   label "n4"
 }
 edge n1 -> n2

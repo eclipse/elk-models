@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2021 Kiel University and others.
+ * Copyright (c) 2021-2022 Kiel University and others.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License 2.0 which is available at
@@ -34,18 +34,32 @@ elk.direction: RIGHT
 node Pause {
 	crossingMinimization.positionChoiceConstraint: 0
 	layering.layerChoiceConstraint: 3
-} node Accel node Deccel {
-	layering.layerChoiceConstraint: 2
-	crossingMinimization.positionChoiceConstraint: 1
+  label "Pause"
+}
+node Accel {
+  layering.layerChoiceConstraint: 2
+  crossingMinimization.positionChoiceConstraint: 0
+  label "Accel"
+}
+node Deccel {
+  layering.layerChoiceConstraint: 2
+  crossingMinimization.positionChoiceConstraint: 1
+  label "Deccel"
 }
 node CheckMax {
 	crossingMinimization.positionChoiceConstraint: 0
 	layering.layerChoiceConstraint: 1
-} node CheckMin {
+  label "CheckMax"
+}
+node CheckMin {
 	crossingMinimization.positionChoiceConstraint: 1
 	layering.layerChoiceConstraint: 1
+  label "CheckMin"
 }
-node SetPeriod edge Pause -> Accel
+node SetPeriod {
+  label "SetPeriod"
+}
+edge Pause -> Accel
 edge Pause -> Deccel
 edge Accel -> CheckMax
 edge Deccel -> CheckMin

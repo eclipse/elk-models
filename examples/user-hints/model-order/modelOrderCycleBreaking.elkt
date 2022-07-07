@@ -1,0 +1,176 @@
+/*******************************************************************************
+ * Copyright (c) 2022 Kiel University and others.
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ *******************************************************************************/
+ 
+/*
+// elkex:category
+Model Order > Cycle Breaking
+
+// elkex:label
+Tie Breaker
+
+// elkex:doc
+Model Order can be used during crossing minimization.
+*/
+
+// elkex:graph
+considerModelOrder.components: INSIDE_PORT_SIDE_GROUPS
+node greedy {
+  // Default cycle breaker, primarily reduces backward edges.
+  // Makes random decisions if no clear solution.
+  label "greedy"
+  node n0 {
+    label "n0"
+  }
+  node n1 {
+    layering.layerConstraint: FIRST // layer constraints still work
+    label "n1"
+  }
+  edge n1 -> n4
+  
+  node n2 {
+    label "n2"
+  }
+  edge n2 -> n3
+  
+  node n3 {
+    label "n3"
+  }
+  edge n3 -> n4
+  
+  node n4 {
+    label "n4"
+  }
+  edge n4 -> n2
+  edge n4 -> n0
+}
+
+node greedyModelOrder {
+  cycleBreaking.strategy: GREEDY_MODEL_ORDER
+  label "greedyMO"
+  // n0 is in the last layer since backward edges are reduced if possible
+  node n0 {
+    label "n0"
+  }
+  node n1 {
+    layering.layerConstraint: FIRST // layer constraints still work
+    label "n1"
+  }
+  edge n1 -> n4
+  
+  node n2 {
+    label "n2"
+  }
+  edge n2 -> n3
+  
+  node n3 {
+    label "n3"
+  }
+  edge n3 -> n4
+  
+  node n4 {
+    label "n4"
+  }
+  edge n4 -> n2
+  edge n4 -> n0
+}
+
+node modelOrder {
+  cycleBreaking.strategy: MODEL_ORDER
+  label "strictMO"
+  // Node n0 is still not in the first layer since edge length is optimized by
+  // layer assignment. Model order layer assignment is still WIP.
+  node n0 {
+    label "n0"
+  }
+  node n1 {
+    layering.layerConstraint: FIRST // layer constraints still work
+    label "n1"
+  }
+  edge n1 -> n4
+  
+  node n2 {
+    label "n2"
+  }
+  edge n2 -> n3
+  
+  node n3 {
+    label "n3"
+  }
+  edge n3 -> n4
+  
+  node n4 {
+    label "n4"
+  }
+  edge n4 -> n2
+  edge n4 -> n0
+}
+
+node greedyModelOrderCMModelOrder {
+  // Cycle breaking and crossing minimization.
+  cycleBreaking.strategy: GREEDY_MODEL_ORDER
+  considerModelOrder.strategy: NODES_AND_EDGES
+  label "CB+CM"
+  // n0 is in the last layer since backward edges are reduced if possible
+  node n0 {
+    label "n0"
+  }
+  node n1 {
+    layering.layerConstraint: FIRST // layer constraints still work
+    label "n1"
+  }
+  edge n1 -> n4
+  
+  node n2 {
+    label "n2"
+  }
+  edge n2 -> n3
+  
+  node n3 {
+    label "n3"
+  }
+  edge n3 -> n4
+  
+  node n4 {
+    label "n4"
+  }
+  edge n4 -> n2
+  edge n4 -> n0
+}
+node strictModelOrderCMModelOrder {
+  // Cycle breaking and crossing minimization.
+  cycleBreaking.strategy: MODEL_ORDER
+  considerModelOrder.strategy: NODES_AND_EDGES
+  label "strictCB+CM"
+  // n0 is in the last layer since backward edges are reduced if possible
+  node n0 {
+    label "n0"
+  }
+  node n1 {
+    layering.layerConstraint: FIRST // layer constraints still work
+    label "n1"
+  }
+  edge n1 -> n4
+  
+  node n2 {
+    label "n2"
+  }
+  edge n2 -> n3
+  
+  node n3 {
+    label "n3"
+  }
+  edge n3 -> n4
+  
+  node n4 {
+    label "n4"
+  }
+  edge n4 -> n2
+  edge n4 -> n0
+}

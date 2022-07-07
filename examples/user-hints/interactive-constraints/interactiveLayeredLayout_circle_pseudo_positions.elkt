@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2021-2022 Kiel University and others.
+ * Copyright (c) 2022 Kiel University and others.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License 2.0 which is available at
@@ -13,31 +13,29 @@
 Interactive > Layered
 
 // elkex:label
-Circle
+Circle (Pseudo Positions)
 
 // elkex:doc
-This can only be used within an editor that configures two consecutive layout runs, e.g. KIELER, Keith
-but not Elklive.
- 
-The interactiveLayout property allows to move nodes in diagram view that supports this (e.g. Klighd VSCode extension).
-Internally it sets via a GraphVisitor all other necessary properties, such as interactive and interactive strategies
-for the different phases.
+Pseudo positions are set which emulate what would be done by the interactiveLayout property.
 
 The nodes are forced in a cycle with n1 in the middle layer.
 */
 
 // elkex:graph
-interactiveLayout: true
 elk.direction:RIGHT
+cycleBreaking.strategy: INTERACTIVE
+layering.strategy: INTERACTIVE
 
 node n1 {
-	layering.layerChoiceConstraint: 1
+  layout [position: 100, 0]
   label "n1"
 }
 node n2 {
+  layout [position: 0, 0]
   label "n2"
 }
 node n3 {
+  layout [position: 200, 0]
   label "n3"
 }
 edge n1 -> n2
