@@ -10,10 +10,10 @@
  
 /*
 // elkex:category
-Model Order > Cycle Breaking
+Model Order
 
 // elkex:label
-Tie Breaker
+Cycle Breaking
 
 // elkex:doc
 Model Order can be used during crossing minimization.
