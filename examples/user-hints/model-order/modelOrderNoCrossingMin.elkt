@@ -10,10 +10,10 @@
  
 /*
 // elkex:category
-Model Order > No Crossing Minimization
+Model Order
 
 // elkex:label
-Tie Breaker
+No Crossing Minimization
 
 // elkex:doc
 Crossing minimization can be turned of entirely.

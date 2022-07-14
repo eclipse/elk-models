@@ -19,13 +19,14 @@ Pseudo positions are set which emulate what would be done by the interactiveLayo
  
 Expected layout:
 
-
+<pre>
  ____ <_ ____ <_ ____
 |n3  |<_|n2  |<_|n1  |
 |____| _|____|  |____|
  ____ | 
 |n4  |< 
 |____|   
+</pre>
  
 Change the direction or introduce pseudo positions to change the layout.
 

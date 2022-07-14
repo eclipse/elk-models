@@ -10,10 +10,10 @@
  
 /*
 // elkex:category
-Model Order > Crossing Minimization
+Model Order 
 
 // elkex:label
-Tie Breaker
+Crossing Minimization
 
 // elkex:doc
 Ordering of nodes and edges in a layer can be influenced by model order.*/
