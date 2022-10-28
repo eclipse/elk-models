@@ -1,0 +1,24 @@
+algorithm: layered
+org.eclipse.elk.partitioning.activate: true
+nodePlacement.strategy: NETWORK_SIMPLEX
+
+node n1 {
+    layout [size: 30, 30]
+    org.eclipse.elk.partitioning.partition: 1
+    label "1"
+}
+node n2 {
+    layout [size: 30, 30]
+    org.eclipse.elk.partitioning.partition: 2
+    label "2"
+}
+node n3 {
+    layout [size: 30, 30]
+    org.eclipse.elk.partitioning.partition: 3
+    label "3"
+}
+edge n1 -> n1
+edge n2 -> n2
+edge n1 -> n2
+edge n2 -> n1
+edge n2 -> n3
