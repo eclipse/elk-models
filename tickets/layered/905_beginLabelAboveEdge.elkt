@@ -1,0 +1,83 @@
+/*******************************************************************************
+ * Copyright (c) 2023 Kiel University and others.
+ * 
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ *******************************************************************************/
+
+// For the two nodes below, N1, N2, the positions of the ports 
+// P1 and P2 should be the same irrespective of the layout direction
+// (only that the vertical order of P1 and P2 is swapped).
+// The same should hold for corresponding labels attached to the two ports.
+
+node N1 {
+    layout [
+        position: 42, 20
+        size: 284, 148
+    ]
+    nodeSize.minimum: "(13.0,29.0)"
+    label L1: " " {
+        layout [
+            position: 139, 5
+            size: 8, 21
+        ]
+        nodeLabels.placement: "[H_CENTER, V_TOP, INSIDE]"
+    }
+    port P1 {
+        layout [
+            position: -22, 73
+            size: 30, 30
+        ]
+        org.eclipse.elk.^port.borderOffset: -8.0
+    }
+    node N2 {
+        layout [
+            position: 174, 38
+            size: 100, 100
+        ]
+        nodeSize.minimum: "(10.0,10.0)"
+        label L5: " " {
+            nodeLabels.placement: "[H_CENTER, V_CENTER, INSIDE]"
+        }
+        port P2 {
+            layout [
+                position: -22, 35
+                size: 30, 30
+            ]
+            org.eclipse.elk.^port.borderOffset: -8.0
+        }
+    }
+    edge E1: P1 -> N2.P2 {
+        layout [
+            section ES1 [
+                start: 8, 88
+                end: 152, 88
+            ]
+        ]
+        org.eclipse.elk.^edge.thickness: 2.0
+        label L2: "center" {
+            layout [
+                position: 50, 25
+                size: 43, 21
+            ]
+            edgeLabels.placement: CENTER
+        }
+        label L3: "begin" {
+            layout [
+                position: 11, 20
+                size: 39, 21
+            ]
+            edgeLabels.placement: TAIL
+        }
+        label L4: "end" {
+            layout [
+                position: 110, 30
+                size: 26, 21
+            ]
+            edgeLabels.placement: HEAD
+        }
+    }
+}
