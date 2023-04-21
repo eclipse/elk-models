@@ -31,22 +31,27 @@ separateConnectedComponents: false
 
 node Pause {
   layout [position: 300, 0]
+  elk.^position: "(300.0,0.0)"
   label "Pause"
 }
 node Accel {
   layout [position: 200, 0]
+  elk.^position: "(200.0,0.0)"
   label "Accel"
 }
 node Deccel {
   layout [position: 200, 100]
+  elk.^position: "(200.0,100.0)"
   label "Deccel"
 }
 node CheckMax {
   layout [position: 100, 0]
+  elk.^position: "(100.0,0.0)"
   label "CheckMax"
 }
 node CheckMin {
   layout [position: 100, 100]
+  elk.^position: "(100.0,100.0)"
   label "CheckMin"
 }
 node SetPeriod {

@@ -34,38 +34,47 @@ crossingMinimization.semiInteractive: true
 separateConnectedComponents: false
 node A {
   layout [position: 0, 0]
+  elk.^position: "(0.0,0.0)"
   label "A"
 }
 node AA {
   layout [position: 0, 100]
+  elk.^position: "(0.0,100.0)"
   label "AA"
 }
 node AAA {
   layout [position: 0, 200]
+  elk.^position: "(0.0,200.0)"
   label "AAA"
 }
 node B {
   layout [position: 100, 0]
+  elk.^position: "(100.0,0.0)"
   label "B"
 }
 node BB {
   layout [position: 100, 100]
+  elk.^position: "(100.0,100.0)"
   label "BB"
 }
 node BBB {
   layout [position: 100, 200]
+  elk.^position: "(100.0,200.0)"
   label "BBB"
 }
 node C {
   layout [position: 200, 0]
+  elk.^position: "(200.0,0.0)"
   label "C"
 }
 node CC {
   layout [position: 200, 100]
+  elk.^position: "(200.0,100.0)"
   label "CC"
 }
 node CCC {
   layout [position: 200, 200]
+  elk.^position: "(200.0,200.0)"
   label "CCC"
 }
 edge AA -> B

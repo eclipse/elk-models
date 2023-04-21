@@ -24,7 +24,6 @@ elk.direction: RIGHT
 separateConnectedComponents: false 
 cycleBreaking.strategy: INTERACTIVE
 layering.strategy: INTERACTIVE
-crossingMinimization.semiInteractive: true
 node n1 {
 	layout [position: 0, 0 size: 200, 200]
 	label "n1"

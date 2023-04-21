@@ -40,19 +40,23 @@ layering.strategy: INTERACTIVE
 crossingMinimization.semiInteractive: true
 separateConnectedComponents: false
 node n1 {
-  layout [position: 300, 0]
+  layout [position: 300, 100]
+  elk.^position: "(300.0,100.0)"
   label "n1"
 }
 node n2 {
-  layout [position: 200, 0]
+  layout [position: 200, 100]
+  elk.^position: "(200.0,100.0)"
   label "n2"
 }
 node n3 {
   layout [position: 100, 0]
+  elk.^position: "(100.0,0.0)"
   label "n3"
 }
 node n4 {
   layout [position: 200, 0]
+  elk.^position: "(200.0,0.0)"
   label "n4"
 }
 edge n1 -> n2
