@@ -20,7 +20,7 @@ Ordering of nodes and edges in a layer can be influenced by model order.*/
 
 // elkex:graph
 // Orders components based on the minimal model order of their nodes for presentation purposes.
-considerModelOrder.components: FORCE_MODEL_ORDER
+considerModelOrder.components: MODEL_ORDER
 
 node dummyNodesBetween {
   // PREFER_EDGES Edge order is respected yields same result, since crossing has to be prevented

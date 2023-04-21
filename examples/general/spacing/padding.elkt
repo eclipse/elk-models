@@ -21,7 +21,7 @@ They also show the impact of using `nodeLabels.placement` in the same time.
 
 // elkex:graph
 algorithm: layered
-considerModelOrder.components: FORCE_MODEL_ORDER // Only for presentation purposes
+considerModelOrder.components: MODEL_ORDER // Only for presentation purposes
 
 // Without nothing the default padding, 12 pixels on each side, is used.
 node n1 {

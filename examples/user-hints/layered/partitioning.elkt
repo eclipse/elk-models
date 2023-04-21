@@ -34,7 +34,7 @@ in different layers. In the example all nodes starting with "N1" should be on th
 */
 
 // elkex:graph
-considerModelOrder.components: FORCE_MODEL_ORDER // for presentation only
+considerModelOrder.components: MODEL_ORDER // for presentation only
 node default {
     algorithm: layered
     elk.direction: DOWN
