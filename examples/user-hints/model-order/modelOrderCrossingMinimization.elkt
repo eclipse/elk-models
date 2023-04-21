@@ -29,6 +29,7 @@ node dummyNodesBetween {
   // since n3 has no connections to the previous layer.
   // Because of this the long edge to n6 produces a crossing.
   nodeSize.constraints: NODE_LABELS
+  nodeLabels.placement: "INSIDE, V_TOP, H_CENTER"
   
   label "dummyNodesBetween"
 
@@ -106,6 +107,7 @@ node dummyNodesOver {
   elk.direction: RIGHT
   // considerModelOrder.longEdgeStrategy: DUMMY_NODE_OVER // set as default
   nodeSize.constraints: NODE_LABELS
+  nodeLabels.placement: "INSIDE, V_TOP, H_CENTER"
   
   label "dummyNodesOver"
   
@@ -164,6 +166,7 @@ node dummyNodesUnder {
   // Default would produce a crossing or violate the model order.
   considerModelOrder.longEdgeStrategy: DUMMY_NODE_UNDER
   nodeSize.constraints: NODE_LABELS
+  nodeLabels.placement: "INSIDE, V_TOP, H_CENTER"
   
   label "dummyNodesUnder"
   
@@ -223,6 +226,7 @@ node dummyNodesUnderNoCM {
   crossingMinimization.strategy: NONE
   crossingMinimization.greedySwitch.type: OFF
   nodeSize.constraints: NODE_LABELS
+  nodeLabels.placement: "INSIDE, V_TOP, H_CENTER"
   
   label "dummyNodesUnderNoCM"
   
@@ -279,6 +283,7 @@ node noMO {
   // No model order just randomized crossing minimization focused on crossings.
   // Neither nodes nor edges are ordered even though it would be easily possible
   nodeSize.constraints: NODE_LABELS
+  nodeLabels.placement: "INSIDE, V_TOP, H_CENTER"
   
   label "noMO"
   node v1 {
@@ -320,6 +325,7 @@ node preferEdges {
   // Node order is disregarded in favor of edge order.
   considerModelOrder.strategy: PREFER_EDGES
   nodeSize.constraints: NODE_LABELS
+  nodeLabels.placement: "INSIDE, V_TOP, H_CENTER"
   
   label "preferEdges"
   node v1 {
@@ -362,6 +368,7 @@ node nodesAndEdges {
   // since crossing minimization itself is centered around edges.
   considerModelOrder.strategy: NODES_AND_EDGES
   nodeSize.constraints: NODE_LABELS
+  nodeLabels.placement: "INSIDE, V_TOP, H_CENTER"
   
   label "nodesAndEdges"
   node v1 {
@@ -407,6 +414,7 @@ node nodesAndEdgesPreferNodes {
   // The way the different runs are configured does not guarantee that the optimal solution will ever be chosen.
   considerModelOrder.crossingCounterNodeInfluence: 100.0
   nodeSize.constraints: NODE_LABELS
+  nodeLabels.placement: "INSIDE, V_TOP, H_CENTER"
   
   label "nodesAndEdgesPreferNodes"
   
@@ -447,6 +455,7 @@ node nodesAndEdgesForceNodeMO {
   // Order of nodes before crossing minimization does not change during crossing minimization.
   crossingMinimization.forceNodeModelOrder: true
   nodeSize.constraints: NODE_LABELS
+  nodeLabels.placement: "INSIDE, V_TOP, H_CENTER"
   
   label "nodesAndEdgesForceNodeMO"
   
@@ -488,6 +497,7 @@ node nodesAndEdgesNoCM {
   crossingMinimization.strategy: NONE
   crossingMinimization.greedySwitch.type: OFF
   nodeSize.constraints: NODE_LABELS
+  nodeLabels.placement: "INSIDE, V_TOP, H_CENTER"
   
   label "nodesAndEdgesNoCM"
   

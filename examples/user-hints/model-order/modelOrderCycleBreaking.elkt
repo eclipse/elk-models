@@ -22,6 +22,8 @@ Model Order can be used during crossing minimization.
 // elkex:graph
 considerModelOrder.components: INSIDE_PORT_SIDE_GROUPS
 node greedy {
+  nodeSize.constraints: NODE_LABELS
+  nodeLabels.placement: "INSIDE, V_TOP, H_CENTER"
   // Default cycle breaker, primarily reduces backward edges.
   // Makes random decisions if no clear solution.
   label "greedy"
@@ -53,6 +55,8 @@ node greedy {
 
 node greedyModelOrder {
   cycleBreaking.strategy: GREEDY_MODEL_ORDER
+  nodeSize.constraints: NODE_LABELS
+  nodeLabels.placement: "INSIDE, V_TOP, H_CENTER"
   label "greedyMO"
   // n0 is in the last layer since backward edges are reduced if possible
   node n0 {
@@ -83,6 +87,8 @@ node greedyModelOrder {
 
 node modelOrder {
   cycleBreaking.strategy: MODEL_ORDER
+  nodeSize.constraints: NODE_LABELS
+  nodeLabels.placement: "INSIDE, V_TOP, H_CENTER"
   label "strictMO"
   // Node n0 is still not in the first layer since edge length is optimized by
   // layer assignment. Model order layer assignment is still WIP.
@@ -116,6 +122,8 @@ node greedyModelOrderCMModelOrder {
   // Cycle breaking and crossing minimization.
   cycleBreaking.strategy: GREEDY_MODEL_ORDER
   considerModelOrder.strategy: NODES_AND_EDGES
+  nodeSize.constraints: NODE_LABELS
+  nodeLabels.placement: "INSIDE, V_TOP, H_CENTER"
   label "CB+CM"
   // n0 is in the last layer since backward edges are reduced if possible
   node n0 {
@@ -147,6 +155,8 @@ node strictModelOrderCMModelOrder {
   // Cycle breaking and crossing minimization.
   cycleBreaking.strategy: MODEL_ORDER
   considerModelOrder.strategy: NODES_AND_EDGES
+  nodeSize.constraints: NODE_LABELS
+  nodeLabels.placement: "INSIDE, V_TOP, H_CENTER"
   label "strictCB+CM"
   // n0 is in the last layer since backward edges are reduced if possible
   node n0 {
