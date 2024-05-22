@@ -18,7 +18,7 @@ Vertical Order
 // elkex:doc
 The example illustrates how the user can influence the 
 _vertical order_ of the nodes in a _left-to-right_ layout using `elk.layered`
-(or the vertical order in a top-down layout),
+(or the horizontal order in a top-down layout),
 i.e. the order of the nodes _within_ their layers.
 
 The `Default` node shows the result without any user-hints: 
