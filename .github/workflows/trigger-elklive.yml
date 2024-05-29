@@ -1,0 +1,11 @@
+on:
+  push:
+    branches: ["master"]
+
+jobs:
+  elklive:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger workflow
+        run: |
+          curl -XPOST -u "${{ secrets.PAT_USERNAME}}:${{secrets.PAT_TOKEN}}" -H "Accept: application/vnd.github.everest-preview+json" -H "Content-Type: application/json" https://api.github.com/repos/kieler/elk-live/actions/workflows/publish-docker.yml/dispatches --data '{"ref": "master"}'
